@@ -24,6 +24,90 @@
 		</script>
 
 
+<style>
+
+.cm-facet-form-search {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+    color: #26374A;
+    padding-left: 15px;
+    padding-top: 9px;
+    padding-bottom: 88px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-bottom: 1px solid rgba(78, 91, 115, 0.3);
+}
+
+.cm-facet-form-search-inner {
+    position: relative;
+    display: inline-block;
+}
+
+
+  .cm-facet-form-search #cm_text_search {
+    background-image: url(../images/211818_search_icon.png);
+    background-repeat: no-repeat;
+    background-position: 3%;
+    color: #000000;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    padding-left: 65px;
+    padding-right: 240px;
+    height: 60px;
+    width: 650px;
+    border-radius: 50px;
+    border: 0.5px solid rgba(78, 91, 115, 0.5);
+    box-shadow: 0px 8px 16px rgb(38 55 74 / 10%);
+}
+
+
+.cm-facet-form-search .btn-primary {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    background-color: #26374A;
+    border: 2px solid #FFFFFF;
+    border-radius: 0;
+    color: #FFFFFF;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    padding: 1px 12px 1px 12px;
+    height: 45px;
+    border-radius: 50px;
+    width: 174px;
+    display: inline;
+}
+
+.cm-facet-form-search .btn-clear-search {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    background-color: #26374A;
+    border: 2px solid #FFFFFF;
+    border-radius: 0;
+    color: #FFFFFF;
+    position: absolute;
+    right: 185px;
+    top: 7px;
+    padding: 1px 12px 1px 12px;
+    height: 45px;
+    border-radius: 50px;
+    width: 45px;
+    display: none;
+}
+</style>
 	</head>
 	<body vocab="https://schema.org/" typeof="WebPage">
 		<div id="def-top">
@@ -41,19 +125,25 @@
 		<main role="main" property="mainContentOfPage" class="container">
 <h1 property="name" id="wb-cont" class="gc-thickline">Public Health InfoBase</h1>
 
-<p>The Public Health Infobase offers a selection of easy to use tools for accessing and viewing public health data. </p>
-
-<p>Interact with data visualisations or view infographics and charts to gain insight on chronic diseases, mental health, risk and protective factors and associated determinants of health.</p>
 
 
-<div class="cm-facet-form-search" id="cm-srch">
+<div class="container">
+        <div class="row">
+            <div class="col-sm-12 mrgn-tp-lg">
+              <p>The Public Health Infobase offers a selection of easy to use tools for accessing and viewing public health data. </p>
+
+              <p>Interact with data visualisations or view infographics and charts to gain insight on chronic diseases, mental health, risk and protective factors and associated determinants of health.</p>
+
+		<div class="row">
+				<div class="col-sm-12 mrgn-tp-lg pl-0" style="padding-left: 0;">
+								<div class="cm-facet-form-search" id="cm-srch">
 							<div class="cm-facet-form-search-inner">
 				<input type="text" class="input-large" name="cm_text_search" id="cm_text_search" placeholder="Search the Public Health Infobase" autocomplete="off"
 					value="" data-matomo-unmask>
 
 				<input type="submit" class="btn btn-primary" id="cm_text_search_submit" name="cm_text_search_submit" value="Search now">
-				<input type="submit" class="btn btn-clear-search " id="cm_clear_text_search_submit" name="cm_clear_text_search_submit" value="X">
 			</div>
+			</div></div></div></div></div></div>
 			<div id="def-preFooter">
 				<!-- Write closure fall-back static file -->
 				<!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_28/cdts/static/preFooter-en.html -->
@@ -64,7 +154,7 @@
 				defPreFooter.outerHTML = wet.builder.preFooter({
 					"dateModified": "2022-08-30",
 					"showShare": false,
-					"showFeedback": true
+					"showFeedback": false
 				});
 			</script>
 		</main>
