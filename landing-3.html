@@ -476,8 +476,7 @@ h1:before {
             <div class="container">
               <h2>Search all of InfoBase</h2>
 
-
-              <ul class="btn-toolbar list-inline" role="toolbar">
+              <ul class="btn-toolbar list-inline mrgn-bttm-lg mrgn-tp-md" role="toolbar">
 	<li class="btn-group">
 		<button type="button" class="btn btn-primary" onclick="all_topics()">All topics</button>
 	</li>
@@ -502,7 +501,7 @@ h1:before {
 
     <ul class="list-unstyled row">
 
-    <li class="mrgn-bttm-lg covid19 well well-sm">
+    <li class="mrgn-bttm-lg article covid19 well well-sm">
       <div class="row">
         <div class="col-md-2">
           <img class="img-responsive mrgn-bttm-sm" src="./img/covid-icon-smaller.png" alt=""/>
@@ -516,7 +515,7 @@ h1:before {
       </div>
       </div>
     </li>
-    <li class="mrgn-bttm-lg covid19 well well-sm">
+    <li class="mrgn-bttm-lg article covid19 well well-sm">
       <div class="row">
     <div class="col-md-2">
       <img class="img-responsive mrgn-bttm-sm" src="./img/covid-icon-smaller.png" alt=""/>
@@ -530,7 +529,7 @@ h1:before {
 </div>
 </li>
 
-<li class="mrgn-bttm-lg cancer well well-sm">
+<li class="mrgn-bttm-lg article cancer well well-sm">
   <div class="row">
 <div class="col-md-2">
   <img class="img-responsive mrgn-bttm-sm" src="./img/cypc_smaller.png" alt=""/>
@@ -538,7 +537,7 @@ h1:before {
 <div class="col-md-10">
 
   <h3 class="mrgn-tp-md"><a  href="#">Cancer in young people in Canada</a></h3>
-  <p class="small">Last updated: 2022-06-30<span class="label label-info mrgn-lft-md">Cancer</span> <span class="label label-default mrgn-lft-sm">Infographic</span></p>  
+  <p class="small">Last updated: 2022-06-30<span class="label label-info mrgn-lft-md">Cancer</span> <span class="label label-default mrgn-lft-sm">Infographic</span></p>
   <p>Pan-Canadian surveillance data on cancer in children and youth.</p>
 </div>
 </div>
@@ -989,38 +988,30 @@ h1:before {
       <script>
 
       function all_topics(){
-          var element = document.querySelectorAll('.cancer, .covid19');
-          Array.from(element).forEach((x) => {
-          if (x.style.display === "none") {
-            x.style.display = "block";
-          } else {
-            x.style.display = "block";
-          }
-        })
+          var element = document.querySelectorAll('.article');
+          Array.from(element).forEach((x) => x.style.display = "block")
       }
 
 
         function covid19(){
-            var element = document.getElementsByClassName("cancer");
-            Array.from(element).forEach((x) => {
-            if (x.style.display === "none") {
-              x.style.display = "block";
-            } else {
-              x.style.display = "none";
-            }
-          })
-        }
+
+          var element = document.querySelectorAll('.article');
+          Array.from(element).forEach((x) => x.style.display = "none")
+
+
+          var element_show = document.getElementsByClassName("covid19");
+            Array.from(element_show).forEach((x) => x.style.display = "block")
+          }
 
         function cancer(){
-            var element = document.getElementsByClassName("covid19");
-            Array.from(element).forEach((x) => {
-            if (x.style.display === "none") {
-              x.style.display = "block";
-            } else {
-              x.style.display = "none";
-            }
-          })
-        }
+          var element = document.querySelectorAll('.article');
+          Array.from(element).forEach((x) => x.style.display = "none")
+
+
+          var element_show = document.getElementsByClassName("cancer");
+            Array.from(element_show).forEach((x) => x.style.display = "block")
+          }
+
 
 
 
