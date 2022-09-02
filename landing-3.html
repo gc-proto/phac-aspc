@@ -474,82 +474,76 @@ h1:before {
             </section>
 
             <div class="container">
-              <h2 class="h3 wb-inv">Search the whole collection</h2>
-							<section class="text-center">
-							<button class="pill">Cancer</button>
-							<button class="pill">Opioids</button>
-							<button class="pill">COVID-19</button>
-							<button class="pill">Injuries</button>
-							<button class="pill">Children</button>
-		</section>
-							<div class="row">
-									<div class="col-sm-12 mrgn-tp-lg pl-0" style="padding-left: 0;">
-													<div class="cm-facet-form-search" id="cm-srch">
-												<div class="cm-facet-form-search-inner">
-									<input type="text" class="input-large" name="cm_text_search" id="cm_text_search" placeholder="Search the Public Health Infobase" autocomplete="off"
-										value="" data-matomo-unmask>
-
-									<input type="submit" class="btn btn-primary" id="cm_text_search_submit" name="cm_text_search_submit" value="Search now">
-								</div>
-								</div></div>
+              <h2>Search all of InfoBase</h2>
 
 
-						</div>
+              <ul class="btn-toolbar list-inline" role="toolbar">
+	<li class="btn-group">
+		<button type="button" class="btn btn-primary" id="showall">All topics</button>
+	</li>
+  <li class="btn-group">
+		<button type="button" class="btn btn-primary showSingle" target="1">COVID-19</button>
+	</li>
+  <li class="btn-group">
+		<button type="button" class="btn btn-primary showSingle" target="2">Cancer</button>
+	</li>
 
-								<div class="row">
-									<div class="col-md-3">
-										<h3>Filter by</h3>
-										<fieldset class="gc-chckbxrdio">
-											<legend>Topic</legend>
-											<ul class="list-unstyled lst-spcd-2">
-												<li class="checkbox">
-													<input type="checkbox" id="cond1">
-													<label for="cond1">Cancer</label>
-												</li>
-												<li class="checkbox">
-													<input type="checkbox" id="cond2">
-													<label for="cond2">COVID-19</label>
-												</li>
-												<li class="checkbox">
-													<input type="checkbox" id="cond3">
-													<label for="cond3">Children</label>
-												</li>
-												<li class="checkbox">
-													<input type="checkbox" id="cond4">
-													<label for="cond4">Opioids</label>
-												</li>
-											</ul>
-										</fieldset>
+</ul>
 
-										<fieldset class="gc-chckbxrdio">
-											<legend>Type</legend>
-											<ul class="list-unstyled lst-spcd-2">
-												<li class="checkbox">
-													<input type="checkbox" id="cond5">
-													<label for="cond5">Blog post</label>
-												</li>
-												<li class="checkbox">
-													<input type="checkbox" id="cond6">
-													<label for="cond6">Infographic</label>
-												</li>
-												<li class="checkbox">
-													<input type="checkbox" id="cond7">
-													<label for="cond7">Interactive tool</label>
-												</li>
 
-											</ul>
-										</fieldset>
-									</div>
-										<div class="col-md-9">
-											<p>Data tools, infographics, charts and blog posts for public health data.</p>
-											</div>
-                  </div>
 
-              </div>
-            </div>
+
+
+              <div class="wb-filter">
+<section id="articles">
+
+    <ul class="list-unstyled row">
+    <div id="div1" class="targetDiv">
+    <li class="mrgn-bttm-lg">
+      <div class="row">
+        <div class="col-md-2">
+          <img class="img-responsive mrgn-bttm-sm" src="./img/covid-icon-smaller.png" alt=""/>
+        </div>
+        <div class="col-md-10">
+          <h3 class="mrgn-tp-sm"><a href="#">COVID-19 epidemilogy update</a></h3>
+          <p>Detailed data about the spread of virus over time.</p>
       </div>
+      </div>
+    </li>
+    <div id="div1" class="targetDiv">
+    <li class="mrgn-bttm-lg">
+      <div class="row">
+    <div class="col-md-2">
+      <img class="img-responsive mrgn-bttm-sm" src="./img/covid-icon-smaller.png" alt=""/>
+    </div>
+    <div class="col-md-10">
+      <h3 class="mrgn-tp-sm"><a  href="#">COVID-19 vaccination</a></h3>
+      <p>Number of COVID-19 vaccine doses that have been administed in Canada.</p>
+  </div>
+</div>
+</li>
+</div>
 
-      </section>
+<div id="div2" class="targetDiv">
+<li class="mrgn-bttm-lg">
+  <div class="row">
+<div class="col-md-2">
+  <img class="img-responsive mrgn-bttm-sm" src="./img/cypc_smaller.png" alt=""/>
+</div>
+<div class="col-md-10">
+  <h3 class="mrgn-tp-sm"><a  href="#">Cancer in young people in Canada</a></h3>
+  <p>Pan-Canadian surveillance data on cancer in children and youth.</p>
+</div>
+</div>
+</li>
+</div>
+
+		</ul>
+  </section>
+</div>
+
+
+
 
     </div>
 
@@ -986,6 +980,45 @@ h1:before {
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
 
 
+      <script>
+        function covid19(){
+            var element = document.getElementById("covid19");
+            var button = document.getElementById("covid19-button");
+            var color = button.style.backgroundColor;
+
+            color = button.style.backgroundColor = color === '#16446C' ? '#26374A' : '#16446C';
+            if(element.style.display === "none"){
+                element.style.display = "block";
+            }else{
+                element.style.display = "none";
+            }
+        }
+
+        function cancer(){
+            var element = document.getElementById("cancer");
+            var button = document.getElementById("cancer-button");
+            var color = button.style.backgroundColor;
+
+            color = button.style.backgroundColor = color === '#16446C' ? '#26374A' : '#16446C';
+            if(element.style.display === "none"){
+                element.style.display = "block";
+            }else{
+                element.style.display = "none";
+            }
+        }
+
+
+        jQuery(function() {
+          jQuery('#showall').click(function() {
+            jQuery('.targetDiv').show();
+          });
+          jQuery('.showSingle').click(function() {
+            jQuery('.targetDiv').hide();
+            jQuery('#div' + $(this).attr('target')).show();
+          });
+        });
+
+        </script>
 
       </body>
 
