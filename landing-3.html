@@ -479,18 +479,21 @@ h1:before {
 
               <ul class="btn-toolbar list-inline" role="toolbar">
 	<li class="btn-group">
-		<button type="button" class="btn btn-primary" id="showall">All topics</button>
+		<button type="button" class="btn btn-primary" onclick="all-topics()" id="all-topics-button">All topics</button>
 	</li>
   <li class="btn-group">
-		<button type="button" class="btn btn-primary showSingle" target="1">COVID-19</button>
+		<button type="button" class="btn btn-primary" onclick="cancer()" id="cancer-button">Cancer</button>
 	</li>
   <li class="btn-group">
-		<button type="button" class="btn btn-primary showSingle" target="2">Cancer</button>
+		<button type="button" class="btn btn-primary" onclick="covid19()" id="covid19-button">COVID-19</button>
 	</li>
-
+  <li class="btn-group">
+		<button type="button" class="btn btn-primary" onclick="injuries()" id="injuries-button">Injuries</button>
+	</li>
+  <li class="btn-group">
+		<button type="button" class="btn btn-primary" onclick="children()" id="children-button">Childen</button>
+	</li>
 </ul>
-
-
 
 
 
@@ -498,8 +501,8 @@ h1:before {
 <section id="articles">
 
     <ul class="list-unstyled row">
-    <div id="div1" class="targetDiv">
-    <li class="mrgn-bttm-lg">
+
+    <li class="mrgn-bttm-lg covid19">
       <div class="row">
         <div class="col-md-2">
           <img class="img-responsive mrgn-bttm-sm" src="./img/covid-icon-smaller.png" alt=""/>
@@ -510,8 +513,7 @@ h1:before {
       </div>
       </div>
     </li>
-    <div id="div1" class="targetDiv">
-    <li class="mrgn-bttm-lg">
+    <li class="mrgn-bttm-lg covid19">
       <div class="row">
     <div class="col-md-2">
       <img class="img-responsive mrgn-bttm-sm" src="./img/covid-icon-smaller.png" alt=""/>
@@ -522,10 +524,8 @@ h1:before {
   </div>
 </div>
 </li>
-</div>
 
-<div id="div2" class="targetDiv">
-<li class="mrgn-bttm-lg">
+<li class="mrgn-bttm-lg cancer">
   <div class="row">
 <div class="col-md-2">
   <img class="img-responsive mrgn-bttm-sm" src="./img/cypc_smaller.png" alt=""/>
@@ -536,7 +536,6 @@ h1:before {
 </div>
 </div>
 </li>
-</div>
 
 		</ul>
   </section>
@@ -982,41 +981,28 @@ h1:before {
 
       <script>
         function covid19(){
-            var element = document.getElementById("covid19");
-            var button = document.getElementById("covid19-button");
-            var color = button.style.backgroundColor;
-
-            color = button.style.backgroundColor = color === '#16446C' ? '#26374A' : '#16446C';
-            if(element.style.display === "none"){
-                element.style.display = "block";
-            }else{
-                element.style.display = "none";
+            var element = document.getElementsByClassName("covid19");
+            Array.from(element).forEach((x) => {
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
             }
+          })
         }
 
         function cancer(){
-            var element = document.getElementById("cancer");
-            var button = document.getElementById("cancer-button");
-            var color = button.style.backgroundColor;
-
-            color = button.style.backgroundColor = color === '#16446C' ? '#26374A' : '#16446C';
-            if(element.style.display === "none"){
-                element.style.display = "block";
-            }else{
-                element.style.display = "none";
+            var element = document.getElementsByClassName("cancer");
+            Array.from(element).forEach((x) => {
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
             }
+          })
         }
 
 
-        jQuery(function() {
-          jQuery('#showall').click(function() {
-            jQuery('.targetDiv').show();
-          });
-          jQuery('.showSingle').click(function() {
-            jQuery('.targetDiv').hide();
-            jQuery('#div' + $(this).attr('target')).show();
-          });
-        });
 
         </script>
 
