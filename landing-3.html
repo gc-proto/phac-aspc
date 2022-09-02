@@ -483,15 +483,22 @@ h1:before {
   <li class="btn-group">
 		<button type="button" class="btn btn-primary" onclick="cancer()">Cancer</button>
 	</li>
+
+    <li class="btn-group">
+  		<button type="button" class="btn btn-primary" onclick="children()" >Childen</button>
+  	</li>
   <li class="btn-group">
 		<button type="button" class="btn btn-primary" onclick="covid19()">COVID-19</button>
 	</li>
+
+  <li class="btn-group">
+    <button type="button" class="btn btn-primary" onclick="opioids()" >Opioids</button>
+  </li>
+
   <li class="btn-group">
 		<button type="button" class="btn btn-primary" onclick="injuries()">Injuries</button>
 	</li>
-  <li class="btn-group">
-		<button type="button" class="btn btn-primary" onclick="children()" >Childen</button>
-	</li>
+
 </ul>
 
 
@@ -1003,6 +1010,7 @@ h1:before {
             Array.from(element_show).forEach((x) => x.style.display = "block")
           }
 
+
         function cancer(){
           var element = document.querySelectorAll('.article');
           Array.from(element).forEach((x) => x.style.display = "none")
@@ -1014,6 +1022,34 @@ h1:before {
 
 
 
+          function children(){
+            var element = document.querySelectorAll('.article');
+            Array.from(element).forEach((x) => x.style.display = "none")
+
+
+            var element_show = document.getElementsByClassName("children");
+              Array.from(element_show).forEach((x) => x.style.display = "block")
+            }
+
+
+
+            function opioids(){
+              var element = document.querySelectorAll('.article');
+              Array.from(element).forEach((x) => x.style.display = "none")
+
+
+              var element_show = document.getElementsByClassName("opioids");
+                Array.from(element_show).forEach((x) => x.style.display = "block")
+              }
+
+              function injuries(){
+                var element = document.querySelectorAll('.article');
+                Array.from(element).forEach((x) => x.style.display = "none")
+
+
+                var element_show = document.getElementsByClassName("injuries");
+                  Array.from(element_show).forEach((x) => x.style.display = "block")
+                }
 
         </script>
 
