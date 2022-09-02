@@ -454,7 +454,7 @@ h1:before {
 												<img class="img-responsive mrgn-bttm-sm" src="./img/covid-icon-smaller.png" alt=""/>
 											</div>
 											<div class="col-md-9">
-												<h3 class="mrgn-tp-sm"><a href="#">COVID-19 epidemilogy update</a></h3>
+												<h3 class="mrgn-tp-sm"><a href="https://health-infobase.canada.ca/covid-19/">COVID-19 epidemilogy update</a></h3>
 												<p>Detailed data about the spread of virus over time.</p>
 										</div>
 										</div>
@@ -463,7 +463,7 @@ h1:before {
 											<img class="img-responsive mrgn-bttm-sm" src="./img/covid-icon-smaller.png" alt=""/>
 										</div>
 										<div class="col-md-9">
-											<h3 class="mrgn-tp-sm"><a  href="#">COVID-19 vaccination</a></h3>
+											<h3 class="mrgn-tp-sm"><a  href="https://health-infobase.canada.ca/covid-19/vaccine-administration/">COVID-19 vaccination</a></h3>
 											<p>Number of COVID-19 vaccine doses that have been administed in Canada.</p>
 									</div>
 								</div>
@@ -484,9 +484,10 @@ h1:before {
 		<button type="button" class="btn btn-primary" onclick="cancer()">Cancer</button>
 	</li>
 
-    <li class="btn-group">
-  		<button type="button" class="btn btn-primary" onclick="children()" >Childen</button>
-  	</li>
+  <li class="btn-group">
+		<button type="button" class="btn btn-primary" onclick="kids()">Children</button>
+	</li>
+
   <li class="btn-group">
 		<button type="button" class="btn btn-primary" onclick="covid19()">COVID-19</button>
 	</li>
@@ -499,6 +500,10 @@ h1:before {
 		<button type="button" class="btn btn-primary" onclick="injuries()">Injuries</button>
 	</li>
 
+  <li class="btn-group">
+		<button type="button" class="btn btn-primary" onclick="vaccines()">Vaccines</button>
+	</li>
+
 </ul>
 
 
@@ -508,44 +513,87 @@ h1:before {
 
     <ul class="list-unstyled row">
 
-    <li class="mrgn-bttm-lg article covid19 well well-sm">
+    <li class="mrgn-bttm-lg article covid19 well">
       <div class="row">
         <div class="col-md-2">
           <img class="img-responsive mrgn-bttm-sm" src="./img/covid-icon-smaller.png" alt=""/>
         </div>
         <div class="col-md-10">
 
-          <h3 class="mrgn-tp-md"><a href="#">COVID-19 epidemilogy update</a></h3>
-          <p class="small">Last updated: 2022-08-30  <span class="label label-info mrgn-lft-md">COVID-19</span>  <span class="label label-default mrgn-lft-sm">Interactive chart</span></p>
+          <h3 class="mrgn-tp-md"><a href="https://health-infobase.canada.ca/covid-19/">COVID-19 epidemilogy update</a></h3>
+          <p class="small">Last updated: 2022-08-30  <span class="label label-info mrgn-lft-sm">COVID-19</span> <span class="label label-info mrgn-lft-sm">Cases</span> <span class="label label-default mrgn-lft-sm">Interactive chart</span></p>
           <p>Detailed data about the spread of virus over time.</p>
 
       </div>
       </div>
     </li>
-    <li class="mrgn-bttm-lg article covid19 well well-sm">
+    <li class="mrgn-bttm-lg article covid19 vaccines well">
       <div class="row">
     <div class="col-md-2">
       <img class="img-responsive mrgn-bttm-sm" src="./img/covid-icon-smaller.png" alt=""/>
     </div>
     <div class="col-md-10">
 
-      <h3 class="mrgn-tp-md"><a  href="#">COVID-19 vaccination</a></h3>
-      <p class="small">Last updated: 2022-08-26<span class="label label-info mrgn-lft-md">COVID-19</span> <span class="label label-default mrgn-lft-sm">Interactive chart</span></p>
+      <h3 class="mrgn-tp-md"><a  href="https://health-infobase.canada.ca/covid-19/vaccine-administration/">COVID-19 vaccination</a></h3>
+      <p class="small">Last updated: 2022-08-26<span class="label label-info mrgn-lft-sm">COVID-19</span> <span class="label label-info mrgn-lft-sm">Vaccines</span> <span class="label label-default mrgn-lft-sm">Interactive chart</span></p>
       <p>Number of COVID-19 vaccine doses that have been administed in Canada.</p>
   </div>
 </div>
 </li>
 
-<li class="mrgn-bttm-lg article cancer well well-sm">
+<li class="mrgn-bttm-lg article cancer kids well ">
   <div class="row">
 <div class="col-md-2">
   <img class="img-responsive mrgn-bttm-sm" src="./img/cypc_smaller.png" alt=""/>
 </div>
 <div class="col-md-10">
 
-  <h3 class="mrgn-tp-md"><a  href="#">Cancer in young people in Canada</a></h3>
-  <p class="small">Last updated: 2022-06-30<span class="label label-info mrgn-lft-md">Cancer</span> <span class="label label-default mrgn-lft-sm">Infographic</span></p>
+  <h3 class="mrgn-tp-md"><a  href="https://health-infobase.canada.ca/data-tools/cypc/">Cancer in young people in Canada</a></h3>
+  <p class="small">Last updated: 2022-06-30<span class="label label-info mrgn-lft-sm">Cancer</span>  <span class="label label-info mrgn-lft-sm">Children</span><span class="label label-default mrgn-lft-sm">Infographic</span></p>
   <p>Pan-Canadian surveillance data on cancer in children and youth.</p>
+</div>
+</div>
+</li>
+
+<li class="mrgn-bttm-lg article covid19 vaccines well">
+  <div class="row">
+<div class="col-md-2">
+  <img class="img-responsive mrgn-bttm-sm" src="./img/covid-icon-smaller.png" alt=""/>
+</div>
+<div class="col-md-10">
+
+  <h3 class="mrgn-tp-md"><a  href="https://health-infobase.canada.ca/covid-19/vaccination-coverage/">COVID-19 vaccination in Canada:Vaccination coverage</a></h3>
+  <p class="small">Last updated: 2022-08-19<span class="label label-info mrgn-lft-sm">COVID-19</span> <span class="label label-info mrgn-lft-sm">Vaccines</span> <span class="label label-default mrgn-lft-sm">Interactive chart</span></p>
+  <p>number and percentage of people that have received a COVID-19 vaccine in Canada by province or territory, vaccination status, sex, age group, and vaccine series.</p>
+</div>
+</div>
+</li>
+
+<li class="mrgn-bttm-lg article covid19 vaccines well">
+  <div class="row">
+<div class="col-md-2">
+  <img class="img-responsive mrgn-bttm-sm" src="./img/covid-icon-smaller.png" alt=""/>
+</div>
+<div class="col-md-10">
+
+  <h3 class="mrgn-tp-md"><a  href="https://health-infobase.canada.ca/covid-19/vaccine-safety/">Reported side effects following COVID-19 vaccination in Canada</a></h3>
+  <p class="small">Last updated: 2022-08-19<span class="label label-info mrgn-lft-sm">COVID-19</span> <span class="label label-info mrgn-lft-sm">Vaccines</span> <span class="label label-default mrgn-lft-sm">Interactive chart</span></p>
+  <p>detailed case information data from the Public Health Agency of Canada’s Canadian Adverse Events Following Immunization Surveillance System (CAEFISS) and Health Canada’s Canada Vigilance program.</p>
+</div>
+</div>
+</li>
+
+
+<li class="mrgn-bttm-lg article opioids well">
+  <div class="row">
+<div class="col-md-2">
+  <img class="img-responsive mrgn-bttm-sm" src="./img/opiDeaths_smaller.png" alt=""/>
+</div>
+<div class="col-md-10">
+
+  <h3 class="mrgn-tp-md"><a  href="https://health-infobase.canada.ca/substance-related-harms/opioids-stimulants/">Opioid- and Stimulant-Related Harms in Canada</a></h3>
+  <p class="small">Last updated: 2022-08-19<span class="label label-info mrgn-lft-sm">Opioids</span> <span class="label label-default mrgn-lft-sm">Interactive chart</span></p>
+  <p>Canada continues to experience a serious opioid crisis. Across the country, it is having devastating effects on families and communities. </p>
 </div>
 </div>
 </li>
@@ -1022,18 +1070,18 @@ h1:before {
 
 
 
-          function children(){
-            var element = document.querySelectorAll('.article');
-            Array.from(element).forEach((x) => x.style.display = "none")
+          function kids(){
+                var element = document.querySelectorAll('.article');
+                Array.from(element).forEach((x) => x.style.display = "none")
 
 
-            var element_show = document.getElementsByClassName("children");
-              Array.from(element_show).forEach((x) => x.style.display = "block")
-            }
+                var element_show = document.getElementsByClassName("kids");
+                  Array.from(element_show).forEach((x) => x.style.display = "block")
+                }
 
 
 
-            function opioids(){
+        function opioids(){
               var element = document.querySelectorAll('.article');
               Array.from(element).forEach((x) => x.style.display = "none")
 
@@ -1042,7 +1090,7 @@ h1:before {
                 Array.from(element_show).forEach((x) => x.style.display = "block")
               }
 
-              function injuries(){
+          function injuries(){
                 var element = document.querySelectorAll('.article');
                 Array.from(element).forEach((x) => x.style.display = "none")
 
@@ -1051,6 +1099,15 @@ h1:before {
                   Array.from(element_show).forEach((x) => x.style.display = "block")
                 }
 
+
+                function vaccines(){
+                      var element = document.querySelectorAll('.article');
+                      Array.from(element).forEach((x) => x.style.display = "none")
+
+
+                      var element_show = document.getElementsByClassName("vaccines");
+                        Array.from(element_show).forEach((x) => x.style.display = "block")
+                      }
         </script>
 
       </body>
