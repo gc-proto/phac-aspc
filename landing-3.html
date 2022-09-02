@@ -479,19 +479,19 @@ h1:before {
 
               <ul class="btn-toolbar list-inline" role="toolbar">
 	<li class="btn-group">
-		<button type="button" class="btn btn-primary" onclick="all-topics()" id="all-topics-button">All topics</button>
+		<button type="button" class="btn btn-primary" onclick="all_topics()">All topics</button>
 	</li>
   <li class="btn-group">
-		<button type="button" class="btn btn-primary" onclick="cancer()" id="cancer-button">Cancer</button>
+		<button type="button" class="btn btn-primary" onclick="cancer()">Cancer</button>
 	</li>
   <li class="btn-group">
-		<button type="button" class="btn btn-primary" onclick="covid19()" id="covid19-button">COVID-19</button>
+		<button type="button" class="btn btn-primary" onclick="covid19()">COVID-19</button>
 	</li>
   <li class="btn-group">
-		<button type="button" class="btn btn-primary" onclick="injuries()" id="injuries-button">Injuries</button>
+		<button type="button" class="btn btn-primary" onclick="injuries()">Injuries</button>
 	</li>
   <li class="btn-group">
-		<button type="button" class="btn btn-primary" onclick="children()" id="children-button">Childen</button>
+		<button type="button" class="btn btn-primary" onclick="children()" >Childen</button>
 	</li>
 </ul>
 
@@ -980,8 +980,21 @@ h1:before {
 
 
       <script>
+
+      function all_topics(){
+          var element = document.querySelectorAll('.cancer, .covid19');
+          Array.from(element).forEach((x) => {
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        })
+      }
+
+
         function covid19(){
-            var element = document.getElementsByClassName("covid19");
+            var element = document.getElementsByClassName("cancer");
             Array.from(element).forEach((x) => {
             if (x.style.display === "none") {
               x.style.display = "block";
@@ -992,7 +1005,7 @@ h1:before {
         }
 
         function cancer(){
-            var element = document.getElementsByClassName("cancer");
+            var element = document.getElementsByClassName("covid19");
             Array.from(element).forEach((x) => {
             if (x.style.display === "none") {
               x.style.display = "block";
