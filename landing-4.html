@@ -208,86 +208,6 @@ h1 span.stacked span:nth-child(2) {
 	}
 
 
-	.cm-facet-form-search {
-	    font-family: Noto Sans;
-	    font-style: normal;
-	    font-weight: bold;
-	    font-size: 20px;
-	    line-height: 27px;
-	    color: #26374A;
-	    padding-left: 15px;
-	    padding-top: 9px;
-	    padding-bottom: 25px;
-	    margin-left: auto;
-	    margin-right: auto;
-	    text-align: center;
-	}
-
-	.cm-facet-form-search-inner {
-	    position: relative;
-	    display: inline-block;
-	}
-
-
-	  .cm-facet-form-search #cm_text_search {
-	    background-image: url(../images/211818_search_icon.png);
-	    background-repeat: no-repeat;
-	    background-position: 3%;
-	    color: #000000;
-	    font-family: Noto Sans;
-	    font-style: normal;
-	    font-weight: normal;
-	    font-size: 15px;
-	    line-height: 20px;
-	    padding-left: 65px;
-	    padding-right: 240px;
-	    height: 60px;
-	    width: 650px;
-	    border-radius: 50px;
-	    border: 0.5px solid rgba(78, 91, 115, 0.5);
-	    box-shadow: 0px 8px 16px rgb(38 55 74 / 10%);
-	}
-
-
-	.cm-facet-form-search .btn-primary {
-	    font-family: Noto Sans;
-	    font-style: normal;
-	    font-weight: bold;
-	    font-size: 18px;
-	    line-height: 25px;
-	    background-color: #26374A;
-	    border: 2px solid #FFFFFF;
-	    border-radius: 0;
-	    color: #FFFFFF;
-	    position: absolute;
-	    right: 10px;
-	    top: 7px;
-	    padding: 1px 12px 1px 12px;
-	    height: 45px;
-	    border-radius: 50px;
-	    width: 174px;
-	    display: inline;
-	}
-
-	.cm-facet-form-search .btn-clear-search {
-	    font-family: Noto Sans;
-	    font-style: normal;
-	    font-weight: bold;
-	    font-size: 18px;
-	    line-height: 25px;
-	    background-color: #26374A;
-	    border: 2px solid #FFFFFF;
-	    border-radius: 0;
-	    color: #FFFFFF;
-	    position: absolute;
-	    right: 185px;
-	    top: 7px;
-	    padding: 1px 12px 1px 12px;
-	    height: 45px;
-	    border-radius: 50px;
-	    width: 45px;
-	    display: none;
-	}
 
 	.fa-tachometer-alt  {
 	  color: white;
@@ -303,13 +223,27 @@ h1 span.stacked span:nth-child(2) {
 
   .btn-block {
 	  background-color: #FFF;
-    border : 0;
+    border : 5 px;
 	}
 
   .light-blue-header {
 	background-color: #D7FAFF;
 	}
 
+.or_circle {
+      display: block;
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+
+      -moz-border-radius: 30px; /* or 50% */
+      border-radius: 30px; /* or 50% */
+
+      background-color: #26374A;
+      color: white;
+      text-align: center;
+      font-size: 1.5em;
+  }
 </style>
 
 <body>
@@ -424,8 +358,8 @@ h1 span.stacked span:nth-child(2) {
 			<div class="row">
 				<div class="col-md-6">
 
-          <h1 property="name" id="wb-cont" dir="ltr"><span class="stacked"><span>Public health data in Canada</span>: <span>Public Health Infobase</span></span></h1>
-					<p>Data tools, infographics, charts and blog posts for public health data.</p>
+          <h1 property="name" id="wb-cont" dir="ltr"><span class="stacked"><span>Halth data in Canada</span>: <span>Health Infobase</span></span></h1>
+					<p>Data tools, infographics, charts and blog posts about health data in Canada.</p>
 				</div>
 				<div class="col-md-6 mrgn-tp-sm hidden-sm hidden-xs mrgn-bttm-lg">
 					<span class="fas fa-tachometer-alt text-default fa-5x mrgn-lft-xl"></span> <span class="fas fa-chart-bar text-default fa-5x mrgn-lft-xl mrgn-tp-lg"></span>  <span class="fas fa-chart-pie text-default fa-5x mrgn-lft-xl"></span>
@@ -443,12 +377,12 @@ h1 span.stacked span:nth-child(2) {
               <div class="container mrgn-tp-md">
                 <div class="row">
                   <div class="col-sm-12 col-md-12">
-                    <h2 class="mrgn-bttm-md">Featured</h2>
+                    <h2 class="h3 mrgn-bttm-md mrgn-tp-0">Featured</h2>
 
 										<div class="row">
 											<div class="col-md-6">
-											<div class="col-md-3">
-												<img class="img-responsive mrgn-bttm-sm" src="./img/covid-icon-smaller.png" alt=""/>
+											<div class="col-md-3 hidden-sm hidden-xs">
+												<img class="img-responsive mrgn-bttm-sm" src="./img/covid_featured.png" alt=""/>
 											</div>
 											<div class="col-md-9">
 												<h3 class="mrgn-tp-sm"><a href="https://health-infobase.canada.ca/covid-19/">COVID-19 epidemilogy update</a></h3>
@@ -456,8 +390,8 @@ h1 span.stacked span:nth-child(2) {
 										</div>
 										</div>
 										<div class="col-md-6">
-										<div class="col-md-3">
-											<img class="img-responsive mrgn-bttm-sm" src="./img/covid-icon-smaller.png" alt=""/>
+										<div class="col-md-3 hidden-sm hidden-xs">
+											<img class="img-responsive mrgn-bttm-sm" src="./img/vaccine_featured.png" alt=""/>
 										</div>
 										<div class="col-md-9">
 											<h3 class="mrgn-tp-sm"><a  href="https://health-infobase.canada.ca/covid-19/vaccine-administration/">COVID-19 vaccination</a></h3>
@@ -471,107 +405,94 @@ h1 span.stacked span:nth-child(2) {
             </section>
 
 
-<section class="light-blue-header well well-sm brdr-0 mrgn-bttm-0">
-              <div class="container mrgn-tp-md">
-
-
-
-                <div class="row">
-                  <div class="col-sm-12 col-md-12">
-                    <h2 class="mrgn-bttm-md">Top topics</h2>
-
-      <div class="row">
-	<div class="col-sm-12">
-		<ul class="list-unstyled row text-center wb-eqht">
-			<li class="col-sm-2">
-				<a onclick="covid19()" href="#search" class="btn btn-default btn-block well hght-inhrt">
-					<div class="row">
-						<div class="col-sm-12 col-xs-3">
-							<img src="./img/covid.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
-						</div>
-						<div class="col-sm-12 col-xs-9">
-							<p class="mrgn-bttm-0"><strong class="h2">COVID19</strong></p>
-						</div>
-					</div>
-				</a>
-			</li>
-      <li class="col-sm-2">
-        <a onclick="opioids()" href="#search" class="btn btn-default btn-block well hght-inhrt">
-          <div class="row">
-            <div class="col-sm-12 col-xs-3">
-              <img src="./img/opioids.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
-            </div>
-            <div class="col-sm-12 col-xs-9">
-              <p class="mrgn-bttm-0"><strong class="h2">Opioids</strong></p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="col-sm-2">
-        <a onclick="cancer()" href="#search" class="btn btn-default btn-block well hght-inhrt">
-          <div class="row">
-            <div class="col-sm-12 col-xs-3">
-              <img src="./img/Cancer.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
-            </div>
-            <div class="col-sm-12 col-xs-9">
-              <p class="mrgn-bttm-0"><strong class="h2">Cancer</strong></p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="col-sm-2">
-        <a onclick="vaccines()" href="#search" class="btn btn-default btn-block well hght-inhrt">
-          <div class="row">
-            <div class="col-sm-12 col-xs-3">
-              <img src="./img/vaccine.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
-            </div>
-            <div class="col-sm-12 col-xs-9">
-              <p class="mrgn-bttm-0"><strong class="h2">Vaccines</strong></p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="col-sm-2">
-        <a onclick="kids()" href="#search" class="btn btn-default btn-block well hght-inhrt">
-          <div class="row">
-            <div class="col-sm-12 col-xs-3">
-              <img src="./img/kids.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
-            </div>
-            <div class="col-sm-12 col-xs-9">
-              <p class="mrgn-bttm-0"><strong class="h2">Children</strong></p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="col-sm-2">
-        <a onclick="injuries()" href="#search" class="btn btn-default btn-block well hght-inhrt">
-          <div class="row">
-            <div class="col-sm-12 col-xs-3">
-              <img src="./img/injury.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
-            </div>
-            <div class="col-sm-12 col-xs-9">
-              <p class="mrgn-bttm-0"><strong class="h2">Injuries</strong></p>
-            </div>
-          </div>
-        </a>
-      </li>
-
-		</ul>
-	</div>
-</div>
-
-
-
-                  </div>
-                </div>
-              </div>
-</section>
             <div class="container">
-              <h2 id="search">Search all of Public Health Infobase</h2>
+              <h2>Search all of Health Infobase</h2>
 
+              <h3>Filter by top topic</h3>
+              <div class="row">
+        	<div class="col-sm-12">
+        		<ul class="list-unstyled row text-center wb-eqht">
+        			<li class="col-sm-2">
+        				<a onclick="covid19()" href="#search" class="btn btn-default btn-block well hght-inhrt">
+        					<div class="row">
+        						<div class="col-sm-12 col-xs-3">
+        							<img src="./img/covid.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
+        						</div>
+        						<div class="col-sm-12 col-xs-9">
+        							<p class="mrgn-bttm-0"><strong class="h2">COVID19</strong></p>
+        						</div>
+        					</div>
+        				</a>
+        			</li>
+              <li class="col-sm-2">
+                <a onclick="opioids()" href="#search" class="btn btn-default btn-block well hght-inhrt">
+                  <div class="row">
+                    <div class="col-sm-12 col-xs-3">
+                      <img src="./img/opioids.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
+                    </div>
+                    <div class="col-sm-12 col-xs-9">
+                      <p class="mrgn-bttm-0"><strong class="h2">Opioids</strong></p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="col-sm-2">
+                <a onclick="cancer()" href="#search" class="btn btn-default btn-block well hght-inhrt">
+                  <div class="row">
+                    <div class="col-sm-12 col-xs-3">
+                      <img src="./img/Cancer.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
+                    </div>
+                    <div class="col-sm-12 col-xs-9">
+                      <p class="mrgn-bttm-0"><strong class="h2">Cancer</strong></p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="col-sm-2">
+                <a onclick="vaccines()" href="#search" class="btn btn-default btn-block well hght-inhrt">
+                  <div class="row">
+                    <div class="col-sm-12 col-xs-3">
+                      <img src="./img/vaccine.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
+                    </div>
+                    <div class="col-sm-12 col-xs-9">
+                      <p class="mrgn-bttm-0"><strong class="h2">Vaccines</strong></p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="col-sm-2">
+                <a onclick="kids()" href="#search" class="btn btn-default btn-block well hght-inhrt">
+                  <div class="row">
+                    <div class="col-sm-12 col-xs-3">
+                      <img src="./img/kids.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
+                    </div>
+                    <div class="col-sm-12 col-xs-9">
+                      <p class="mrgn-bttm-0"><strong class="h2">Children</strong></p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="col-sm-2">
+                <a onclick="injuries()" href="#search" class="btn btn-default btn-block well hght-inhrt">
+                  <div class="row">
+                    <div class="col-sm-12 col-xs-3">
+                      <img src="./img/injury.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
+                    </div>
+                    <div class="col-sm-12 col-xs-9">
+                      <p class="mrgn-bttm-0"><strong class="h2">Injuries</strong></p>
+                    </div>
+                  </div>
+                </a>
+              </li>
 
+        		</ul>
+        	</div>
+        </div>
 
-              <div class="wb-filter">
+      <p class = "or_circle">or</p>
+        <h3>Filter by keyword</h3>
+              <div class="wb-filter" id="search">
+              		<button type="button" class="btn btn-primary mrgn-bttm-lg" onclick="all_topics()">See all topics</button>
 <section id="articles">
 
     <ul class="list-unstyled row">
