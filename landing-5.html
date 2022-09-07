@@ -400,22 +400,22 @@ h1 span.stacked span:nth-child(2) {
 
 
               <div class="wb-filter" id="search">
-                <p class="h4">Filter by topic:
+                <p class="h4">Select topic(s):
                 <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="all_topics()">All topics</button>
-                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="covid19()"><img src="./img/covid.png" width="25" height="25"/> COVID-19</button>
-                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="opioids()"><img src="./img/opioids.png" width="25" height="25"/> Opioids</button>
-                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="cancer()"><img src="./img/Cancer.png" width="25" height="25"/> Cancer</button>
-                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="vaccines()"><img src="./img/vaccine.png" width="25" height="25"/> Vaccines</button>
-                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="kids()"><img src="./img/kids.png" width="25" height="25"/> Children</button>
-                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="injuries()"><img src="./img/injury.png" width="25" height="25"/> Injuries</button>
+                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="covid19()"><img src="./img/covid.png" width="25" height="25"/> COVID-19 (8)</button>
+                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="opioids()"><img src="./img/opioids.png" width="25" height="25"/> Opioids (2)</button>
+                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="cancer()"><img src="./img/Cancer.png" width="25" height="25"/> Cancer (1)</button>
+                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="vaccines()"><img src="./img/vaccine.png" width="25" height="25"/> Vaccines (3)</button>
+                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="kids()"><img src="./img/kids.png" width="25" height="25"/> Children (1)</button>
+                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="injuries()"><img src="./img/injury.png" width="25" height="25"/> Injuries(0)</button>
 
                 </p>
 
-                <p class="h4 mrgn-bttm-0">Filter type:
-                <button type="button" class="btn btn-default mrgn-bttm-lg mrgn-lft-lg" onclick="all_types()">All types</button>
-                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="chart()"><img src="./img/chart_icon.png" width="25" height="25"/> Interactive chart</button>
-                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="infographic()"><img src="./img/infographic.png" width="25" height="25"/> Infographic</button>
-                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="blog()"><img src="./img/blog.png" width="25" height="25"/> Blog</button>
+                <p class="h4 mrgn-bttm-0">Select type(s):
+                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="all_types()">All types</button>
+                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="chart()"><img src="./img/chart_icon.png" width="25" height="25"/> Interactive chart (5)</button>
+                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="infographic()"><img src="./img/infographic.png" width="25" height="25"/> Infographic (1)</button>
+                <button type="button" class="btn btn-default mrgn-bttm-lg" onclick="blog()"><img src="./img/blog.png" width="25" height="25"/> Blog (0)</button>
 
                 </p>
 
@@ -427,57 +427,92 @@ h1 span.stacked span:nth-child(2) {
 
     <ul class="list-unstyled row">
 
-    <li class="mrgn-bttm-lg article covid19 chart well">
 
-
+      <li class="mrgn-bttm-lg article covid19 chart well">
+        <div class="row">
+          <div class="col-md-2">
+            <img class="img-responsive mrgn-bttm-sm" src="./img/covid_featured.png" alt=""/>
+          </div>
+          <div class="col-md-10">
           <h3 class="mrgn-tp-md"><a href="https://health-infobase.canada.ca/covid-19/">COVID-19 epidemiology update</a></h3>
           <p class="small">Last updated: 2022-08-30  </p>
           <p>Detailed data about the spread of virus over time.</p>
           <span class="label label-info mrgn-lft-sm"><img src="./img/covid.png" width="20" height="20"/> COVID-19</span> <span class="label label-default mrgn-lft-sm"><img src="./img/chart_icon.png" width="20" height="20"/> Interactive chart</span>
-
+        </div>
+        </div>
     </li>
     <li class="mrgn-bttm-lg article covid19 vaccines chart well">
+
+      <div class="row">
+        <div class="col-md-2">
+          <img class="img-responsive mrgn-bttm-sm" src="./img/vaccine_featured.png" alt=""/>
+        </div>
+        <div class="col-md-10">
       <h3 class="mrgn-tp-md"><a  href="https://health-infobase.canada.ca/covid-19/vaccine-administration/">COVID-19 vaccination</a></h3>
       <p class="small">Last updated: 2022-08-26</p>
       <p>Number of COVID-19 vaccine doses that have been administed in Canada.</p>
       <span class="label label-info mrgn-lft-sm"><img src="./img/covid.png" width="20" height="20"/> COVID-20</span> <span class="label label-info mrgn-lft-sm"><img src="./img/vaccine.png" width="20" height="20"/> Vaccines</span> <span class="label label-default mrgn-lft-sm"><img src="./img/chart_icon.png" width="20" height="20"/> Interactive chart</span>
-
+    </div>
+    </div>
 </li>
 
 <li class="mrgn-bttm-lg article cancer kids infographic well ">
-
+  <div class="row">
+    <div class="col-md-2">
+      <img class="img-responsive mrgn-bttm-sm" src="./img/cancer_featured.png" alt=""/>
+    </div>
+    <div class="col-md-10">
   <h3 class="mrgn-tp-md"><a  href="https://health-infobase.canada.ca/data-tools/cypc/">Cancer in young people in Canada</a></h3>
   <p class="small">Last updated: 2022-06-30</p>
   <p>Pan-Canadian surveillance data on cancer in children and youth.</p>
   <span class="label label-info mrgn-lft-sm"><img src="./img/Cancer.png" width="20" height="20"/> Cancer</span> <span class="label label-info mrgn-lft-sm"><img src="./img/kids.png" width="20" height="20"/> Children</span><span class="label label-default mrgn-lft-sm"><img src="./img/infographic.png" width="20" height="20"/> Infographic</span>
-
+</div>
+</div>
 </li>
 
 <li class="mrgn-bttm-lg article covid19 vaccines chart well">
 
-
+  <div class="row">
+    <div class="col-md-2">
+      <img class="img-responsive mrgn-bttm-sm" src="./img/vaccine_featured.png" alt=""/>
+    </div>
+    <div class="col-md-10">
   <h3 class="mrgn-tp-md"><a  href="https://health-infobase.canada.ca/covid-19/vaccination-coverage/">COVID-19 vaccination in Canada:Vaccination coverage</a></h3>
-  <p class="small">Last updated: 2022-08-19<span class="label label-info mrgn-lft-sm"><img src="./img/covid.png" width="20" height="20"/> COVID-20</span> <span class="label label-info mrgn-lft-sm"><img src="./img/vaccine.png" width="20" height="20"/> Vaccines</span> <span class="label label-default mrgn-lft-sm"><img src="./img/chart_icon.png" width="20" height="20"/> Interactive chart</span>
+  <p class="small">Last updated: 2022-08-19</p>
   <p>number and percentage of people that have received a COVID-19 vaccine in Canada by province or territory, vaccination status, sex, age group, and vaccine series.</p>
   <span class="label label-info mrgn-lft-sm"><img src="./img/covid.png" width="20" height="20"/> COVID-20</span> <span class="label label-info mrgn-lft-sm"><img src="./img/vaccine.png" width="20" height="20"/> Vaccines</span> <span class="label label-default mrgn-lft-sm"><img src="./img/chart_icon.png" width="20" height="20"/> Interactive chart</span>
+</div>
+</div>
 </li>
 
 <li class="mrgn-bttm-lg article covid19 vaccines chart well">
 
-
+  <div class="row">
+    <div class="col-md-2">
+      <img class="img-responsive mrgn-bttm-sm" src="./img/vaccine_featured.png" alt=""/>
+    </div>
+    <div class="col-md-10">
   <h3 class="mrgn-tp-md"><a  href="https://health-infobase.canada.ca/covid-19/vaccine-safety/">Reported side effects following COVID-19 vaccination in Canada</a></h3>
   <p class="small">Last updated: 2022-08-19
   <p>detailed case information data from the Public Health Agency of Canada’s Canadian Adverse Events Following Immunization Surveillance System (CAEFISS) and Health Canada’s Canada Vigilance program.</p>
   <span class="label label-info mrgn-lft-sm"><img src="./img/covid.png" width="20" height="20"/> COVID-20</span> <span class="label label-info mrgn-lft-sm"><img src="./img/vaccine.png" width="20" height="20"/> Vaccines</span> <span class="label label-default mrgn-lft-sm"><img src="./img/chart_icon.png" width="20" height="20"/> Interactive chart</span>
+</div>
+</div>
 </li>
 
 
 <li class="mrgn-bttm-lg article opioids chart well">
-
+  <div class="row">
+    <div class="col-md-2">
+      <img class="img-responsive mrgn-bttm-sm" src="./img/opioids_featured.png" alt=""/>
+    </div>
+    <div class="col-md-10">
   <h3 class="mrgn-tp-md"><a  href="https://health-infobase.canada.ca/substance-related-harms/opioids-stimulants/">Opioid- and Stimulant-Related Harms in Canada</a></h3>
   <p class="small">Last updated: 2022-08-19</p>
   <p>Canada continues to experience a serious opioid crisis. Across the country, it is having devastating effects on families and communities. </p>
 <span class="label label-info mrgn-lft-sm">Opioids</span>  <span class="label label-default mrgn-lft-sm"><img src="./img/chart_icon.png" width="20" height="20"/> Interactive chart</span>
+</div>
+</div>
 </li>
 
 		</ul>
