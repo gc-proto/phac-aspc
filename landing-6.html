@@ -235,12 +235,42 @@ h1 span.stacked span:nth-child(2) {
   }
 
 
-  .details summary {
-    border: 0px solid #ddd;
-    border-radius: 4px;
-    color: #295376;
-    padding: 5px 15px;
+  .accordion {
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-weight: bold;
+  }
+
+  .active, .accordion:hover {
+  background-color: #ccc;
 }
+
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
 </style>
 
 <body>
@@ -495,10 +525,9 @@ h1 span.stacked span:nth-child(2) {
                 <div class="col-md-4">
                   <h3>Filters</h3>
                   <h3>By topic</h3>
-                  <ul class="list-unstyled">
-                   <li>
-                    <details>
-                     <summary>Diseases and illnesses</summary>
+                  <button class="accordion">Diseases and illnesses</button>
+                     <div class="panel">
+
                   <fieldset class="gc-chckbxrdio">
                     <ul class="list-unstyled lst-spcd-2">
                       <li class="checkbox">
@@ -523,12 +552,10 @@ h1 span.stacked span:nth-child(2) {
                       </li>
                     </ul>
                   </fieldset>
-                </details>
-              </li>
+                </div>
 
-              <li>
-               <details>
-                <summary>Environmental factors</summary>
+              <button class="accordion">Environmental factors</button>
+                 <div class="panel">
              <fieldset class="gc-chckbxrdio">
                <ul class="list-unstyled lst-spcd-2">
 
@@ -574,12 +601,10 @@ h1 span.stacked span:nth-child(2) {
                  </li>
                </ul>
              </fieldset>
-           </details>
-         </li>
+           </div>
 
-         <li>
-          <details>
-           <summary>Injuries</summary>
+         <button class="accordion">Injuries</button>
+            <div class="panel">
         <fieldset class="gc-chckbxrdio">
           <ul class="list-unstyled lst-spcd-2">
             <li class="checkbox">
@@ -601,12 +626,10 @@ h1 span.stacked span:nth-child(2) {
 
           </ul>
         </fieldset>
-      </details>
-    </li>
+      </div>
 
-    <li>
-     <details>
-      <summary>Live events</summary>
+    <button class="accordion">Life events</button>
+       <div class="panel">
    <fieldset class="gc-chckbxrdio">
      <ul class="list-unstyled lst-spcd-2">
        <li class="checkbox">
@@ -624,12 +647,10 @@ h1 span.stacked span:nth-child(2) {
 
      </ul>
    </fieldset>
- </details>
-</li>
+ </div>
 
-<li>
- <details>
-  <summary>Population</summary>
+<button class="accordion">Population</button>
+   <div class="panel">
 <fieldset class="gc-chckbxrdio">
  <ul class="list-unstyled lst-spcd-2">
    <li class="checkbox">
@@ -656,12 +677,10 @@ h1 span.stacked span:nth-child(2) {
 
  </ul>
 </fieldset>
-</details>
-</li>
+</div>
 
-<li>
- <details>
-  <summary>Substance use</summary>
+<button class="accordion">Substance use</button>
+   <div class="panel">
 <fieldset class="gc-chckbxrdio">
  <ul class="list-unstyled lst-spcd-2">
    <li class="checkbox">
@@ -697,11 +716,9 @@ h1 span.stacked span:nth-child(2) {
 
  </ul>
 </fieldset>
-</details>
-</li>
-   <li>
-    <details>
-     <summary>Treatments</summary>
+</div>
+<button class="accordion">Treatment</button>
+   <div class="panel">
    <fieldset class="gc-chckbxrdio">
     <ul class="list-unstyled lst-spcd-2">
       <li class="checkbox">
@@ -718,11 +735,9 @@ h1 span.stacked span:nth-child(2) {
       </li>
  </ul>
 </fieldset>
-</details>
-</li>
+</div>
 
 
-      </ul>
 
 <h3>By type</h3>
                   <fieldset class="gc-chckbxrdio">
@@ -1276,6 +1291,26 @@ h1 span.stacked span:nth-child(2) {
                         Array.from(element_show).forEach((x) => x.style.display = "block")
                       }
 
+
+                      var acc = document.getElementsByClassName("accordion");
+
+                      var i;
+
+                      for (i = 0; i < acc.length; i++) {
+                        acc[i].addEventListener("click", function() {
+                          /* Toggle between adding and removing the "active" class,
+                          to highlight the button that controls the panel */
+                          this.classList.toggle("active");
+
+                          /* Toggle between hiding and showing the active panel */
+                          var panel = this.nextElementSibling;
+                          if (panel.style.display === "block") {
+                            panel.style.display = "none";
+                          } else {
+                            panel.style.display = "block";
+                          }
+                        });
+                      }
 
         </script>
 
