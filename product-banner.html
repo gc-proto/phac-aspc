@@ -229,7 +229,7 @@ h1 span.stacked span:nth-child(2) {
 
 
   .btn-default {
-  border-radius: 20px;
+  border-radius: 30px;
   font-weight: bold;
   background-color: #FFF;
 
@@ -769,6 +769,29 @@ h1 span.stacked span:nth-child(2) {
    	    width: 45px;
    	    display: none;
    	}
+
+
+
+.app-name {
+  float: left;
+  font-size: 28px;
+  margin-bottom: 20px;
+  margin-top: 8px;
+  padding: 5px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  width:100%;
+}
 </style>
 
 <body>
@@ -877,107 +900,27 @@ h1 span.stacked span:nth-child(2) {
 
 
             <section class="blue-header well well-sm brdr-0 mrgn-bttm-0">
-						<div class="container">
-<div class="row">
-  <div class="col-md-4">
-          <h1 class="h1banner">Health Infobase</h1>
+						<div class="container topnav">
+              <div class="row">
+                <div class="col-md-4">
+          <h2 class="app-name">Health Infobase</h2>
           </div>
           <div class="col-md-8">
-        <div class="cm-facet-form-search" id="cm-srch">
-  <div class="cm-facet-form-search-inner">
-<input type="text" class="input-large" name="cm_text_search" id="cm_text_search" placeholder="Search the Public Health Infobase" autocomplete="off"
-value="" data-matomo-unmask>
+          <input type="text" placeholder="Search the Health Infobase">
 
-<input type="submit" class="btn btn-primary" id="cm_text_search_submit" name="cm_text_search_submit" value="Search now">
 </div>
 </div>
-</div>
-  <div class="col-sm-12">
-    <ul class="list-unstyled row text-center wb-eqht">
-      <li class="col-sm-2">
-        <a onclick="covid19()" href="#search" class="btn btn-default btn-block well hght-inhrt">
-          <div class="row">
-            <div class="col-sm-12 col-xs-3">
-              <img src="./img/covid.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
-            </div>
-            <div class="col-sm-12 col-xs-9">
-              <p class="mrgn-bttm-0"><strong class="h3">COVID19</strong></p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="col-sm-2">
-        <a onclick="opioids()" href="#search" class="btn btn-default btn-block well hght-inhrt">
-          <div class="row">
-            <div class="col-sm-12 col-xs-3">
-              <img src="./img/opioids.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
-            </div>
-            <div class="col-sm-12 col-xs-9">
-              <p class="mrgn-bttm-0"><strong class="h3">Opioids</strong></p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="col-sm-2">
-        <a onclick="cancer()" href="#search" class="btn btn-default btn-block well hght-inhrt">
-          <div class="row">
-            <div class="col-sm-12 col-xs-3">
-              <img src="./img/Cancer.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
-            </div>
-            <div class="col-sm-12 col-xs-9">
-              <p class="mrgn-bttm-0"><strong class="h3">Cancer</strong></p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="col-sm-2">
-        <a onclick="vaccines()" href="#search" class="btn btn-default btn-block well hght-inhrt">
-          <div class="row">
-            <div class="col-sm-12 col-xs-3">
-              <img src="./img/vaccine.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
-            </div>
-            <div class="col-sm-12 col-xs-9">
-              <p class="mrgn-bttm-0"><strong class="h3">Vaccines</strong></p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="col-sm-2">
-        <a onclick="kids()" href="#search" class="btn btn-default btn-block well hght-inhrt">
-          <div class="row">
-            <div class="col-sm-12 col-xs-3">
-              <img src="./img/kids.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
-            </div>
-            <div class="col-sm-12 col-xs-9">
-              <p class="mrgn-bttm-0"><strong class="h3">Children</strong></p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="col-sm-2">
-        <a onclick="injuries()" href="#search" class="btn btn-default btn-block well hght-inhrt">
-          <div class="row">
-            <div class="col-sm-12 col-xs-3">
-              <img src="./img/injury.png" class="img-responsive center-block mrgn-bttm-md" alt="" />
-            </div>
-            <div class="col-sm-12 col-xs-9">
-              <p class="mrgn-bttm-0"><strong class="h3">Injuries</strong></p>
-            </div>
-          </div>
-        </a>
-      </li>
 
-    </ul>
-  </div>
-</div>
-			</div>
-		</div>
-
-		</section>
-
-						<div class="container">
-
-
+              <button type="button" class="btn btn-default mrgn-bttm-sm" onclick="all_topics()">All topics</button>
+              <button type="button" class="btn btn-default mrgn-bttm-sm " onclick="covid19()"><img src="./img/covid.png" width="25" height="25"/> COVID-19</button>
+              <button type="button" class="btn btn-default mrgn-bttm-sm" onclick="opioids()"><img src="./img/opioids.png" width="25" height="25"/> Opioids</button>
+              <button type="button" class="btn btn-default mrgn-bttm-sm" onclick="cancer()"><img src="./img/Cancer.png" width="25" height="25"/> Cancer</button>
+              <button type="button" class="btn btn-default mrgn-bttm-sm" onclick="vaccines()"><img src="./img/vaccine.png" width="25" height="25"/> Vaccines</button>
+              <button type="button" class="btn btn-default mrgn-bttm-sm" onclick="kids()"><img src="./img/kids.png" width="25" height="25"/> Children</button>
+              <button type="button" class="btn btn-default mrgn-bttm-sm" onclick="injuries()"><img src="./img/injury.png" width="25" height="25"/> Injuries</button>
+              </div>
+            </section>
+<div class="container">
           <h1 property="name" id="wb-cont" dir="ltr" class="gc-thickline">COVID-19 epidemiology update</h1>
           <p class="mrgn-bttm-sm">Summary of COVID-19 cases, hospitalizations and deaths, testing and variants of concern across Canada and over time.</p>
 
