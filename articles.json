@@ -5,8 +5,8 @@
 				 "link":"https://health-infobase.canada.ca/cnisp/index.html",
 				 "description":"The CNISP summarizes trends in national incidence rates, antimicrobial resistance and molecular characterization for select healthcare-acquired infections (HAIs) and antimicrobial-resistant organisms (AROs)."
 				 "date": "2021-06-07"
-         "topic2":"hospitals",
-         "format":"interactive",
+         "topic":"Hospitals",
+         "format":"Interactive",
 				 "icon":"hospital.png"
       },
       {
@@ -15,9 +15,8 @@
 				"link":"https://health-infobase.canada.ca/datalab/covid-19-stbbi-acb-people.html",
 				"description":"Since the start of Canada’s COVID-19 pandemic, challenges in delivering healthcare services including sexually transmitted and blood-borne infection (STBBI) prevention, testing and treatment services, including harm reduction services, have been reported across the country. "
 				"date": "2021-06-07"
-				"topic1":"covid19",
-				"topic1":"std",
-				"format":"blog",
+				"topic":"Covid19, Sexually transmitted infections",
+				"format":"Blog",
 				"icon":"covid.png"
 
       },
@@ -27,8 +26,8 @@
 				"link":"https://health-infobase.canada.ca/covid-19/visual-data-gallery/",
 				"description":"Telling the COVID-19 story through numbers. Includes maps, charts, graphics, models and projections."
 				"date": "2020-05-27"
-				"topic1":"covid19",
-				"format":"interactive",
+				"topic":"Covid19",
+				"format":"Interactive",
 				"icon":"covid.png"
       },
       {
@@ -37,8 +36,8 @@
 				"link":"https://health-infobase.canada.ca/datalab/parkinson-blog.html",
 				"description":"Stats and data about the Parkinson disease"
 				"date": "2022-04-26"
-				"topic1":"neurological",
-				"format":"blog",
+				"topic":"Neurological diseases",
+				"format":"Blog",
 				"icon":"brain.png"
 
       },
@@ -48,8 +47,8 @@
 				"link":"https://health-infobase.canada.ca/datalab/bia-alcl-blog.html",
 				"description":"Breast implant-associated anaplastic large cell lymphoma (BIA-ALCL) is a cancer of the immune system that can develop next to a breast implant."
 				"date": "2022-04-06"
-				"topic1":"cancer",
-				"format":"blog",
+				"topic":"Cancer",
+				"format":"Blog",
 				"icon":"cancer.png"
       },
       {
@@ -57,8 +56,8 @@
 				"link":"https://health-infobase.canada.ca/datalab/bia-alcl-blog.html",
 				"description":"Health Canada’s Drug Analysis Service (DAS) operates laboratories across Canada that analyze suspected illegal drugs seized by Canadian law enforcement agencies."
 				"date": "2022-07-13"
-				"topic1":"drugs",
-				"format":"blog",
+				"topic":"Opioids, Stimulants",
+				"format":"Interactive",
 				"icon":"opioids.png"
       },
       {
@@ -67,9 +66,8 @@
 				"link":"https://health-infobase.canada.ca/substance-related-harms/opioids-stimulants/",
 				"description":"Data on overdoses and deaths involving opioids and/or stimulants from January 2016 to December 2021"
 				"date": "2022-06-23"
-				"topic1":"drugs",
-				"topic2":"opioids",
-				"format":"interactive",
+				"topic":"Opioids, Stimulants",
+				"format":"Interactive",
 				"icon":"opioids.png"
 
       },
@@ -79,8 +77,8 @@
 				"link":"https://health-infobase.canada.ca/carss/",
 				"description":"This interactive tool demonstrates the quantity of antimicrobial doses dispensed by Canadian retail pharmacies between 2015 and 2019. "
 				"date": "2022-03-16"
-				"topic1":"drugs",
-				"format":"interactive",
+				"topic":"Prescription drugs",
+				"format":"Interactive",
 				"icon":"rx.png"
       },
       {
@@ -89,9 +87,8 @@
 				"link":"https://health-infobase.canada.ca/datalab/poisonings-surveillance/cannabis.html",
 				"description":"Statistics on poisonings from cannabis."
 				"date": "2021-12-31"
-				"topic1":"drugs",
-				"topic1":"cannabis",
-				"format":"blog",
+				"topic":"Cannabis",
+				"format":"Blog",
 				"icon":"cannabis.png"
       },
       {
@@ -100,90 +97,168 @@
 				"link":"https://health-infobase.canada.ca/cannabis/",
 				"description":"Data on non-medical use of cannabis in Canada."
 				"date": "2021-12-23"
-				"topic1":"drugs",
-				"topic1":"cannabis",
-				"format":"interactive",
+				"topic":"Cannabis",
+				"format":"Interactive",
 				"icon":"cannabis.png"
-				
+
       },
+
       {
-         "link":"https://health-infobase.canada.ca/covid-19/mental-health-survey/",
-         "tag1":"pandemic",
-         "tag2":"screened",
-         "tag3":"covid"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/bicycling-infrastructure.html",
-         "tag1":"bicycling",
-         "tag2":"infrastructure",
-         "tag3":"municipalities"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/covid-19/impacts-on-children/",
-         "tag1":"disabilities",
-         "tag2":"children",
-         "tag3":"parents"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/alcohol/cpads/",
-         "tag1":"past",
-         "tag2":"cannabis",
-         "tag3":"students"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/covid-19-stbbi-services.html",
-         "tag1":"able",
-         "tag2":"covid",
-         "tag3":"access"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/poisonings-surveillance/methamphetamine.html",
-         "tag1":"cases",
-         "tag2":"methamphetamine",
-         "tag3":"poisonings"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/covid-19-impact-stbbi-services.html",
-         "tag1":"providers",
-         "tag2":"stbbi",
-         "tag3":"service"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/covid-19/",
-         "tag1":"cases",
-         "tag2":"covid",
-         "tag3":"19"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/alcohol/ctads/",
-         "tag1":"alcohol",
-         "tag2":"past",
-         "tag3":"drinks"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/radon-awareness-blog.html",
-         "tag1":"radon",
-         "tag2":"action",
-         "tag3":"awareness"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/canadian-risk-factor-atlas-obesity-blog.html",
-         "tag1":"obesity",
-         "tag2":"urban",
-         "tag3":"rural"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/poisonings-surveillance/opioids.html",
-         "tag1":"poisonings",
-         "tag2":"cases",
-         "tag3":"opioid"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/mental-illness-blog.html",
-         "tag1":"illness",
-         "tag2":"mental",
-         "tag3":"disorders"
-      },
+      "title":"Mental Illness during the Pandemic: Survey on COVID-19 and Mental Health (Cycles 1 and 2)"
+      "link":"https://health-infobase.canada.ca/covid-19/mental-health-survey/",
+      "description":"The COVID-19 pandemic has affected individuals, families, and communities in many ways. The Survey on COVID-19 and Mental Health (SCMH) was designed to collect data to assess the mental health and well-being of Canadians during the pandemic."
+      "date": "2022-09-20"
+      "topic":"Mental health",
+      "format":"Blog",
+      "icon":"mental_health.png"
+
+    },
+
+
+    {
+    "title":"Measuring Bicycling Infrastructure Across Canada"
+    "link":"https://health-infobase.canada.ca/datalab/bicycling-infrastructure.html",
+    "description":"Active transportation, such as walking, bicycling, and skateboarding to get around, is an important method by which Canadians move through their environment. While its benefits are typically thought of as reducing road congestion and greenhouse gas emissions, active transportation is also a crucial way that many Canadians achieve daily physical activity."
+    "date": "2021-08-23"
+    "topic":"Biking infrastructure",
+    "format":"Interactive",
+    "icon":"bike.png"
+
+  },
+
+
+  {
+  "title":"Impacts of the COVID-19 Pandemic on Canadian Children with Cognitive, Behavioural or Emotional Disabilities"
+  "link":"https://health-infobase.canada.ca/covid-19/impacts-on-children/",
+  "description":"Highlights from a Crowdsourcing Questionnaire: Impacts of COVID-19 on Canadians - Parenting during the Pandemic, 2020"
+  "date": "2021-07-13"
+  "topic":"COVID-19, Children, Disabilities",
+  "format":"Blog",
+  "icon":"family_house.png"
+
+},
+
+{
+"title":"Canadian Postsecondary Education Alcohol and Drug Use Survey, 2019/2020"
+"link":"https://health-infobase.canada.ca/alcohol/cpads/",
+"description":"The Canadian Postsecondary Education Alcohol and Drug use Survey (CPADS) contributes to Health Canada’s substance use surveillance strategy, which provides the Government of Canada with vital information on the use of drugs and other substances by Canadians."
+"date": "2021-05-10"
+"topic":"Alcohol, Cannabis, Smoking and vaping",
+"format":"Blog",
+"icon":"alcohol_drugs.png"
+
+},
+
+
+{
+"title":"How has COVID-19 impacted access to STBBI-related health services, including harm reduction services, for people who use drugs or alcohol in Canada"
+"link":"https://health-infobase.canada.ca/datalab/covid-19-stbbi-services.html",
+"description":"To better understand how the COVID-19 pandemic has affected access to sexually transmitted and blood-borne infection (STBBI) prevention, testing and treatment services, and harm reduction services, for people who use drugs or alcohol, the Public Health Agency of Canada (PHAC) conducted an anonymous online survey in January and February 2021."
+"date": "2021-05-18"
+"topic":"Sexually transmitted infections, Alcohol, Cannabis, Opioids ",
+"format":"Blog",
+"icon":"virus.png"
+
+},
+
+
+{
+"title":"Sentinel Surveillance of Substance Use-related Injuries and Poisonings in Canada"
+"link":"https://health-infobase.canada.ca/datalab/poisonings-surveillance/substance-use-injuries.html",
+"description":"Substance-related poisonings and injuries in Canada have received increasing attention in recent years due to emerging public health threats, such as the opioids overdose crisis, the introduction of potent synthetic cannabinoids to the illicit market and the emergence of electronic cigarettes on the Canadian market."
+"date": "2021-21-31"
+"topic":"Cannabis, Opioids, Stimulants, Smoking and vaping",
+"format":"Blog",
+"icon":"alcohol_drugs.png"
+
+},
+
+{
+"title":"SHow has COVID-19 impacted the delivery of STBBI-related services, including harm reduction services, in Canada?"
+"link":"https://health-infobase.canada.ca/datalab/covid-19-impact-stbbi-services.html",
+"description":"To better understand how the COVID-19 pandemic has affected the ability of healthcare service providers to deliver sexually transmitted and blood-borne infection (STBBI) prevention, testing and treatment services, the Public Health Agency of Canada (PHAC) conducted a survey in November and December 2020. T"
+"date": "2021-02-07"
+"topic":"Sexually transmitted infections",
+"format":"Blog",
+"icon":"virus.png"
+
+},
+
+
+{
+"title":"COVID-19 epidemiology update"
+"link":"https://health-infobase.canada.ca/covid-19/",
+"description":"This summary of COVID-19 cases across Canada contains detailed data about the spread of the virus over time and in different regions of the country."
+"date": "2022-09-23"
+"topic":"COVID-19",
+"format":"Interactive",
+"icon":"covid.png"
+
+},
+
+{
+"title":"Alcohol use among Canadians"
+"link":"https://health-infobase.canada.ca/alcohol/ctads/",
+"description":"Trends of alcohol use among Canadians 15 years of age and older from the Canadian Tobacco, Alcohol and Drugs Survey (CTADS) and the Canadian Alcohol and Drug Use Monitoring Survey (CADUMS)."
+"date": "2020-21-21"
+"topic":"Alcohol",
+"format":"Interactive",
+"icon":"alcohol_drugs.png"
+
+},
+
+
+
+{
+"title":"Radon risk: Raising awareness to encourage action"
+"link":"https://health-infobase.canada.ca/datalab/radon-awareness-blog.html",
+"description":"Radon exposure is the leading cause of lung cancer among non-smokers in Canada. Raising public awareness is a critical first step toward protecting Canadians from the health risks associated with long-term exposure to high radon levels. "
+"date": "2020-11-26"
+"topic":"Radon",
+"format":"Blog",
+"icon":"house.png"
+
+},
+
+
+{
+"title":"Differences in obesity rates between rural communities and urban cities in Canada"
+"link":"https://health-infobase.canada.ca/datalab/canadian-risk-factor-atlas-obesity-blog.html",
+"description":"In Canada overall, the rate of obesity is higher for adults living in rural areas compared with those living in urban areas, independently of sex."
+"date": "2020-11-05"
+"topic":"Obesity",
+"format":"Blog",
+"icon":"obesity.png"
+
+},
+
+
+
+
+{
+"title":"Mental illness in Canada"
+"link":"https://health-infobase.canada.ca/datalab/mental-illness-blog.html",
+"description":"Mental illness is characterized by changes in an individual's thinking, mood, or behaviour and is usually associated with significant distress or impaired functioning in social, occupational or other activities."
+"date": "2020-10-08"
+"topic":"Mental health",
+"format":"Blog",
+"icon":"mental_health.png"
+
+},
+
+
+{
+"title":"Canada: Land of wildfires?"
+"link":"https://health-infobase.canada.ca/datalab/wildfire-blog.html",
+"description":"Canada is covered with 347 million hectares of forest, making up 9% of the world’s total forest area. With so many forested areas, wildfires are a serious risk for Canadians, particularly from May to September. Large, destructive fires can quickly spread out of control. "
+"date": "2020-9-21"
+"topic":"Wildfires",
+"format":"Blog",
+"icon":"wildfire.png"
+
+},
+
+
       {
          "link":"https://health-infobase.canada.ca/datalab/wildfire-blog.html",
          "tag1":"air",
