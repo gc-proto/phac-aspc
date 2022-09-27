@@ -251,86 +251,127 @@
 "title":"Canada: Land of wildfires?"
 "link":"https://health-infobase.canada.ca/datalab/wildfire-blog.html",
 "description":"Canada is covered with 347 million hectares of forest, making up 9% of the world’s total forest area. With so many forested areas, wildfires are a serious risk for Canadians, particularly from May to September. Large, destructive fires can quickly spread out of control. "
-"date": "2020-9-21"
+"date": "2020-09-21"
 "topic":"Wildfires",
 "format":"Blog",
 "icon":"wildfire.png"
 
 },
 
+{
+"title":"Dementia (including Alzheimer's Disease) in Canada"
+"link":"https://health-infobase.canada.ca/datalab/dementia-alzheimers-blog.html",
+"description":"Dementia is an umbrella term that describes a set of symptoms affecting brain function. It happens when cells in the brain die or important nerve connections are broken. This process is known as neurodegeneration."
+"date": "2020-09-17"
+"topic":"Neurological diseases, Brain injuries",
+"format":"Blog",
+"icon":"brain.png"
 
-      {
-         "link":"https://health-infobase.canada.ca/datalab/wildfire-blog.html",
-         "tag1":"air",
-         "tag2":"wildfire",
-         "tag3":"smoke"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/dementia-alzheimers-blog.html",
-         "tag1":"dementia",
-         "tag2":"footnote",
-         "tag3":"health"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/traumatic-brain-injuries-blog.html",
-         "tag1":"tbi",
-         "tag2":"injuries",
-         "tag3":"head"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/supervised-consumption-sites-blog.html",
-         "tag1":"scs",
-         "tag2":"sites",
-         "tag3":"clients"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/schizophrenia-blog.html",
-         "tag1":"schizophrenia",
-         "tag2":"footnote",
-         "tag3":"referrer"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/poisonings-surveillance/substance-use-injuries.html",
-         "tag1":"footnote",
-         "tag2":"vaping",
-         "tag3":"cannabis"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/covid-19/",
-         "tag1":"cases",
-         "tag2":"covid",
-         "tag3":"19"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/quick-facts-suicide-blog.html",
-         "tag1":"suicide",
-         "tag2":"ssif",
-         "tag3":"canada"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/radon-blog.html",
-         "tag1":"radon",
-         "tag2":"homes",
-         "tag3":"lung"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/diabetes-blog.html",
-         "tag1":"diabetes",
-         "tag2":"type",
-         "tag3":"insulin"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/drowning-blog.html",
-         "tag1":"drowning",
-         "tag2":"drownings",
-         "tag3":"swimming"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/bbq-blog.html",
-         "tag1":"brush",
-         "tag2":"barbecue",
-         "tag3":"bbq"
-      },
+},
+
+
+{
+"title":"Injury in Review, 2020 Edition: Spotlight on Traumatic Brain Injuries Across the Life Course"
+"link":"https://health-infobase.canada.ca/datalab/traumatic-brain-injuries-blog.html",
+"description":"This is the third report of the Public Health Agency of Canada’s (PHAC) Injury in Review series, providing national surveillance statistics on head injuries and traumatic brain injuries (TBI)."
+"date": "2020-08-11"
+"topic":"Brain injuries",
+"format":"Blog",
+"icon":"brain.png"
+
+},
+
+
+
+{
+"title":"Canadian Supervised Consumption Sites Statistics — 2017 to 2019"
+"link":"https://health-infobase.canada.ca/datalab/supervised-consumption-sites-blog.html",
+"description":"Supervised consumption sites (SCS) are facilities where people can consume pre-obtained drugs under the supervision of trained staff. SCS provide people who use drugs with a safe, non-judgemental environment, sterile consumption equipment, and services that include social, medical, and mental health care. "
+"date": "2020-07-21"
+"topic":"Opioids, Supervised injection sites",
+"format":"Blog",
+"icon":"brain.png"
+},
+
+{
+"title":"Schizophrenia in Canada"
+"link":"https://health-infobase.canada.ca/datalab/schizophrenia-blog.html",
+"description":"Schizophrenia is a psychotic disorder that affects about 1% of Canadians. "
+"date": "2020-07-07"
+"topic":"Mental health",
+"format":"Blog",
+"icon":"brain.png"
+
+},
+
+{
+"title":"Quick Facts About Suicide in Canada"
+"link":"https://health-infobase.canada.ca/datalab/quick-facts-suicide-blog.html",
+"description":"In 2017, approximately 4,000 people died by suicide in Canada, averaging 11 deaths each day.That year, suicide was the ninth leading cause of death in Canada and the second leading cause of death among youth and young adults aged 15 to 34."
+"date": "2020-01-29"
+"topic":"Suicides",
+"format":"Blog",
+"icon":"semicolon.png"
+
+},
+
+
+{
+"title":"Radon Action Month in Canada"
+"link":"https://health-infobase.canada.ca/datalab/radon-blog.html",
+"description":"Radon is an invisible radioactive gas that causes lung cancer. In Canada, it is the second highest cause of lung cancer, after smoking."
+"date": "2019-11-21"
+"topic":"Radon",
+"format":"Blog",
+"icon":"house.png"
+
+},
+
+
+{
+"title":"Diabetes in Canada"
+"link":"https://health-infobase.canada.ca/datalab/diabetes-blog.html",
+"description":"Diabetes is a common chronic condition that affects Canadians of all ages. It occurs when the body loses its ability to produce or properly use insulin, a hormone that regulates sugar levels in the blood."
+"date": "2019-11-14"
+"topic":"Drowning",
+"format":"Blog",
+"icon":"blood.png"
+
+},
+
+{
+"title":"Drowning related deaths and injuries"
+"link":"https://health-infobase.canada.ca/datalab/drowning-blog.html",
+"description":"Between April 2011 and July 2021, there were 918 drowning-related cases reported in selected emergency departments across Canada."
+"date": "2021-12-20"
+"topic":"Drowning",
+"format":"Blog",
+"icon":"drowning.png"
+},
+
+{
+"title":"Injuries related to barbecue brush bristle ingestion/inhalation"
+"link":"https://health-infobase.canada.ca/datalab/bbq-blog.html",
+"description":"Injuries related to barbecue brush bristle ingestion/inhalation continue to be a public health concern. This common household item can pose a health risk to individuals, as metal bristles can detach from the brush and remain on the grill."
+"date": "2022-08-10"
+"topic":"Consumer product injuries",
+"format":"Blog",
+"icon":"bbq.png"
+},
+
+
+{
+"title":"Fireworks-related injurie"
+"link":"https://health-infobase.canada.ca/datalab/firework-blog.html",
+"description":"Statistics highlighting injuries associated with fireworks and other related products that occurred on or after April 2011"
+"date": "2019-06-27"
+"topic":"Consumer product injuries",
+"format":"Blog",
+"icon":"fireworks.png"
+},
+
+
+
       {
          "link":"https://health-infobase.canada.ca/datalab/firework-blog.html",
          "tag1":"fireworks",
