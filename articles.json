@@ -120,7 +120,7 @@
     "link":"https://health-infobase.canada.ca/datalab/bicycling-infrastructure.html",
     "description":"Active transportation, such as walking, bicycling, and skateboarding to get around, is an important method by which Canadians move through their environment. While its benefits are typically thought of as reducing road congestion and greenhouse gas emissions, active transportation is also a crucial way that many Canadians achieve daily physical activity."
     "date": "2021-08-23"
-    "topic":"Biking infrastructure",
+    "topic":"Biking",
     "format":"Interactive",
     "icon":"bike.png"
 
@@ -333,7 +333,7 @@
 "link":"https://health-infobase.canada.ca/datalab/diabetes-blog.html",
 "description":"Diabetes is a common chronic condition that affects Canadians of all ages. It occurs when the body loses its ability to produce or properly use insulin, a hormone that regulates sugar levels in the blood."
 "date": "2019-11-14"
-"topic":"Drowning",
+"topic":"Blood and metabolic diseases",
 "format":"Blog",
 "icon":"blood.png"
 
@@ -361,7 +361,7 @@
 
 
 {
-"title":"Fireworks-related injurie"
+"title":"Fireworks-related injuries"
 "link":"https://health-infobase.canada.ca/datalab/firework-blog.html",
 "description":"Statistics highlighting injuries associated with fireworks and other related products that occurred on or after April 2011"
 "date": "2019-06-27"
@@ -372,150 +372,259 @@
 
 
 
-      {
-         "link":"https://health-infobase.canada.ca/datalab/firework-blog.html",
-         "tag1":"fireworks",
-         "tag2":"injuries",
-         "tag3":"cases"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/cpsp-blog.html",
-         "tag1":"cpsp",
-         "tag2":"studies",
-         "tag3":"surveillance"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/head-injury-interactive.html",
-         "tag1":"concussions",
-         "tag2":"tbis",
-         "tag3":"recreation"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/ecigarette-blog.html",
-         "tag1":"vaping",
-         "tag2":"footnote",
-         "tag3":"poisonings"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/lawn-mower-blog.html",
-         "tag1":"mower",
-         "tag2":"lawn",
-         "tag3":"injuries"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/sedentary-measurement-blog.html",
-         "tag1":"sedentary",
-         "tag2":"behaviour",
-         "tag3":"footnote"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/heart-disease-blog.html",
-         "tag1":"heart",
-         "tag2":"limit",
-         "tag3":"ci"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/copd-blog.html",
-         "tag1":"copd",
-         "tag2":"95",
-         "tag3":"limit"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/mortality-blog.html",
-         "tag1":"chapter",
-         "tag2":"deaths",
-         "tag3":"death"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/bike-blog.html",
-         "tag1":"bike",
-         "tag2":"work",
-         "tag3":"bikemaps"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/indicator-framework-blog.html",
-         "tag1":"framework",
-         "tag2":"indicator",
-         "tag3":"data"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/asthma-blog.html",
-         "tag1":"asthma",
-         "tag2":"prevalence",
-         "tag3":"ci"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/adult-obesity-blog.html",
-         "tag1":"95",
-         "tag2":"obese",
-         "tag3":"interval"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/healthy-canadians-interactive.html",
-         "tag1":"canadians",
-         "tag2":"healthy",
-         "tag3":"health"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/down-syndrome-blog.html",
-         "tag1":"syndrome",
-         "tag2":"congenital",
-         "tag3":"2005"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/cm-diabetes-blog.html",
-         "tag1":"abuse",
-         "tag2":"childhood",
-         "tag3":"maltreatment"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/cancer-blog.html",
-         "tag1":"cancer",
-         "tag2":"ccs",
-         "tag3":"2017"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/pmh-blog.html",
-         "tag1":"positive",
-         "tag2":"mental",
-         "tag3":"health"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/pass-blog.html",
-         "tag1":"individual",
-         "tag2":"development",
-         "tag3":"sleep"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/childhood-cancer-blog.html",
-         "tag1":"cancer",
-         "tag2":"childhood",
-         "tag3":"2015"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/suicide-blog.html",
-         "tag1":"suicide",
-         "tag2":"inflicted",
-         "tag3":"self"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/hospital-births-blog.html",
-         "tag1":"births",
-         "tag2":"2014",
-         "tag3":"dad"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/healthy-weights-blog.html",
-         "tag1":"obesity",
-         "tag2":"childhood",
-         "tag3":"confidence"
-      },
-      {
-         "link":"https://health-infobase.canada.ca/datalab/mood-anxiety-blog.html",
-         "tag1":"anxiety",
-         "tag2":"disorders",
-         "tag3":"mood"
-      },
+{
+"title":"What is the Canadian Paediatric Surveillance Program?"
+"link":"https://health-infobase.canada.ca/datalab/cpsp-blog.html",
+"description":"The Canadian Paediatric Surveillance Program (CPSP) actively monitors rare and/or emerging diseases and conditions in children and youth. It examines conditions that are high-risk in terms of disability and economic costs to society, despite their low frequency."
+"date": "2019-01-23"
+"topic":"Children",
+"format":"Blog",
+"icon":"children.png"
+},
+
+
+{
+"title":"Sport and Recreation-related Concussions and Other Traumatic Brain Injuries Among Canada's Children and Youth"
+"link":"https://health-infobase.canada.ca/datalab/head-injury-interactive.html",
+"description":"Interactive snapshots of statistics about sports and recreation-related concussions and other TBIs among Canada's children and youth aged 5 to 19 years."
+"date": "2018-10-11"
+"topic":"Children, Brain injuries, Physical activity",
+"format":"Blog",
+"icon":"sport.png"
+},
+
+{
+"title":"Injuries and poisonings from vaping products including e-cigarettes"
+"link":"https://health-infobase.canada.ca/datalab/ecigarette-blog.html",
+"description":"Vaping has a risk of poisoning, burns and other unexpected health effects. Children have been poisoned by ingesting vaping liquid as it is often flavoured, making it more appealing; ingesting even a small amount of liquid nicotine can be serious and even life-threatening for a child."
+"date": "2018-10-11"
+"topic":"Smoking and vaping",
+"format":"Blog",
+"icon":"vaping.png"
+},
+
+{
+"title":"Lawn mower-related injuries"
+"link":"https://health-infobase.canada.ca/datalab/lawn-mower-blog.html",
+"description":"The Canadian Hospitals Injury Reporting and Prevention Program (CHIRPP) is an injury and poisoning surveillance system currently operating in the emergency departments of 11 paediatric and 7 general hospitals across Canada. The numbers below are taken from an analysis of CHIRPP’s electronic database (eCHIRPP)."
+"date": "2018-08-16"
+"topic":"Consumer product injuries",
+"format":"Blog",
+"icon":"lawnmower.png"
+},
+
+
+{
+"title":"What is sedentary behaviour and how do we measure it?"
+"link":"https://health-infobase.canada.ca/datalab/sedentary-measurement-blog.html",
+"description":"Sedentary behaviour refers to activities that we do while we are sitting, reclining or lying down and expending very little energy."
+"date": "2018-06-28"
+"topic":"Physical activity",
+"format":"Blog",
+"icon":"sedentary.png"
+},
+
+
+{
+"title":"Heart disease in Canada"
+"link":"https://health-infobase.canada.ca/datalab/heart-disease-blog.html",
+"description":"Heart disease is a general term used to refer to several diseases of the heart and blood vessels. In Canada, heart disease is the second leading cause of death and accounted for over 51,500 deaths in 2015."
+"date": "2018-05-31"
+"topic":"Cardiovascular diseases",
+"format":"Blog",
+"icon":"heart.png"
+},
+
+{
+"title":"Chronic Obstructive Pulmonary Disease (COPD) in Canada"
+"link":"https://health-infobase.canada.ca/datalab/copd-blog.html",
+"description":"COPD is a chronic disease that is characterised by shortness of breath, cough and sputum production. The disease is progressive (i.e. it tends to get worse over time) and debilitating. It primarily affects the population age 35 years and older. "
+"date": "2018-05-01"
+"topic":"Respiratory diseases",
+"format":"Blog",
+"icon":"lung.png"
+},
+
+
+{
+"title":"Big Picture Mortality in Canada"
+"link":"https://health-infobase.canada.ca/datalab/mortality-blog.html",
+"description":"Every year more than 250,000 Canadians die of various causes. Each death becomes part of a vital statistics mortality dataset. Death data in Canada is categorized using a classification system entitled International Statistical Classification of Diseases and Related Health Problems. "
+"date": "2018-05-04"
+"topic":"Death",
+"format":"Blog",
+"icon":"heart_rate.png"
+},
+
+{
+"title":"Bike to Work"
+"link":"https://health-infobase.canada.ca/datalab/bike-blog.html",
+"description":"For everyone who can’t wait to dust off their bikes this spring, we want to tell you about BikeMaps.org - use it to plan your routes and avoid traffic, in order to stay safe and improve your health!"
+"date": "2017-05-19"
+"topic":"Biking, Physical activity",
+"format":"Blog",
+"icon":"bike.png"
+},
+
+{
+"title":"What is an Indicator Framework? "
+"link":"https://health-infobase.canada.ca/datalab/indicator-framework-blog.html",
+"description":"An indicator framework is an organized way to view data from different sources. It is a simple and concise way to present gathered data and help show the relevance and connection between different indicators."
+"date": "2017-05-11"
+"topic":"",
+"format":"Blog",
+"icon":"indicator.png"
+},
+
+
+{
+"title":"Asthma in Canada"
+"link":"https://health-infobase.canada.ca/datalab/asthma-blog.html",
+"description":"Asthma is one of the most common chronic respiratory diseases in Canada. It affects Canadians of all ages, but younger Canadians are disproportionately affected."
+"date": "2018-05-01"
+"topic":"Respiratory diseases",
+"format":"Blog",
+"icon":"lung.png"
+},
+
+
+{
+"title":"Obesity in Canadian Adults: It’s About More Than Just Weight "
+"link":"https://health-infobase.canada.ca/datalab/adult-obesity-blog.html",
+"description":"Obesity is at epidemic levels around the world in both children and adults. Although adult obesity in Canada has been relatively steady since 2004, the percentage of adults who are obese today is twice as high as it was in 1978-1979, from 13.8% to 28.2%."
+"date": "2017-04-25"
+"topic":"Obesity",
+"format":"Blog",
+"icon":"obesity.png"
+},
+
+
+
+{
+"title":"How Healthy are Canadians?"
+"link":"https://health-infobase.canada.ca/datalab/healthy-canadians-interactive.html",
+"description":"Health is a state of being but also a resource for everyday life. So, how healthy are Canadians? To find out, we examined health data and indicators from the past 10 to 15 years."
+"date": "2017-04-11"
+"topic":"",
+"format":"Interactive",
+"icon":"indicator.png"
+},
+
+{
+"title":"Down Syndrome Day – March 21"
+"link":"https://health-infobase.canada.ca/datalab/healthy-canadians-interactive.html",
+"description":"Down syndrome, a chromosomal abnormality, is one of the most common congenital anomalies (or birth defects) worldwide, and the most common one in Canada."
+"date": "2017-03-21"
+"topic":"Developmental disorders",
+"format":"Blog",
+"icon":"adn.png"
+},
+
+
+{
+"title":"A Canadian look at the connection between childhood maltreatment and diabetes"
+"link":"https://health-infobase.canada.ca/datalab/cm-diabetes-blog.html",
+"description":"A 2015 systematic review and meta-analysis using the ACEs found that adverse childhood experiences, including physical abuse, sexual abuse or neglect, were associated with an elevated risk of developing type 2 diabetes in adulthood. "
+"date": "2017-02-21"
+"topic":"Children, Blood and metabolic diseases",
+"format":"Blog",
+"icon":"blood.png"
+},
+
+
+{
+"title":"Cancer in Canada"
+"link":"https://health-infobase.canada.ca/datalab/cancer-blog.html",
+"description":"Cancer is a disease that develops when abnormal cells grow and divide in an uncontrolled way, forming lumps or tumours that can invade nearby tissues or spread to other parts of the body."
+"date": "2018-01-22"
+"topic":"Cancer",
+"format":"Blog",
+"icon":"cancer.png"
+},
+
+{
+"title":"Positive Mental Health in Canada"
+"link":"https://health-infobase.canada.ca/datalab/pmh-blog.html",
+"description":"Positive mental health is the capacity to feel, think, and act in ways that enhance the ability to enjoy life and deal with challenges. It is a positive sense of emotional and spiritual well-being that respects the importance of culture, equity, social justice, interconnections and personal dignity."
+"date": "2017-01-25"
+"topic":"Mental health",
+"format":"Blog",
+"icon":"mental_health.png"
+},
+
+{
+"title":"Physical Activity, Sedentary Behaviour, and Sleep (PASS): a new way of tracking healthy daily activity"
+"link":"https://health-infobase.canada.ca/datalab/pmh-blog.html",
+"description":"We developed a list of key indicators that highlight the different components of daily activity and organized them in a framework called the Physical Activity, Sedentary behaviour and Sleep (PASS) Indicator Framework."
+"date": "2017-01-17"
+"topic":"Physical activity, Sleep",
+"format":"Blog",
+"icon":"indicator.png"
+},
+
+
+{
+"title":"Childhood Cancer Month (September 2016)"
+"link":"https://health-infobase.canada.ca/datalab/childhood-cancer-blog.html",
+"description":"The Cancer in Young People in Canada (CYP-C) program is a national childhood cancer system that was launched in 2009 to contribute to cancer control in all children living with cancer in Canada. It includes nearly 100% of all children aged up to 14 years who have been diagnosed with cancer in Canada."
+"date": "2016-09-20"
+"topic":"Cancer, Children",
+"format":"Blog",
+"icon":"cancer.png"
+},
+
+
+{
+"title":"World Suicide Prevention Day (September 10, 2016)"
+"link":"https://health-infobase.canada.ca/datalab/childhood-cancer-blog.html",
+"description":"Suicide is a significant public health issue. The grief and trauma associated with suicide produce long-term costs to society and devastating effects on families, friends and communities."
+"date": "2016-09-09"
+"topic":"Suicide",
+"format":"Blog",
+"icon":"semicolon.png"
+},
+
+{
+"title":"Hospital Births in Canada"
+"link":"https://health-infobase.canada.ca/datalab/childhood-cancer-blog.html",
+"description":"Although some births occur in homes and birthing centres, most births in Canada still take place in hospitals. Here are some interesting findings regarding hospital births in 2014 in Canada (excluding Quebec), according to the Public Health Agency of Canada’s Canadian Perinatal Surveillance System."
+"date": "2016-07-26"
+"topic":"Hospital, Birth",
+"format":"Blog",
+"icon":"birth.png"
+},
+
+{
+"title":"Healthy Weights in Canadian Children"
+"link":"https://health-infobase.canada.ca/datalab/healthy-weights-blog.html",
+"description":"Obesity means having too much body fat and it can negatively affect a child's health and well-being. An obese child will likely become an obese adult. Obesity in adulthood has been linked to many conditions, such as diabetes, heart disease, high blood pressure, cancer and poor emotional health."
+"date": "2016-07-26"
+"topic":"Children, Obesity",
+"format":"Blog",
+"icon":"children.png"
+},
+
+{
+"title":"Mood & Anxiety Disorders in Canada"
+"link":"https://health-infobase.canada.ca/datalab/mood-anxiety-blog.html",
+"description":"Mood and anxiety disorders are the most common types of mental illnesses, and they affect Canadians of all ages."
+"date": "2016-06-28"
+"topic":"Mental health",
+"format":"Blog",
+"icon":"mental_health.png"
+},
+
+
+{
+"title":"Family Violence in Canada"
+"link":"https://health-infobase.canada.ca/datalab/family-violence-blog.html",
+"description":"Family violence is any form of abuse or neglect that a child or adult experiences from a family member, or from someone with whom they have an intimate relationship. It is an abuse of power by a person to hurt and control someone who trusts and depends on them."
+"date": "2016-06-23"
+"topic":"Family, Violence",
+"format":"Blog",
+"icon":"family.png"
+},
+
       {
          "link":"https://health-infobase.canada.ca/datalab/family-violence-blog.html",
          "tag1":"violence",
