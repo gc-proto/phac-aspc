@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>
+<html class="no-js lt-ie9" dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+   <![endif]-->
+   <!--[if gt IE 8]><!-->
+   <html class="no-js" dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+      <!--<![endif]-->
+      <head prefix="og: http://ogp.me/ns#">
+         <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+         <meta charset="utf-8"/>
+         <!--CHANGE THE TITLE-->
+         <title>Guidelines for data and dashboards on Canada.ca V1.0 - Canada.ca</title>
+         <meta content="width=device-width, initial-scale=1" name="viewport"/>
+         <meta content=" " name="description"/>
+         <link href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+         <link href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/css/theme.min.css" rel="stylesheet"/>
+         <noscript>
+            <link href="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/css/noscript.min.css" rel="stylesheet"/>
+         </noscript>
+         <link href="https://test.canada.ca/covid-19-guidance/proto/css/alpha-beta-banner.css" rel="stylesheet"/>
+         <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" rel="stylesheet"/>
+      </head>
+      <body typeof="WebPage" vocab="http://schema.org/">
+         <nav>
+            <ul id="wb-tphp">
+               <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+               <li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to "About government"</a></li>
+            </ul>
+         </nav>
+         <header>
+            <div class="container" id="wb-bnr">
+               <div class="row">
+                  <section class="col-xs-3 col-sm-12 pull-right text-right" id="wb-lng">
+                     <h2 class="wb-inv">Language selection</h2>
+                     <div class="row">
+                        <div class="col-md-12">
+                           <ul class="list-inline mrgn-bttm-0">
+                              <li>
+                                 <a href="#" lang="fr">
+                                 <span class="hidden-xs hidden-sm">Français</span>
+                                 <abbr class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase" title="Français">fr</abbr>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </section>
+                  <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+                     <a href="/en.html" property="url">
+                     <img alt="Government of Canada" property="logo" src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg"/>
+                     </a>
+                     <meta content="Government of Canada" property="name"/>
+                     <meta content="Canada" property="areaServed" typeof="Country"/>
+                     <link href="https://www.canada.ca/etc/designs/canada/wet-boew/assets/wmms-blk.svg" property="logo"/>
+                  </div>
+                  <section class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4" id="wb-srch">
+                     <h2>Search</h2>
+                     <form action="/en/sr/srb.html" method="get" name="cse-search-box" role="search">
+                        <div class="form-group wb-srch-qry">
+                           <label class="wb-inv" for="wb-srch-q">Search Canada.ca</label>
+                           <input name="cdn" type="hidden" value="canada"/>
+                           <input name="st" type="hidden" value="s"/>
+                           <input name="num" type="hidden" value="10"/>
+                           <input name="langs" type="hidden" value="en"/>
+                           <input name="st1rt" type="hidden" value="1"/>
+                           <input name="s5bm3ts21rch" type="hidden" value="x"/>
+                           <input class="wb-srch-q form-control" id="wb-srch-q" list="wb-srch-q-ac" maxlength="170" name="q" placeholder="Search Canada.ca" size="34" type="search" value=""/>
+                           <input name="_charset_" type="hidden" value="UTF-8"/>
+                           <datalist id="wb-srch-q-ac"></datalist>
+                        </div>
+                        <div class="form-group submit">
+                           <button class="btn btn-primary btn-small" id="wb-srch-sub" name="wb-srch-sub" type="submit"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+                        </div>
+                     </form>
+                  </section>
+               </div>
+            </div>
+            <nav class="gcweb-v2 gcweb-menu" typeof="SiteNavigationElement">
+               <div class="container">
+                  <h2 class="wb-inv">Menu</h2>
+                  <button aria-expanded="false" aria-haspopup="true" type="button"><span class="wb-inv">Main
+                  </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
+                  <ul aria-orientation="vertical" data-ajax-replace="https://www.canada.ca/content/dam/canada/sitemenu/sitemenu-v2-en.html" role="menu">
+                     <li role="presentation"><a href="https://www.canada.ca/en/services/jobs.html" role="menuitem" tabindex="-1">Jobs and the workplace</a></li>
+                     <li role="presentation"><a href="https://www.canada.ca/en/services/immigration-citizenship.html" role="menuitem" tabindex="-1">Immigration
+                        and citizenship</a>
+                     </li>
+                     <li role="presentation"><a href="https://travel.gc.ca/" role="menuitem" tabindex="-1">Travel
+                        and
+                        tourism</a>
+                     </li>
+                     <li role="presentation"><a href="https://www.canada.ca/en/services/business.html" role="menuitem" tabindex="-1">Business and industry</a></li>
+                     <li role="presentation"><a href="https://www.canada.ca/en/services/benefits.html" role="menuitem" tabindex="-1">Benefits</a></li>
+                     <li role="presentation"><a href="https://www.canada.ca/en/services/health.html" role="menuitem" tabindex="-1">Health</a></li>
+                     <li role="presentation"><a href="https://www.canada.ca/en/services/taxes.html" role="menuitem" tabindex="-1">Taxes</a></li>
+                     <li role="presentation"><a href="https://www.canada.ca/en/services/environment.html" role="menuitem" tabindex="-1">Environment and natural
+                        resources</a>
+                     </li>
+                     <li role="presentation"><a href="https://www.canada.ca/en/services/defence.html" role="menuitem" tabindex="-1">National security and
+                        defence</a>
+                     </li>
+                     <li role="presentation"><a href="https://www.canada.ca/en/services/culture.html" role="menuitem" tabindex="-1">Culture, history and sport</a></li>
+                     <li role="presentation"><a href="https://www.canada.ca/en/services/policing.html" role="menuitem" tabindex="-1">Policing, justice and
+                        emergencies</a>
+                     </li>
+                     <li role="presentation"><a href="https://www.canada.ca/en/services/transport.html" role="menuitem" tabindex="-1">Transport and
+                        infrastructure</a>
+                     </li>
+                     <li role="presentation"><a href="http://international.gc.ca/world-monde/index.aspx?lang=eng" role="menuitem" tabindex="-1">Canada and the
+                        world </a>
+                     </li>
+                     <li role="presentation"><a href="https://www.canada.ca/en/services/finance.html" role="menuitem" tabindex="-1">Money and finances</a></li>
+                     <li role="presentation"><a href="https://www.canada.ca/en/services/science.html" role="menuitem" tabindex="-1">Science and innovation</a></li>
+                  </ul>
+               </div>
+            </nav>
+            <!--UPDATE THE BREADCRUMB-->
+            <nav id="wb-bc" property="breadcrumb">
+               <h2 class="wb-inv">You are here:</h2>
+               <div class="container">
+                  <ol class="breadcrumb">
+                     <li><a href="/en.html">Canada.ca</a></li>
+                     <li><a href="#">[Breadcrumb]</a></li>
+                  </ol>
+               </div>
+            </nav>
+         </header>
+         <!--CONTENT STARTS HERE-->
+         <main class="container" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+            <h1 class="gc-thickline">Guidelines for data and dashboards on Canada.ca  V1.0</h1>
+
+
+            <p>Short description of the purpose of this page + link to WET-BEOW</p>
+            <h2>Table of contents</h3>
+            <p><a href="#_Toc115335326">Background, vision and mission</a></p>
+            <p><a href="#_Toc115335330">Data strategy and digital communications objectives</a></p>
+            <p><a href="#_Toc115335331">Criteria for a good data project</a></p>
+            <p><a href="#_Toc115335332">Challenges and risks</a></p>
+            <p><a href="#_Toc115335335">Requirements and policies</a></p>
+            <p><a href="#_Toc115335336">Roles and responsibilities</a></p>
+            <p><a href="#_Toc115335337">Web writing</a></p>
+            <p><a href="#_Toc115335338">Web publishing process</a></p>
+            <p><a href="#_Toc115335339">Current technologies and platforms</a></p>
+            <h2 id="_Toc115335326">Background, vision and mission</h2>
+            <h3 id="_Toc115335327">Background</h3>
+            <p>Digital Communications at Health Canada and the Public Health Infobase (PHAC) collaborated closely to deliver data and dashboards during the COVID-19 pandemic. This document highlights the discoveries, best practices and expertise we developed on the integration of data and dashboard on Canada.ca, and offers advice and best practices for meeting Canada.ca web standards for public data products. </p>
+            <p>Integrating data and dashboards into user-friendly web content is complex and a collaborative effort. It requires input from a number of stakeholders including P/Ts, epidemiologists, data scientists, plain language writers, user experience experts, web developers and translators. Many steps are needed to create a web product that is clear and useful for health experts, decision makers and the public.</p>
+            <p>This document has been developed through a working group consultation with our HC and PHAC data experts colleagues. </p>
+            <p>The intent of this document is to help:</p>
+            <ol>
+               <li>respond to increased demand for data from the public, senior decision makers and stakeholders</li>
+               <li>share best practices and establish guidelines and clarity on developing accessible, public-facing data and dashboards that are easy to use</li>
+               <li>plan and prioritise data projects that are agile, responsive and focused, given various capacity constraints</li>
+               <li>provide consistent data across digital products and web pages</li>
+               <li>streamline processes  to ensure they are up to date, efficient, and provide consistent messaging across platforms</li>
+            </ol>
+            <h3 id="_Toc115335328">Vision</h3>
+            <p>To position Health Canada and the Public Health Agency of Canada as leaders in the design and dissemination of reliable, accessible and usable health data.</p>
+            <h3 id="_Toc115335329">Mission</h3>
+            <p>Develop web standards and best practices to guide the development of tools, designs and products for all public-facing data and dashboard products.</p>
+            <h2 id="_Toc115335330">Data strategy and digital communications objectives</h2>
+            <p>The data strategy aims to:</p>
+            <ul>
+               <li>align digital best practices with strategic communication goals and program policy requirements </li>
+               <li>proactively release timely data </li>
+               <li>continuously improve content to help people interpret the data (strategic, phased approach, evolving data)</li>
+               <li>be the authoritative and trusted source of health data and information from a national perspective</li>
+               <li>work collaboratively with partners (programs, other governmental departments (OGD), epidemiologists, digital communications, P/Ts, digital developers)</li>
+            </ul>
+            <p>The digital communications objectives for data include:</p>
+            <ul>
+               <li>working collaboratively with HC and PHAC partners to develop standards for a consistent approach across government</li>
+               <li>supporting <strong>data-driven</strong> decision making</li>
+               <li>building <strong>public trust</strong> through <strong>openness, transparency and design consistency</strong></li>
+               <li>promoting good public health</li>
+               <li>combatting <strong>misinformation</strong> with official, credible sources of data</li>
+               <li>
+                  publishing on <strong>different platforms </strong>for different audiences, including:
+                  <ul>
+                     <li>Canada.ca </li>
+                     <li>Public Health Infobase</li>
+                     <li>Open.canada.ca</li>
+                     <li>Social media (promotion)</li>
+                     <li>Other applications (ex. WeatherCAN/Thrive, COVID trends)</li>
+                  </ul>
+               </li>
+            </ul>
+            <h2 id="_Toc115335331">Criteria for a good data project</h2>
+            <p>A good data project:</p>
+            <ul>
+               <li>simplifies complex information through visualisations</li>
+               <li>appeals to users </li>
+               <li>aligns with government objectives</li>
+               <li>is a top task</li>
+               <li>involves data which will evolve over time (illustrates trends)</li>
+               <li>is sufficiently resourced  to maintain and update data regularly, prototyping, test and track user feedback</li>
+               <li>chooses the data approach (i.e. interactive or static) that will most effectively present the data </li>
+               <li>is scalable to allow for data to evolve over time</li>
+            </ul>
+            <h2 id="_Toc115335332">Challenges and risks</h2>
+            <h3 id="_Toc115335333">Challenges</h3>
+            <ul>
+               <li>Aligning federal, provincial and territorial reporting</li>
+               <li>Approval process</li>
+               <li>Public appetite for new data and dashboards</li>
+               <li>Putting data into context</li>
+               <li>Senior management demands</li>
+               <li>Sensitivities </li>
+               <li>Prioritization of public health emergencies</li>
+               <li>Timelines</li>
+            </ul>
+            <h3 id="_Toc115335334">Risks</h3>
+            <ul>
+               <li>Significant work is required to build dashboards, and the evolving needs of decision makers and stakeholders can be challenging to anticipate. </li>
+               <li>All dashboards must comply with all relevant GC web standards.</li>
+               <li>Balancing the need to release timely data with accessibility, official languages and other GoC communications requirements</li>
+               <li>Ensuring adequate program resources to maintain and update dashboard <br/> </li>
+            </ul>
+            <h2 id="_Toc115335335">Requirements and policies</h2>
+            <ul>
+               <li><cite>Official Languages Act</cite></li>
+               <li>Policy on Communications and Federal Identity</li>
+               <li>Open government and transparency</li>
+               <li>Canada.ca design system</li>
+               <li><a href="https://design.canada.ca/crisis/content.html">Crisis communications content design checklist</a></li>
+               <li>Web Content Accessibility Guidelines (WCAG) international standard</li>
+               <li>Operability, User friendly (UX), usability</li>
+               <li>Mobility, responsive design </li>
+               <li>Trustable data source </li>
+               <li><a href="https://canada-ca.github.io/digital-playbook-guide-numerique/en/4-use-open-standards-solutions.html">TBS Directives</a> (when open source software exists, it should be the primary avenue)</li>
+            </ul>
+            <h2 id="_Toc115335336">Roles and responsibilities</h2>
+            <p>We collaborate with a variety of internal and external stakeholders who contribute to our dashboards.</p>
+            <p>Please note: Not all of these collaborators will work on every project.</p>
+            <p>Table 1: list of HC and PHAC collaborators for Data and dashboard</p>
+            <table class="provisional gc-table table" id="myTable1">
+               <tr>
+                  <td>
+                     <p><strong>Collaborator</strong></p>
+                  </td>
+                  <td>
+                     <p><strong>Role and responsibilities</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p>Digital Communications </p>
+                     <p>CPAB </p>
+                     <p>Data and Dashboard team Digital communication advisor (DCA)</p>
+                  </td>
+                  <td>
+                     <p>Lead on data and dashboards on Canada.ca, and help with publishing process and approval.</p>
+                     <p>Helps content contributor meet Canada.ca web standards (for example: plain language writing, translation, second language concurrence, accessibility, user experience, information architecture (IA))</p>
+                     <p>(TBC) Involved to establish the site and large changes </p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p>Content contributor or Content creator (CC) </p>
+                     <p>(HC &amp; PHAC program or other department)</p>
+                  </td>
+                  <td>
+                     <p>Client or partner (Interdepartmental program partners like StatsCan, DND, ISC, CSC, PSPC, PSC, PT's...) who is a subject matter expert. They provide content and data </p>
+                     <p>The content contributor owns the content and the data</p>
+                     <p>Reports publishing priorities to Digital Comms. Priorities will be added to the tracker for approval</p>
+                     <p>Gets approvals from their senior management</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p>Strategic communications advisor (Strat comms)</p>
+                     <p>HC &amp; PHAC </p>
+                  </td>
+                  <td>
+                     <p>Helps client define web content needs</p>
+                     <p>Provides strategic communication advise on the project</p>
+                     <p>Helps to align content with the department’s strategic messaging</p>
+                     <p>Highlights the needs of website users through analytics and research</p>
+                     <p>On-going maintenance</p>
+                     <p>Gets approval from their senior management and/or informs as a FYI</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p>Digital transformation (DT)</p>
+                     <p>CPAB</p>
+                  </td>
+                  <td>
+                     <p>Usability quality assessment and metadata</p>
+                     <p>UX testing</p>
+                     <p>Coordinates with other Canada.ca themes as necessary</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p>Digital publishing (DP)</p>
+                     <p>CPAB</p>
+                  </td>
+                  <td>
+                     <p>converts final content into HTML pages on Canada.ca</p>
+                     <p>publishes  content to Canada.ca</p>
+                     <p>performs technical quality assessments (TQA) of static web pages</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p>Service Canada (SC), Principal publisher (PP)</p>
+                  </td>
+                  <td>
+                     <p>Integration into Canada.ca’s web management software</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p>Public Health Infobase (PHAC)</p>
+                  </td>
+                  <td>
+                     <p>\u2022Responsible for building, publishing and hosting public dashboards and data products (COVID-19 and HC+ PHAC programs). </p>
+                     <p>Responsible for maintaining and creating an automated report with charts and graphics that pulls data from a google sheet in real time</p>
+                     <p>Using D3 technology to produce interactive data visualizations </p>
+                     <p>Coding contextual content about the product and technical notes on how to use it.</p>
+                     <p>Applying best practices and meeting accessibility, usability, mobility and other web standards needs.</p>
+                     <p>Publishing tabular data and sharing CSV files format on OGP for transparency and accessibility needs.</p>
+                     <p>Creating archived reports for historical research</p>
+                     <p>Note: Infobase codes and publishes content on the Infobase server (as opposed to Canada.ca</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p>Open Government portal (OGP)</p>
+                     <p>HC</p>
+                  </td>
+                  <td>
+                     <p>Publishing comma-separated values (CSV) files on OGP </p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p>Health Portfolio Operations Centre (HPOC) </p>
+                  </td>
+                  <td>
+                     <p>Responsible for collecting and managing all COVID-19-related case data.  Responsible for providing input, validating and approving primary COVID-19 data.</p>
+                     <p>Get approval from senior management</p>
+                     <p>Coordinate the 48h heads up approval with Private Council Office (PCO) </p>
+                     <p>phac.hpoc.communications-cops.aspc@canada.ca    </p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p>National Microbiology Lab (NML) Geomatics Team </p>
+                     <p>IDPCB</p>
+                  </td>
+                  <td>
+                     <p>Responsible for stakeholder management with NRCan and Stats Can Geomatics Teams, Responsible for all Geomatics-related product releases. Responsible for R&amp;D, geospatial data analysis when needed and some dashboard content.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p>Centre for Data Management, Innovation and Analytics (DMIA)</p>
+                     <p>Corporate Data and Surveillance Branch</p>
+                     <p>PHAC</p>
+                  </td>
+                  <td>
+                     <ul>
+                        <li>Responsible for central coordination of briefing style and language for data and dashboard briefings at PHAC (producing briefing templates and SOPs)</li>
+                        <li>Responsible for coordinating briefing on data and dashboards at PHAC to ensure consistent language and expectations of briefing materials. </li>
+                        <li>Responsible for advocating for data and dashboards to be published online for all PHAC branches.</li>
+                        <li>Informed of all dashboard publication to increase cross-promotion and avoid competing publication schedules.</li>
+                     </ul>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p>Resource Management and Operations Directorate (RMOD)</p>
+                     <p>HC  </p>
+                  </td>
+                  <td>
+                     <p>Leads information technology and information management initiatives, advances policy initiatives and provides support, strategic direction and advice to HPFB in areas including:</p>
+                     <ul>
+                        <li>Information technology portfolio management and technical service delivery</li>
+                        <li>Investment planning</li>
+                        <li>Openness and transparency</li>
+                     </ul>
+                     <p>Provides support, strategic direction and advice to HPFB in areas including:</p>
+                     <ul>
+                        <li>Innovation</li>
+                        <li>Data science</li>
+                        <li>Database management, statistics reporting, and web publication</li>
+                        <li>Internal communications</li>
+                     </ul>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p>Digital Transformation Branch</p>
+                     <p>IMSD </p>
+                  </td>
+                  <td>
+                     <p>Responsible for installation and maintenance of Cognos/Power BI/SAS software. Point of contact for clients for usage, design, and best practices. Hold the keys of Power Bi</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p>Chief Data Office (CDO)</p>
+                     <p>HC</p>
+                  </td>
+                  <td>
+                     <p>Provide expertise and updates related to CDO’s work to advance FAIR data principles for data (Findable, Accessible, Interoperability, and reusability), availability of data disaggregation (SGBA+), open data and open science, etc. as it relates to public communications, including assisting with documentation on best practices and guidance material when necessary.</p>
+                     <p>On a project-by-project basis, the HC CDO may support with designing and optimizing dashboards, aligning content, refining data architecture, and providing technical quality support related to data.</p>
+                  </td>
+               </tr>
+            </table>
+            <h2 id="_Toc115335337">Web writing</h2>
+            <p>The <a href="https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-style-guide.html">Canada.ca Content Style Guide</a> provides rules and guidance for writing and formatting Government of Canada web content. The Style Guide is based on user testing and best practices, and emphasizes writing in plain language. </p>
+            <h3>Put the reader first</h3>
+            <p>Good web content puts the reader’s interests first. Define your audience, and write for them. Your page should help readers accomplish their task. It doesn’t need to include everything there is to know about a subject. </p>
+            <p>Avoid duplicating information that’s already available elsewhere on the site. Instead of repeating it, link to it. </p>
+            <p><strong>Less is more</strong></p>
+            <p>Define the purpose and scope of your page and stick to it.</p>
+            <p>The more text there is on a page, the less people will read. If you want people to read it, make it readable. Readable text is short, clear, relevant and easy to understand.</p>
+            <h3>Organize your content</h3>
+            <p>Most people access GoC content using mobile devices, and most people scan content on the web rather than reading it word-for-word. They’re looking for keywords and other signs that they’re on the right path. They’ll “follow the scent” to the information they’re seeking. This is why it’s critical to use headings as signposts and to use language effectively. </p>
+            <p>Titles and headings must be relatively short and crystal clear. They should accurately describe the content that follows. </p>
+            <p>Start each page and each section with the most important information, the way newspapers do it. That way, if people leave the page before finishing it, they’ll still get the main point.</p>
+            <h3>Define your audience and set readability levels</h3>
+            <p>If your audience is the general public, write the content at a grade 6 to 8 reading level. This doesn’t mean you should aim the content at people aged 12 to 14. Rather, aim it at adults with average or lower literacy skills. This includes, among others:</p>
+            <ul>
+               <li>people whose first language isn’t English or French</li>
+               <li>people with limited education</li>
+               <li>people with learning difficulties</li>
+               <li>people who find it hard to focus for any number of reasons<br/></li>
+            </ul>
+            <p>If your audience is technical (eg scientists or those already familiar with the subject area), you can write to a grade 10-12 level. Keep in mind that even technical audiences respond well to short, clear, relevant, easy-to-understand content. <br/><br/>If your audience is mixed (eg general public and technical), write to the lower literacy level (grade 6-8). The goal is for all readers to understand the content. </p>
+            <p>Once a reader finds your content, you want them to understand it the first time they read it. Say what you’re trying to convey as simply and clearly as possible. Avoid jargon. Test the reading level of your draft as you go. </p>
+            <p>There are a number of web tools you can use to assess the reading level, including the <a href="https://goodcalculators.com/flesch-kincaid-calculator/">Flesch-Kincaid calculator</a>. </p>
+            <h3><br/>Tips for lowering the grade level</h3>
+            <ul>
+               <li>Use short, common words</li>
+               <li> Limit the number of multi-syllabic words in a sentence</li>
+               <li>
+                  Limit sentences to 20 words maximum
+                  <ul>
+                     <li>use bulleted lists instead of long list-y sentences</li>
+                     <li>break long sentences into two or more sentences</li>
+                  </ul>
+               </li>
+               <li>Use common contractions (you’re, can’t, don’t, etc.)</li>
+               <li>Write in active voice</li>
+               <li>Use pronouns (“we” for the GoC, “you” for the reader). Avoid using department names, program names, branch names, etc. <br/></li>
+            </ul>
+            <h3>Working with a web writer</h3>
+            <p>Once you’ve completed a draft, a web writer will work with you to further refine your content. They’ll ensure it meets GoC web standards and plain language requirements.</p>
+            <p>One person on the program side should be assigned to work with the web writer. That person will consolidate all feedback from program’s side before sending it back to the web writer in a single document. Your document will likely go back and forth between the web writer and the program representative several times before final content is agreed upon. </p>
+            <p>Once the document is final, the web writer will arrange for translation and concurrence. <br/><br/></p>
+            <h2 id="_Toc115335338">DATA product PUBLISHING PROCESS</h2>
+            <p>Integrating data and dashboards into user-friendly web content is complex. It requires input and collaboration from a number of stakeholders including P/Ts, epidemiologists, data scientists, plain language writers, user experience experts, web developers and translators. Many steps are needed to create a web data product that is clear and useful for health experts, decision makers and the public.</p>
+            <p>We strongly recommend a phased project approach to establish deliverables based what can be accomplished with resources, time, software and budget available. </p>
+            <p>Before you start working on a data application, make sure your management is engaged from the start to the end. Gather the right people around a table and discuss resources, roles and responsibilities, maintenance, process, timeline, approval level and life cycle. Defining who is responsible, accountable, consulted and informed will help you to shape your phases and steps.</p>
+            <p>Based on best practices, here is a quick overview of phases and steps identified for the web publishing process and approval. </p>
+            <p>Table 2: Publishing process: phases and steps for the integration of data and Dashboard on Canada.ca.</p>
+            <table class="provisional gc-table table" id="myTable1">
+               <tr>
+                  <td>
+                     <p>Phases</p>
+                  </td>
+                  <td>
+                     <p>Steps</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td rowspan="3">
+                     <p>1: Define requirements</p>
+                  </td>
+                  <td>
+                     <p><strong>1: Define content and data requirements</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p><strong>2: Refine content and data requirements</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p><strong>3: Validate location in the information architecture (IA)</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td rowspan="5">
+                     <p>2 : Edit content and data</p>
+                  </td>
+                  <td>
+                     <p><strong>4: Draft content</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p><strong>5: Web content quality assessment</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p><strong>6: Adjust content or data as required</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p><strong>7: Approve final content, data and concept</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p><strong>8: Translate content</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td rowspan="4">
+                     <p>3: Web development</p>
+                  </td>
+                  <td>
+                     <p><strong>9:  Add UTM code, metadata, content and data on Development site</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p><strong>10: Accessibility and usability quality assessment</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p><strong>11: Approval (greenlight to go live)</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p><strong>12: Publish content on Production site (go live)</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td rowspan="3">
+                     <p>4: Performance evaluation</p>
+                  </td>
+                  <td>
+                     <p><strong>13: Collect data (questions, analytics)</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p><strong>14: Analyse data</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p><strong>15: Evaluate results</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td rowspan="2">
+                     <p>5 : Life cycle</p>
+                  </td>
+                  <td>
+                     <p><strong>16: Update content (new iteration, new layer)</strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <p><strong>17: Archive or unpublish</strong></p>
+                  </td>
+               </tr>
+            </table>
+            <h2 id="_Toc115335339">Current technologies and platforms</h2>
+            <ul>
+               <li>Automation of data through a google sheet</li>
+               <li>Data-Driven Documents technology (D3) </li>
+               <li>PowerBI</li>
+               <li>Tableau</li>
+               <li>CSV</li>
+            </ul>
+            <h2 id="_Toc115335340">Examples</h2>
+            <ul>
+               <li><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><a id="_Toc115335341">Automation of data through a shared google sheet</a></li>
+               <li>(What does it means and how it works?)</li>
+            </ul>
+            <h3 id="_Toc115335342">Time range selector</h3>
+            <ul>
+               <li>
+                  What is this, how component feature works and how to make it accessible? “This feature allow user to navigate through available historical data\u2026”
+                  <ul>
+                     <li>
+                        1- drop down with pre-set time range, ex:
+                        <ul>
+                           <li>all time</li>
+                           <li>last year</li>
+                           <li>list month</li>
+                           <li>custom</li>
+                        </ul>
+                     </li>
+                     <li>2- enter the date manually</li>
+                     <li>3- time range to select the start and the end of report</li>
+                     <li>4- explanation on how to use the feature</li>
+                     <li>5- historical data need to be available <br/><br/></li>
+                  </ul>
+               </li>
+               <li>
+                  Examples
+                  <ul>
+                     <li>Usability: Explanation content example</li>
+                     <li>Accessibility:</li>
+                     <li>code snippets of the feature  </li>
+                  </ul>
+               </li>
+            </ul>
+            <h3 id="_Toc115335343">Drop down selector</h3>
+            <ul>
+               <li>What is this, how the feature works and how to make it accessible</li>
+               <li>
+                  Examples
+                  <ul>
+                     <li>Picture example</li>
+                     <li>Usability: Explanation content example</li>
+                     <li>Piece of code </li>
+                  </ul>
+               </li>
+            </ul>
+            <h3 id="_Toc115335344">Interactive tiles, map, chart, percentage donut</h3>
+            <ul>
+               <li>What are they, how the feature works and how to make it accessible</li>
+               <li>
+                  Examples
+                  <ul>
+                     <li>Picture example</li>
+                     <li>Usability: Explanation content example</li>
+                     <li>Piece of code </li>
+                  </ul>
+               </li>
+            </ul>
+            <h3 id="_Toc115335345">Tab design</h3>
+            <ul>
+               <li>What are they, how the features work and how to make it accessible</li>
+               <li>
+                  Examples
+                  <ul>
+                     <li>Picture example</li>
+                     <li>Usability: Explanation content example</li>
+                     <li>Piece of code </li>
+                  </ul>
+               </li>
+            </ul>
+            <p>Developing context pieces to accompany dashboards that are properly written for a public audience.</p>
+            <ul>
+               <li>Explanation</li>
+               <li>Technical note</li>
+               <li>Related links</li>
+               <li>Iconography</li>
+            </ul>
+            <p><br/></p>
+            <!-- CONTENT ENDS HERE -->
+            <div class="clearfix"></div>
+            <div class="pagedetails">
+               <div class="row">
+                  <div class="col-sm-6 col-md-5 col-lg-4">
+                     <details class="brdr-0">
+                        <summary class="btn btn-default text-center">Report a problem on this page</summary>
+                        <div class="well row">
+                           <div class="gc-rprt-prblm">
+                              <div class="gc-rprt-prblm-frm gc-rprt-prblm-tggl">
+                                 <form action="#">
+                                    <fieldset>
+                                       <legend><span class="field-name">Please select all that apply: </span></legend>
+                                       <div class="checkbox">
+                                          <label for="problem1"><input data-reveal="#broken" id="problem1" name="problem" type="checkbox" value="Something is broken"/>Something is broken</label>
+                                       </div>
+                                       <div class="form-group hide" id="broken">
+                                          <label for="problem1-detail">Provide more details (optional):</label>
+                                          <input class="form-control full-width" id="problem1-detail" type="text"/>
+                                       </div>
+                                       <div class="checkbox">
+                                          <label for="problem2"><input data-reveal="#spelling" id="problem2" name="problem" type="checkbox" value="It has spelling or grammar mistakes"/>It has spelling or grammar mistakes</label>
+                                       </div>
+                                       <div class="form-group hide" id="spelling">
+                                          <label for="problem2-detail">Provide more details (optional):</label>
+                                          <input class="form-control full-width" id="problem2-detail" type="text"/>
+                                       </div>
+                                       <div class="checkbox">
+                                          <label for="problem3"><input data-reveal="#wrong" id="problem3" name="problem" type="checkbox" value="The information is wrong"/>The information is wrong</label>
+                                       </div>
+                                       <div class="form-group hide" id="wrong">
+                                          <label for="problem3-detail">Provide more details (optional):</label>
+                                          <input class="form-control full-width" id="problem3-detail" type="text"/>
+                                       </div>
+                                       <div class="checkbox">
+                                          <label for="problem4"><input data-reveal="#outdated" id="problem4" name="problem" type="checkbox" value="The information is outdated"/>The information is outdated</label>
+                                       </div>
+                                       <div class="form-group hide" id="outdated">
+                                          <label for="problem4-detail">Provide more details (optional):</label>
+                                          <input class="form-control full-width" id="problem4-detail" type="text"/>
+                                       </div>
+                                       <div class="checkbox">
+                                          <label for="problem5"><input data-reveal="#find" id="problem5" name="problem" type="checkbox" value="I can’t find what I’m looking for"/>I can’t find what I’m looking for</label>
+                                       </div>
+                                       <div class="form-group hide" id="find">
+                                          <label for="problem5-detail">Describe what you’re looking for (optional):</label>
+                                          <input class="form-control full-width" id="problem5-detail" type="text"/>
+                                       </div>
+                                       <div class="checkbox">
+                                          <label for="problem6"><input data-reveal="#confusing" id="problem6" name="problem" type="checkbox" value="Other"/>Other</label>
+                                       </div>
+                                       <div class="form-group hide" id="confusing">
+                                          <label for="problem6-detail">Provide more details (optional):</label>
+                                          <input class="form-control full-width" id="problem6-detail" type="text"/>
+                                       </div>
+                                    </fieldset>
+                                    <button class="btn btn-primary wb-toggle" data-toggle='{"stateOff": "hide", "stateOn": "show", "selector": ".gc-rprt-prblm-tggl"}' type="submit">Soumettre</button>
+                                 </form>
+                              </div>
+                              <div class="gc-rprt-prblm-thnk gc-rprt-prblm-tggl hide">
+                                 <h3>Merci de votre aide!</h3>
+                                 <p>Vous ne recevrez pas de réponse. Pour toute question, s’il vous plaît <a href="https://www.canada.ca/fr/contact.html">contactez-nous</a>.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </details>
+                  </div>
+               </div>
+               <!--update references-->
+            </div>
+            <div class="pagedetails">
+               <dl id="wb-dtmd">
+                  <dt>Date modified:</dt>
+                  <dd><time property="dateModified">2022-01-01</time></dd>
+               </dl>
+            </div>
+         </main>
+         <div class="par iparys_inherited">
+            <div class="global-footer">
+               <footer id="wb-info">
+                  <div class="landscape">
+                     <nav class="container wb-navcurr">
+                        <h2 class="wb-inv">About government</h2>
+                        <ul class="list-unstyled colcount-sm-2 colcount-md-3">
+                           <li><a href="http://www.phac-aspc.gc.ca/contac-eng.php">Contact us</a></li>
+                           <li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+                           <li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and
+                              military</a>
+                           </li>
+                           <li><a href="https://www.canada.ca/en/news.html">News</a></li>
+                           <li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and
+                              regulations</a>
+                           </li>
+                           <li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide
+                              reporting</a>
+                           </li>
+                           <li><a href="http://pm.gc.ca/en">Prime Minister</a></li>
+                           <li><a href="https://www.canada.ca/en/government/system.html">About government</a></li>
+                           <li><a href="http://open.canada.ca/en">Open government</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+                  <div class="brand">
+                     <div class="container">
+                        <div class="row">
+                           <nav class="col-md-10 ftr-urlt-lnk">
+                              <h2 class="wb-inv">About this site</h2>
+                              <ul>
+                                 <li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+                                 <li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+                                 <li><a href="https://www.canada.ca/en/government/about.html">About Canada.ca</a></li>
+                                 <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and
+                                    conditions</a>
+                                 </li>
+                                 <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+                              </ul>
+                           </nav>
+                           <div class="col-xs-6 visible-sm visible-xs tofpg">
+                              <a href="#wb-cont">Top of page <span class="glyphicon glyphicon-chevron-up"></span></a>
+                           </div>
+                           <div class="col-xs-6 col-md-2 text-right">
+                              <img alt="Symbol of the Government of Canada" src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/wmms-blk.svg"/>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </footer>
+            </div>
+         </div>
+         <script type="text/javascript">
+            _satellite.pageBottom();
+         </script>
+         <script crossorigin="anonymous" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+         <script src="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/wet-boew.min.js"></script>
+         <script src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js"></script>
+         <script src="https://test.canada.ca/covid-19-guidance/proto/js/alpha-banner.js"></script>
+      </body>
+   </html>
