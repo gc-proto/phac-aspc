@@ -96,7 +96,7 @@ nav[data-toggle=toc]  ul.nav ul.nav ul.nav>.active>a {
     font-weight: 700;
     color: #26374A;
     background-color: transparent;
-    border-left: 5px solid #26374A
+    border-left: 1px solid #26374A
 }
 
 nav[data-toggle=toc] .nav .nav {
@@ -127,3 +127,85 @@ nav[data-toggle=toc] .nav .nav>.active>a {
 nav[data-toggle=toc] .nav>.active>ul {
     display: block
 }
+
+
+
+.global-toc {
+  position: sticky;
+  top: 0;
+  width: 20%;}
+
+  .menu-list>li>a{
+    display: block;
+      padding: 5px 18px;
+      font-size: 18px;
+      line-height: 1.5;
+      font-weight: 500;
+      margin-bottom: 0.3em;
+      color: #5f5f5f;
+      text-decoration: none;}
+
+.menu-list>li>a:focus,
+.menu-list>li>a:hover{
+                padding-left: 19px;
+          color: #26374A;
+          text-decoration: none;
+          background-color: transparent;
+          font-weight: 700;
+          border-left: 5px solid #26374A
+      }
+
+  .menu-list>li>a.active{
+                      padding-left: 19px;
+                color: #26374A;
+                text-decoration: none;
+                font-weight: 700;
+                background-color: transparent;
+                border-left: 5px solid #26374A
+            }
+
+
+            .menu-list>li>ul.menu-list>li>a:focus,
+            .menu-list>li>ul.menu-list>li>a:hover{
+                            padding-left: 19px;
+                      color: #26374A;
+                      text-decoration: none;
+                      font-weight: 700;
+                      background-color: transparent;
+                      border-left: 3px solid #26374A
+                      }
+
+    .menu-list>li>ul.menu-list>li>a.active{
+                      padding-left: 19px;
+                      color: #26374A;
+                      font-weight: 700;
+                      text-decoration: none;
+                      background-color: transparent;
+                      border-left: 3px solid #26374A
+                  }
+
+                  .menu-list>li>ul.menu-list>li>ul.menu-list>li>a:focus,
+                  .menu-list>li>ul.menu-list>li>ul.menu-list>li>a:hover{
+                                  padding-left: 19px;
+                            color: #26374A;
+                            font-weight: 700;
+                            text-decoration: none;
+                            background-color: transparent;
+                            border-left: 1px solid #26374A
+                            }
+
+          .menu-list>li>ul.menu-list>li>ul.menu-list>li>a.active{
+                            padding-left: 19px;
+                            color: #26374A;
+                            font-weight: 700;
+                            text-decoration: none;
+                            background-color: transparent;
+                            border-left: 1px solid #26374A
+                        }
+
+
+          .blue-header {
+                     background-color: #26374A;
+                     color: #FFF;
+                     margin-top: 5px;
+                     }
