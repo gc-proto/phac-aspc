@@ -96,7 +96,7 @@ nav[data-toggle=toc]  ul.nav ul.nav ul.nav>.active>a {
     font-weight: 700;
     color: #26374A;
     background-color: transparent;
-    border-left: 1px solid #26374A
+    border-left: 5px solid #26374A
 }
 
 nav[data-toggle=toc] .nav .nav {

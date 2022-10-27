@@ -14,8 +14,8 @@ dir="ltr"><![endif]-->
     <!--[if gte IE 9 | !IE ]><!-->
     <link href="https://www.canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/wet-boew/css/theme.min.css">
-    <link rel="stylesheet" href="../css/toc.css">
-    <link rel="stylesheet" href="../css/in-page.css">
+    <link rel="stylesheet" href="../../css/toc.css">
+    <link rel="stylesheet" href="../../css/in-page.css">
 
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -37,6 +37,85 @@ dir="ltr"><![endif]-->
     </noscript>
 </head>
 
+<style>
+
+.global-toc {
+  position: sticky;
+  top: 0;
+  width: 20%;}
+
+  .menu-list>li>a{
+    display: block;
+      padding: 5px 18px;
+      font-size: 18px;
+      line-height: 1.5;
+      font-weight: 500;
+      margin-bottom: 0.3em;
+      color: #5f5f5f;
+      text-decoration: none;}
+
+.menu-list>li>a:focus,
+.menu-list>li>a:hover{
+                padding-left: 19px;
+          color: #26374A;
+          text-decoration: none;
+          background-color: transparent;
+          border-left: 5px solid #26374A
+      }
+
+  .menu-list>li>a.active{
+                      padding-left: 19px;
+                color: #26374A;
+                text-decoration: none;
+                background-color: transparent;
+                border-left: 5px solid #26374A
+            }
+
+
+            .menu-list>li>ul.menu-list>li>a:focus,
+            .menu-list>li>ul.menu-list>li>a:hover{
+                            padding-left: 19px;
+                      color: #26374A;
+                      text-decoration: none;
+                      background-color: transparent;
+                      border-left: 3px solid #26374A
+                      }
+
+    .menu-list>li>ul.menu-list>li>a.active{
+                      padding-left: 19px;
+                      color: #26374A;
+                      text-decoration: none;
+                      background-color: transparent;
+                      border-left: 3px solid #26374A
+                  }
+
+                  .menu-list>li>ul.menu-list>li>ul.menu-list>li>a:focus,
+                  .menu-list>li>ul.menu-list>li>ul.menu-list>li>a:hover{
+                                  padding-left: 19px;
+                            color: #26374A;
+                            text-decoration: none;
+                            background-color: transparent;
+                            border-left: 1px solid #26374A
+                            }
+
+          .menu-list>li>ul.menu-list>li>ul.menu-list>li>a.active{
+                            padding-left: 19px;
+                            color: #26374A;
+                            text-decoration: none;
+                            background-color: transparent;
+                            border-left: 1px solid #26374A
+                        }
+
+
+.blue-header {
+           background-color: #26374A;
+           color: #FFF;
+           margin-top: 5px;
+           }
+
+
+</style>
+
 <body id="start" class="page-type-nav" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
     <ul id="wb-tphp">
         <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
@@ -44,7 +123,7 @@ dir="ltr"><![endif]-->
 		government"</a> </li>
     </ul>
     <header>
-    <div id="wb-bnr" class="container">
+    <div id="wb-bnr" class="container-fluid">
     <section id="wb-lng" class="text-right">
     <h1 class="wb-inv">Language selection</h2>
     <ul class="list-inline margin-bottom-none">
@@ -62,74 +141,109 @@ dir="ltr"><![endif]-->
 
     </header>
 
-</style>
 
-<main property="mainContentOfPage" class="container wb-prettify all-pre">
 
+<main property="mainContentOfPage" class="wb-prettify all-pre">
+<div class="container-fluid">
+    	<section class="blue-header well well-sm brdr-0 mrgn-bttm-0 mrgn-tp-0">
+<h2 class="mrgn-tp-md">Health Infobase Design Manual</h2>
+        		</section>
   <div class="row">
 
     <section id="btn-toc" class="col-sm-12 visible-xs visible-sm"><a class="btn btn-primary show-menu col-sm-3 col-xs-9" style="color: white !important;"><i class="fas fa-bars"></i>&nbsp Table of contents</a> <a class="btn btn-primary col-sm-1 col-xs-3 pull-right" style="color: white !important;"><i class="fas fa-search"></i></a></section>
 
     <div class="mgrn-tp-xl visible-sm"><p><br></p></div> <!-- temp test fix for menu covering button -->
+<div class="col-md-2 global-toc">
+  <h2 class="h3">Table of contents</h2>
+
+  <ul class="menu-list lst-none">
+
+    <li > <a href="../getting-started.html">Getting started</a>    </li>
+
+      <li><a href="../data.html">Data</a></li>
+      <li><a href="../dataviz.html">Storytelling and visualization</a></li>
+      <li><a class="active" href="../library.html">Pattern library</a>
+      <ul class="menu-list lst-none">
+
+        <li class="longdoc-toc-link"><a href="./library/bar-graphs.html">Bar graphs</a></li>
+        <li class="longdoc-toc-link"><a href="./library/drop-down.html">Drop-down selectors</a></li>
+        <li class="longdoc-toc-link"><a class="active" href="./library/maps.html">Maps</a></li>
+        <li class="longdoc-toc-link"><a href="./library/pie-charts.html">Pie charts</a></li>
+        <li class="longdoc-toc-link"><a href="./library/related-products.html">Related data products</a></li>
+  </ul>
+      </li>
+      <li><a href="../performance.html">Performance measurement</a></li>
+
+</ul>
+
+</div>
 
 
-    <div class="col-md-4">
+    <div class="col-md-2 visible-md visible-lg">
 <div class="row">
 
       <nav id="toc" data-spy="affix" data-toggle="toc" class="affix col-xs-12 col-sm-12" >
 
 
-<h2 class="h3"><a href="./index.html">Health Infobase design system</a></h2>
-        <ul class="nav" >
+<h2 class="h3">On this page</h2>
 
-            <li class="longdoc-toc-link "><a href="./getting-started.html">Getting started</a></li>
-            <li class="longdoc-toc-link"><a href="./data.html">Data</a></li>
-            <li class="longdoc-toc-link"><a href="./dataviz.html">Storytelling and visualization</a></li>
-          <li><a class="menu-drilldown " href="#start">Pattern library</a>
-            <ul class="nav">
-              <li class="longdoc-toc-link"><a href="./library/bar-graphs.html">Bar graphs</a></li>
-              <li class="longdoc-toc-link"><a href="./library/drop-down.html">Drop-down selectors</a></li>
-              <li class="longdoc-toc-link"><a href="./library/maps.html">Maps</a></li>
-              <li class="longdoc-toc-link"><a href="./library/pie-charts.html">Pie charts</a></li>
-              <li class="longdoc-toc-link"><a href="./library/related-products.html">Related data products</a></li>
-            </ul>
-          </li>
 
-            <li class="longdoc-toc-link"><a href="./performance.html">Performance measurement</a></li>
 
-</ul>
+                <ul class="nav">
+                  <li class="longdoc-toc-link"><a href="#when">When to use</a></li>
+                  <li class="longdoc-toc-link"><a href="#avoid">What to avoid</a></li>
+                  <li class="longdoc-toc-link"><a href="#design">Design and code</a></li>
+                  <li class="longdoc-toc-link"><a href="#content">Content guidelines</a></li>
+                  <li class="longdoc-toc-link"><a href="#accessibility">Accessibility guidelines</a></li>
+                  <li class="longdoc-toc-link"><a href="#research">Research</a></li>
+
+
           </nav>
     </div>
 </div>
 
-<div class="col-md-8 mrgn-tp-lg">
+<div class="col-md-7 mrgn-tp-lg">
 
-<h1  class="gc-thickline mrgn-tp-0">Pattern library</h1>
+<h1 class="gc-thickline mrgn-tp-0">Maps</h1>
 
-<a href="./getting-started/working.html">Working with the Infobase </a>
+<div class="visible-xs visible-sm">
+
+<h2 class="h3">On this page</h2>
+<ul>
+  <li><a href="#when">When to use</a></li>
+  <li><a href="#avoid">What to avoid</a></li>
+  <li><a href="#design">Design and code</a></li>
+  <li><a href="#content">Content guidelines</a></li>
+  <li><a href="#design">Accessibility guidelines</a></li>
+  <li><a href="#research">Research</a></li>
+</ul>
+</div>
+<h2 id="when">When to use</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
 
 </p>
 
+<h2 id="avoid">What to avoid</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
 
 </p>
 
-
+<h2 id="design">Design and code</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
 
 </p>
 
-
+<h2 id="content">Content guidelines</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
 
 </p>
 
-
+<h2 id="accessibility">Accessibility guidelines</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
 
 </p>
 
+<h2 id="resarch">Research</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
 
 </p>
@@ -201,7 +315,7 @@ dir="ltr"><![endif]-->
     	<!--[if gte IE 9 | !IE ]><!-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script>
-      <script src="../js/toc-custom.js"></script>
+      <script src="../../js/toc-custom.js"></script>
 
       <!--<![endif]-->
       <!--[if lt IE 9]>
