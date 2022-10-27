@@ -1,6 +1,6 @@
 # PHAC - Optimization prototyping space
 
-This is a repository used by Public Health Agency of Canada to prototype and test ideas.
+This is a repository used by Public Health Agency of Canada to prototype and test ideas..
 
 ## How to use the templates
 
