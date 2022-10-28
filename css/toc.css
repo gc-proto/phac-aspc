@@ -133,6 +133,7 @@ nav[data-toggle=toc] .nav>.active>ul {
 .global-toc {
   position: sticky;
   top: 0;
+  overflow-y: auto;
   background-color: #26374A;
   color: #FFF;
   min-height: 100vh;

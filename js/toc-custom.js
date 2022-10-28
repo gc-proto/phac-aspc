@@ -65,43 +65,43 @@ if ($window.width() < 992) {
 }
 
 if ($window.width() > 992) {
-  $('#toc').css({"maxWidth":($(window).width() / 3)+"px"})
+  $('#toc').css({"maxWidth":($(window).width() / 4.75)+"px"})
 }
 
 if ($window.width() > 1024) {
-  $('#toc').css({"maxWidth":($(window).width() / 3.55)+"px"})
+  $('#toc').css({"maxWidth":($(window).width() / 5)+"px"})
 }
 
 if ($window.width() > 1225) {
-  $('#toc').css({"maxWidth":($(window).width() / 3.15)+"px"})
+  $('#toc').css({"maxWidth":($(window).width() / 5.25)+"px"})
 }
 
 if ($window.width() > 1325) {
-  $('#toc').css({"maxWidth":($(window).width() / 3.6)+"px"})
+  $('#toc').css({"maxWidth":($(window).width() / 5.4)+"px"})
 }
 
 if ($window.width() > 1425) {
-  $('#toc').css({"maxWidth":($(window).width() / 3.75)+"px"})
+  $('#toc').css({"maxWidth":($(window).width() / 5.55)+"px"})
 }
 
 if ($window.width() > 1525) {
-  $('#toc').css({"maxWidth":($(window).width() / 3.95)+"px"})
+  $('#toc').css({"maxWidth":($(window).width() / 5.75)+"px"})
 }
 
 if ($window.width() > 1625) {
-  $('#toc').css({"maxWidth":($(window).width() / 4.2)+"px"})
+  $('#toc').css({"maxWidth":($(window).width() / 6)+"px"})
 }
 
 if ($window.width() > 1725) {
-  $('#toc').css({"maxWidth":($(window).width() / 4.4)+"px"})
+  $('#toc').css({"maxWidth":($(window).width() / 6.3)+"px"})
 }
 
 if ($window.width() > 1825) {
-  $('#toc').css({"maxWidth":($(window).width() / 4.7)+"px"})
+  $('#toc').css({"maxWidth":($(window).width() / 6.6)+"px"})
 }
 
 if ($window.width() > 1925) {
-  $('#toc').css({"maxWidth":($(window).width() / 5)+"px"})
+  $('#toc').css({"maxWidth":($(window).width() / 6.9)+"px"})
 }
 
 // only adds sticky class if it's in desktop size, also adds full-width button and #toc classes
