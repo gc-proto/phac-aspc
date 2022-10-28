@@ -158,3 +158,5 @@ $('.menu-drilldown').click(function(){
   $(this).parent().toggleClass('active');
   return false;
 });
+
+$( "#unique-id" ).trigger( "open.wb-overlay" );

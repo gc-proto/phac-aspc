@@ -76,7 +76,37 @@ dir="ltr"><![endif]-->
             <section class="brdr-0">
   <div class="row">
 
-    <section id="btn-toc" class="col-sm-12 visible-xs visible-sm"><a class="btn btn-primary show-menu col-sm-3 col-xs-9" style="color: white !important;"><i class="fas fa-bars"></i>&nbsp Table of contents</a> <a class="btn btn-primary col-sm-1 col-xs-3 pull-right" style="color: white !important;"><i class="fas fa-search"></i></a></section>
+    <section class="col-sm-12 visible-xs visible-sm">
+
+      <a id="btn-toc" class="btn btn-block btn-primary wb-lbx lbx-modal" title="Example of a modal popup" href="#inline_content_modal" style="color: white !important; border-radius: 0px;"><i class="fas fa-bars"></i>&nbsp Table of contents</a>
+
+      <section id="inline_content_modal" class="mfp-hide modal-dialog modal-content overlay-def">
+			<header class="modal-header">
+				<h2 class="modal-title">Table of contents</h2>
+			</header>
+			<div class="modal-body">
+        <ul>
+
+          <li > <a href="../getting-started.html">Getting started</a></li>
+
+            <li><a href="../data.html">Data</a></li>
+            <li><a href="../dataviz.html">Storytelling and visualization</a></li>
+            <li><a class="active" href="../library.html">Pattern library</a>
+            <ul>
+
+              <li><a href="./library/bar-graphs.html">Bar graph</a></li>
+              <li><a href="./library/drop-down.html">Drop-down selectors</a></li>
+              <li><a class="active" href="./library/maps.html">Maps</a></li>
+              <li><a href="./library/pie-charts.html">Pie charts</a></li>
+              <li><a href="./library/related-products.html">Related data products</a></li>
+        </ul>
+            </li>
+            <li><a href="../performance.html">Performance measurement</a></li>
+
+      </ul>
+			</div>
+		</section>
+    </section>
 
     <div class="mgrn-tp-xl visible-sm"><p><br></p></div> <!-- temp test fix for menu covering button -->
 <div class="col-md-2 global-toc visible-md visible-lg">
@@ -98,7 +128,7 @@ dir="ltr"><![endif]-->
         <li class="longdoc-toc-link"><a href="./library/related-products.html">Related data products</a></li>
   </ul>
       </li>
-      <li><a href="../performance.html">Performance measurement</a></li>
+      <li class="longdoc-toc-link"><a href="../performance.html">Performance measurement</a></li>
 
 </ul>
 
@@ -202,9 +232,9 @@ dir="ltr"><![endif]-->
     		<footer id="wb-info">
     	<div class="landscape">
     	<nav class="container wb-navcurr">
-    	<h2 class="wb-inv">About government</h2>
+    	<h2 class="wb-inv">About this guide</h2>
     	<ul class="list-unstyled colcount-sm-2 colcount-md-3">
-    	<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
+    	<li><a href="mailto:phac.infobase.aspc@canada.ca">Contact the Infobase Team</a></li>
     	<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
     	<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
     	<li><a href="https://www.canada.ca/en/news.html">News</a></li>
