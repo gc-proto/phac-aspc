@@ -31,17 +31,14 @@ nav[data-toggle=toc] .nav>li>a {
 
 nav[data-toggle=toc] .nav>li>a:focus,
 nav[data-toggle=toc] .nav>li>a:hover {
-    padding-left: 19px;
     color: #26374A;
     text-decoration: none;
-    background-color: transparent;
-    border-left: 5px solid #26374A
+    background-color: #eaebed;
 }
 
 nav[data-toggle=toc] .nav>.active:focus>a,
 nav[data-toggle=toc] .nav>.active:hover>a,
 nav[data-toggle=toc] .nav>.active>a {
-    padding-left: 18px;
     font-weight: 700;
     color: #26374A;
     background-color: transparent;
@@ -51,12 +48,9 @@ nav[data-toggle=toc] .nav>.active>a {
 /* 2nd layer of toc */
 nav[data-toggle=toc] ul.nav ul.nav>li>a:focus,
 nav[data-toggle=toc] ul.nav ul.nav>li>a:hover {
-    margin-left: 16px;
-    padding-left: 18px;
-    color: #26374A;
-    text-decoration: none;
-    background-color: transparent;
-    border-left: 3px solid #26374A
+  color: #26374A;
+  text-decoration: none;
+  background-color: #eaebed;
 }
 
 nav[data-toggle=toc]  ul.nav ul.nav>.active:focus>a,
@@ -151,12 +145,9 @@ nav[data-toggle=toc] .nav>.active>ul {
 
 .menu-list>li>a:focus,
 .menu-list>li>a:hover{
-                padding-left: 19px;
           color: #FFF;
           text-decoration: none;
-          background-color: transparent;
-          font-weight: 800;
-          border-left: 5px solid #FFF
+          background-color: #344f6e;
       }
 
   .menu-list>li>a.active{
@@ -171,12 +162,9 @@ nav[data-toggle=toc] .nav>.active>ul {
 
             .menu-list>li>ul.menu-list>li>a:focus,
             .menu-list>li>ul.menu-list>li>a:hover{
-                            padding-left: 19px;
-                      color: #FFF;
-                      text-decoration: none;
-                      font-weight: 800;
-                      background-color: transparent;
-                      border-left: 3px solid #FFF
+              color: #FFF;
+              text-decoration: none;
+              background-color: #344f6e;
                       }
 
     .menu-list>li>ul.menu-list>li>a.active{
@@ -190,12 +178,9 @@ nav[data-toggle=toc] .nav>.active>ul {
 
                   .menu-list>li>ul.menu-list>li>ul.menu-list>li>a:focus,
                   .menu-list>li>ul.menu-list>li>ul.menu-list>li>a:hover{
-                                  padding-left: 19px;
-                            color: #FFF;
-                            font-weight: 800;
-                            text-decoration: none;
-                            background-color: transparent;
-                            border-left: 1px solid #FFF
+                    color: #FFF;
+                    text-decoration: none;
+                    background-color: #344f6e;
                             }
 
           .menu-list>li>ul.menu-list>li>ul.menu-list>li>a.active{
