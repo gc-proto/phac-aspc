@@ -132,6 +132,11 @@ nav[data-toggle=toc] .nav>.active>ul {
   min-height: 100vh;
   width: 20%;}
 
+
+  .menu-list {
+    padding-left: 20px;}
+
+
   .menu-list>li>a{
     display: block;
       padding: 5px 18px;
@@ -154,7 +159,8 @@ nav[data-toggle=toc] .nav>.active>ul {
                 text-decoration: none;
                 font-weight: 800;
                 background-color: #344f6e;
-                border-left: 5px solid #FFF
+                border-left: 5px solid #FFF;
+                padding-left: 12px;
             }
 
 
@@ -171,7 +177,8 @@ nav[data-toggle=toc] .nav>.active>ul {
                       font-weight: 800;
                       text-decoration: none;
                       background-color: #344f6e;
-                      border-left: 3px solid #FFF
+                      border-left: 3px solid #FFF;
+                      padding-left: 14px;
                   }
 
                   .menu-list>li>ul.menu-list>li>ul.menu-list>li>a:focus,
@@ -187,7 +194,8 @@ nav[data-toggle=toc] .nav>.active>ul {
                             font-weight: 800;
                             text-decoration: none;
                             background-color: #344f6e;
-                            border-left: 1px solid #FFF
+                            border-left: 1px solid #FFF;
+                            padding-left: 16px;
                         }
 
 
