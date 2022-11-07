@@ -199,3 +199,21 @@ nav[data-toggle=toc] .nav>.active>ul {
                      margin-top: 5px;
                      border-radius: 0px;
                      }
+
+
+
+
+
+          .top-menu, .top-menu:visited {
+          display: inline-block;
+          text-decoration: none;
+        }
+
+        .top-menu, .top-menu:visited, .top-menu:focus, .top-menu:hover {
+          color: #FFF;
+        }
+
+        .top-menu:active, .top-menue:focus, .top-menu:hover {
+          text-decoration: underline;
+
+        }
