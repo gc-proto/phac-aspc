@@ -41,8 +41,7 @@ nav[data-toggle=toc] .nav>.active>a {
     font-weight: 700;
     color: #26374A;
       background-color: #eaebed;
-    border-left: 5px solid #26374A;
-    padding-left: 12px;
+
 }
 
 /* 2nd layer of toc */
@@ -56,12 +55,10 @@ nav[data-toggle=toc] ul.nav ul.nav>li>a:hover {
 nav[data-toggle=toc]  ul.nav ul.nav>.active:focus>a,
 nav[data-toggle=toc]  ul.nav ul.nav>.active:hover>a,
 nav[data-toggle=toc]  ul.nav ul.nav>.active>a {
-    margin-left: 16px;
-    padding-left: 18px;
     font-weight: 700;
     color: #26374A;
         background-color: #eaebed;
-    border-left: 3px solid #26374A
+
 }
 
 /* 3rd layer of toc */
@@ -75,11 +72,10 @@ nav[data-toggle=toc] ul.nav ul.nav ul.nav>li>a{
 nav[data-toggle=toc] ul.nav ul.nav ul.nav>li>a:focus,
 nav[data-toggle=toc] ul.nav ul.nav ul.nav>li>a:hover {
     margin-left: 30px;
-    padding-left: 18px;
     color: #26374A;
     text-decoration: none;
         background-color: #eaebed;
-    border-left: 1px solid #26374A
+
 }
 
 nav[data-toggle=toc]  ul.nav ul.nav ul.nav>.active:focus>a,
@@ -90,7 +86,6 @@ nav[data-toggle=toc]  ul.nav ul.nav ul.nav>.active>a {
     font-weight: 700;
     color: #26374A;
       background-color: #eaebed;
-    border-left: 1px solid #26374A
 }
 
 nav[data-toggle=toc] .nav .nav {
@@ -178,8 +173,8 @@ nav[data-toggle=toc] .nav>.active>ul {
                       font-weight: 800;
                       text-decoration: none;
                       background-color: #344f6e;
-                      border-left: 3px solid #FFF;
-                      padding-left: 14px;
+                      border-left: 5px solid #FFF;
+                      padding-left: 12px;
                   }
 
                   .menu-list>li>ul.menu-list>li>ul.menu-list>li>a:focus,
@@ -195,8 +190,8 @@ nav[data-toggle=toc] .nav>.active>ul {
                             font-weight: 800;
                             text-decoration: none;
                             background-color: #344f6e;
-                            border-left: 1px solid #FFF;
-                            padding-left: 16px;
+                            border-left: 5px solid #FFF;
+                            padding-left: 12px;
                         }
 
 
