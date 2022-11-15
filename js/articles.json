@@ -1,0 +1,790 @@
+   [
+      {
+         "title":"The Canadian Nosocomial Infection Surveillance Program (CNISP)",
+         "link":"https://health-infobase.canada.ca/cnisp/index.html",
+         "description":"The CNISP summarizes trends in national incidence rates, antimicrobial resistance and molecular characterization for select healthcare-acquired infections (HAIs) and antimicrobial-resistant organisms (AROs).",
+         "date":"2021-06-07",
+         "topic":"Hospitals",
+         "format":"Interactive",
+         "icon":"hospital.png"
+      },
+      {
+         "title":"How has COVID-19 impacted access to STBBI-related health services, including harm reduction services, for African, Caribbean and Black (ACB) people in Canada?",
+         "link":"https://health-infobase.canada.ca/datalab/covid-19-stbbi-acb-people.html",
+         "description":"Since the start of Canada’s COVID-19 pandemic, challenges in delivering healthcare services including sexually transmitted and blood-borne infection (STBBI) prevention, testing and treatment services, including harm reduction services, have been reported across the country. ",
+         "date":"2021-06-07",
+         "topic":"COVID-19, Sexually transmitted infections, BIPOC",
+         "format":"Blog",
+         "icon":"covid.png"
+      },
+      {
+         "title":"Interactive chart data visualizations of COVID-19",
+         "link":"https://health-infobase.canada.ca/covid-19/visual-data-gallery/",
+         "description":"Telling the COVID-19 story through numbers. Includes maps, charts, graphics, models and projections.",
+         "date":"2020-05-27",
+         "topic":"COVID-19",
+         "format":"Interactive",
+         "icon":"covid.png"
+      },
+      {
+         "title":"Parkinson Disease",
+         "link":"https://health-infobase.canada.ca/datalab/parkinson-blog.html",
+         "description":"Stats and data about the Parkinson disease",
+         "date":"2022-04-26",
+         "topic":"Neurological diseases",
+         "format":"Blog",
+         "icon":"brain.png"
+      },
+      {
+         "title":"Breast Implant-Associated Anaplastic Large Cell Lymphoma (BIA-ALCL) – Canadian Surveillance 2021 Data",
+         "link":"https://health-infobase.canada.ca/datalab/bia-alcl-blog.html",
+         "description":"Breast implant-associated anaplastic large cell lymphoma (BIA-ALCL) is a cancer of the immune system that can develop next to a breast implant.",
+         "date":"2022-04-06",
+         "topic":"Cancer",
+         "format":"Blog",
+         "icon":"Cancer.png"
+      },
+      {
+         "title":"Drug Analysis Service",
+         "link":"https://health-infobase.canada.ca/drug-analysis-service/analyzed-drug-report.html",
+         "description":"Health Canada’s Drug Analysis Service (DAS) operates laboratories across Canada that analyze suspected illegal drugs seized by Canadian law enforcement agencies.",
+         "date":"2022-07-13",
+         "topic":"Opioids, Stimulants",
+         "format":"Interactive",
+         "icon":"opioids.png"
+      },
+      {
+         "title":"Opioid- and Stimulant-related Harms in Canada",
+         "link":"https://health-infobase.canada.ca/substance-related-harms/opioids-stimulants/",
+         "description":"Data on overdoses and deaths involving opioids and/or stimulants from January 2016 to March 2022",
+         "date":"2022-09-28",
+         "topic":"Opioids, Stimulants",
+         "format":"Interactive",
+         "icon":"opioids.png"
+      },
+      {
+         "title":"Antimicrobial use (AMU) in Canada",
+         "link":"https://health-infobase.canada.ca/carss/",
+         "description":"This Interactive chart tool demonstrates the quantity of antimicrobial doses dispensed by Canadian retail pharmacies between 2015 and 2019. ",
+         "date":"2022-03-16",
+         "topic":"Prescription drugs",
+         "format":"Interactive",
+         "icon":"rx.png"
+      },
+
+      {
+         "title":"Cannabis Use For Non-medical Purposes Among Canadians (Aged 16+)",
+         "link":"https://health-infobase.canada.ca/cannabis/",
+         "description":"Data on non-medical use of cannabis in Canada.",
+         "date":"2021-12-23",
+         "topic":"Cannabis",
+         "format":"Interactive",
+         "icon":"cannabis.png"
+      },
+      {
+         "title":"Mental Illness during the Pandemic: Survey on COVID-19 and Mental Health (Cycles 1 and 2)",
+         "link":"https://health-infobase.canada.ca/covid-19/mental-health-survey/",
+         "description":"The COVID-19 pandemic has affected individuals, families, and communities in many ways. The Survey on COVID-19 and Mental Health (SCMH) was designed to collect data to assess the mental health and well-being of Canadians during the pandemic.",
+         "date":"2022-09-20",
+         "topic":"Mental health",
+         "format":"Blog",
+         "icon":"mental_health.png"
+      },
+      {
+         "title":"Measuring Bicycling Infrastructure Across Canada",
+         "link":"https://health-infobase.canada.ca/datalab/bicycling-infrastructure.html",
+         "description":"Active transportation, such as walking, bicycling, and skateboarding to get around, is an important method by which Canadians move through their environment. While its benefits are typically thought of as reducing road congestion and greenhouse gas emissions, active transportation is also a crucial way that many Canadians achieve daily physical activity.",
+         "date":"2021-08-23",
+         "topic":"Physical activity",
+         "format":"Interactive",
+         "icon":"bike.png"
+      },
+      {
+         "title":"Impacts of the COVID-19 Pandemic on Canadian Children with Cognitive, Behavioural or Emotional Disabilities",
+         "link":"https://health-infobase.canada.ca/covid-19/impacts-on-children/",
+         "description":"Highlights from a Crowdsourcing Questionnaire: Impacts of COVID-19 on Canadians - Parenting during the Pandemic, 2020",
+         "date":"2021-07-13",
+         "topic":"COVID-19, Children, Disabilities",
+         "format":"Blog",
+         "icon":"family_house.png"
+      },
+      {
+         "title":"Canadian Postsecondary Education Alcohol and Drug Use Survey, 2019/2020",
+         "link":"https://health-infobase.canada.ca/alcohol/cpads/",
+         "description":"The Canadian Postsecondary Education Alcohol and Drug use Survey (CPADS) contributes to Health Canada’s substance use surveillance strategy, which provides the Government of Canada with vital information on the use of drugs and other substances by Canadians.",
+         "date":"2021-05-10",
+         "topic":"Alcohol, Cannabis, Smoking and vaping",
+         "format":"Blog",
+         "icon":"alcohol_drugs.png"
+      },
+      {
+         "title":"How has COVID-19 impacted access to STBBI-related health services, including harm reduction services, for people who use drugs or alcohol in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/covid-19-stbbi-services.html",
+         "description":"To better understand how the COVID-19 pandemic has affected access to sexually transmitted and blood-borne infection (STBBI) prevention, testing and treatment services, and harm reduction services, for people who use drugs or alcohol, the Public Health Agency of Canada (PHAC) conducted an anonymous online survey in January and February 2021.",
+         "date":"2021-05-18",
+         "topic":"COVID-19, Sexually transmitted infections, Alcohol, Cannabis, Opioids ",
+         "format":"Blog",
+         "icon":"covid.png"
+      },
+      {
+         "title":"Sentinel Surveillance of Substance Use-related Injuries and Poisonings in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/poisonings-surveillance/substance-use-injuries.html",
+         "description":"Substance-related poisonings and injuries in Canada have received increasing attention in recent years due to emerging public health threats, such as the opioids overdose crisis, the introduction of potent synthetic cannabinoids to the illicit market and the emergence of electronic cigarettes on the Canadian market.",
+         "date":"2021-21-31",
+         "topic":"Cannabis, Opioids, Stimulants, Smoking and vaping",
+         "format":"Blog",
+         "icon":"alcohol_drugs.png"
+      },
+      {
+         "title":"How has COVID-19 impacted the delivery of STBBI-related services, including harm reduction services, in Canada?",
+         "link":"https://health-infobase.canada.ca/datalab/covid-19-impact-stbbi-services.html",
+         "description":"To better understand how the COVID-19 pandemic has affected the ability of healthcare service providers to deliver sexually transmitted and blood-borne infection (STBBI) prevention, testing and treatment services, the Public Health Agency of Canada (PHAC) conducted a survey in November and December 2020.",
+         "date":"2021-02-07",
+         "topic":"COVID-19, Sexually transmitted infections",
+         "format":"Blog",
+         "icon":"covid.png"
+      },
+      {
+         "title":"COVID-19 epidemiology update",
+         "link":"https://health-infobase.canada.ca/covid-19/",
+         "description":"This summary of COVID-19 cases across Canada contains detailed data about the spread of the virus over time and in different regions of the country.",
+         "date":"2022-09-23",
+         "topic":"COVID-19",
+         "format":"Interactive",
+         "icon":"covid.png"
+      },
+      {
+         "title":"Alcohol use among Canadians",
+         "link":"https://health-infobase.canada.ca/alcohol/ctads/",
+         "description":"Trends of alcohol use among Canadians 15 years of age and older from the Canadian Tobacco, Alcohol and Drugs Survey (CTADS) and the Canadian Alcohol and Drug Use Monitoring Survey (CADUMS).",
+         "date":"2020-21-21",
+         "topic":"Alcohol",
+         "format":"Interactive",
+         "icon":"alcohol_drugs.png"
+      },
+      {
+         "title":"Radon risk: Raising awareness to encourage action",
+         "link":"https://health-infobase.canada.ca/datalab/radon-awareness-blog.html",
+         "description":"Radon exposure is the leading cause of lung cancer among non-smokers in Canada. Raising public awareness is a critical first step toward protecting Canadians from the health risks associated with long-term exposure to high radon levels. ",
+         "date":"2020-11-26",
+         "topic":"Radon",
+         "format":"Blog",
+         "icon":"house.png"
+      },
+      {
+         "title":"Differences in obesity rates between rural communities and urban cities in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/canadian-risk-factor-atlas-obesity-blog.html",
+         "description":"In Canada overall, the rate of obesity is higher for adults living in rural areas compared with those living in urban areas, independently of sex.",
+         "date":"2020-11-05",
+         "topic":"Obesity",
+         "format":"Blog",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Mental illness in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/mental-illness-blog.html",
+         "description":"Mental illness is characterized by changes in an individual's thinking, mood, or behaviour and is usually associated with significant distress or impaired functioning in social, occupational or other activities.",
+         "date":"2020-10-08",
+         "topic":"Mental health",
+         "format":"Blog",
+         "icon":"mental_health.png"
+      },
+      {
+         "title":"Canada: Land of wildfires?",
+         "link":"https://health-infobase.canada.ca/datalab/wildfire-blog.html",
+         "description":"Canada is covered with 347 million hectares of forest, making up 9% of the world’s total forest area. With so many forested areas, wildfires are a serious risk for Canadians, particularly from May to September. Large, destructive fires can quickly spread out of control.",
+         "date":"2020-09-21",
+         "topic":"Wildfires",
+         "format":"Blog",
+         "icon":"wildfire.png"
+      },
+      {
+         "title":"Dementia (including Alzheimer's Disease) in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/dementia-alzheimers-blog.html",
+         "description":"Dementia is an umbrella term that describes a set of symptoms affecting brain function. It happens when cells in the brain die or important nerve connections are broken. This process is known as neurodegeneration.",
+         "date":"2020-09-17",
+         "topic":"Neurological diseases",
+         "format":"Blog",
+         "icon":"brain.png"
+      },
+      {
+         "title":"Injury in Review, 2020 Edition: Spotlight on Traumatic Brain Injuries Across the Life Course",
+         "link":"https://health-infobase.canada.ca/datalab/traumatic-brain-injuries-blog.html",
+         "description":"This is the third report of the Public Health Agency of Canada’s (PHAC) Injury in Review series, providing national surveillance statistics on head injuries and traumatic brain injuries (TBI).",
+         "date":"2020-08-11",
+         "topic":"Brain injuries",
+         "format":"Blog",
+         "icon":"brain.png"
+      },
+      {
+         "title":"Canadian Supervised Consumption Sites Statistics — 2017 to 2019",
+         "link":"https://health-infobase.canada.ca/datalab/supervised-consumption-sites-blog.html",
+         "description":"Supervised consumption sites (SCS) are facilities where people can consume pre-obtained drugs under the supervision of trained staff. SCS provide people who use drugs with a safe, non-judgemental environment, sterile consumption equipment, and services that include social, medical, and mental health care. ",
+         "date":"2020-07-21",
+         "topic":"Opioids, Supervised consumption sites",
+         "format":"Blog",
+         "icon":"opioids.png"
+      },
+      {
+         "title":"Schizophrenia in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/schizophrenia-blog.html",
+         "description":"Schizophrenia is a psychotic disorder that affects about 1% of Canadians. ",
+         "date":"2020-07-07",
+         "topic":"Mental health",
+         "format":"Blog",
+         "icon":"brain.png"
+      },
+      {
+         "title":"Quick Facts About Suicide in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/quick-facts-suicide-blog.html",
+         "description":"In 2017, approximately 4,000 people died by suicide in Canada, averaging 11 deaths each day.That year, suicide was the ninth leading cause of death in Canada and the second leading cause of death among youth and young adults aged 15 to 34.",
+         "date":"2020-01-29",
+         "topic":"Suicide",
+         "format":"Blog",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Radon Action Month in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/radon-blog.html",
+         "description":"Radon is an invisible radioactive gas that causes lung cancer. In Canada, it is the second highest cause of lung cancer, after smoking.",
+         "date":"2019-11-21",
+         "topic":"Radon",
+         "format":"Blog",
+         "icon":"house.png"
+      },
+      {
+         "title":"Diabetes in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/diabetes-blog.html",
+         "description":"Diabetes is a common chronic condition that affects Canadians of all ages. It occurs when the body loses its ability to produce or properly use insulin, a hormone that regulates sugar levels in the blood.",
+         "date":"2019-11-14",
+         "topic":"Blood and metabolic diseases",
+         "format":"Blog",
+         "icon":"blood.png"
+      },
+      {
+         "title":"Drowning related deaths and injuries",
+         "link":"https://health-infobase.canada.ca/datalab/drowning-blog.html",
+         "description":"Between April 2011 and July 2021, there were 918 drowning-related cases reported in selected emergency departments across Canada.",
+         "date":"2021-12-20",
+         "topic":"Drowning",
+         "format":"Blog",
+         "icon":"drowning.png"
+      },
+      {
+         "title":"Injuries related to barbecue brush bristle ingestion/inhalation",
+         "link":"https://health-infobase.canada.ca/datalab/bbq-blog.html",
+         "description":"Injuries related to barbecue brush bristle ingestion/inhalation continue to be a public health concern. This common household item can pose a health risk to individuals, as metal bristles can detach from the brush and remain on the grill.",
+         "date":"2022-08-10",
+         "topic":"Consumer product injuries",
+         "format":"Blog",
+         "icon":"bbq.png"
+      },
+      {
+         "title":"Fireworks-related injuries",
+         "link":"https://health-infobase.canada.ca/datalab/firework-blog.html",
+         "description":"Statistics highlighting injuries associated with fireworks and other related products that occurred on or after April 2011",
+         "date":"2019-06-27",
+         "topic":"Consumer product injuries",
+         "format":"Blog",
+         "icon":"fireworks.png"
+      },
+      {
+         "title":"What is the Canadian Paediatric Surveillance Program?",
+         "link":"https://health-infobase.canada.ca/datalab/cpsp-blog.html",
+         "description":"The Canadian Paediatric Surveillance Program (CPSP) actively monitors rare and/or emerging diseases and conditions in children and youth. It examines conditions that are high-risk in terms of disability and economic costs to society, despite their low frequency.",
+         "date":"2019-01-23",
+         "topic":"Children",
+         "format":"Blog",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Sport and Recreation-related Concussions and Other Traumatic Brain Injuries Among Canada's Children and Youth",
+         "link":"https://health-infobase.canada.ca/datalab/head-injury-interactive.html",
+         "description":"Interactive chart snapshots of statistics about sports and recreation-related concussions and other TBIs among Canada's children and youth aged 5 to 19 years.",
+         "date":"2018-10-11",
+         "topic":"Children, Brain injuries, Physical activity",
+         "format":"Blog",
+         "icon":"brain.png"
+      },
+      {
+         "title":"Injuries and poisonings from vaping products including e-cigarettes",
+         "link":"https://health-infobase.canada.ca/datalab/ecigarette-blog.html",
+         "description":"Vaping has a risk of poisoning, burns and other unexpected health effects. Children have been poisoned by ingesting vaping liquid as it is often flavoured, making it more appealing; ingesting even a small amount of liquid nicotine can be serious and even life-threatening for a child.",
+         "date":"2018-10-11",
+         "topic":"Smoking and vaping",
+         "format":"Blog",
+         "icon":"vaping.png"
+      },
+      {
+         "title":"Lawn mower-related injuries",
+         "link":"https://health-infobase.canada.ca/datalab/lawn-mower-blog.html",
+         "description":"Between April 2011 and June 2018, there were 512 unintentional injury cases related to lawn mowers.",
+         "date":"2018-08-16",
+         "topic":"Consumer product injuries",
+         "format":"Blog",
+         "icon":"lawnmower.png"
+      },
+      {
+         "title":"What is sedentary behaviour and how do we measure it?",
+         "link":"https://health-infobase.canada.ca/datalab/sedentary-measurement-blog.html",
+         "description":"Sedentary behaviour refers to activities that we do while we are sitting, reclining or lying down and expending very little energy.",
+         "date":"2018-06-28",
+         "topic":"Physical activity",
+         "format":"Blog",
+         "icon":"sedentary.png"
+      },
+      {
+         "title":"Heart disease in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/heart-disease-blog.html",
+         "description":"Heart disease is a general term used to refer to several diseases of the heart and blood vessels. In Canada, heart disease is the second leading cause of death and accounted for over 51,500 deaths in 2015.",
+         "date":"2018-05-31",
+         "topic":"Cardiovascular diseases",
+         "format":"Blog",
+         "icon":"heart.png"
+      },
+      {
+         "title":"Chronic Obstructive Pulmonary Disease (COPD) in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/copd-blog.html",
+         "description":"COPD is a chronic disease that is characterised by shortness of breath, cough and sputum production. The disease is progressive (i.e. it tends to get worse over time) and debilitating. It primarily affects the population age 35 years and older. ",
+         "date":"2018-05-01",
+         "topic":"Respiratory diseases",
+         "format":"Blog",
+         "icon":"lung.png"
+      },
+      {
+         "title":"Big Picture Mortality in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/mortality-blog.html",
+         "description":"Every year more than 250,000 Canadians die of various causes. Each death becomes part of a vital statistics mortality dataset. Death data in Canada is categorized using a classification system entitled International Statistical Classification of Diseases and Related Health Problems. ",
+         "date":"2018-05-04",
+         "topic":"Death",
+         "format":"Blog",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Bike to Work",
+         "link":"https://health-infobase.canada.ca/datalab/bike-blog.html",
+         "description":"For everyone who can’t wait to dust off their bikes this spring, we want to tell you about BikeMaps.org - use it to plan your routes and avoid traffic, in order to stay safe and improve your health!",
+         "date":"2017-05-19",
+         "topic":"Physical activity",
+         "format":"Blog",
+         "icon":"bike.png"
+      },
+      {
+         "title":"What is an Indicator Framework?",
+         "link":"https://health-infobase.canada.ca/datalab/indicator-framework-blog.html",
+         "description":"An indicator framework is an organized way to view data from different sources. It is a simple and concise way to present gathered data and help show the relevance and connection between different indicators.",
+         "date":"2017-05-11",
+         "topic":"",
+         "format":"Blog",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Asthma in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/asthma-blog.html",
+         "description":"Asthma is one of the most common chronic respiratory diseases in Canada. It affects Canadians of all ages, but younger Canadians are disproportionately affected.",
+         "date":"2018-05-01",
+         "topic":"Respiratory diseases",
+         "format":"Blog",
+         "icon":"lung.png"
+      },
+      {
+         "title":"Obesity in Canadian Adults: It’s About More Than Just Weight ",
+         "link":"https://health-infobase.canada.ca/datalab/adult-obesity-blog.html",
+         "description":"Obesity is at epidemic levels around the world in both children and adults. Although adult obesity in Canada has been relatively steady since 2004, the percentage of adults who are obese today is twice as high as it was in 1978-1979, from 13.8% to 28.2%.",
+         "date":"2017-04-25",
+         "topic":"Obesity",
+         "format":"Blog",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"How Healthy are Canadians?",
+         "link":"https://health-infobase.canada.ca/datalab/healthy-canadians-interactive.html",
+         "description":"Health is a state of being but also a resource for everyday life. So, how healthy are Canadians? To find out, we examined health data and indicators from the past 10 to 15 years.",
+         "date":"2017-04-11",
+         "topic":"",
+         "format":"Interactive",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Down Syndrome Day – March 21",
+         "link":"https://health-infobase.canada.ca/datalab/down-syndrome-blog.html",
+         "description":"Down syndrome, a chromosomal abnormality, is one of the most common congenital anomalies (or birth defects) worldwide, and the most common one in Canada.",
+         "date":"2017-03-21",
+         "topic":"Developmental disorders",
+         "format":"Blog",
+         "icon":"adn.png"
+      },
+      {
+         "title":"A Canadian look at the connection between childhood maltreatment and diabetes",
+         "link":"https://health-infobase.canada.ca/datalab/cm-diabetes-blog.html",
+         "description":"A 2015 systematic review and meta-analysis using the ACEs found that adverse childhood experiences, including physical abuse, sexual abuse or neglect, were associated with an elevated risk of developing type 2 diabetes in adulthood. ",
+         "date":"2017-02-21",
+         "topic":"Children, Blood and metabolic diseases",
+         "format":"Blog",
+         "icon":"blood.png"
+      },
+      {
+         "title":"Cancer in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/cancer-blog.html",
+         "description":"Cancer is a disease that develops when abnormal cells grow and divide in an uncontrolled way, forming lumps or tumours that can invade nearby tissues or spread to other parts of the body.",
+         "date":"2018-01-22",
+         "topic":"Cancer",
+         "format":"Blog",
+         "icon":"Cancer.png"
+      },
+      {
+         "title":"Positive Mental Health in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/pmh-blog.html",
+         "description":"Positive mental health is the capacity to feel, think, and act in ways that enhance the ability to enjoy life and deal with challenges. It is a positive sense of emotional and spiritual well-being that respects the importance of culture, equity, social justice, interconnections and personal dignity.",
+         "date":"2017-01-25",
+         "topic":"Mental health",
+         "format":"Blog",
+         "icon":"mental_health.png"
+      },
+      {
+         "title":"Physical Activity, Sedentary Behaviour, and Sleep (PASS): a new way of tracking healthy daily activity",
+         "link":"https://health-infobase.canada.ca/datalab/pass-blog.html",
+         "description":"We developed a list of key indicators that highlight the different components of daily activity and organized them in a framework called the Physical Activity, Sedentary behaviour and Sleep (PASS) Indicator Framework.",
+         "date":"2017-01-17",
+         "topic":"Physical activity, Sleep",
+         "format":"Blog",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Childhood Cancer Month (September 2016)",
+         "link":"https://health-infobase.canada.ca/datalab/childhood-cancer-blog.html",
+         "description":"The Cancer in Young People in Canada (CYP-C) program is a national childhood cancer system that was launched in 2009 to contribute to cancer control in all children living with cancer in Canada. It includes nearly 100% of all children aged up to 14 years who have been diagnosed with cancer in Canada.",
+         "date":"2016-09-20",
+         "topic":"Cancer, Children",
+         "format":"Blog",
+         "icon":"Cancer.png"
+      },
+      {
+         "title":"World Suicide Prevention Day (September 10, 2016)",
+         "link":"https://health-infobase.canada.ca/datalab/suicide-blog.html",
+         "description":"Suicide is a significant public health issue. The grief and trauma associated with suicide produce long-term costs to society and devastating effects on families, friends and communities.",
+         "date":"2016-09-09",
+         "topic":"Suicide",
+         "format":"Blog",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Hospital Births in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/hospital-births-blog.html",
+         "description":"Although some births occur in homes and birthing centres, most births in Canada still take place in hospitals. Here are some interesting findings regarding hospital births in 2014 in Canada (excluding Quebec), according to the Public Health Agency of Canada’s Canadian Perinatal Surveillance System.",
+         "date":"2016-07-26",
+         "topic":"Hospitals, Birth",
+         "format":"Blog",
+         "icon":"birth.png"
+      },
+      {
+         "title":"Healthy Weights in Canadian Children",
+         "link":"https://health-infobase.canada.ca/datalab/healthy-weights-blog.html",
+         "description":"Obesity means having too much body fat and it can negatively affect a child's health and well-being. An obese child will likely become an obese adult. Obesity in adulthood has been linked to many conditions, such as diabetes, heart disease, high blood pressure, cancer and poor emotional health.",
+         "date":"2016-07-26",
+         "topic":"Children, Obesity",
+         "format":"Blog",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Mood & Anxiety Disorders in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/mood-anxiety-blog.html",
+         "description":"Mood and anxiety disorders are the most common types of mental illnesses, and they affect Canadians of all ages.",
+         "date":"2016-06-28",
+         "topic":"Mental health",
+         "format":"Blog",
+         "icon":"mental_health.png"
+      },
+      {
+         "title":"Family Violence in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/family-violence-blog.html",
+         "description":"Family violence is any form of abuse or neglect that a child or adult experiences from a family member, or from someone with whom they have an intimate relationship. It is an abuse of power by a person to hurt and control someone who trusts and depends on them.",
+         "date":"2016-06-23",
+         "topic":"Family, Violence",
+         "format":"Blog",
+         "icon":"family.png"
+      },
+      {
+         "title":"National Multiple Births Day (May 28)",
+         "link":"https://health-infobase.canada.ca/datalab/multiple-births-blog.html",
+         "description":"Multiple births mean the birth of more than one baby at a time: a birth of twins, triplets, or more! As unique as these births are, they also face more challenges: higher risk of premature birth, low birth weight and neonatal death (meaning death before a child is one month old). ",
+         "date":"2017-05-28",
+         "topic":"Birth",
+         "format":"Blog",
+         "icon":"twins.png"
+      },
+      {
+         "title":"Mental Health Awareness Week (May 2-8)",
+         "link":"https://health-infobase.canada.ca/datalab/positive-mental-health-blog.html",
+         "description":"Positive mental health is the capacity of people to feel, think, and act in ways that enhance the ability to enjoy life and deal with challenges. It is a positive sense of emotional and spiritual well-being that respects the importance of culture, equity, social justice, interconnections and personal dignity.",
+         "date":"2016-05-05",
+         "topic":"Mental health",
+         "format":"Blog",
+         "icon":"mental_health.png"
+      },
+      {
+         "title":"Sedentary Behaviour in Children and Youth: A New Health Risk",
+         "link":"https://health-infobase.canada.ca/datalab/sedentary-blog.html",
+         "description":"Among children, common sedentary behaviours include sitting while watching TV, playing on the computer or iPad, or texting. Excessive time spent being sedentary is linked to poor health in children and youth, no matter how active they are.",
+         "date":"2016-04-26",
+         "topic":"Children, Phsysical activity",
+         "format":"Blog",
+         "icon":"sedentary.png"
+      },
+      {
+         "title":"Colorectal Cancer Awareness Month",
+         "link":"https://health-infobase.canada.ca/datalab/colorectal-blog.html",
+         "description":"Colorectal cancer is a malignant tumour that starts in the cells of the colon or rectum, most often in the cell walls that line them. The colon and rectum are parts of the large intestine and digestive system responsible for absorbing water and nutrients from food and eliminating wastes.",
+         "date":"2018-01-16",
+         "topic":"Cancer, Digestive diseases",
+         "format":"Blog",
+         "icon":"Cancer.png"
+      },
+      {
+         "title":"Head Injuries in Children and Youth – The Invisible Epidemic",
+         "link":"https://health-infobase.canada.ca/datalab/head-injuries-blog.html",
+         "description":"You might have noticed that head injuries in sport have received a lot of attention lately, and this type of injury is now recognized as a public health problem. In some sports, head injuries are common and their potential short-and long-term consequences can be severe.",
+         "date":"2016-02-09",
+         "topic":"Children, Brain injuries",
+         "format":"Blog",
+         "icon":"brain.png"
+      },
+      {
+         "title":"Osteoporosis Awareness Month – Exposing The Bone Thief",
+         "link":"https://health-infobase.canada.ca/datalab/osteo-blog.html",
+         "description":"Osteoporosis — the bone thief — is a common bone disease and with the aging Canadian population, the number of people affected is expected to increase. It occurs when the loss of bone tissue is faster than normal, causing it to become weak and break (fracture) easily.",
+         "date":"2015-12-07",
+         "topic":"Musculo-skeletal disorders",
+         "format":"Blog",
+         "icon":"bone.png"
+      },
+      {
+         "title":"Autism Spectrum Disorder in Canada",
+         "link":"https://health-infobase.canada.ca/datalab/autism-blog.html",
+         "description":"Autism Spectrum Disorder (ASD) is a neurodevelopmental disorder that includes impairments in language, communication skills, and social interactions combined with restricted and repetitive behaviours, interests or activities.",
+         "date":"2018-04-03",
+         "topic":"Developmental disorders",
+         "format":"Blog",
+         "icon":"brain.png"
+      },
+      {
+         "title":"Canadian Cancer Data Tool",
+         "link":"https://health-infobase.canada.ca/ccdt/",
+         "description":"The Canadian Cancer Data Tool (CCDT) provides comprehensive data on the incidence and mortality of cancer in Canada over time by age and sex in an easy to use, flexible format. Information on 24 different categories of cancer types, including overall cancer, are available.",
+         "date":"2021-02-26",
+         "topic":"Cancer",
+         "format":"Interactive",
+         "icon":"Cancer.png"
+      },
+      {
+         "title":"Canadian Risk Factor Atlas (CRFA)",
+         "link":"https://health-infobase.canada.ca/canadian-risk-factor-atlas/",
+         "description":"The Canadian Risk Factor Atlas (CRFA) is an Interactive chart database that shows prevalence maps of key chronic disease and mental health risk factors for various geographic breakdowns: provinces and territories, health regions and census metropolitan areas/large census agglomerations plus the three territorial capitals.",
+         "date":"2020-08-13",
+         "topic":"",
+         "format":"Interactive",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Cancer in Young People in Canada Data Tool",
+         "link":"https://health-infobase.canada.ca/data-tools/cypc/",
+         "description":"The Cancer in Young People in Canada (CYP-C) Data Tool provides pan-Canadian surveillance data on children and youth with cancer to inform research and planning for cancer control efforts. ",
+         "date":"2022-06-30",
+         "topic":"Children, Cancer",
+         "format":"Interactive",
+         "icon":"Cancer.png"
+      },
+      {
+         "title":"Canadian Chronic Disease Surveillance System (CCDSS)",
+         "link":"https://health-infobase.canada.ca/ccdss/data-tool/",
+         "description":"The CCDSS is a collaborative network of provincial and territorial surveillance systems, supported by the Public Health Agency of Canada (PHAC). The system collects data on all residents who are eligible for provincial or territorial health insurance. ",
+         "date":"2021-12-15",
+         "topic":"Chronic diseases",
+         "format":"Interactive",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Health Inequalities Data Tool",
+         "link":"https://health-infobase.canada.ca/health-inequalities/data-tool/",
+         "description":"Health inequalities refer to differences in health status between groups in society. These differences can be due to biological factors,individual choices, or chance, but public health evidence suggests that many are attributable to the unequal distribution of the social and economic factors that influence health and exposure to societal conditions and environments  beyond the control of the individuals concerned.",
+         "date":"2022-07-05",
+         "topic":"Inequalities",
+         "format":"Interactive",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Congenital Anomalies in Canada",
+         "link":"https://health-infobase.canada.ca/congenital-anomalies/data-tool/",
+         "description":"Congenital anomalies also known as birth defects, congenital disorders or congenital malformations are usually structural or functional in nature.",
+         "date":"2021-10-06",
+         "topic":"Birth",
+         "format":"Interactive",
+         "icon":"birth.png"
+      },
+      {
+         "title":"Perinatal Health Indicators (PHI)",
+         "link":"https://health-infobase.canada.ca/phi/",
+         "description":"The Perinatal Health Indicators produced by the Public Health Agency of Canada's Canadian Perinatal Surveillance System present information on maternal, fetal and infant health in Canada",
+         "date":"2020-10-20",
+         "topic":"Children, Maternity, Birth",
+         "format":"Interactive",
+         "icon":"maternity.png"
+      },
+      {
+         "title":"Child Maltreatment Surveillance Indicator Framework",
+         "link":"https://health-infobase.canada.ca/cmsif/",
+         "description":"This Framework presents child maltreatment outcome indicators and risk and protective factors at the individual, family, community and societal levels, disaggregated by sex, age and other sociodemographic variables.",
+         "date":"2020-05-19",
+         "topic":"Children, Violence",
+         "format":"Interactive",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Suicide Surveillance Indicator Framework",
+         "link":"https://health-infobase.canada.ca/ssif/",
+         "description":"The Suicide Surveillance Indicator Framework (SSIF) provides information on suicide and self-inflicted injury outcomes and its associated risk and protective factors.",
+         "date":"2021-10-06",
+         "topic":"Suicide",
+         "format":"Interactive",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Physical Activity, Sedentary Behaviour and Sleep (PASS) Indicators",
+         "link":"https://health-infobase.canada.ca/pass/",
+         "description":"The Physical Activity, Sedentary Behaviour and Sleep (PASS) Indicators provides important surveillance information on physical activity, sedentary and sleep behaviours in Canadians as well as factors that influence them.",
+         "date":"2021-12-24",
+         "topic":"Physical activity, Sleep",
+         "format":"Interactive",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"First Nations and Inuit Health and Wellness Indicators",
+         "link":"https://health-infobase.canada.ca/fnih/",
+         "description":"The First Nations and Inuit Health and Wellness Indicators provide an overview of some key facets of the health of First Nations people and Inuit. These indicators are grouped into four domains - demographics, health status and outcomes, determinants of health, and health system performance.",
+         "date":"2018-09-05",
+         "topic":"BIPOC",
+         "format":"Interactive",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Canadian Chronic Disease Indicators (CCDI)",
+         "link":"https://health-infobase.canada.ca/ccdi/",
+         "description":"The Canadian Chronic Disease Indicators (CCDI) are a comprehensive pan-Canadian resource on the burden of chronic diseases and associated determinants.",
+         "date":"2021-12-30",
+         "topic":"Chronic diseases",
+         "format":"Interactive",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Positive Mental Health Surveillance Indicator Framework",
+         "link":"https://health-infobase.canada.ca/positive-mental-health/",
+         "description":"The Positive Mental Health Surveillance Indicator Framework provides information on positive mental health outcomes and its associated risk and protective factors. ",
+         "date":"2022-03-10",
+         "topic":"Mental health",
+         "format":"Interactive",
+         "icon":"mental_health.png"
+      },
+      {
+         "title":"Multiple Sclerosis in Canada",
+         "link":"https://www.canada.ca/en/public-health/services/publications/diseases-conditions/multiple-sclerosis-infographic.html",
+         "description":"Multiple sclerosis (MS) is a disease of the central nervous system (CNS). The immune system attacks myelin (protective covering of the nerves) in the brain, spinal cord, and optic nerves, which disrupts communication between the CNS and the rest of the body.",
+         "date":"2019-12-09",
+         "topic":"Neurological diseases",
+         "format":"Infographic",
+         "icon":"brain.png"
+      },
+      {
+         "title":"Are Canadian children getting enough sleep?",
+         "link":"https://www.canada.ca/en/public-health/services/publications/healthy-living/canadian-children-getting-enough-sleep-infographic.html",
+         "description":"To be as healthy as possible, children need adequate night time sleep.",
+         "date":"2019-09-06",
+         "topic":"Children, Sleep",
+         "format":"Infographic",
+         "icon":"sleep.png"
+      },
+      {
+         "title":"Dementia in Canada",
+         "link":"https://www.canada.ca/en/public-health/services/publications/diseases-conditions/dementia.html",
+         "description":"Dementia is the loss of mental function affecting daily activities, caused by brain diseases and brain injuries. Alzheimer's disease is the most common cause of dementia.",
+         "date":"2019-12-09",
+         "topic":"Neurological diseases",
+         "format":"Infographic",
+         "icon":"brain.png"
+      },
+      {
+         "title":"Stroke in Canada",
+         "link":"https://www.canada.ca/en/public-health/services/publications/diseases-conditions/stroke-in-canada.html",
+         "description":"A stroke is a sudden loss of brain function caused by a sudden brain blood vessel blockage (ischemic stroke) or rupture (hemorrhagic stroke). Ischemic stroke is the most common type of stroke.",
+         "date":"2022-06-23",
+         "topic":"Cardiovascular diseases",
+         "format":"Infographic",
+         "icon":"heart.png"
+      },
+      {
+         "title":"Measuring positive mental health in Canada: Myths and facts",
+         "link":"https://www.canada.ca/en/public-health/services/publications/healthy-living/measuring-positive-mental-health-myths-facts.html",
+         "description":"Positive mental health is the capacity to feel, think, and act in ways that enhance the ability to enjoy life and deal with challenges.",
+         "date":"2020-06-22",
+         "topic":"Mental health",
+         "format":"Infographic",
+         "icon":"mental_health.png"
+      },
+      {
+         "title":"Measuring Positive Mental Health in Canada: Social support",
+         "link":"https://www.canada.ca/en/public-health/services/publications/healthy-living/measuring-positive-mental-health-canada-social-support.html",
+         "description":"Positive mental health is the capacity to feel, think, and act in ways that enhance the ability to enjoy life and deal with challenges.",
+         "date":"2019-09-06",
+         "topic":"Mental health",
+         "format":"Infographic",
+         "icon":"mental_health.png"
+      },
+      {
+         "title":"Suicide in Canada: infographic",
+         "link":"https://www.canada.ca/en/public-health/services/publications/healthy-living/suicide-canada-infographic.html",
+         "description":"An average of 10 people die by suicide each day in Canada. Of the approximately 4000 deaths by suicide each year, more than 90% were living with a mental health problem or illness.",
+         "date":"2016-06-16",
+         "topic":"Suicide",
+         "format":"Infographic",
+         "icon":"general_health.png"
+      },
+      {
+         "title":"Reported side effects following COVID-19 vaccination in Canada",
+         "link":"https://health-infobase.canada.ca/covid-19/vaccine-safety/",
+         "description":"Number of reported adverse events following immunization against COVID-19.",
+         "date":"2022-09-02",
+         "topic":"COVID-19, Vaccines",
+         "format":"Interactive",
+         "icon":"vaccine.png"
+      },
+
+      {
+         "title":"COVID-19 vaccination in Canada",
+         "link":"https://health-infobase.canada.ca/covid-19/vaccine-distribution/",
+         "description":"COVID-19 vaccine distribution, administration and coverage in Canada.",
+         "date":"2022-09-16",
+         "topic":"COVID-19, Vaccines",
+         "format":"Interactive",
+         "icon":"vaccine.png"
+      },
+
+         
+      {
+         "title":"Monkeypox epidemiology update",
+         "link":"https://health-infobase.canada.ca/monkeypox/",
+         "description":"The Public Health Agency of Canada (PHAC) is working with health authorities in the provinces and territories to investigate cases of monkeypox in Canada.",
+         "date":"2022-10-03",
+         "topic":"Infections",
+         "format":"Interactive",
+         "icon":"virus.png"
+      },
+      
+      {
+         "title":"Canada's breastfeeding dashboard",
+         "link":"https://health-infobase.canada.ca/breastfeeding/",
+         "description":"Data about breastfeeding in Canada, including related factors such as age, education and immigration status. ",
+         "date":"2022-11-04",
+         "topic":"Maternity, Children",
+         "format":"Interactive",
+         "icon":"breastfeeding.png"
+      }
+   ]
