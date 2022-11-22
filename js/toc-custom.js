@@ -159,4 +159,4 @@ $('.menu-drilldown').click(function(){
   return false;
 });
 
-$( "#unique-id" ).trigger( "open.wb-overlay" );
+$( "#unique-id" ).trigger( "      " );
