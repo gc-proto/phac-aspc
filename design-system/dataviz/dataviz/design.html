@@ -42,7 +42,7 @@ dir="ltr"><![endif]-->
 
 </style>
 
-<body id="start" class="page-type-nav" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
+<body id="start" class="page-type-nav cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
     <ul id="wb-tphp">
         <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
         <li class="wb-slc"> <a class="wb-sl" href="#wb-info">Skip to "About
@@ -158,8 +158,15 @@ dir="ltr"><![endif]-->
 
                 <ul class="nav mrgn-lft-lg">
 
-                  <li class="longdoc-toc-link"><a href="#canada">Canada.ca design system</a></li>
-                  <li class="longdoc-toc-link"><a href="#colours">Colours</a></li>
+                  <li class="longdoc-toc-link"><a href="#canada">Part of Canada.ca</a></li>
+                  <li class="longdoc-toc-link"><a href="#colours">Colours</a>
+                    <ul class="nav">
+                        <li class="longdoc-toc-link"><a href="#why">Why use colours</a></li>
+                        <li class="longdoc-toc-link"><a href="#choosing">Choosing a colour palette</a></li>
+                        <li class="longdoc-toc-link"><a href="#more-info">More information on colours</a></li>
+                    </ul>
+                
+                </li>
                   <li class="longdoc-toc-link"><a href="#axis">Axis and labels</a></li>
                   <li class="longdoc-toc-link"><a href="#grids">Grids</a></li>
                   <li class="longdoc-toc-link"><a href="#accessibility">Accessibility</a></li>
@@ -179,7 +186,7 @@ dir="ltr"><![endif]-->
 
 <h2 class="h3">On this page</h2>
 <ul>
-  <li><a href="#canada">Canada.ca design system</a></li>
+  <li><a href="#canada">Part of Canada.ca</a></li>
   <li><a href="#colours">Colours</a></li>
   <li><a href="#axis">Axis and labels</a></li>
   <li><a href="#grids">Grids</a></li>
@@ -187,103 +194,114 @@ dir="ltr"><![endif]-->
 
 </ul>
 </div>
-<h2 id="canada">Canada.ca design system</h2>
+<h2 id="canada">Part of Canada.ca</h2>
+<p>The Health Infobase is part of the Canada.ca ecosystem - it’s part of the Government of Canada web presence. As such, the overall design of data products needs to respect the mandatory elements of the <cite>Canada.ca design system</cite>. You also need to follow the <cite>Canada.ca Content style guide</cite>. </p>
+
+<p>Also, when possible and appropriate, it’s a good idea to use patterns from the Canada.ca design system</p>
 <ul>
-               <li>
-                   The overall design needs to respect the mandatory elements of the Canada.ca design system (
-                   <a href="https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification/mandatory-elements.html">
-                       https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification/mandatory-elements.html
-                   </a>
-                   )
-               </li>
-               <li>
-                   When possible and appropriate, use patterns from the Canada.ca design system:
-                   <a href="https://www.canada.ca/en/government/about/design-system/pattern-library.html">
-                       https://www.canada.ca/en/government/about/design-system/pattern-library.html
-                   </a>
-                   &nbsp;
-               </li>
-               <li>
-                   Follow the Canada.ca Content style guide:
-                   <a href="https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-style-guide.html">
-                       https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-style-guide.html
-                   </a>
-                   &nbsp;
-               </li>
-               <li>
-                   There is room for creativity, as long as the Canada.ca brand elements are respected
-               </li>
-           </ul>
+   <li><a href="https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification/mandatory-elements.html">Canada.ca design system</a></li>
+   <li><a href="https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-style-guide.html">Canada.ca Content style guide</a></li>
+   <li><a href="https://www.canada.ca/en/government/about/design-system/pattern-library.html">Canada.ca pattern library</a></li>
+</ul>
+<p>However, the Canada.ca design system leaves room for creativity ( as long as the Canada.ca brand elements are respected). In the end, usability is more important than conformity: the most important thing is to design a data product that will help people complete their tasks. </p>
+
+
 <h2 id="colours">Colours</h2>
-<ul>
-             <li>
-                 Use colours intentionally and carefully
-             </li>
-             <li>
-                 If you use colours to convey meaning, you need to convey the same meaning in a different way (accessibility)
-             </li>
-             <li>
-                 Some colours have specific meaning in Western culture (green = good, red = bad)
-             </li>
-             <li>
-                 Use accessibility checkers for foreground/background colours
-             </li>
-             <li>
-                 3 types of palettes:
-                 <ul>
-                     <li>
-                         Qualitative: distinct colors, for distinct categories that don&rsquo;t have a relationship between each other. Colours need to be clearly distinct.&nbsp;
-                     </li>
-                     <li>
-                         Sequential: sequence of gradients or saturations of the same colour. Good for numeric values, where the colour also conveys an idea of the number (e.g. darker = bigger number)
-                     </li>
-                     <li>
-                         Divergent: colours sit on a spectrum (e.g. from cold to hot). One colour at one end of the spectrum, neutral in the middle, another colour at the other end of the spectrum, and gradient in between.&nbsp;
-                     </li>
-                 </ul>
-             </li>
-             <li>
-                 <a href="https://www.sigmacomputing.com/blog/7-best-practices-for-using-color-in-data-visualizations">
-                     7 Best Practices for Using Color in Data Visualizations | Sigma Computing | Sigma Computing
-                 </a>
-             </li>
-             <li>
-                 <a href="https://everydayanalytics.ca/2017/03/when-to-use-sequential-and-diverging-palettes.html">
-                     https://everydayanalytics.ca/2017/03/when-to-use-sequential-and-diverging-palettes.html
-                 </a>
-                 &nbsp;&nbsp;
-             </li>
-             <li>
-                 <a href="https://colorbrewer2.org/learnmore/schemes_full.html">
-                     https://colorbrewer2.org/learnmore/schemes_full.html
-                 </a>
-                 &nbsp;
-             </li>
-         </ul>
+<p>Always select colours intentionally and carefully.</p>
+   <h3 id="why">Why use colours</h3>
+   <p>Using the right colour scheme can help people quickly understand your visualization. </p>
+   <h3 id="choosing">Choosing a colour palette</h3>
+   <p>Consider the following when choosing a colour palette:</p>
+   <ul>
+      <li>colours should be easy to distinguish from each other</li>
+      <li>generally, you can use warm colours for positive values, and cool colours for negative values</li>
+      <li>try to limit the number of different colours in your visualization</li>
+   </ul>
+   <p>Different types of colour palettes can be used depending on the purpose of the visualization:</p>
+   <h4>Qualitative</h4>
+   <p>Use a qualitative colour palette for distinct categories that don’t have a relationship between each other. Use completely and clearly distinct colors to avoid suggesting a relationship between categories. </p>
+   <p>Here’s an example of an accessible colour palette:</p>
+   <p>Blue: #0078D7</p>
+   <p>Green: #00B8D4</p>
+   <p>Yellow: #FFC300</p>
+   <p>Orange: #FF5733</p>
+   <p>Red: #C239B3</p>
+   <p>Purple: #5D90FF</p>
+   <p>These colors provide enough contrast for individuals with visual impairments, and the use of distinct, unrelated colors makes it easy to distinguish between different categories or groups on a chart or graph.</p>
+   <h4>Sequential</h4>
+   <p>Use sequential palettes to show a progression in values (from low to high, for example, or from bad to good). Use an ordered sequence of colours, from light to dark, or from low saturation to high saturation. </p>
+   <p>Here’s an example of an accessible, sequential color palette:</p>
+   <p>Blue: #BFD7FF</p>
+   <p>Light Blue: #7FB8FF</p>
+   <p>Purple: #5D90FF</p>
+   <p>Dark Purple: #0067C5</p>
+   <p>These colors provide enough contrast for individuals with visual impairments, and the sequential nature of the palette (moving from light to dark colors) makes it easy to distinguish between different data points on a chart or graph.</p>
+   <h4>Divergent</h4>
+   <p>Use a divergent color palette when you want to represent opposite or contrasting values, each side of an average or neutral value. Use a gradient that transitions from one color to another, with a neutral color in the middle. For example, you could represent cold temperatures in shades of blue, average temperatures in a neutral colour, and warm temperatures in shades of red. </p>
+   <p>Here’s an example of an accessible, diverging color palette:</p>
+   <p>Blue: #0078D7</p>
+   <p>Green: #00B8D4</p>
+   <p>Yellow: #FFC300</p>
+   <p>Orange: #FF5733</p>
+   <p>Red: #C239B3</p>
+   <p>These colors provide enough contrast for individuals with visual impairments, and the diverging nature of the palette (moving from cool to warm colors) makes it easy to distinguish between different data points on a chart or graph.</p>
+   <h3 id="more-info">More information on colours</h3>
+   <ul>
+      <li><a href="https://www.sigmacomputing.com/blog/7-best-practices-for-using-color-in-data-visualizations">7 Best Practices for Using Color in Data Visualizations | Sigma Computing | Sigma Computing</a></li>
+      <li><a href="https://everydayanalytics.ca/2017/03/when-to-use-sequential-and-diverging-palettes.html">When to Use Sequential and Diverging Palettes</a>  </li>
+      <li><a href="https://colorbrewer2.org/learnmore/schemes_full.html">Color schemes types - Color Brewer</a> </li>
+   </ul>
 <h2 id="axis">Axis and labels</h2>
-<ul>
-               <li>
-                   Labels should be horizontal (not vertical or diagonal)
-                   <ul>
-                       <li>
-                           <a href="https://www.storytellingwithdata.com/blog/2020/4/22/alternatives-to-diagonal-axis-labels">
-                               alternatives to diagonal axis labels &mdash; storytelling with data
-                           </a>
-                           &nbsp;
-                       </li>
-                   </ul>
-               </li>
-           </ul>
+<p>Use labels and annotations to explain data points and provide context to users. </p>
+   <p>Follow these recommendations:<br/></p>
+   <ul>
+      <li>when possible, include the label directly with the line or bar, instead of on the axis</li>
+      <li>avoid using jargon and acronyms, unless you are absolutely certain it’s understood by your audience</li>
+      <li>labels should be horizontal (not vertical or diagonal). See <a href="https://www.storytellingwithdata.com/blog/2020/4/22/alternatives-to-diagonal-axis-labels">alternatives to diagonal axis labels — storytelling with data</a></li>
+      <li>start the axis at 0 in bar charts. In line charts, it is possible to cut the axis to better show the trend</li>
+      <li>tick marks on the axis are not always necessary</li>
+   </ul>
 
 <h2 id="grids">Grids</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit.
-
-</p>
+<p>Don’t clutter the chart with full grid lines. </p>
+   <p>Generally, only include horizontal grids, and make them light gray.. </p>
+   <p><cite>***insert example of light grids***</cite></p>
 
 <h2 id="accessibility">Accessibility</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit.
+<p>Accessibility is <strong>not optional</strong>. Every single product in the Infobase needs to be fully accessible. </p>
 
-</p>
+
+<div class="row wb-eqht mrgn-tp-lg">
+    <section class="col-md-5 col-xs-6">
+      <h2 class="mrgn-tp-0 text-success h4"><span class="glyphicon glyphicon-ok-circle"></span> Do </h2>
+      <ul>
+        <li>Provide key insights from the data</li>
+        <li>Use clear labels and legends</li>
+        <li>Provide a data table for each visualization</a></li>
+        <li>If the visualization tells a story, convey it in words too</li>
+        <li>Use accessibility assessment tools</li>
+        <li>Use proper contrast between elements (use accessibility checkers like <a href="https://webaim.org/resources/contrastchecker/">Contrast Checker - WebAIM</a>)</li>
+        <li>Consider using a palette adapted for color blindnes</li>
+        <li>Test with people with disabilities</li>
+     </ul>
+
+
+    </section>
+    <section class="col-md-5 brdr-lft col-xs-6">
+      <h2 class="mrgn-tp-0 text-danger h4"><span class="glyphicon glyphicon-remove-circle"></span> Don't </h2>
+      <ul>
+        <li>Rely strictly on visually cues (colour or shape) to convey meaning</li>
+        <li>Use low contrast between items</li>
+        <li>Rely solely on interactions to find the key insights</a></li>
+        <li>Leave any empty table cells</li>
+        <li>Use the same ID multiple times on a page</li>
+
+     </ul>
+
+
+    </section>
+  </div>
+
 
 
     <div class="clearfix"></div>
