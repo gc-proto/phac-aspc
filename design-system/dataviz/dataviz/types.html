@@ -17,6 +17,7 @@ dir="ltr"><![endif]-->
     <link rel="stylesheet" href="../../../css/toc.css">
     <link rel="stylesheet" href="../../../css/in-page.css">
     <link rel="stylesheet" href="../../../css/alpha-beta-banner.css" />
+    <link rel="stylesheet" href="../../../css/cra-fieldflow.css" />
 
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -42,7 +43,7 @@ dir="ltr"><![endif]-->
 
 </style>
 
-<body id="start" class="page-type-nav" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
+<body id="start" class="page-type-nav cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
     <ul id="wb-tphp">
         <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
         <li class="wb-slc"> <a class="wb-sl" href="#wb-info">Skip to "About
@@ -158,7 +159,7 @@ dir="ltr"><![endif]-->
 
                 <ul class="nav mrgn-lft-lg">
 
-                  <li class="longdoc-toc-link"><a href="#explanatory">Explanatory vs exploratory</a></li>
+                  <li class="longdoc-toc-link"><a href="#explanatory">Explanatory vs exploratory visualization</a></li>
                   <li class="longdoc-toc-link"><a href="#static">Static vs interactive</a></li>
                   <li class="longdoc-toc-link"><a href="#choosing">Choosing the right type for the task</a></li>
 
@@ -177,69 +178,119 @@ dir="ltr"><![endif]-->
 
 <h2 class="h3">On this page</h2>
 <ul>
-  <li><a href="#explanatory">Explanatory vs exploratory</a></li>
+  <li><a href="#explanatory">Explanatory vs exploratory visualization</a></li>
   <li><a href="#static">Static vs interactive</a></li>
   <li><a href="#choosing">Choosing the right type for the task</a></li>
 
 </ul>
 </div>
-<h2 id="explanatory">Explanatory vs exploratory</h2>
-<ul>
-       <li>
-           Explanatory visualization is useful to show something specific to the audience (the correlation between 2 things, the distance from the mean value, etc.). Explanatory viz are deliberate highlighting on &ldquo;nuggets of wisdom&rdquo; from the data
-       </li>
-       <li>
-           Exploratory visualization is useful to let people go through the data themselves and find highlights. Supports self-interpretation.
-       </li>
-       <li>
-           <a href="https://www.storytellingwithdata.com/blog/2014/04/exploratory-vs-explanatory-analysis">
-               https://www.storytellingwithdata.com/blog/2014/04/exploratory-vs-explanatory-analysis
-           </a>
-           &nbsp;
-       </li>
+<p>Choose a visualization technique that will help people complete their tasks. </p>
+
+<h2 id="explanatory">Explanatory vs exploratory visualization</h2>
+<p><strong>Explanatory </strong>visualization is showing specific highlights to the audience. For example, illustrating the correlation between 2 things, or the distribution of different values). It deliberately highlights some “nuggets of wisdom” from the data. </p>
+   <p><strong>Exploratory </strong>visualization lets people go through the data themselves and find insights. It supports self-interpretation of the data. </p>
+   <p>When creating a data product, think carefully about how much data exploration you want to enable. Too many options and features may make it difficult for people to extract useful information. </p>
+   <p>Think of the <a href="../tasks.html#range">range of tasks</a> you need to enable. Start with explanatory visualization, and gradually allow users to explore by themselves, if it makes sense. </p>
+   <ul>
+      <li><a href="https://www.storytellingwithdata.com/blog/2014/04/exploratory-vs-explanatory-analysis">Exploratory vs explanatory analysis (Storytelling with data)</a></li>
    </ul>
 <h2 id="static">Static vs interactive</h2>
-<ul>
-                <li>
-                    Data viz doesn&rsquo;t always have to be interactive - sometimes, a static data viz may work better to support the tasks and the story
-                </li>
-                <li>
-                    Interactive works best to support exploratory tasks
-                </li>
-            </ul>
+<p>Data visualization doesn’t always have to be interactive. Sometimes, a static visualization may work better to support the tasks and the story you’re trying to tell. </p>
+<p><strong>Static </strong>visualizations work best to support <strong>explanatory </strong>tasks, where the insights are already extracted and you want to show a specific thing. </p>
+<p><strong>Interactive </strong>visualizations work best to support <strong>exploratory </strong>tasks, where users are in charge of exploring the data and extract insights by themselves. </p>
+<p>A comprehensive dashboard where everything can be explored is not always the best way to support users in their tasks. Just because we can do interactive charts doesn’t mean we always should. It all depends on what we want people to do with the data. </p>
+
 
 <h2 id="choosing">Choosing the right type for the task</h2>
-<ul>
-                <li>
-                    The choice of graph depends on what you&rsquo;re trying to show:
-                    <ul>
-                        <li>
-                            Capture a trend
-                        </li>
-                        <li>
-                            Show relationships
-                        </li>
-                        <li>
-                            Part-to-whole&nbsp;
-                        </li>
-                        <li>
-                            Single value
-                        </li>
-                        <li>
-                            Distribution
-                        </li>
-                        <li>
-                            Flow
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="https://www.datacamp.com/cheat-sheet/data-viz-cheat-sheet">
-                        https://www.datacamp.com/cheat-sheet/data-viz-cheat-sheet
-                    </a>
-                    &nbsp;
-                </li>
-            </ul>
+<p>The choice of graph depends on what you’re trying to illustrate.</p>
+
+
+
+<div class="wb-frmvld fieldflow-lg">
+  <form>
+      <div class="wb-fieldflow" data-wb-fieldflow="{&quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;renderas&quot;: &quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.viztype&quot;, &quot;class&quot;: &quot;hidden&quot;}}" id="types">
+          <p>What do you want to illustrate?</p>
+          <ul>
+            <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1-1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Capture a trend</li>
+            <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1-2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Show relationships</li>
+            <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1-3&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Part to whole</li>
+            <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1-4&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Single value</li>
+            <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1-5&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Distribution</li>
+            <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1-6&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Distribution</li>
+
+          </ul>
+      </div>
+  </form>
+</div>
+
+
+
+
+  <div id="answer1-1" class="hidden viztype">
+    <h3>Capture a trend</h3>
+    <ul>
+       <li>Line chart / Multi-line chart</li>
+       <li>Area chart / Stacked area chart</li>
+    </ul>
+</div>
+  <div id="answer1-2" class="hidden viztype">
+    <h3>Show relationships</h3>
+    <ul>
+       <li>Bar chart (horizontal and vertical)</li>
+       <li>Scatter plot</li>
+       <li>Bubble chart</li>
+       <li>Word cloud</li>
+    </ul>
+  </div>
+
+  <div id="answer1-3" class="hidden viztype">
+    <h3>Part-to-whole</h3>
+    <ul>
+       <li>Pie chart / Doughnut pie chart</li>
+       <li>Heat maps</li>
+       <li>Stacked bar charts</li>
+       <li>Treemap charts</li>
+    </ul>
+  </div>
+
+  <div id="answer1-4" class="hidden viztype">
+    <h3>Single value</h3>
+    <ul>
+       <li>Card chart</li>
+       <li>Gauge</li>
+       <li>Table</li>
+    </ul>
+  </div>
+
+
+  <div id="answer1-5" class="hidden viztype">
+    <h3>Distribution</h5>
+    <ul>
+       <li>Histograms</li>
+       <li>Box plots</li>
+       <li>Violin plots</li>
+       <li>Density plots</li>
+       <li>Maps (geographical distribution)</li>
+    </ul>
+
+  </div>
+   
+  <div id="answer1-6" class="hidden viztype">
+    <h3>Flow</h3>
+    <ul>
+       <li>Sankey chart</li>
+       <li>Network chart</li>
+    </ul>
+
+  </div>
+   
+
+
+
+   <h2>Additional resources: </h2>
+   <ul>
+      <li><a href="https://www.datacamp.com/cheat-sheet/data-viz-cheat-sheet">Data Visualization Cheat Sheet - Data Camp</a></li>
+   </ul>
 
 
     <div class="clearfix"></div>
