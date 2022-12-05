@@ -41,7 +41,7 @@ dir="ltr"><![endif]-->
 
 </style>
 
-<body id="start" class="page-type-nav" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
+<body id="start" class="page-type-nav cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
     <ul id="wb-tphp">
         <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
         <li class="wb-slc"> <a class="wb-sl" href="#wb-info">Skip to "About
@@ -92,9 +92,9 @@ dir="ltr"><![endif]-->
             <li><a href="../data.html">Data</a>
 
               <ul>
-
-                <li><a href="./preparation.html">Data preparation</a></li>
                 <li><a href="./exploration.html">Data exploration</a></li>
+                <li><a href="./preparation.html">Data preparation</a></li>
+                
             </ul>
           </li>
             <li><a href="../dataviz.html">Storytelling and visualization</a></li>
@@ -118,9 +118,9 @@ dir="ltr"><![endif]-->
     <li > <a href="../getting-started.html">Getting started</a></li>
       <li><a href="../data.html">Data</a>
         <ul class="menu-list lst-none">
-
+            <li><a class="active" href="./exploration.html">Data exploration</a></li>
         <li><a href="./preparation.html">Data preparation</a></li>
-        <li><a class="active" href="./exploration.html">Data exploration</a></li>
+        
   </ul></li>
 
       <li><a href="../dataviz.html">Storytelling and visualization</a></li>
@@ -170,71 +170,42 @@ dir="ltr"><![endif]-->
   <li><a href="#possibilities">Explore visualization possibilities</a></li>
 </ul>
 </div>
+
+<p>It’s a good idea to use data exploration techniques on your data to help you see what you can get out of it. </p>
+
 <h2 id="tools">Tools for data exploration</h2>
- <ul>
-   <li>
-                    Use simple data viz tools to explore:
-                    <ul>
-                        <li>
-                            Excel
-                        </li>
-                        <li>
-                            Google Sheets
-                        </li>
-                        <li>
-                            Tableau
-                        </li>
-                        <li>
-                            Power BI
-                        </li>
-                        <li>
-                            <a href="https://app.rawgraphs.io/">
-                                https://app.rawgraphs.io/
-                            </a>
-                        </li>
-                        <li>
-                            Google Charts
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    Note that the charts you produce in these tools usually cannot be used &ldquo;as is&rdquo; in the data products (we need to recreate them in D3)
-                </li>
-            </ul>
+<p>Using simple tools to explore your data is much less cumbersome than working directly in D3. </p>
+<p>Here are some tools you can use:</p>
+<ul>
+   <li>Excel</li>
+   <li>Google Sheets</li>
+   <li>Tableau</li>
+   <li>Power BI</li>
+   <li><a href="https://app.rawgraphs.io/">Raw Graphs</a></li>
+   <li><a href="https://developers.google.com/chart">Google Charts</a></li>
+   <li>Python and R, if you are familiar with code</li>
+</ul>
+
+<p>Note that the charts you produce in these tools usually cannot be used “as is” in the data products. We need to recreate them using D3 to ensure usability and accessibility. </p>
+
+
 <h2 id="work">Work with your data</h2>
-<ul>
-                <li>
-                    You may have an idea in advance of the chart you want - if you realize the data you have doesn&rsquo;t lend itself well to that type of data viz, let it go\u2026
-                </li>
-                <li>
-                    Let the data determine what data viz will work best for the tasks at hand, not your presuppositions&nbsp;
-                </li>
-            </ul>
+<p>You may have an idea in advance of the chart or graph you’d like to use. While exploring your data, if you realize it doesn’t lend itself well to that type of data, don’t force the wrong data visualization technique. </p>
+<p>Continue exploring until you find the right data visualization technique. Let the data determine what technique will work best for the tasks at hand.</p>
+
 <h2 id="possibilities">Explore visualization possibilities</h2>
-<ul>
-                <li>
-                    Think outside the box
-                </li>
-                <li>
-                    Consult the the
-                    <a href="https://docs.google.com/document/d/1nnO4Ox7ZkZ2bXlZBs75MeLIjgZfQ6Ngo43_lLSpZtXw/edit#heading=h.u354v4edtkuw">
-                        data visualization
-                    </a>
-                    section for ideas, depending on the story you&rsquo;d like to tell
-                </li>
-                <li>
-                    Start with simple, instead of complex
-                </li>
-                <li>
-                    Think of what works, not what&rsquo;s cool
-                </li>
-                <li>
-                    <a href="https://towardsdatascience.com/15-data-exploration-techniques-to-go-from-data-to-insights-93f66e6805df">
-                        https://towardsdatascience.com/15-data-exploration-techniques-to-go-from-data-to-insights-93f66e6805df
-                    </a>
-                    &nbsp;
-                </li>
-            </ul>
+<p>Here are some tips to help you explore your data:</p>
+   <ul>
+      <li>consult the <a href="../dataviz/visualization.html">data visualization</a> section for options, depending on the story you’d like to tell</li>
+      <li>start with simple techniques, and progress to more complex ones</li>
+      <li>figure out what works to help people understand the data, not what “looks cool”</li>
+      <li>keep your mind open and try techniques you are less familiar with<br/><br/></li>
+   </ul>
+
+   <h2 id="additional">Additional resources</h2>
+   <ul>
+      <li><a href="https://towardsdatascience.com/15-data-exploration-techniques-to-go-from-data-to-insights-93f66e6805df">15 Data Exploration techniques to go from Data to Insights</a></li>
+   </ul>
 
     <div class="clearfix"></div>
     	<div class="row pagedetails">
