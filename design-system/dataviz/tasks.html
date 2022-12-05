@@ -42,7 +42,7 @@ dir="ltr"><![endif]-->
 
 </style>
 
-<body id="start" class="page-type-nav" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
+<body id="start" class="page-type-nav cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
     <ul id="wb-tphp">
         <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
         <li class="wb-slc"> <a class="wb-sl" href="#wb-info">Skip to "About
@@ -151,7 +151,14 @@ dir="ltr"><![endif]-->
                 <ul class="nav mrgn-lft-lg">
 
                   <li class="longdoc-toc-link"><a href="#audience">Understand your audience</a></li>
-                  <li class="longdoc-toc-link"><a href="#tasks">Data tasks</a></li>
+                  <li class="longdoc-toc-link"><a href="#tasks">Data tasks</a>
+                
+                    <ul class="nav">
+                        <li class="longdoc-toc-link"><a href="#stories">Job stories</a></li>
+                        <li class="longdoc-toc-link"><a href="#range">A wide range of data tasks</a></li>
+                    </ul>
+
+                </li>
                   <li class="longdoc-toc-link"><a href="#story">Tell a story with data</a></li>
 
 
@@ -175,80 +182,85 @@ dir="ltr"><![endif]-->
 
 </ul>
 </div>
+<p>Understanding your audience and what they want to do with your data (their <strong>tasks</strong>) is a crucial step in designing a good data product. </p>
+
 <h2 id="audience">Understand your audience</h2>
-<ul>
-                <li>
-                    Who will be using your data
-                </li>
-                <li>
-                    Because this is public, your &ldquo;intended&rdquo; audience may not be your real audience (e.g.: you may wish only health specialists will use the data, but it may still interest the general public - the product needs to work for them too)
-                </li>
-                <li>
-                    There may be more than one audience for your product - think of them all&nbsp;
-                </li>
-            </ul>
-            <h2>
+<p>Ask yourself: who will be using the data? </p>
+<p>Because Health Infobase is public, your intended audience may not be your actual audience. For example, maybe you would like to only see health specialists use the data; but if the topic interests the general public, they may also use your data products. <strong>Make sure your data products work for all real audiences, and not just your idealized one. </strong></p>
+
 
 <h2 id="tasks">Data tasks</h2>
-<ul>
-             <li>
-                 What will people try to
-                 <strong>
-                     do
-                 </strong>
-                 with the data?&nbsp;
-             </li>
-             <li>
-                 What do they want to get out of the data
-             </li>
-             <li>
-                 Use job stories to explore the data tasks&nbsp;
-                 <ul>
-                     <li>
-                         When I... I want to... so I can...&nbsp;
-                     </li>
-                     <li>
-                         Eg.:
-                         <strong>
-                             When I
-                         </strong>
-                         &rsquo;m eligible for a covid vaccine booster,
-                         <strong>
-                             I want to
-                         </strong>
-                         know if the vaccine is effective in preventing serious cases,
-                         <strong>
-                             so I can
-                         </strong>
-                         decide if want to get it or not
-                     </li>
-                 </ul>
-             </li>
-             <li>
-                 Different audiences may have different tasks they want to perform
-             </li>
-             <li>
-                 There is a range of tasks, from key insights to raw data.&nbsp;
-             </li>
-         </ul>
 
-         <img src="../img/task_range.PNG" class="full-width" alt="Long description below.">
-<h2 id="story">Tell a story with data</h2>
+<p>These questions can help you explore the tasks your product needs to help people accomplish:</p>
 <ul>
-                <li>
-                    We have the responsibility to contextualize data, explain its meaning, and tell its story (reducing the risk of the data being used for nefarious)
-                </li>
-                <li>
-                    Extract the key insights from the data yourself - what are the key takeaways for people?&nbsp;
-                </li>
-                <li>
-                    Start your product with the key insights (the story the data tells), move on to data exploration tasks (if applicable), and finish with raw data&nbsp;
-                </li>
-                <li>
-                    Don't tell a story not supported by the data
-                </li>
-            </ul>
-</p>
+   <li>What will people <strong>try to do </strong>with the data? </li>
+   <li>What do they <strong>want to get</strong> out of the data?</li>
+   <li>What would they be <strong>able to do </strong>with the data that they can't do without having the data? </li>
+</ul>
+<p>Understanding this is crucial to select the right visualization technique. </p>
+<h3 id="stories">Job stories</h3>
+<p>Job stories are helpful to identify how, in certain situations, people can use the data you're publishing to arrive at a desired outcome. </p>
+
+<p>Job stories follow this format:</p>
+<blockquote><p> “When I (situation),  I want to (motivation), so I can (desired outcome).” </p></blockquote>
+<div class="well well-sm">
+<p>Example: </p>
+<p><strong>When I</strong>'m eligible for a covid vaccine booster, <strong>I want to</strong> know if the vaccine is effective in preventing serious illness from COVID-19, <strong>so I can</strong> decide if want to get it or not</p>
+</div>
+<p>Do job stories workshop with everyone involved to reinforce your understanding of how and why someone may want to use your data.</p>
+
+<h3 id="range">A wide range of data tasks</h3>
+<p>Different audiences may have different tasks they want to perform with the data. </p>
+<p>We can visualize that wide range of tasks on a continuum, from top-down explanation (provided by us) to self-directed exploration (performed by the user):</p>
+
+         <img src="../img/task_range.PNG" class="full-width" alt="Long description after the image.">
+
+         <details>
+            <summary>A range of top tasks</summary>
+            <p>Tge range of data tasks can be understood as a continuum, from simple to complex.</p>
+
+            <p>On the left of the continuum are the tasks most likely to be performed by the majority:</p>
+            <ul>
+                <li>General public</li>
+                <li>Simple</li>
+                <li>Explanatory</li>
+                <li>Key insights</li>
+                <li>Data storytelling</li>
+                <li>Infographics and blog</li>
+                <li>Top-down interpretation</li>
+
+             </ul>
+
+             <p>In the middle of the continuum are tasks likely to be performed by a good proortion of users:</p>
+            <ul>
+                <li>Interactice maps and charts</li>
+                <li>Self-exploration of data</li>
+                <li>Complex data visualization</li>
+                <li>Self=interpretation</li>
+
+             </ul>
+
+
+             <p>On the right of the continuum are tasks likely to be performed by a minority of users:</p>
+            <ul>
+                <li>Experts</li>
+                <li>Complex</li>
+                <li>Raw data</li>
+                <li>Technical details</li>
+                <li>Sources</li>
+                <li>API</li>
+
+             </ul>
+            
+            </details>
+
+
+
+         <h2 id="story">Tell a story with data</h2>
+         <p>We have the responsibility to contextualize the data we provide to the public, while being transparent about the data itself. What’s the story in the data? What are the key takeaways? </p>
+         <p>It’s important to extract key insights from the data and present it to people. </p>
+         <p>Start your product with the key insights (the story the data tells), move on to data exploration tasks (if applicable), and finish with making the raw data available. </p>
+         <p>Be responsible: don’t tell a story not supported by the data.</p>
 
 
     <div class="clearfix"></div>
