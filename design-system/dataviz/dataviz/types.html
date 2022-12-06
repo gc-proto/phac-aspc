@@ -21,6 +21,8 @@ dir="ltr"><![endif]-->
 
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script> 		<!-- makes ToC work -->
 
@@ -278,12 +280,13 @@ dir="ltr"><![endif]-->
     
     <h4 id="bubble">Bubble chart</h4>
     <p>Example of a bubble chart:</p>
-    (working on it)
+    <div id="bubble_div"></div>
+
 
     <h4 id="word">Word cloud</h4>
     <p>Example of a word cloud:</p>
-    (working on it)
-
+    <div id="word-cloud"></div>
+    
 
   </div>
 
@@ -644,6 +647,93 @@ function drawChart() {
 }
 </script>
 
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawSeriesChart);
+
+function drawSeriesChart() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['ID', 'Life Expectancy', 'Fertility Rate', 'Region',     'Population'],
+    ['CAN',    80.66,              1.67,      'North America',  33739900],
+    ['DEU',    79.84,              1.36,      'Europe',         81902307],
+    ['DNK',    78.6,               1.84,      'Europe',         5523095],
+    ['EGY',    72.73,              2.78,      'Middle East',    79716203],
+    ['GBR',    80.05,              2,         'Europe',         61801570],
+    ['IRN',    72.49,              1.7,       'Middle East',    73137148],
+    ['IRQ',    68.09,              4.77,      'Middle East',    31090763],
+    ['ISR',    81.55,              2.96,      'Middle East',    7485600],
+    ['RUS',    68.6,               1.54,      'Europe',         141850000],
+    ['USA',    78.09,              2.05,      'North America',  307007000]
+  ]);
+
+  var options = {
+    width: 600,
+    height: 400,
+    title: 'Fertility rate vs life expectancy in selected countries (2010)',
+    hAxis: {title: 'Life Expectancy'},
+    vAxis: {title: 'Fertility Rate'},
+    bubble: {textStyle: {fontSize: 11}}
+  };
+
+  var chart = new google.visualization.BubbleChart(document.getElementById('bubble_div'));
+  chart.draw(data, options);
+}
+</script>
+
+<script type="text/javascript">
+  // Set the dimensions of the canvas
+  var width = 600;
+  var height = 400;
+
+  // Define the data for the word cloud
+  var data = [
+    {text: "Data", size: 20},
+    {text: "Visualization", size: 40},
+    {text: "Charts", size: 17},
+    {text: "Graphs", size: 25},
+    {text: "Maps", size: 10},
+    {text: "Plots", size: 10},
+    {text: "Information", size: 12},
+    {text: "User", size: 35},
+    {text: "Insights", size: 13},
+    {text: "Tasks", size: 28},
+  ];
+
+  // Define the colors for the word cloud
+  var colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"];
+
+  // Create the word cloud layout
+  var layout = d3.layout.cloud()
+    .size([width, height])
+    .words(data)
+    .rotate(function() { return ~~(Math.random() * 2) * 90; })
+    .fontSize(function(d) { return d.size; })
+    .on("end", draw);
+
+  // Draw the word cloud
+  function draw(words) {
+    d3.select("#word-cloud").append("svg")
+      .attr("width", layout.size()[0])
+      .attr("height", layout.size()[1])
+      .style("background-color", "#fff") // Set the background color to white
+      .append("g")
+      .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+      .selectAll("text")
+      .data(words)
+      .enter().append("text")
+      .style("font-size", function(d) { return d.size + "px"; })
+      .style("fill", function(d, i) { return colors[i]; })
+      .attr("text-anchor", "middle")
+      .attr("transform", function(d) {
+        return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+      })
+      .text(function(d) { return d.text; });
+  }
+
+  // Start the word cloud layout
+  layout.start();
+</script>
 
 
   </body>
