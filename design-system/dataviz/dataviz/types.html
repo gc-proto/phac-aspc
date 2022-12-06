@@ -21,6 +21,7 @@ dir="ltr"><![endif]-->
 
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script> 		<!-- makes ToC work -->
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -224,23 +225,66 @@ dir="ltr"><![endif]-->
 </div>
 
 
-
-
-  <div id="answer1-1" class="hidden viztype">
-    <h3>Capture a trend</h3>
+  <div id="answer1-1" class="hidden viztype well well-sm">
+    <h3 class="mrgn-tp-sm">Capture a trend</h3>
+    <p>Use these types of visualization to illustrate a trend:</p>
     <ul>
-       <li>Line chart / Multi-line chart</li>
-       <li>Area chart / Stacked area chart</li>
+       <li><a href="#line">Line chart</a></li>
+       <li><a href="#area">Area chart</a></li>
     </ul>
+
+    <h4 id="line">Line chart</h4>
+    <p>Example of a single line chart:</p>
+    <div id="line_div"></div>
+
+    <p>Example of a multi-line chart:</p>
+    <div id="multiline_div"></div>
+
+    <a href="../../library/line-chart.html">Consult line chart guidance</a>
+
+   <h4 id="area">Area chart</h4>   
+
+   <p>Example of an area chart:</p>
+   <div id="areachart_div"></div>
+
+
 </div>
-  <div id="answer1-2" class="hidden viztype">
-    <h3>Show relationships</h3>
+  <div id="answer1-2" class="hidden viztype well well-sm">
+    <h3 class="mrgn-tp-sm">Show relationships</h3>
+
+    <p>Use these types of visualization to illustrate a trend:</p>
     <ul>
-       <li>Bar chart (horizontal and vertical)</li>
-       <li>Scatter plot</li>
-       <li>Bubble chart</li>
-       <li>Word cloud</li>
+       <li><a href="#bar">Bar chart (horizontal and vertical)</a></li>
+       <li><a href="#scatter">Scatter plot</a></li>
+       <li><a href="#bubble">Bubble chart</a></li>
+       <li><a href="#word">Word cloud</a></li>
     </ul>
+
+
+    <h4 id="bar">Bar chart</h4>
+    <p>Example of a verical bar chart:</p>
+    <div id="verticalbar_div"></div>
+
+    <p>Example of a horizontal bar chart:</p>
+    <div id="horizontalbar_div"></div>
+
+    <a href="../../library/bar-graphs.html">Consult bar chart guidance</a>
+
+
+    <h4 id="scatter">Scatter plot</h4>
+    <p>Example of a scatter plot:</p>
+    <div id="scatterplot_div"></div>
+
+    
+    <h4 id="bubble">Bubble chart</h4>
+    <p>Example of a bubble chart:</p>
+    (working on it)
+
+    <h4 id="word">Word cloud</h4>
+    <p>Example of a word cloud:</p>
+    (working on it)
+
+
   </div>
 
   <div id="answer1-3" class="hidden viztype">
@@ -284,7 +328,6 @@ dir="ltr"><![endif]-->
 
   </div>
    
-
 
 
    <h2>Additional resources: </h2>
@@ -370,6 +413,238 @@ dir="ltr"><![endif]-->
 
           <![endif]-->
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
+
+    <script type="text/javascript">
+      google.charts.load('current', {
+        packages: ['corechart', 'line']
+      });
+      google.charts.setOnLoadCallback(drawBasic);
+      
+      function drawBasic() {
+      
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'X');
+        data.addColumn('number', 'Dogs');
+      
+        data.addRows([
+          [0, 0],
+          [1, 10],
+          [2, 23],
+          [3, 17],
+          [4, 18],
+          [5, 9],
+          [6, 11],
+          [7, 27],
+          [8, 33],
+          [9, 40],
+          [10, 32],
+          [11, 35],
+          [12, 30],
+          [13, 40],
+          [14, 42],
+          [15, 47],
+          [16, 44],
+          [17, 48],
+          [18, 52],
+          [19, 54],
+          [20, 42],
+          [21, 55],
+          [22, 56],
+          [23, 57],
+          [24, 60],
+          [25, 50],
+          [26, 52],
+          [27, 51],
+          [28, 49],
+          [29, 53],
+          [30, 55],
+          [31, 60],
+          [32, 61],
+          [33, 59],
+          [34, 62],
+          [35, 65],
+          [36, 62],
+          [37, 58],
+          [38, 55],
+          [39, 61],
+          [40, 64]
+        ]);
+      
+        var options = {
+          width: 600,
+          height: 400,
+          hAxis: {
+            title: 'Time'
+          },
+          vAxis: {
+            title: 'Popularity'
+          }
+        };
+      
+        var chart = new google.visualization.LineChart(document.getElementById('line_div'));
+      
+        chart.draw(data, options);
+      }
+
+      google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawCurveTypes);
+
+function drawCurveTypes() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'X');
+      data.addColumn('number', 'Dogs');
+      data.addColumn('number', 'Cats');
+
+      data.addRows([
+        [0, 0, 0],    [1, 10, 5],   [2, 23, 15],  [3, 17, 9],   [4, 18, 10],  [5, 9, 5],
+        [6, 11, 3],   [7, 27, 19],  [8, 33, 28],  [9, 40, 45],  [10, 32, 35], [11, 35, 34],
+        [12, 30, 30], [13, 40, 32], [14, 42, 38], [15, 47, 28], [16, 44, 26], [17, 48, 24],
+        [18, 52, 32], [19, 54, 46], [20, 42, 22], [21, 55, 35], [22, 56, 39], [23, 57, 47],
+        [24, 60, 55], [25, 50, 58], [26, 52, 60], [27, 51, 62], [28, 49, 55], [29, 53, 68],
+        [30, 55, 70]
+      ]);
+
+      var options = {
+        width: 600,
+        height: 400,
+        hAxis: {
+          title: 'Time'
+        },
+        vAxis: {
+          title: 'Popularity'
+        },
+        series: {
+          1: {curveType: 'function'}
+        }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('multiline_div'));
+      chart.draw(data, options);
+    }
+
+      google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawStacked);
+
+function drawStacked() {
+      var data = google.visualization.arrayToDataTable([
+        ['City', '2010 Population', '2000 Population'],
+        ['New York City, NY', 8175000, 8008000],
+        ['Los Angeles, CA', 3792000, 3694000],
+        ['Chicago, IL', 2695000, 2896000],
+        ['Houston, TX', 2099000, 1953000],
+        ['Philadelphia, PA', 1526000, 1517000]
+      ]);
+
+      var options = {
+        title: 'Population of Largest U.S. Cities',
+        chartArea: { width: "40%", height: "50%" },
+        width: 600,
+        height: 400,
+        isStacked: true,
+        hAxis: {
+          title: 'Total Population',
+          minValue: 0,
+        },
+        vAxis: {
+          title: 'City'
+        }
+      };
+      var chart = new google.visualization.BarChart(document.getElementById('horizontalbar_div'));
+      chart.draw(data, options);
+    }
+
+
+
+  google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Age', 'Weight'],
+          [ 8,      12],
+          [ 4,      5.5],
+          [ 11,     14],
+          [ 4,      5],
+          [ 3,      3.5],
+          [ 6.5,    7]
+        ]);
+
+        var options = {
+          width: 600,
+          height: 400,
+          title: 'Age vs. Weight comparison',
+          hAxis: {title: 'Age', minValue: 0, maxValue: 15},
+          vAxis: {title: 'Weight', minValue: 0, maxValue: 15},
+          legend: 'none'
+        };
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('scatterplot_div'));
+
+        chart.draw(data, options);
+      }
+    </script> 
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Sales', 'Expenses'],
+      ['2013',  1000,      400],
+      ['2014',  1170,      460],
+      ['2015',  660,       1120],
+      ['2016',  1030,      540]
+    ]);
+
+    var options = {
+      width: 600,
+      height: 400,
+      title: 'Company Performance',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(document.getElementById('areachart_div'));
+    chart.draw(data, options);
+  }
+
+  
+ 
+</script>
+<script type="text/javascript">
+google.charts.load("current", {packages:['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    ["Element", "Density", { role: "style" } ],
+    ["Copper", 8.94, "#b87333"],
+    ["Silver", 10.49, "silver"],
+    ["Gold", 19.30, "gold"],
+    ["Platinum", 21.45, "color: #e5e4e2"]
+  ]);
+
+  var view = new google.visualization.DataView(data);
+  view.setColumns([0, 1,
+                   { calc: "stringify",
+                     sourceColumn: 1,
+                     type: "string",
+                     role: "annotation" },
+                   2]);
+
+  var options = {
+    title: "Density of Precious Metals, in g/cm^3",
+    width: 600,
+    height: 400,
+    bar: {groupWidth: "95%"},
+    legend: { position: "none" },
+  };
+  var chart = new google.visualization.ColumnChart(document.getElementById("verticalbar_div"));
+  chart.draw(view, options);
+}
+</script>
+
+
 
   </body>
 </html>
