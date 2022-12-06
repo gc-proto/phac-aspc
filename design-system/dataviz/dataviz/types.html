@@ -227,7 +227,7 @@ dir="ltr"><![endif]-->
 </div>
 
 
-  <div id="answer1-1" class="hidden viztype well well-sm">
+  <div id="answer1-1" class="hidden viztype well">
     <h3 class="mrgn-tp-sm">Capture a trend</h3>
     <p>Use these types of visualization to illustrate a trend:</p>
     <ul>
@@ -251,7 +251,7 @@ dir="ltr"><![endif]-->
 
 
 </div>
-  <div id="answer1-2" class="hidden viztype well well-sm">
+  <div id="answer1-2" class="hidden viztype well">
     <h3 class="mrgn-tp-sm">Show relationships</h3>
 
     <p>Use these types of visualization to illustrate a trend:</p>
@@ -290,14 +290,40 @@ dir="ltr"><![endif]-->
 
   </div>
 
-  <div id="answer1-3" class="hidden viztype">
-    <h3>Part-to-whole</h3>
+  <div id="answer1-3" class="hidden viztype well">
+    <h3 class="mrgn-tp-sm">Part-to-whole</h3>
+    <p>Use these types of visualization to illustrate a part-to-whole relationship:</p>
     <ul>
-       <li>Pie chart / Doughnut pie chart</li>
-       <li>Heat maps</li>
-       <li>Stacked bar charts</li>
-       <li>Treemap charts</li>
+       <li><a href="#pie">Pie chart and dougnut chart</a></li>
+       <li><a href="#heat">Heat maps</a></li>
+       <li><a href="#stackedbar">Stacked bar chart</a></li>
+       <li><a href="#tree">Treemap charts</a></li>
     </ul>
+
+
+    <h4 id="pie">Pie chart and dougnut chart</h4>
+    <p>Example of a verical pie chart:</p>
+    <div id="pie_div"></div>
+
+    <p>Example of a doughnut chart:</p>
+    <div id="doughnut_div"></div>
+
+    <a href="../../library/pie-charts.html">Consult pie chart guidance</a>
+
+
+    <h4 id="heat">Heat maps</h4>
+    <p>Example of a heat map:</p>
+    <canvas id="heatmap" width="400" height="400"></canvas>
+
+    
+    <h4 id="stackedbar">Stacked bar chart</h4>
+    <p>Example of a stacked bar chart:</p>
+    <div id="stackedbar_div"></div>
+
+
+    <h4 id="tree">Tree map charts</h4>
+    <p>Example of a treemap chart:</p>
+    <div id="treemap_div"></div>
   </div>
 
   <div id="answer1-4" class="hidden viztype">
@@ -734,6 +760,181 @@ function drawSeriesChart() {
   // Start the word cloud layout
   layout.start();
 </script>
+
+
+<script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          width: 600,
+        height: 400,
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('pie_div'));
+
+        chart.draw(data, options);
+      }
+
+</script>
+
+<script type="text/javascript">
+
+google.charts.load('current', {'packages':['treemap']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)'],
+          ['Global',    null,                 0,                               0],
+          ['America',   'Global',             0,                               0],
+          ['Europe',    'Global',             0,                               0],
+          ['Asia',      'Global',             0,                               0],
+          ['Australia', 'Global',             0,                               0],
+          ['Africa',    'Global',             0,                               0],
+          ['Brazil',    'America',            11,                              10],
+          ['USA',       'America',            52,                              31],
+          ['Mexico',    'America',            24,                              12],
+          ['Canada',    'America',            16,                              -23],
+          ['France',    'Europe',             42,                              -11],
+          ['Germany',   'Europe',             31,                              -2],
+          ['Sweden',    'Europe',             22,                              -13],
+          ['Italy',     'Europe',             17,                              4],
+          ['UK',        'Europe',             21,                              -5],
+          ['China',     'Asia',               36,                              4],
+          ['Japan',     'Asia',               20,                              -12],
+          ['India',     'Asia',               40,                              63],
+          ['Laos',      'Asia',               4,                               34],
+          ['Mongolia',  'Asia',               1,                               -5],
+          ['Israel',    'Asia',               12,                              24],
+          ['Iran',      'Asia',               18,                              13],
+          ['Pakistan',  'Asia',               11,                              -52],
+          ['Egypt',     'Africa',             21,                              0],
+          ['S. Africa', 'Africa',             30,                              43],
+          ['Sudan',     'Africa',             12,                              2],
+          ['Congo',     'Africa',             10,                              12],
+          ['Zaire',     'Africa',             8,                               10]
+        ]);
+
+        tree = new google.visualization.TreeMap(document.getElementById('treemap_div'));
+
+        tree.draw(data, {
+          width: 600,
+          height: 400,
+          minColor: '#f00',
+          midColor: '#ddd',
+          maxColor: '#0d0',
+          headerHeight: 15,
+          fontColor: 'black',
+          showScale: true
+        });
+
+      }
+
+    </script>
+<script type="text/javascript">
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['Work',     11],
+      ['Eat',      2],
+      ['Commute',  2],
+      ['Watch TV', 2],
+      ['Sleep',    7]
+    ]);
+
+    var options = {
+      width: 600,
+      height: 400,
+      title: 'My Daily Activities',
+      pieHole: 0.4,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('doughnut_div'));
+    chart.draw(data, options);
+  }
+</script>
+
+<script type="text/javascript">
+  google.charts.load('current', {packages:['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
+       'Western', 'Literature', { role: 'annotation' } ],
+      ['2010', 10, 24, 20, 32, 18, 5, ''],
+      ['2020', 16, 22, 23, 30, 16, 9, ''],
+      ['2030', 28, 19, 29, 30, 12, 13, '']
+    ]);
+
+    var options = {
+      width: 600,
+      height: 400,
+      legend: { position: 'top', maxLines: 3 },
+      bar: {groupWidth: '75%'},
+      isStacked: true,
+    };
+
+    var chart = new google.visualization.BarChart(document.getElementById('stackedbar_div'));
+    chart.draw(data, options);
+}
+</script>
+
+<script>
+  // Get the canvas element
+  var canvas = document.getElementById('heatmap');
+  // Get the 2D drawing context
+  var ctx = canvas.getContext('2d');
+  
+  // Create a two-dimensional array of data
+  var data = [
+    [0, 1, 0, 2, 1, 0, 2, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 1, 2, 0, 1],
+    [0, 0, 1, 2, 2, 1, 0, 2],
+    [2, 0, 1, 1, 0, 1, 0, 0],
+    [0, 2, 1, 1, 1, 1, 0, 2],
+    [0, 1, 0, 2, 1, 1, 0, 1],
+    [0, 0, 1, 0, 0, 2, 0, 0]
+  ];
+  
+  // Loop through the data and draw a rectangle for each value
+  for (var i = 0; i < data.length; i++) {
+    for (var j = 0; j < data[i].length; j++) {
+      // Calculate the x and y position of the rectangle
+      var x = j * 50;
+      var y = i * 50;
+      
+      // Set the fill color based on the value in the data array
+      if (data[i][j] == 0) {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0)';
+      } else if (data[i][j] == 1) {
+        ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+      } else if (data[i][j] == 2) {
+        ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+      }
+      
+      // Draw the rectangle
+      ctx.fillRect(x, y, 50, 50);
+    }
+  }
+</script>
+
+
 
 
   </body>
