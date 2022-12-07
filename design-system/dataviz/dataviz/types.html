@@ -18,6 +18,7 @@ dir="ltr"><![endif]-->
     <link rel="stylesheet" href="../../../css/in-page.css">
     <link rel="stylesheet" href="../../../css/alpha-beta-banner.css" />
     <link rel="stylesheet" href="../../../css/cra-fieldflow.css" />
+    <link rel="stylesheet" href="../../../css/boxes.css" />
 
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -313,7 +314,7 @@ dir="ltr"><![endif]-->
 
     <h4 id="heat">Heat maps</h4>
     <p>Example of a heat map:</p>
-    <canvas id="heatmap" width="400" height="400"></canvas>
+    <div id="heat_map"></div>
 
     
     <h4 id="stackedbar">Stacked bar chart</h4>
@@ -326,14 +327,44 @@ dir="ltr"><![endif]-->
     <div id="treemap_div"></div>
   </div>
 
-  <div id="answer1-4" class="hidden viztype">
-    <h3>Single value</h3>
+  <div id="answer1-4" class="hidden viztype well">
+      <h3 class="mrgn-tp-sm">Single value</h3>
+    <p>Use these types of visualization to ilustrate a single value:</p>
     <ul>
-       <li>Card chart</li>
-       <li>Gauge</li>
-       <li>Table</li>
+       <li><a href="#key">Key update</a></li>
+       <li><a href="#gauge">Gauge</a></li>
+       <li><a href="#table">Responsive table</a></li>
     </ul>
+
+
+    <h4 id="key">Key update</h4>
+    <p>Example of a verical key update:</p>
+    <div class='boxes col-md-12' style="">
+      <div id="box4" class="innerBox col-md-12 col-sm-12">
+          <div class="col-xs-12 col-print-12 mrgn-tp-msm mrgn-bttm-sm">
+              <a href="#a2" data-figure="1" data-type-stat="num" data-type-measure="tests" id="keybox7">
+                  <div class="mrgn-tp-lg mrgn-bttm-lg">
+                      <p>Weekly tests reported</p>
+                      <p class="h2"><span class="numTests">89913</span></p>
+                  </div>
+              </a>
+          </div>
+      </div>
+  
+    </div>
+    <h4 id="gauge">Gauge</h4>
+    <p>Example of a gauge:</p>
+    <p>Coming soon</p>
+
+    
+    <h4 id="table">Responsive table</h4>
+    <p>Example of a responsive table</p>
+    <p>Coming soon</p>
+
+
   </div>
+
+
 
 
   <div id="answer1-5" class="hidden viztype">
@@ -894,48 +925,120 @@ google.charts.load('current', {'packages':['treemap']});
 }
 </script>
 
+
 <script>
-  // Get the canvas element
-  var canvas = document.getElementById('heatmap');
-  // Get the 2D drawing context
-  var ctx = canvas.getContext('2d');
-  
-  // Create a two-dimensional array of data
+  // Sample data
   var data = [
-    [0, 1, 0, 2, 1, 0, 2, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 1, 0, 1, 2, 0, 1],
-    [0, 0, 1, 2, 2, 1, 0, 2],
-    [2, 0, 1, 1, 0, 1, 0, 0],
-    [0, 2, 1, 1, 1, 1, 0, 2],
-    [0, 1, 0, 2, 1, 1, 0, 1],
-    [0, 0, 1, 0, 0, 2, 0, 0]
+    // Average temperature for each month in Montreal over the last 10 years
+    { month: "Jan", year: 2021, temperature: -10 },
+    { month: "Feb", year: 2021, temperature: -8 },
+    { month: "Mar", year: 2021, temperature: -4 },
+    { month: "Apr", year: 2021, temperature: 4 },
+    { month: "May", year: 2021, temperature: 12 },
+    { month: "Jun", year: 2021, temperature: 17 },
+    { month: "Jul", year: 2021, temperature: 20 },
+    { month: "Aug", year: 2021, temperature: 19 },
+    { month: "Sep", year: 2021, temperature: 15 },
+    { month: "Oct", year: 2021, temperature: 9 },
+    { month: "Nov", year: 2021, temperature: 2 },
+    { month: "Dec", year: 2021, temperature: -5 },
+    { month: "Jan", year: 2020, temperature: -7 },
+    { month: "Feb", year: 2020, temperature: -5 },
+    { month: "Mar", year: 2020, temperature: 0 },
+    { month: "Apr", year: 2020, temperature: 6 },
+    { month: "May", year: 2020, temperature: 14 },
+    { month: "Jun", year: 2020, temperature: 19 },
+    { month: "Jul", year: 2020, temperature: 22 },
+    { month: "Aug", year: 2020, temperature: 21 },
+    { month: "Sep", year: 2020, temperature: 17 },
+    { month: "Oct", year: 2020, temperature: 11 },
+    { month: "Nov", year: 2020, temperature: 4 },
+    { month: "Dec", year: 2020, temperature: -3 },
+    { month: "Jan", year: 2019, temperature: -12 },
+    { month: "Feb", year: 2019, temperature: -10 },
+    { month: "Mar", year: 2019, temperature: -6 },
+    { month: "Apr", year: 2019, temperature: 2 },
+    { month: "May", year: 2019, temperature: 10 },
+    { month: "Jun", year: 2019, temperature: 15 },
+    { month: "Jul", year: 2019, temperature: 18 },
+    { month: "Aug", year: 2019, temperature: 17 },
+    { month: "Sep", year: 2019, temperature: 13 },
+    { month: "Oct", year: 2019, temperature: 7 },
+    { month: "Nov", year: 2019, temperature: 0 },
+    { month: "Dec", year: 2019, temperature: -7 },
+    // ...
   ];
   
-  // Loop through the data and draw a rectangle for each value
-  for (var i = 0; i < data.length; i++) {
-    for (var j = 0; j < data[i].length; j++) {
-      // Calculate the x and y position of the rectangle
-      var x = j * 50;
-      var y = i * 50;
-      
-      // Set the fill color based on the value in the data array
-      if (data[i][j] == 0) {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0)';
-      } else if (data[i][j] == 1) {
-        ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
-      } else if (data[i][j] == 2) {
-        ctx.fillStyle = 'rgba(255, 0, 0, 1)';
-      }
-      
-      // Draw the rectangle
-      ctx.fillRect(x, y, 50, 50);
-    }
-  }
+  // Temperature scale in Celsius
+var temperatureScale = d3.scaleLinear()
+  .domain([-12, 22])
+  .range([0, 100]);
+
+// Color scale for heat map
+var colorScale = d3.scaleLinear()
+  .domain([0, 100])
+  .range(["#ffffff", "#8b0000"]);
+
+// Select the div where the heat map will be drawn
+var chart = d3.select("#heat_map");
+
+// Add an SVG element to the div
+var svg = chart.append("svg")
+  .attr("width", 900)
+  .attr("height", 200);
+
+// Add a label for the legend
+svg.append("text")
+  .attr("x", 50)
+  .attr("y", 25)
+  .text("Average temperature in Montreal");
+
+
+  svg.selectAll("rect")
+  .data(data)
+  .enter()
+  .append("rect")
+  .attr("x", (d, i) => (i % 12) * 50 + 50)
+  .attr("y", (d, i) => Math.floor(i / 12) * 50)
+  .attr("width", 50)
+  .attr("height", 50)
+  .style("fill", (d) => colorScale(temperatureScale(d.temperature)));
+
+// Add text for each year
+svg.selectAll("year")
+  .data(data)
+  .enter()
+  .append("text")
+  .attr("x", (d, i) => 10)
+  .attr("y", (d, i) => Math.floor(i / 12) * 50 + 25)
+  .style("text-anchor", "middle")
+  .style("dominant-baseline", "central")
+  .text((d) => d.year);
+
+// Add text for each month
+svg.selectAll("month")
+  .data(data)
+  .enter()
+  .append("text")
+  .attr("x", (d, i) => (i % 12) * 50 + 75)
+  .attr("y", (d, i) => 0) // position month labels at the top of the chart
+  .style("text-anchor", "middle")
+  .style("dominant-baseline", "central")
+  .text((d) => d.month);
+
+// Add text for each temperature
+svg.selectAll("temperature")
+  .data(data)
+  .enter()
+  .append("text")
+  .attr("x", (d, i) => (i % 12) * 50 + 75)
+  .attr("y", (d, i) => Math.floor(i / 12) * 50 + 25)
+  .style("text-anchor", "middle")
+  .style("dominant-baseline", "central")
+  .text((d) => d.temperature);
+
+
 </script>
-
-
-
 
   </body>
 </html>

@@ -1,0 +1,54 @@
+
+            .boxes {
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding-left: 1px;
+                padding-right: 1px;
+                height: 10%;
+            }
+
+            .boxes a,
+            .boxes a:visited,
+            .boxes a:focus {
+                text-decoration: none;
+                color: black;
+            }
+
+            .innerBox {
+                flex: 0 0 48.5%;
+                border: 3px solid #ccc;
+                border-radius: 10px;
+                margin-left: 0px;
+                margin-right: 8px;
+                text-decoration: none;
+                color: black;
+                margin-bottom: 5px;
+            }
+
+            .innerBox:hover {
+                border: 3px solid #000;
+                border-radius: 10px;
+                box-shadow: 2px 2px;
+            }
+
+            .innerBox div {
+                padding-left: 3px;
+                padding-right: 3px;
+            }
+
+            .boxes p {
+                font-size: 20px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+            .boxes p.h2 {
+                font-size: 30px;
+                margin-top: 5px;
+            }
+
+            #box4 {
+                flex: 0 0 47.5%;
+            }
