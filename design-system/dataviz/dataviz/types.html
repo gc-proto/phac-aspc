@@ -354,7 +354,7 @@ dir="ltr"><![endif]-->
     </div>
     <h4 id="gauge">Gauge</h4>
     <p>Example of a gauge:</p>
-    <p>Coming soon</p>
+    <div id="gauge_div"></div>
 
     
     <h4 id="table">Responsive table</h4>
@@ -967,33 +967,26 @@ google.charts.load('current', {'packages':['treemap']});
     { month: "Nov", year: 2019, temperature: 0 },
     { month: "Dec", year: 2019, temperature: -7 },
     // ...
-  ];
-  
+    ];
   // Temperature scale in Celsius
 var temperatureScale = d3.scaleLinear()
   .domain([-12, 22])
   .range([0, 100]);
-
 // Color scale for heat map
 var colorScale = d3.scaleLinear()
   .domain([0, 100])
   .range(["#ffffff", "#8b0000"]);
-
 // Select the div where the heat map will be drawn
 var chart = d3.select("#heat_map");
-
 // Add an SVG element to the div
 var svg = chart.append("svg")
   .attr("width", 900)
   .attr("height", 200);
-
 // Add a label for the legend
 svg.append("text")
   .attr("x", 50)
   .attr("y", 25)
   .text("Average temperature in Montreal");
-
-
   svg.selectAll("rect")
   .data(data)
   .enter()
@@ -1003,7 +996,6 @@ svg.append("text")
   .attr("width", 50)
   .attr("height", 50)
   .style("fill", (d) => colorScale(temperatureScale(d.temperature)));
-
 // Add text for each year
 svg.selectAll("year")
   .data(data)
@@ -1014,7 +1006,6 @@ svg.selectAll("year")
   .style("text-anchor", "middle")
   .style("dominant-baseline", "central")
   .text((d) => d.year);
-
 // Add text for each month
 svg.selectAll("month")
   .data(data)
@@ -1025,7 +1016,6 @@ svg.selectAll("month")
   .style("text-anchor", "middle")
   .style("dominant-baseline", "central")
   .text((d) => d.month);
-
 // Add text for each temperature
 svg.selectAll("temperature")
   .data(data)
@@ -1033,12 +1023,67 @@ svg.selectAll("temperature")
   .append("text")
   .attr("x", (d, i) => (i % 12) * 50 + 75)
   .attr("y", (d, i) => Math.floor(i / 12) * 50 + 25)
+  .style("fill", (d) => {     
+    // Calculate the appropriate text color based on the background color of the heatmap cell  
+    var backgroundColor = colorScale(temperatureScale(d.temperature));
+    // Return a color with high contrast to the background color
+    return getContrastingColor(backgroundColor);
+  })
   .style("text-anchor", "middle")
   .style("dominant-baseline", "central")
   .text((d) => d.temperature);
-
-
+function getContrastingColor(backgroundColor) {
+// Convert the background color to HSL (hue, saturation, lightness) format   
+const hsl = getHSLFromColor(backgroundColor);   
+// Calculate the relative luminance of the background color  
+// See https://www.w3.org/TR/WCAG21/#dfn-relative-luminance   
+let luminance = 0.2126 * hsl.l;   
+luminance += 0.7152 * hsl.s;   
+luminance += 0.0722 * hsl.h;  
+ // If the luminance is less than 0.5, return white as the contrasting color,   // otherwise return black   
+return luminance < 0.5 ? '#fff' : '#000';
+}
 </script>
 
+
+<script type="text/javascript">
+google.charts.load('current', {'packages':['gauge']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['Label', 'Value'],
+    ['Memory', 80],
+    ['CPU', 55],
+    ['Network', 68]
+  ]);
+
+  var options = {
+    width: 400, height: 120,
+    redFrom: 90, redTo: 100,
+    yellowFrom:75, yellowTo: 90,
+    minorTicks: 5
+  };
+
+  var chart = new google.visualization.Gauge(document.getElementById('gauge_div'));
+
+  chart.draw(data, options);
+
+  setInterval(function() {
+    data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+    chart.draw(data, options);
+  }, 13000);
+  setInterval(function() {
+    data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
+    chart.draw(data, options);
+  }, 5000);
+  setInterval(function() {
+    data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
+    chart.draw(data, options);
+  }, 26000);
+}
+
+</script>
   </body>
 </html>
