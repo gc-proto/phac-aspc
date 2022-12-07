@@ -354,12 +354,49 @@ dir="ltr"><![endif]-->
     </div>
     <h4 id="gauge">Gauge</h4>
     <p>Example of a gauge:</p>
-    <div id="gauge_div"></div>
-
+    <div id="gauge_test"></div>
     
     <h4 id="table">Responsive table</h4>
-    <p>Example of a responsive table</p>
-    <p>Coming soon</p>
+    <p>Example of a responsive table:</p>
+    <table class="provisional gc-table table" id="myTable1">
+      <caption>Population growth in Canadian cities</caption>
+      <thead>
+       <tr>
+        <th>City</th>
+        <th>Population in 2007</th>
+        <th>Population in 2017</th>
+        <th>Percentage change</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td data-label="City">Toronto</td>
+        <td data-label="Population in 2007">5,418,207</td>
+        <td data-label="Population in 2017">6,346,088</td>
+        <td data-label="Percentage change">17.1%</td>
+       </tr>
+       <tr>
+        <td data-label="City">Montréal</td>
+        <td data-label="Population in 2007">3,714,846</td>
+        <td data-label="Population in 2017">4,138,254</td>
+        <td data-label="Percentage change">11.4%</td>
+       </tr>
+       <tr>
+        <td data-label="City">Vancouver</td>
+        <td data-label="Population in 2007">2,218,134</td>
+        <td data-label="Population in 2017">2,571,262</td>
+        <td data-label="Percentage change">15.9%</td>
+       </tr>
+       <tr>
+        <td data-label="City">Ottawa–Gatineau</td>
+        <td data-label="Population in 2007">1,188,073</td>
+        <td data-label="Population in 2017">1,377,016 </td>
+        <td data-label="Percentage change">15.9%</td>
+       </tr>
+      </tbody>
+     </table>
+     <a href="https://design.canada.ca/common-design-patterns/tables.html">Consult Canada.ca guidance on tables</a>
+
 
 
   </div>
@@ -1035,6 +1072,7 @@ svg.selectAll("temperature")
 function getContrastingColor(backgroundColor) {
 // Convert the background color to HSL (hue, saturation, lightness) format   
 const hsl = getHSLFromColor(backgroundColor);   
+
 // Calculate the relative luminance of the background color  
 // See https://www.w3.org/TR/WCAG21/#dfn-relative-luminance   
 let luminance = 0.2126 * hsl.l;   
@@ -1045,45 +1083,86 @@ return luminance < 0.5 ? '#fff' : '#000';
 }
 </script>
 
+  <script>
+    // Set the dimensions of the gauge
+    var width = 250;
+    var height = 250;
 
-<script type="text/javascript">
-google.charts.load('current', {'packages':['gauge']});
-google.charts.setOnLoadCallback(drawChart);
+    // Set the range of the gauge
+    var angleRange = 120;
+    var minValue = 0;
+    var maxValue = 1000;
 
-function drawChart() {
+    // Set the colors for the gauge
+    var color = d3.scaleLinear()
+      .domain([minValue, 600, 800, maxValue])
+      .range(["#00ff00", "#ffff00", "#ff0000", "#ff0000"]);
 
-  var data = google.visualization.arrayToDataTable([
-    ['Label', 'Value'],
-    ['Memory', 80],
-    ['CPU', 55],
-    ['Network', 68]
-  ]);
+    // Create the SVG container for the gauge
+    var svg = d3.select("#gauge_test")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height);
 
-  var options = {
-    width: 400, height: 120,
-    redFrom: 90, redTo: 100,
-    yellowFrom:75, yellowTo: 90,
-    minorTicks: 5
-  };
 
-  var chart = new google.visualization.Gauge(document.getElementById('gauge_div'));
+    // Create the container for the arc and add the arc to it
+    var arcGroup = svg.append("g")
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+      .append("path")
+      .attr("d", arc)
+      .attr("fill", color(0));
 
-  chart.draw(data, options);
+          // Create the circular arc for the gauge
+    var arc = d3.arc()
+      .innerRadius(width / 2 - 100)
+      .outerRadius(width / 2)
+      .startAngle((-angleRange * Math.PI / 180) + (minValue / maxValue) * (angleRange * Math.PI / 180))
+      .endAngle((angleRange * Math.PI / 180) - ((maxValue - minValue) / maxValue) * (angleRange * Math.PI / 180));
 
-  setInterval(function() {
-    data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
-    chart.draw(data, options);
-  }, 13000);
-  setInterval(function() {
-    data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
-    chart.draw(data, options);
-  }, 5000);
-  setInterval(function() {
-    data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
-    chart.draw(data, options);
-  }, 26000);
+
+    // Add the text label for the gauge
+    var label = svg.append("text")
+      .attr("x", width / 2)
+      .attr("y", height / 2)
+      .attr("dy", ".35em")
+      .attr("text-anchor", "middle")
+      .text(0);
+
+// Add ticks to the gauge
+var ticks = [0, 250, 500, 750, 1000];
+var tickArc = d3.arc()
+  .innerRadius(width / 2 - 90)
+  .outerRadius(width / 2 - 80)
+  .startAngle((-angleRange * Math.PI / 180) + (minValue / maxValue) * (angleRange * Math.PI / 180));
+
+    // Update the gauge when new data is available
+    function updateGauge(data) {
+      // Update the color and value of the gauge
+      arcGroup.attr("fill", color(data.value));
+      label.text(data.value);
+
+      // Animate the transition of the gauge
+      arcGroup.transition()
+      .duration(750)
+      .attrTween("d", function(d) {
+      var interpolate = d3.interpolate(this._current, data.value);
+      this._current = interpolate(0);
+      return function(t) {
+      return arc(interpolate(t));
+      };
+      });
 }
 
+      // Set the initial data value
+      data = {value: 750};
+
+      // Define the this._current variable
+      this._current = data.value;
+
+      // Update the gauge with the initial data value
+      updateGauge(data);
+
 </script>
+
   </body>
 </html>
