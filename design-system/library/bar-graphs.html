@@ -18,7 +18,7 @@ dir="ltr"><![endif]-->
     <link rel="stylesheet" href="../../css/in-page.css">
     <link rel="stylesheet" href="../../css/alpha-beta-banner.css" />
 
-
+    <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script> 		<!-- makes ToC work -->
 
@@ -183,7 +183,10 @@ dir="ltr"><![endif]-->
 
 <h1 class="gc-thickline mrgn-tp-0">Bar graph</h1>
 
+<p>A bar chart is a visual representation of data that uses bars to show the relative values of different data points. Bar charts can be oriented either horizontally or vertically, and they can be used to show a wide range of data, from simple counts and proportions to more complex statistical information.</p>
+
 <div class="visible-xs visible-sm">
+
 
 <h2 class="h3">On this page</h2>
 <ul>
@@ -196,19 +199,207 @@ dir="ltr"><![endif]-->
 </ul>
 </div>
 <h2 id="when">When to use</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
-
-</p>
-
+<ul>
+<li>When you want to show the relative size or value of different data points</li>
+<li>When you want to compare the values of different data points</li>
+<li>When you want to show the distribution of data over a range of values</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>A bar graph showing the revenue of different companies in a given year</li>
+<li>A bar graph showing the number of students enrolled in different schools in a district</li>
+</ul>
+<h3>When to use vertical bar charts</h3>
+<ul>
+<li>When you have a large number of data points or categories</li>
+<li>When you want to emphasize the y-axis values</li>
+<li>When you want to show the data in a compact, space-efficient way</li>
+</ul>
+<h3>When to use horizontal bar charts</h3>
+<ul>
+<li>When you have long category labels</li>
+<li>When you want to emphasize the x-axis values</li>
+<li>When you want to show the data in a way that is easy to read and compare</li>
+</ul>
 <h2 id="avoid">What to avoid</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
-
-</p>
+<ul>
+<li>Avoid using bar charts to show data that cannot be accurately represented using bars, such as data with a high level of uncertainty or data that does not have a clear numeric value</li>
+<li>Avoid using bar charts to show data that is difficult to interpret, such as bar charts with too many data points or bar charts with complex data visualizations</li>
+<li>Avoid using bar charts to show data that is not directly comparable, such as data with different units or data with different scales</li>
+</ul>
 
 <h2 id="design">Design and code</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
 
-</p>
+<div class="wb-frmvld fieldflow-lg">
+
+  <form>
+
+      <div class="wb-fieldflow" data-wb-fieldflow="{&quot;defaultselectedlabel&quot;: false, &quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;: true, &quot;inline&quot;: true,&quot;renderas&quot;: &quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.viztype&quot;, &quot;class&quot;: &quot;hidden&quot;}}" id="types">
+
+          <p>Select a type:</p>
+
+          <ul>
+
+            <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Vertical bars</li>
+
+            <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Horizontal bars</li>
+
+
+
+          </ul>
+
+      </div>
+
+  </form>
+
+</div>
+<div id="answer1" class="viztype">
+
+
+<div class="pattern-demo mrgn-bttm-md">
+<div id="my_dataviz"></div>
+</div>
+<details>
+  <summary>HTML</summary>
+  <pre><code>&lt;!-- Add D3 library in the head section --&gt;
+&lt;script src="https://d3js.org/d3.v4.js"&gt;&lt;/script&gt;
+   
+&lt;!-- Add a div in the section where you want the graph -->
+&lt;div id="my_dataviz"&gt;&lt;/div&gt;</code></pre>
+</details>
+<details>
+  <summary>JS</summary>
+  <pre><code>&lt;script&gt;
+  // set the dimensions and margins of the graph
+  var margin = {top: 30, right: 30, bottom: 70, left: 60},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+  // append the svg object to the body of the page
+  var svg = d3.select("#my_dataviz")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
+    
+  // Parse the Data
+  d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv", function(data) {
+    
+  // X axis
+  var x = d3.scaleBand()
+    .range([ 0, width ])
+    .domain(data.map(function(d) { return d.Country; }))
+    .padding(0.2);
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+      .attr("transform", "translate(-10,0)rotate(-45)")
+      .style("text-anchor", "end");
+    
+  // Add Y axis
+  var y = d3.scaleLinear()
+    .domain([0, 13000])
+    .range([ height, 0]);
+  svg1.append("g")
+    .call(d3.axisLeft(y));
+    
+    // Bars
+  svg1.selectAll("mybar")
+    .data(data)
+    .enter()
+    .append("rect")
+      .attr("x", function(d) { return x(d.Country); })
+      .attr("y", function(d) { return y(d.Value); })
+      .attr("width", x.bandwidth())
+      .attr("height", function(d) { return height - y(d.Value); })
+      .attr("fill", "#69b3a2")
+    
+  })
+    
+&lt;/script&gt;</code></pre>
+</details>
+</div>
+
+<div id="answer2" class="hidden viztype">
+
+<div class="pattern-demo mrgn-bttm-md">
+<div id="my_dataviz2"></div>
+</div>
+<details>
+  <summary>HTML</summary>
+  <pre><code>&lt;!-- Add D3 library in the head section --&gt;
+&lt;script src="https://d3js.org/d3.v4.js"&gt;&lt;/script&gt;
+       
+&lt;!-- Add a div in the section where you want the graph -->
+&lt;div id="my_dataviz"&gt;&lt;/div&gt;</code></pre>
+</details>
+<details>
+  <summary>JS</summary>
+  <pre><code>&lt;script&gt
+
+
+  // set the dimensions and margins of the graph
+  var margin = {top: 20, right: 30, bottom: 40, left: 90},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+    
+  // append the svg object to the body of the page
+  var svg = d3.select("#my_dataviz")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform",
+         "translate(" + margin.left + "," + margin.top + ")");
+    
+  // Parse the Data
+  d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv", function(data) {
+    
+   // Add X axis
+     var x = d3.scaleLinear()
+      .domain([0, 13000])
+      .range([ 0, width]);
+     svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x))
+      .selectAll("text")
+        .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("text-anchor", "end");
+    
+    // Y axis
+    var y = d3.scaleBand()
+      .range([ 0, height ])
+      .domain(data.map(function(d) { return d.Country; }))
+      .padding(.1);
+    svg.append("g")
+      .call(d3.axisLeft(y))
+    
+    //Bars
+    svg.selectAll("myRect")
+      .data(data)
+      .enter()
+      .append("rect")
+      .attr("x", x(0) )
+      .attr("y", function(d) { return y(d.Country); })
+      .attr("width", function(d) { return x(d.Value); })
+      .attr("height", y.bandwidth() )
+      .attr("fill", "#69b3a2")
+    
+    
+      // .attr("x", function(d) { return x(d.Country); })
+      // .attr("y", function(d) { return y(d.Value); })
+      // .attr("width", x.bandwidth())
+      // .attr("height", function(d) { return height - y(d.Value); })
+      // .attr("fill", "#69b3a2")
+    
+  })
+    
+  &lt;/script&gt</code></pre>
+</details>
+</div>
 
 <h2 id="content">Content guidelines</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
@@ -302,6 +493,121 @@ dir="ltr"><![endif]-->
 
           <![endif]-->
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
+
+      
+      <script>
+
+
+        // set the dimensions and margins of the graph
+        var margin = {top: 30, right: 30, bottom: 70, left: 60},
+            width = 460 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+        
+        // append the svg object to the body of the page
+        var svg1 = d3.select("#my_dataviz")
+          .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform",
+                  "translate(" + margin.left + "," + margin.top + ")");
+        
+        // Parse the Data
+        d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv", function(data) {
+        
+        // X axis
+        var x = d3.scaleBand()
+          .range([ 0, width ])
+          .domain(data.map(function(d) { return d.Country; }))
+          .padding(0.2);
+        svg1.append("g")
+          .attr("transform", "translate(0," + height + ")")
+          .call(d3.axisBottom(x))
+          .selectAll("text")
+            .attr("transform", "translate(-10,0)rotate(-45)")
+            .style("text-anchor", "end");
+        
+        // Add Y axis
+        var y = d3.scaleLinear()
+          .domain([0, 13000])
+          .range([ height, 0]);
+        svg1.append("g")
+          .call(d3.axisLeft(y));
+        
+        // Bars
+        svg1.selectAll("mybar")
+          .data(data)
+          .enter()
+          .append("rect")
+            .attr("x", function(d) { return x(d.Country); })
+            .attr("y", function(d) { return y(d.Value); })
+            .attr("width", x.bandwidth())
+            .attr("height", function(d) { return height - y(d.Value); })
+            .attr("fill", "#69b3a2")
+        
+        })
+        
+        </script>
+<script>
+
+
+  // set the dimensions and margins of the graph
+  var margin = {top: 20, right: 30, bottom: 40, left: 90},
+      width = 460 - margin.left - margin.right,
+      height = 400 - margin.top - margin.bottom;
+  
+  // append the svg object to the body of the page
+  var svg2 = d3.select("#my_dataviz2")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+  
+  // Parse the Data
+  d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv", function(data) {
+  
+    // Add X axis
+    var x = d3.scaleLinear()
+      .domain([0, 13000])
+      .range([ 0, width]);
+    svg2.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x))
+      .selectAll("text")
+        .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("text-anchor", "end");
+  
+    // Y axis
+    var y = d3.scaleBand()
+      .range([ 0, height ])
+      .domain(data.map(function(d) { return d.Country; }))
+      .padding(.1);
+    svg2.append("g")
+      .call(d3.axisLeft(y))
+  
+    //Bars
+    svg2.selectAll("myRect")
+      .data(data)
+      .enter()
+      .append("rect")
+      .attr("x", x(0) )
+      .attr("y", function(d) { return y(d.Country); })
+      .attr("width", function(d) { return x(d.Value); })
+      .attr("height", y.bandwidth() )
+      .attr("fill", "#69b3a2")
+  
+  
+      // .attr("x", function(d) { return x(d.Country); })
+      // .attr("y", function(d) { return y(d.Value); })
+      // .attr("width", x.bandwidth())
+      // .attr("height", function(d) { return height - y(d.Value); })
+      // .attr("fill", "#69b3a2")
+  
+  })
+  
+  </script>
 
   </body>
 </html>
