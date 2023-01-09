@@ -23,7 +23,18 @@
     <link rel="stylesheet" href="https://test.canada.ca/covid-19-guidance/proto/css/alpha-beta-banner.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
-    </head>
+
+
+<style>
+        .apply-button {
+        font-size: 1.1em; /* makes the font slightly bigger */
+        background-color: #26374A;
+        color: white;
+        padding: 10px 15px; /* adds spacing all around the text */
+        border-radius: 20px; /* makes the button look like a pill */
+        }
+
+    </style>
 
 
     <body class="cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage"><nav><ul id="wb-tphp">
@@ -172,6 +183,54 @@
               <li>Email: <a href="mailto:info@gov.nl.ca">info@gov.nl.ca</a></li>
               <li>Mailing address: P.O. Box 8700, St. John's, NL A1B 4J6</li>
             </ul>
+
+
+            <button type="submit" class="apply-button">Apply</button>
+              
+
+
+            <h2 id="repetitive_code">Purpose</h2>
+            <p>The purpose of the Footnotes plugin is to implement a consistent, accessible way of handling footnotes across Government of Canada web sites. The main concept behind this solution is to place footnotes in a definition list, within a dedicated section. An example of this can be found in the Footnotes section. Supporting CSS is used to lay out the footnotes and hide navigational aids<sup id="fn1-rf"><a class="fn-lnk" href="#fn1"><span class="wb-inv">Footnote </span>1</a></sup>.</p>
+            
+            <h2>Benefits</h2>
+            <ul>
+              <li>Conforms to WCAG 2.0 AA<sup id="fn2-rf"><a class="fn-lnk" href="#fn2"><span class="wb-inv">Footnote </span>2</a></sup></li>
+              <li>Progressive enhancement approach</li>
+              <li>Support for Firefox, Opera, Safari, Chrome, and IE 7+<sup id="fn2-rf"><a class="fn-lnk" href="#fn2"><span class="wb-inv">Footnote </span>2</a></sup></li>
+              <li>Support for English and French</li>
+              <li>Configurable layout and design<sup id="fn2-rf"><a class="fn-lnk" href="#fn2"><span class="wb-inv">Footnote </span>2</a></sup> <sup id="fn3-rf"><a class="fn-lnk" href="#fn3"><span class="wb-inv">Footnote </span>3</a></sup> <sup id="fn4-rf"><a class="fn-lnk" href="#fn4"><span class="wb-inv">Footnote </span>4</a></sup></li>
+            </ul>
+            
+            <h2>Recommended usage</h2>
+            <p>Implementing footnotes in Web <sup id="fn4-rf"><a class="fn-lnk" href="#fn4"><span class="wb-inv">Footnote </span>4</a></sup></p>
+            
+            <h2>Footnotes</h2>
+            <aside class="wb-fnote" role="note">
+              <dl>
+                <dt>Footnote 1</dt>
+                <dd id="fn1">
+                  <p>Example of a standard footnote.</p>
+                  <p class="fn-rtn"><a href="#fn1-rf"><span class="wb-inv">Return to footnote </span>1<span class="wb-inv"> referrer</span></a></p>
+                </dd>
+                <dt>Footnote 2</dt>
+                <dd id="fn2">
+                  <p>Example of a footnote being referenced by multiple pieces of content.</p>
+                  <p class="fn-rtn"><a href="#fn2-rf"><span class="wb-inv">Return to footnote </span>2<span class="wb-inv"> referrer</span></a></p>
+                </dd>
+                <dt>Footnote 3</dt>
+                <dd id="fn3">
+                  <p>Example of a footnote containing multiple paragraphs (first paragraph).</p>
+                  <p>Example of a footnote containing multiple paragraphs (second paragraph).
+                    <p>Example of a footnote containing multiple paragraphs (third paragraph).</p>
+                    <p class="fn-rtn"><a href="#fn3-rf"><span class="wb-inv">Return to footnote </span>3<span class="wb-inv"> referrer</span></a></p>
+                  </dd>
+                  <dt>Footnote 4</dt>
+                  <dd id="fn4">
+                    <p>Example of a footnote where first time clicked the user will get redirected to it's first instance of the footnote even if the coded link say otherwise. Prevent undesirable behaviour when footnote are added during a content review process.</p>
+                    <p class="fn-rtn"><a href="#fn4-rf"><span class="wb-inv">Return to footnote </span>4<span class="wb-inv"> referrer</span></a></p>
+                  </dd>
+                </dl>
+              </aside>
               
                 </div>
 
