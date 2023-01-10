@@ -170,9 +170,9 @@ dir="ltr"><![endif]-->
                   <li class="longdoc-toc-link"><a href="#when">When to use</a></li>
                   <li class="longdoc-toc-link"><a href="#avoid">What to avoid</a></li>
                   <li class="longdoc-toc-link"><a href="#design">Design and code</a></li>
-                  <li class="longdoc-toc-link"><a href="#content">Content guidelines</a></li>
+                  <li class="longdoc-toc-link"><a href="#content">Content and design guidelines</a></li>
                   <li class="longdoc-toc-link"><a href="#accessibility">Accessibility guidelines</a></li>
-                  <li class="longdoc-toc-link"><a href="#research">Research</a></li>
+                  <!--<li class="longdoc-toc-link"><a href="#research">Research</a></li>-->
 
 
           </nav>
@@ -195,9 +195,9 @@ dir="ltr"><![endif]-->
   <li><a href="#when">When to use</a></li>
   <li><a href="#avoid">What to avoid</a></li>
   <li><a href="#design">Design and code</a></li>
-  <li><a href="#content">Content guidelines</a></li>
+  <li><a href="#content">Content and design guidelines</a></li>
   <li><a href="#design">Accessibility guidelines</a></li>
-  <li><a href="#research">Research</a></li>
+ <!-- <li><a href="#research">Research</a></li>-->
 </ul>
 </div>
 <h2 id="when">When to use</h2>
@@ -206,11 +206,13 @@ dir="ltr"><![endif]-->
 <li>When you want to compare the values of different data points</li>
 <li>When you want to show the distribution of data over a range of values</li>
 </ul>
-<p>Examples:</p>
+<div class="well well-sm cnt-wdth-lmtd"">
+<h3 class="mrgn-tp-sm">Examples</h3>
 <ul>
-<li>A bar graph showing the revenue of different companies in a given year</li>
-<li>A bar graph showing the number of students enrolled in different schools in a district</li>
+<li>A bar graph comparing the vaccination rates of different age groups in a population</li>
+<li>A bar graph showing the number of people who have been screened for a specific health condition, broken down by gender</li>
 </ul>
+</div>
 <h3>When to use vertical bar charts</h3>
 <ul>
 <li>When you have a large number of data points or categories</li>
@@ -410,21 +412,35 @@ dir="ltr"><![endif]-->
 <p><a href="https://d3-graph-gallery.com/barplot.html"><span class="fa fa-arrow-right"></span> Full D3.js documentation on bar graphs</a></p>
 
 
-<h2 id="content">Content guidelines</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
+<h2 id="content">Content and design guidelines</h2>
+<ul>
 
-</p>
+  <li>Always start the Y axis at 0  </li>
+  
+  <li>Consider ordering the bars by value  </li>
+  
+  <li>Use colour wisely - in general, use the same colour for all bars, and use colour to highlight a specific bar   </li>
+  
+  <li>Consider having the labels within the bars, instead of on the axis  </li>
+  
+  <li>Design bars so that they are wider than the space between them.  </li>
+  </li>
+  </ul>
 
 <h2 id="accessibility">Accessibility guidelines</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
+<ul>
 
-</p>
+<li>Provide a data table with the graph</li>
 
+  <li>If the bar graph tells a clear story, include that story in the alt text - for example, if the graph shows a clear increase over time, spell that out in the alt text so screen reader users don't have to sift through the data to get the story
+  </li>
+</ul>
+<!--
 <h2 id="research">Research</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
 
 </p>
-
+-->
     <div class="clearfix"></div>
     	<div class="row pagedetails">
 
