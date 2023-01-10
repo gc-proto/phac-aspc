@@ -261,7 +261,8 @@ dir="ltr"><![endif]-->
 </div>
 <details>
   <summary>HTML</summary>
-  <pre><code>&lt;!-- Add D3 library in the head section --&gt;
+  <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copy code to clipboard</button>
+  <pre id="code1"><code>&lt;!-- Add D3 library in the head section --&gt;
 &lt;script src="https://d3js.org/d3.v4.js"&gt;&lt;/script&gt;
    
 &lt;!-- Add a div in the section where you want the graph -->
@@ -269,7 +270,8 @@ dir="ltr"><![endif]-->
 </details>
 <details>
   <summary>JS</summary>
-  <pre><code>&lt;script&gt;
+  <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copy code to clipboard</button>
+  <pre id="code2"><code>&lt;script&gt;
   // set the dimensions and margins of the graph
   var margin = {top: 30, right: 30, bottom: 70, left: 60},
     width = 460 - margin.left - margin.right,
@@ -330,7 +332,8 @@ dir="ltr"><![endif]-->
 </div>
 <details>
   <summary>HTML</summary>
-  <pre><code>&lt;!-- Add D3 library in the head section --&gt;
+  <button class="btn btn-default" onclick="CopyToClipboard('code3');return false;">Copy code to clipboard</button>
+  <pre id="code3"><code>&lt;!-- Add D3 library in the head section --&gt;
 &lt;script src="https://d3js.org/d3.v4.js"&gt;&lt;/script&gt;
        
 &lt;!-- Add a div in the section where you want the graph -->
@@ -338,7 +341,8 @@ dir="ltr"><![endif]-->
 </details>
 <details>
   <summary>JS</summary>
-  <pre><code>&lt;script&gt
+  <button class="btn btn-default" onclick="CopyToClipboard('code4');return false;">Copy code to clipboard</button>
+  <pre id="code4"><code>&lt;script&gt
 
 
   // set the dimensions and margins of the graph
@@ -610,6 +614,18 @@ dir="ltr"><![endif]-->
   
   })
   
+  </script>
+
+<script>
+  function CopyToClipboard(id)
+  {
+  var r = document.createRange();
+  r.selectNode(document.getElementById(id));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(r);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+  }
   </script>
 
   </body>
