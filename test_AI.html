@@ -232,6 +232,14 @@
                 </dl>
               </aside>
               
+
+              <h2>JS example</h2>
+              <form>
+                <label for="salary">Enter your salary:</label>
+                <input type="number" id="salary" name="salary">
+                <button type="button" onclick="calculate()">Submit</button>
+              </form>
+              <p id="result-text"></p>
                 </div>
 
             </div>
@@ -456,6 +464,16 @@
 <![endif]-->
 
     <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
+
+    <script>
+        function calculate() {
+          var salary = document.getElementById("salary").value;
+          var result = salary * 0.55;
+          var element = document.getElementById("result-text");
+          element.innerText = "55% of your salary is: $" + result;
+        }
+        </script>
+        
 </body>
 
 </html>
