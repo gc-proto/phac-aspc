@@ -207,9 +207,22 @@ dir="ltr"><![endif]-->
 </ul>
 
 <h2 id="design">Design and code</h2>
-<p>Coming soon
+<div class="pattern-demo mrgn-bttm-md">
+    <button title="Sorting alphabetically (ascending order)" type="button" class="btn btn-default"><i class="fas fa-sort-alpha-down"></i> <span class="wb-inv">Sort alphabetically</span></button>
+    <button title="Display two graphs per row" type="button" class="btn btn-default hidden-xs" data-perRow="1"><i class="fas fa-th-large"></i><span class="wb-inv">Display two graphs per row</span></button>
+    <button title="Show daily viral load" type="button" class="btn btn-default">Show daily values</button>
 
-</p>
+    
+  </div>
+
+  <details>
+    <summary>HTML</summary>
+    <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copy code to clipboard</button>
+    <pre id="code1"><code>&lt;button title="Sorting alphabetically (ascending order)" type="button" class="btn btn-default"&gt;&lt;i class="fas fa-sort-alpha-down"&gt;&lt;/i&gt; &lt;span class="wb-inv"&gt;Sort alphabetically&lt;/span&gt;&lt;/button&gt;
+&lt;button title="Display two graphs per row" type="button" class="btn btn-default hidden-xs" data-perRow="1"&gt;&lt;i class="fas fa-th-large"&gt;&lt;/i&gt;&lt;span class="wb-inv"&gt;Display two graphs per row&lt;/span&gt;&lt;/button&gt;
+&lt;button title="Show daily viral load" type="button" class="btn btn-default"&gt;Show daily values&lt;/button&gt;</code></pre>
+  </details>
+
 
 <h2 id="content">Content and design guidelines</h2>
 <ul>
@@ -305,6 +318,17 @@ dir="ltr"><![endif]-->
           <![endif]-->
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
 
+      <script>
+        function CopyToClipboard(id)
+        {
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        }
+        </script>
   </body>
 </html>
 
