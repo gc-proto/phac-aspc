@@ -299,6 +299,70 @@ dir="ltr"><![endif]-->
       </details>
 
 
+
+      <details>
+        <summary>CSS</summary>
+        <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copy code to clipboard</button>
+        <pre id="code2"><code>.tabNav a:visited {
+color: #2b4380;
+}
+.tabNav a:visited:hover {
+color: #fff;
+}
+
+.btn-tabs {
+background-color: #F5F5F5;
+color: #2b4380;
+font-size: 20px;
+font-weight: bold;
+border-radius: 0px;
+}
+        
+.btn-tabs:hover {
+background-color:#26374A;
+color: #FFF;
+}
+ 
+.btn-tabs.active {
+background-color: #26374A;
+color: #FFF;
+font-size: 20px;
+font-weight: bold;
+box-shadow: none;
+border-radius: 0px;
+}
+        
+  
+.btn-tabs-mobile {
+background-color: #F5F5F5;
+color: #2b4380;
+font-size: 20px;
+font-weight: bold;
+border-radius: 0px;
+padding:10px 0px
+}
+        
+  
+.btn-tabs-mobile.active {
+background-color: #F5F5F5;
+color: #26374A;
+font-size: 20px;
+font-weight: bold;
+box-shadow: none;
+border-radius: 0px;
+border-bottom: 5px solid #26374A;
+}
+    
+.btn-tabs, .btn-tabs:visited {
+display: inline-block;
+text-decoration: none;
+}</code></pre>
+      </details>
+
+
+
+     
+
     <h2 id="content">Content and design guidelines</h2>
     <ul>
       <li>Don’t label a tab “Overview” or  “About [topic]” - use meaningful and descriptive tab labels instead</li>
@@ -332,9 +396,6 @@ dir="ltr"><![endif]-->
     		</main>
 
       </section>
-
-
-
 
 
 </div>
@@ -393,5 +454,20 @@ dir="ltr"><![endif]-->
           <![endif]-->
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
 
+      <script>
+        function CopyToClipboard(id)
+        {
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        }
+      </script>
+
   </body>
 </html>
+
+
+
