@@ -17,6 +17,7 @@ dir="ltr"><![endif]-->
     <link rel="stylesheet" href="../../css/toc.css">
     <link rel="stylesheet" href="../../css/in-page.css">
     <link rel="stylesheet" href="../../css/alpha-beta-banner.css" />
+    <link rel="stylesheet" href="https://health-infobase.canada.ca/src/css/selectpicker/bootstrap-select.css">
 
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -39,7 +40,13 @@ dir="ltr"><![endif]-->
 </head>
 
 <style>
-
+       .bootstrap-select>.dropdown-toggle {
+                background: white;
+                border: 3px solid black;
+            }
+      .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+                width: 395px;
+            }
 </style>
 
 <body id="start" class="page-type-nav cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
@@ -203,21 +210,122 @@ dir="ltr"><![endif]-->
     
     <h2 id="avoid">What to avoid</h2>
     <ul>
-      <li>Don't use drop-down selection to select between less than 5 items; use radio buttons instead</li>
+      <li>Avoid overburdening users with too many selection options</li>
     </ul>
     
     <h2 id="design">Design and code</h2>
-    <p>Coming soon
+    <div class="wb-frmvld fieldflow-lg">
+
+      <form>
     
-    </p>
+          <div class="wb-fieldflow" data-wb-fieldflow="{&quot;defaultselectedlabel&quot;: false, &quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;: true, &quot;inline&quot;: true,&quot;renderas&quot;: &quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.viztype&quot;, &quot;class&quot;: &quot;hidden&quot;}}" id="types">
+    
+              <p>Select a type:</p>
+    
+              <ul>
+    
+                <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Single selection</li>
+    
+                <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Multiple selections</li>
+    
+    
+    
+              </ul>
+    
+          </div>
+    
+      </form>
+    
+    </div>
+    <div id="answer1" class="viztype">
+    
+    
+    <div class="pattern-demo mrgn-bttm-md">
+        <label for="graph-ddl-3" class="">Select region(s): </label>
+        <div style="display: inline-block">
+          <select id="graph-ddl-3" class="graph-ddl" multiple>
+            <option class="actionBtn" value="selectAll">Select all</option>
+            <option class="actionBtn" value="deselectAll">Deselect all</option>
+          </select>
+        </div>
+    </div>
+    <details>
+      <summary>HTML</summary>
+      <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copy code to clipboard</button>
+      <pre id="code1"><code>&lt;!-- Code to come later --&gt;
+      </code></pre>
+    </details>
+    <details>
+      <summary>JS</summary>
+      <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copy code to clipboard</button>
+      <pre id="code2"><code>&lt;!-- Code to come later --&gt;
+
+      </code></pre>
+    </details>
+    </div>
+    
+    <div id="answer2" class="hidden viztype">
+      <div class="pattern-demo mrgn-bttm-md">
+      <h3>
+        <label for="dropdownType3" class="wb-inv">Types of statistics</label>
+        <select id="dropdownType3" class="form-control dropdown form-inline" style="display:inline; font-size:1.1em; color:#333; height:39px; padding:3px 9px;">
+            <optgroup label="Types of statistics">
+                <option selected value="num" class="toggleBtns">Count</option>
+                <option value="rate" class="toggleBtns">Rate</option>
+                <!--<option value="avg" class="toggleBtns">Moving average</option>-->
+            </optgroup>
+        </select>
+        <span class="titleNumMod">of</span>
+        <label for="dropdownType1" class="wb-inv">Types of measures</label>
+        <select id="dropdownType1" class="form-control dropdown form-inline" style="display:inline; font-size:1.1em; color:#333; height:39px; padding:3px 9px;">
+            <optgroup label="Types of measures">
+                <option value="cases_total" class="toggleBtns">total cases</option>
+                <option selected value="cases_weekly" class="toggleBtns">cases (last 7 days)</option>
+                <option value="cases_last14" class="toggleBtns">cases (last 14 days)</option>
+                <option value="deaths_total" class="toggleBtns">deaths</option>
+                <option value="deaths_weekly" class="toggleBtns">deaths (last 7 days)</option>
+                <option value="deaths_last14" class="toggleBtns">deaths (last 14 days)</option>
+            </optgroup>
+        </select>
+        <span class="numArticle">of</span> COVID-19,
+        <label for="dropdownType4" class="wb-inv">Types of statistics</label>
+        <select id="dropdownType4" class="form-control dropdown form-inline" style="display:inline; font-size:1.1em; color:#333; height:39px; padding:3px 9px;">
+            <optgroup label="Types of statistics">
+                <option selected value="pt" class="toggleBtns">province/territory</option>
+                <option value="hr" class="toggleBtns">health region</option>
+            </optgroup>
+        </select>
+        <span class="txtCurrentDate">for the week of December 25 to December 31, 2022</span>
+    </h3>
+  </div>
+
+    <details>
+      <summary>HTML</summary>
+      <button class="btn btn-default" onclick="CopyToClipboard('code3');return false;">Copy code to clipboard</button>
+      <pre id="code3"><code>&lt;!-- Code to come later --&gt;
+
+      </code></pre>
+    </details>
+    <details>
+      <summary>JS</summary>
+      <button class="btn btn-default" onclick="CopyToClipboard('code4');return false;">Copy code to clipboard</button>
+      <pre id="code4"><code>&lt;!-- Code to come later --&gt;        
+      </code></pre>
+    </details>
+    </div>
     
     <h2 id="content">Content and design guidelines</h2>
     <ul>
+      <li>In general, if there’s only 1 selection to make, and there are less than 5 options to select </li>
+      <li>If there are multiple selections to make, you can use drop-down selectors for each option</a> </li>
+      <li>When possible, consider integrating the options into a sentence</a> </li>
       <li>Follow the <a href="../dataviz/dataviz/design.html">general design guidelines</a> </li>
     </ul>
     
     <h2 id="accessibility">Accessibility guidelines</h2>
     <ul>
+      
+      <li>Make sure that selections can be made using a keyboard</li>
       <li>Follow the <a href="../dataviz/dataviz/design.html#accessibility">general accessibility guidelines</a> </li>
     </ul>
     
@@ -304,5 +412,16 @@ dir="ltr"><![endif]-->
           <![endif]-->
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
 
+      <script>
+        function CopyToClipboard(id)
+        {
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        }
+        </script>
   </body>
 </html>
