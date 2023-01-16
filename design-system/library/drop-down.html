@@ -65,6 +65,15 @@ dir="ltr"><![endif]-->
                 border-bottom: 0;
                 border-left: 0.3em solid transparent;
             }
+
+            .dropdown {
+            display:inline; 
+            font-size:1.1em; 
+            color:#333; 
+            height:39px;
+            padding:3px 9px;">
+          }
+
         </style>
 
 
@@ -243,9 +252,9 @@ dir="ltr"><![endif]-->
     
               <ul>
     
-                <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Single selection</li>
+                <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Single drop-down</li>
     
-                <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Multiple selections</li>
+                <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Multiple drop-downs</li>
     
     
     
@@ -341,7 +350,7 @@ dir="ltr"><![endif]-->
       <div class="pattern-demo mrgn-bttm-md">
       <h3>
         <label for="dropdownType3" class="wb-inv">Types of statistics</label>
-        <select id="dropdownType3" class="form-control dropdown form-inline" style="display:inline; font-size:1.1em; color:#333; height:39px; padding:3px 9px;">
+        <select id="dropdownType3" class="form-control dropdown form-inline">
             <optgroup label="Types of statistics">
                 <option selected value="num" class="toggleBtns">Count</option>
                 <option value="rate" class="toggleBtns">Rate</option>
@@ -350,7 +359,7 @@ dir="ltr"><![endif]-->
         </select>
         <span class="titleNumMod">of</span>
         <label for="dropdownType1" class="wb-inv">Types of measures</label>
-        <select id="dropdownType1" class="form-control dropdown form-inline" style="display:inline; font-size:1.1em; color:#333; height:39px; padding:3px 9px;">
+        <select id="dropdownType1" class="form-control dropdown form-inline">
             <optgroup label="Types of measures">
                 <option value="cases_total" class="toggleBtns">total cases</option>
                 <option selected value="cases_weekly" class="toggleBtns">cases (last 7 days)</option>
@@ -362,7 +371,7 @@ dir="ltr"><![endif]-->
         </select>
         <span class="numArticle">of</span> COVID-19,
         <label for="dropdownType4" class="wb-inv">Types of statistics</label>
-        <select id="dropdownType4" class="form-control dropdown form-inline" style="display:inline; font-size:1.1em; color:#333; height:39px; padding:3px 9px;">
+        <select id="dropdownType4" class="form-control dropdown form-inline">
             <optgroup label="Types of statistics">
                 <option selected value="pt" class="toggleBtns">province/territory</option>
                 <option value="hr" class="toggleBtns">health region</option>
@@ -374,17 +383,48 @@ dir="ltr"><![endif]-->
 
     <details>
       <summary>HTML</summary>
-      <button class="btn btn-default" onclick="CopyToClipboard('code3');return false;">Copy code to clipboard</button>
-      <pre id="code3"><code>&lt;!-- Code to come later --&gt;
-
-      </code></pre>
+      <button class="btn btn-default" onclick="CopyToClipboard('code4');return false;">Copy code to clipboard</button>
+      <pre id="code4"><code>&lt;h3&gt;
+  &lt;label for="dropdownType3" class="wb-inv"&gt;Types of statistics&lt;/label&gt;
+  &lt;select id="dropdownType3" class="form-control dropdown form-inline"&gt;
+    &lt;optgroup label="Types of statistics"&gt;
+      &lt;option selected value="num" class="toggleBtns"&gt;Count&lt;/option&gt;
+      &lt;option value="rate" class="toggleBtns"&gt;Rate&lt;/option&gt;
+      &lt;!--&lt;option value="avg" class="toggleBtns"&gt;Moving average&lt;/option&gt;--&gt;
+    &lt;/optgroup&gt;
+  &lt;/select&gt;
+  &lt;span class="titleNumMod"&gt;of&lt;/span&gt;
+  &lt;label for="dropdownType1" class="wb-inv"&gt;Types of measures&lt;/label&gt;
+  &lt;select id="dropdownType1" class="form-control dropdown form-inline"&gt;
+    &lt;optgroup label="Types of measures"&gt;
+      &lt;option value="cases_total" class="toggleBtns"&gt;total cases&lt;/option&gt;
+      &lt;option selected value="cases_weekly" class="toggleBtns"&gt;cases (last 7 days)&lt;/option&gt;
+      &lt;option value="cases_last14" class="toggleBtns"&gt;cases (last 14 days)&lt;/option&gt;
+      &lt;option value="deaths_total" class="toggleBtns"&gt;deaths&lt;/option&gt;
+      &lt;option value="deaths_weekly" class="toggleBtns"&gt;deaths (last 7 days)&lt;/option&gt;
+      &lt;option value="deaths_last14" class="toggleBtns"&gt;deaths (last 14 days)&lt;/option&gt;
+    &lt;/optgroup&gt;
+  &lt;/select&gt;
+  &lt;span class="numArticle"&gt;of&lt;/span&gt; COVID-19, &lt;label for="dropdownType4" class="wb-inv"&gt;Types of statistics&lt;/label&gt;
+  &lt;select id="dropdownType4" class="form-control dropdown form-inline"&gt;
+    &lt;optgroup label="Types of statistics"&gt;
+      &lt;option selected value="pt" class="toggleBtns"&gt;province/territory&lt;/option&gt;
+      &lt;option value="hr" class="toggleBtns"&gt;health region&lt;/option&gt;
+    &lt;/optgroup&gt;
+  &lt;/select&gt;
+  &lt;span class="txtCurrentDate"&gt;for the week of December 25 to December 31, 2022&lt;/span&gt;
+&lt;/h3&gt;</code></pre>
     </details>
     <details>
-      <summary>JS</summary>
+      <summary>CSS</summary>
       <button class="btn btn-default" onclick="CopyToClipboard('code4');return false;">Copy code to clipboard</button>
-      <pre id="code4"><code>&lt;!-- Code to come later --&gt;
-
-      </code></pre>
+      <pre id="code4"><code>.dropdown {
+  display:inline; 
+  font-size:1.1em; 
+  color:#333; 
+  height:39px;
+  padding:3px 9px;">
+}</code></pre>
     </details>
     </div>
     
@@ -407,6 +447,7 @@ dir="ltr"><![endif]-->
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
     
     </p> -->
+    
 
     <div class="clearfix"></div>
     	<div class="row pagedetails">
