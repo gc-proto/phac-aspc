@@ -17,6 +17,8 @@ dir="ltr"><![endif]-->
     <link rel="stylesheet" href="../../css/toc.css">
     <link rel="stylesheet" href="../../css/in-page.css">
     <link rel="stylesheet" href="../../css/alpha-beta-banner.css" />
+    <link rel="stylesheet" href="https://infobase-dev.com/src/css/global.css" />
+    
 
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -196,22 +198,110 @@ dir="ltr"><![endif]-->
     </ul>
     </div>
     <h2 id="when">When to use</h2>
-    <p>Coming soon
-    
-    </p>
+    <ul>
+      <li>Use a tabbed interface to separate different aspects of a data product </li>
+
+    </ul>
     
     <h2 id="avoid">What to avoid</h2>
-    <p>Coming soon
-    
-    </p>
-    
+
+    <ul>
+      <li>Use a maximum of 3 to 6 tabs</li>
+      <li>Only use a tabbed interface if you have too much content to make everything fit in one page</li>
+    </ul>
+
     <h2 id="design">Design and code</h2>
-    <p>Coming soon
-    
-    </p>
-    
+
+    <div class="pattern-demo mrgn-bttm-md">
+
+    <section class="blue-header well well-sm brdr-0 mrgn-bttm-0 mrgn-tp-0">
+      <div class="container mrgn-tp-sm">
+
+              <h1 class="mrgn-tp-md" property="name" id="wb-cont" dir="ltr"><span class="stacked"><span>Page 1</span>: <span>Group name</span></span></h1>
+                 <ul class="list-inline small mrgn-bttm-sm" style="line-height:1.65em" id="list-inline-desktop-only">
+                        <li class="mrgn-rght-lg"> Last updated: 2023-01-01</li>
+                        <li> <a class="pdf" href="#"><i class="fa fa-download" aria-hidden="true"></i> <span class="wb-invisible">Download page in </span>PDF<span class="wb-invisible"> format</span></a></li>
+                         <li> <a class="pdf" href="#"><i class="fa fa-download" aria-hidden="true"></i> <span class="wb-invisible">Download data in </span>CSV<span class="wb-invisible"> format</span></a></li>
+                      </ul>
+          <p>Short introduction to the data product (optional). 1 or 2 sentences explaining the product.</p>
+          
+ </div>
+ </section>
+ 
+    <section class="well well-sm brdr-0 mrgn-bttm-25 mrgn-tp-0 tabNav" style="padding:0px;">
+                    <div class="container">
+                      <nav>
+                        <ul class="list-inline hidden-xs hidden-sm mrgn-bttm-0">
+                            <li><a class="active btn btn-tabs" id="active-tab" role="button" href="#">Page 1</a></li>
+                            <li><a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_2_EN">Page 2</a></li>
+                            <li><a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_3_EN">Page 3</a></li>
+                            <li><a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_4_EN">Page 4</a></li>
+                           <li><a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_5_EN">Page 5</a></li>
+                        </ul>
+                        
+                        <ul class="list-unstyled hidden-md hidden-lg">
+                            <li><a class="active btn btn-tabs-mobile" style="padding:10px 0px;" id="active-tab" role="button" href="#">Page 1</a></li>
+                            <li><a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_2_EN">Page 2</a></li>
+                            <li><a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_3_EN">Page 3</a></li>
+                            <li><a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_4_EN">Page 4</a></li>
+                           <li><a class="btn btn-tabs-mobile"  id="tab" role="button" href="./template_tabs_5_EN">Page 5</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </section>
+                  
+                </div>
+
+
+      <details>
+        <summary>HTML</summary>
+        <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copy code to clipboard</button>
+        <pre id="code1"><code>&lt;section class="well well-sm brdr-0 mrgn-bttm-25 mrgn-tp-0 tabNav" style="padding:0px;"&gt; 
+  &lt;div class="container"&gt; 
+    &lt;nav&gt; 
+      &lt;ul class="list-inline hidden-xs hidden-sm mrgn-bttm-0"&gt; 
+        &lt;li&gt; 
+          &lt;a class="active btn btn-tabs" id="active-tab" role="button" href="#"&gt; Page 1&lt;/a&gt; 
+        &lt;/li&gt; 
+        &lt;li&gt; 
+          &lt;a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_2_EN"&gt; Page 2&lt;/a&gt; 
+        &lt;/li&gt; 
+        &lt;li&gt; 
+          &lt;a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_3_EN"&gt; Page 3&lt;/a&gt; 
+        &lt;/li&gt; 
+        &lt;li&gt; 
+          &lt;a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_4_EN"&gt; Page 4&lt;/a&gt; 
+        &lt;/li&gt; 
+        &lt;li&gt; 
+          &lt;a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_5_EN"&gt; Page 5&lt;/a&gt; 
+        &lt;/li&gt; 
+      &lt;/ul&gt; 
+      &lt;ul class="list-unstyled hidden-md hidden-lg"&gt; 
+        &lt;li&gt; 
+          &lt;a class="active btn btn-tabs-mobile" style="padding:10px 0px;" id="active-tab" role="button" href="#"&gt; Page 1&lt;/a&gt; 
+        &lt;/li&gt; 
+        &lt;li&gt; 
+          &lt;a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_2_EN"&gt; Page 2&lt;/a&gt; 
+        &lt;/li&gt; 
+        &lt;li&gt; 
+          &lt;a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_3_EN"&gt; Page 3&lt;/a&gt; 
+        &lt;/li&gt; 
+        &lt;li&gt; 
+          &lt;a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_4_EN"&gt; Page 4&lt;/a&gt; 
+        &lt;/li&gt; 
+        &lt;li&gt; 
+          &lt;a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_5_EN"&gt; Page 5&lt;/a&gt; 
+        &lt;/li&gt; 
+      &lt;/ul&gt; 
+    &lt;/nav&gt; 
+  &lt;/div&gt; 
+&lt;/section&gt; </code></pre>
+      </details>
+
+
     <h2 id="content">Content and design guidelines</h2>
     <ul>
+      <li>Don’t label a tab “Overview” or  “About [topic]” - use meaningful and descriptive tab labels instead</li>
       <li>Follow the <a href="../dataviz/dataviz/design.html">general design guidelines</a> </li>
     </ul>
     
