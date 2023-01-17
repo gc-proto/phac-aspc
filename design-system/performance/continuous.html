@@ -207,15 +207,122 @@ dir="ltr"><![endif]-->
 
    <p>Consult web analytics to understand current user behaviour on your product. </p>
 
-   <p>See <a href="./performance/measurement.html#data">web analytics metrics</a> for details. </p>
+   <p>See <a href="./measurement.html#data">web analytics metrics</a> for details. </p>
 
    <h3 id="feedback">User feedback</h3>
    <p>Adding the feedback tool on key products can be a useful tool in your continuous improvement plan. </p>
-   <p><br/></p>
    <ul>
       <li><a href="https://design.canada.ca/continuous-improvement/monitoring/feedback.html">Page feedback tool</a></li>
    </ul>
    <p>Feedback is not to be used as a performance metric, but as qualitative data to help improve the product. It’s only useful if owners of the product are committed to regularly look at the feedback and act on it. </p>
+   <h4>Code for the feedback tool</h3>
+    <p>To add the feedback tool to a page, you need to replace regular Report a problem widget and the Share button with some HTML code, and add JS script. </p>
+    <p>You only have to change 2 fields: page title and page url. </p>
+   <details>
+    <summary>HTML</summary>
+    <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copy code to clipboard</button>
+    <pre id="code1"><code>&lt;div class="row row-no-gutters mrgn-tp-xl feedbackWidget"&gt; 
+      &lt;div class="col-sm-7 col-lg-6"&gt; 
+        &lt;section class="gc-pg-hlpfl provisional"&gt; 
+          &lt;div class="well mrgn-bttm-0"&gt; 
+            &lt;form id="gc-pg-hlpfl-frm" action="#" method="post" autocomplete="off"&gt; 
+              &lt;input type="hidden" name="institutionopt" value="Public Health Agency of Canada"&gt; 
+              &lt;input type="hidden" name="themeopt" value="Health"&gt; 
+              &lt;input type="hidden" name="sectionopt" value="Health data"&gt; 
+              &lt;input type="hidden" name="language" value="en"&gt; 
+              &lt;input type="hidden" name="pageTitle" value="[Page title]"&gt; 
+              &lt;input type="hidden" name="submissionPage" value="[Page URL]"&gt; 
+              &lt;input type="hidden" id="helpful" name="helpful" value="Yes"&gt; 
+              &lt;div class="gc-pg-hlpfl-btn"&gt; 
+                &lt;div class="row row-no-gutters"&gt; 
+                  &lt;div class="col-xs-12 col-sm-7 mrgn-tp-sm"&gt; 
+                    &lt;h2 class="mrgn-tp-sm h5"&gt; Did you find what you were looking for?&lt;/h2&gt; 
+                  &lt;/div&gt; 
+                  &lt;div class="col-xs-8 col-sm-5 text-right"&gt; 
+                    &lt;button id="btnyes" type="submit" value="Yes" class="btn btn-primary"&gt; Yes&lt;/button&gt; 
+                    &lt;button id="btnno" type="button" class="btn btn-primary mrgn-lft-sm nojs-hide"&gt; No&lt;/button&gt; 
+                  &lt;/div&gt; 
+                &lt;/div&gt; 
+              &lt;/div&gt; 
+              &lt;p class="h3 hidden nojs-show"&gt; If not, tell us why:&lt;/p&gt; 
+              &lt;div class="gc-pg-hlpfl-no nojs-show"&gt; 
+                &lt;fieldset&gt; 
+                  &lt;legend class="h4 mrgn-tp-0 mrgn-bttm-md"&gt; What was wrong?&lt;/legend&gt; 
+                  &lt;div class="radio"&gt; 
+                    &lt;label for="problem1"&gt; 
+                      &lt;input name="problem" id="problem1" type="radio" value="The answer I need is missing" data-gc-analytics-wtph-value="The answer I need is missing-La réponse dont j’ai besoin n’est pas là" data-gc-analytics-collect="notPrivate"&gt;  The answer I need is missing &lt;/label&gt; 
+                  &lt;/div&gt; 
+                  &lt;div class="radio"&gt; 
+                    &lt;label for="problem2"&gt; 
+                      &lt;input name="problem" id="problem2" type="radio" value="The information isn’t clear" data-gc-analytics-wtph-value="The information isn’t clear-L'information n'est pas claire" data-gc-analytics-collect="notPrivate"&gt;  The information isn’t clear &lt;/label&gt; 
+                  &lt;/div&gt; 
+                  &lt;div class="radio"&gt; 
+                    &lt;label for="problem3"&gt; 
+                      &lt;input name="problem" id="problem3" type="radio" value="I’m not in the right place" data-gc-analytics-wtph-value="I’m not in the right place-Je ne suis pas au bon endroit" data-gc-analytics-collect="notPrivate"&gt;  I’m not in the right place &lt;/label&gt; 
+                  &lt;/div&gt; 
+                  &lt;div class="radio"&gt; 
+                    &lt;label for="problem4"&gt; 
+                      &lt;input name="problem" id="problem4" type="radio" value="Something is broken or incorrect" data-gc-analytics-wtph-value="Something is broken or incorrect-Quelque chose est brisé ou incorrect" data-gc-analytics-collect="notPrivate"&gt;  Something is broken or incorrect &lt;/label&gt; 
+                  &lt;/div&gt; 
+                  &lt;div class="radio"&gt; 
+                    &lt;label for="problem5"&gt; 
+                      &lt;input name="problem" id="problem5" type="radio" value="Other reason" data-gc-analytics-wtph-value="Other reason-Autre raison" data-gc-analytics-collect="notPrivate"&gt;  Other reason &lt;/label&gt; 
+                  &lt;/div&gt; 
+                &lt;/fieldset&gt; 
+                &lt;label for="problem6" class="mrgn-bttm-0"&gt; Please provide more details&lt;/label&gt; 
+                &lt;p class="small"&gt; 
+                  &lt;strong&gt; (Don’t include any personal information. Note that you will not receive a reply.)&lt;/strong&gt; 
+                  &lt;br&gt; 
+                  &lt;span class="small"&gt; Maximum 300 characters&lt;/span&gt; 
+                &lt;/p&gt; 
+                &lt;textarea id="problem6" name="details" class="full-width" maxlength="300"&gt; &lt;/textarea&gt; 
+                &lt;button type="submit" value="No" class="btn btn-primary mrgn-tp-md mrgn-bttm-sm"&gt; Submit&lt;/button&gt; 
+              &lt;/div&gt; 
+            &lt;/form&gt; 
+            &lt;div class="gc-pg-hlpfl-thnk hide"&gt; 
+              &lt;p class="h6 mrgn-tp-sm mrgn-bttm-sm"&gt; 
+                &lt;span class="far fa-check-circle text-success mrgn-rght-sm" aria-hidden="true"&gt; &lt;/span&gt;  Thank you for your feedback
+              &lt;/p&gt; 
+            &lt;/div&gt; 
+          &lt;/div&gt; 
+        &lt;/section&gt; 
+      &lt;/div&gt; 
+      &lt;div class="col-sm-3 col-sm-offset-1 col-lg-offset-3"&gt; 
+        &lt;div class="wb-share" data-wb-share="{&quot;pnlId&quot;:&quot;pnlShrPg&quot;, &quot;lnkClass&quot;: &quot;btn btn-default btn-block mrgn-tp-md&quot;}"&gt; &lt;/div&gt; 
+      &lt;/div&gt; 
+    &lt;/div&gt; </code></pre>
+  </details>
+
+  <details>
+    <summary>JS</summary>
+    <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copy code to clipboard</button>
+  <pre id="code2"><code>&lt;script&gt; 
+$(document).on("wb-ready.wb", function() {
+  $("#btnno").click(function(e) {
+    $(".gc-pg-hlpfl-no").removeClass("nojs-show");
+    $(".gc-pg-hlpfl-btn").addClass("hide");
+    $("#helpful").val("No");
+  });
+  $("#gc-pg-hlpfl-frm").submit(function(e) {
+    e.preventDefault();
+    $(".gc-pg-hlpfl-thnk").removeClass("hide");
+    $("#gc-pg-hlpfl-frm").addClass("hide nojs-show");
+    $.ajax({
+      url: 'https://pagesuccessemailqueue.azurewebsites.net/api/QueueProblemForm',
+      type: 'POST',
+      dataType: 'text',
+      data: $('form#gc-pg-hlpfl-frm').serialize(),
+      success: function(data) {},
+      error: function(xhr, status, err) {
+      console.log(xhr.responseText);
+      }
+    });
+  });
+});
+&lt;/script&gt; </code></pre>
+  </details>
+
+
    <h3 id="usability">Usability testing</h3>
    <h4>Formative vs summative testing</h4>
    <p>Formative and summative evaluations differ in their goal:</p>
@@ -334,5 +441,91 @@ dir="ltr"><![endif]-->
           <![endif]-->
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
 
+      <script>
+        function CopyToClipboard(id)
+        {
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        }
+      </script>
+
+
+
   </body>
 </html>
+
+
+<div class="row row-no-gutters mrgn-tp-xl feedbackWidget"> 
+      <div class="col-sm-7 col-lg-6"> 
+        <section class="gc-pg-hlpfl provisional"> 
+          <div class="well mrgn-bttm-0"> 
+            <form id="gc-pg-hlpfl-frm" action="#" method="post" autocomplete="off"> 
+              <input type="hidden" name="institutionopt" value="Public Health Agency of Canada"> 
+              <input type="hidden" name="themeopt" value="Health"> 
+              <input type="hidden" name="sectionopt" value="Health data"> 
+              <input type="hidden" name="language" value="en"> 
+              <input type="hidden" name="pageTitle" value="[Page title]"> 
+              <input type="hidden" name="submissionPage" value="[Page URL]"> 
+              <input type="hidden" id="helpful" name="helpful" value="Yes"> 
+              <div class="gc-pg-hlpfl-btn"> 
+                <div class="row row-no-gutters"> 
+                  <div class="col-xs-12 col-sm-7 mrgn-tp-sm"> 
+                    <h2 class="mrgn-tp-sm h5"> Did you find what you were looking for?</h2> 
+                  </div> 
+                  <div class="col-xs-8 col-sm-5 text-right"> 
+                    <button id="btnyes" type="submit" value="Yes" class="btn btn-primary"> Yes</button> 
+                    <button id="btnno" type="button" class="btn btn-primary mrgn-lft-sm nojs-hide"> No</button> 
+                  </div> 
+                </div> 
+              </div> 
+              <p class="h3 hidden nojs-show"> If not, tell us why:</p> 
+              <div class="gc-pg-hlpfl-no nojs-show"> 
+                <fieldset> 
+                  <legend class="h4 mrgn-tp-0 mrgn-bttm-md"> What was wrong?</legend> 
+                  <div class="radio"> 
+                    <label for="problem1"> 
+                      <input name="problem" id="problem1" type="radio" value="The answer I need is missing" data-gc-analytics-wtph-value="The answer I need is missing-La réponse dont j’ai besoin n’est pas là" data-gc-analytics-collect="notPrivate">  The answer I need is missing </label> 
+                  </div> 
+                  <div class="radio"> 
+                    <label for="problem2"> 
+                      <input name="problem" id="problem2" type="radio" value="The information isn’t clear" data-gc-analytics-wtph-value="The information isn’t clear-L'information n'est pas claire" data-gc-analytics-collect="notPrivate">  The information isn’t clear </label> 
+                  </div> 
+                  <div class="radio"> 
+                    <label for="problem3"> 
+                      <input name="problem" id="problem3" type="radio" value="I’m not in the right place" data-gc-analytics-wtph-value="I’m not in the right place-Je ne suis pas au bon endroit" data-gc-analytics-collect="notPrivate">  I’m not in the right place </label> 
+                  </div> 
+                  <div class="radio"> 
+                    <label for="problem4"> 
+                      <input name="problem" id="problem4" type="radio" value="Something is broken or incorrect" data-gc-analytics-wtph-value="Something is broken or incorrect-Quelque chose est brisé ou incorrect" data-gc-analytics-collect="notPrivate">  Something is broken or incorrect </label> 
+                  </div> 
+                  <div class="radio"> 
+                    <label for="problem5"> 
+                      <input name="problem" id="problem5" type="radio" value="Other reason" data-gc-analytics-wtph-value="Other reason-Autre raison" data-gc-analytics-collect="notPrivate">  Other reason </label> 
+                  </div> 
+                </fieldset> 
+                <label for="problem6" class="mrgn-bttm-0"> Please provide more details</label> 
+                <p class="small"> 
+                  <strong> (Don’t include any personal information. Note that you will not receive a reply.)</strong> 
+                  <br> 
+                  <span class="small"> Maximum 300 characters</span> 
+                </p> 
+                <textarea id="problem6" name="details" class="full-width" maxlength="300"> </textarea> 
+                <button type="submit" value="No" class="btn btn-primary mrgn-tp-md mrgn-bttm-sm"> Submit</button> 
+              </div> 
+            </form> 
+            <div class="gc-pg-hlpfl-thnk hide"> 
+              <p class="h6 mrgn-tp-sm mrgn-bttm-sm"> 
+                <span class="far fa-check-circle text-success mrgn-rght-sm" aria-hidden="true"> </span>  Thank you for your feedback
+              </p> 
+            </div> 
+          </div> 
+        </section> 
+      </div> 
+      <div class="col-sm-3 col-sm-offset-1 col-lg-offset-3"> 
+        <div class="wb-share" data-wb-share="{"pnlId":"pnlShrPg", "lnkClass": "btn btn-default btn-block mrgn-tp-md"}"> </div> 
+      </div> 
+    </div> 
