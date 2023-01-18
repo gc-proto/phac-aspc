@@ -71,10 +71,15 @@ dir="ltr"><![endif]-->
             font-size:1.1em; 
             color:#333; 
             height:39px;
-            padding:3px 9px;">
+            padding:3px 9px;
           }
 
-        </style>
+          
+          .viztype2 {
+            display:none; 
+          }
+     
+     </style>
 
 
 <body id="start" class="page-type-nav cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
@@ -242,30 +247,21 @@ dir="ltr"><![endif]-->
     </ul>
     
     <h2 id="design">Design and code</h2>
-    <div class="wb-frmvld fieldflow-lg">
+  <section>
+    <fieldset class="gc-chckbxrdio form-inline">
+      <legend>Select a type:</legend>
+      <div class="radio label-inline">
+        <input id="graph1" type="radio" name="optradio" value="viztype1">
+        <label for="graph1">Single drop-down</label>
+      </div>
+      <div class="radio label-inline">
+        <input id="graph2" type="radio" value="viztype2" name="optradio">
+        <label for="graph2">Multiple drop-downs</label>
+      </div>
+    </filedset>
+    
 
-      <form>
-    
-          <div class="wb-fieldflow" data-wb-fieldflow="{&quot;defaultselectedlabel&quot;: false, &quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;: true, &quot;inline&quot;: true,&quot;renderas&quot;: &quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.viztype&quot;, &quot;class&quot;: &quot;hidden&quot;}}" id="types">
-    
-              <p>Select a type:</p>
-    
-              <ul>
-    
-                <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Single drop-down</li>
-    
-                <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Multiple drop-downs</li>
-    
-    
-    
-              </ul>
-    
-          </div>
-    
-      </form>
-    
-    </div>
-    <div id="answer1" class="viztype">
+    <div class="graph viztype1 mrgn-tp-md">
     
     
     <div class="pattern-demo mrgn-bttm-md">
@@ -346,7 +342,7 @@ dir="ltr"><![endif]-->
     </details>
     </div>
     
-    <div id="answer2" class="hidden viztype">
+    <div class="graph viztype2 mrgn-tp-md">
       <div class="pattern-demo mrgn-bttm-md">
       <h3>
         <label for="dropdownType3" class="wb-inv">Types of statistics</label>
@@ -402,8 +398,7 @@ dir="ltr"><![endif]-->
       &lt;option value="deaths_total" class="toggleBtns"&gt;deaths&lt;/option&gt;
       &lt;option value="deaths_weekly" class="toggleBtns"&gt;deaths (last 7 days)&lt;/option&gt;
       &lt;option value="deaths_last14" class="toggleBtns"&gt;deaths (last 14 days)&lt;/option&gt;
-    &lt;/optgroup&gt;
-  &lt;/select&gt;
+    &lt;/optgroup&gt;  &lt;/select&gt;
   &lt;span class="numArticle"&gt;of&lt;/span&gt; COVID-19, &lt;label for="dropdownType4" class="wb-inv"&gt;Types of statistics&lt;/label&gt;
   &lt;select id="dropdownType4" class="form-control dropdown form-inline"&gt;
     &lt;optgroup label="Types of statistics"&gt;
@@ -421,11 +416,12 @@ dir="ltr"><![endif]-->
   font-size:1.1em; 
   color:#333; 
   height:39px;
-  padding:3px 9px;">
+  padding:3px 9px;
 }</code></pre>
     </details>
     </div>
-    
+  </section>
+  
     <h2 id="content">Content and design guidelines</h2>
     <ul>
       <li>In general, if there’s only 1 selection to make, and there are less than 5 options to select, use radio buttons or simple checkboxes instead of a drop-down selector </li>
@@ -513,7 +509,7 @@ dir="ltr"><![endif]-->
     	</div>
     	</footer>
     	<!--[if gte IE 9 | !IE ]><!-->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script>
       <script src="../../js/toc-custom.js"></script>
       <script src="../../js/alpha-banner.js"></script>
@@ -565,5 +561,21 @@ dir="ltr"><![endif]-->
       
   })
 </script>
+
+<script>
+
+$(document).ready(function(){
+    $('input[type="radio"]').click(function(){
+        var inputValue = $(this).attr("value");
+        var targetBox = $("." + inputValue);
+        $(".graph").not(targetBox).hide();
+        $(targetBox).show();
+    });
+});
+</script>
+<script>
+document.getElementById('graph1').click();
+</script>
+
   </body>
 </html>
