@@ -39,7 +39,9 @@ dir="ltr"><![endif]-->
 </head>
 
 <style>
-
+   .viztype2 {
+            display:none; 
+   }
 </style>
 
 <body id="start" class="page-type-nav cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
@@ -233,33 +235,21 @@ dir="ltr"><![endif]-->
 
 <h2 id="design">Design and code</h2>
 
-<div class="wb-frmvld fieldflow-lg">
-
-  <form>
-
-      <div class="wb-fieldflow" data-wb-fieldflow="{&quot;defaultselectedlabel&quot;: false, &quot;noForm&quot;: true, &quot;isoptional&quot;: true, &quot;gcChckbxrdio&quot;: true, &quot;inline&quot;: true,&quot;renderas&quot;: &quot;radio&quot;, &quot;reset&quot;: {&quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;.viztype&quot;, &quot;class&quot;: &quot;hidden&quot; }}" id="types">
-
-          <p>Select a type:</p>
-
-          <ul>
-
-            <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer1&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Vertical bars</li>
-
-            <li data-wb-fieldflow="{&quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;: &quot;#answer2&quot;, &quot;class&quot;: &quot;hidden&quot;, &quot;live&quot;: true}">Horizontal bars</li>
-
-
-
-          </ul>
-
-      </div>
-
-  </form>
-
-</div>
-<div id="answer1" class="hidden viztype">
-
-
-<div class="pattern-demo mrgn-bttm-md">
+<fieldset class="gc-chckbxrdio form-inline">
+  <legend>Select a type:</legend>
+  <div class="radio label-inline">
+    <input id="graph1" type="radio" name="optradio" value="viztype1">
+    <label for="graph1">Vertical bars</label>
+  </div>
+  <div class="radio label-inline">
+    <input id="graph2" type="radio" value="viztype2" name="optradio">
+    <label for="graph2">Horizontal bars</label>
+  </div>
+</filedset>
+<div class="graph viztype1 mrgn-tp-md">
+    
+    
+  <div class="pattern-demo mrgn-bttm-md">
   <h3>Quantity of fruits</h3>
 <div id="vertical"></div>
 </div>
@@ -329,9 +319,9 @@ dir="ltr"><![endif]-->
 </details>
 </div>
 
-<div id="answer2" class="hidden viztype">
-
+<div class="graph viztype2 mrgn-tp-md">
 <div class="pattern-demo mrgn-bttm-md">
+
 <div id="my_dataviz2"></div>
 </div>
 <details>
@@ -709,6 +699,21 @@ dir="ltr"><![endif]-->
     }
   )
 </script>
+<script>
+
+  $(document).ready(function(){
+      $('input[type="radio"]').click(function(){
+          var inputValue = $(this).attr("value");
+          var targetBox = $("." + inputValue);
+          $(".graph").not(targetBox).hide();
+          $(targetBox).show();
+      });
+  });
+  </script>
+  
+  <script>
+  document.getElementById('graph1').click();
+  </script>
 
   </body>
 </html>
