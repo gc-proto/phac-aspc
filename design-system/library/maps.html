@@ -216,9 +216,141 @@ dir="ltr"><![endif]-->
 </ul>
 
 <h2 id="design">Design and code</h2>
-<p>Coming soon
+<div class="pattern-demo mrgn-bttm-md">
 
-</p>
+<div class="row" id="mapcontainer">
+  <div class="col-md-12" style="padding-right: 0px;" id="map"></div>
+</div>
+
+</div>
+
+<details>
+  <summary>HTML</summary>
+  <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copy code to clipboard</button>
+  <pre id="code1"><code>&lt;!-- Add this div in the right section --&gt;
+&lt;div class="col-md-12" style="padding-right: 0px;" id="map"&gt;&lt;/div&gt;</code></pre>
+</details>
+
+<details>
+  <summary>JS</summary>
+  <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copy code to clipboard</button>
+  <pre id="code2"><code>&lt;!-- Add these references --&gt;
+&lt;script src="https://d3js.org/d3.v5.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://health-infobase.canada.ca/src/js/polyfill.js"&gt;&lt;/script&gt;
+&lt;script src="https://health-infobase.canada.ca/src/js/topojson.v2.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://health-infobase.canada.ca/src/js/polylabel.js"&gt;&lt;/script&gt;
+&lt;script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"&gt;&lt;/script&gt;
+  
+&lt;!-- Add this script --&gt; 
+&lt;script&gt;
+  // Language
+  var language = $('html').attr('lang');
+  const margin = {
+      top: 10,
+      right: 10,
+      bottom: 10,
+      left: 10
+    },
+    width = 1300 - margin.left - margin.right, //width of the section
+    height = 1200 - (margin.top) - (margin.bottom); //height of the section
+  var path
+  var hrid
+  d3.csv("http://test.canada.ca/phac-aspc/design-system/library/map/AllPTs3.csv", function(d) {
+    d.Year = +d["Year"]
+    d.CNISP_beds = +d["CNISP_beds"]
+    d.total = +d["total"]
+    d.proportion = +d["proportion"]
+    d.Percentage = +d["Percentage"]
+    d.Prov = d["Prov"]
+    return d;
+  }).then(function(data) {
+    console.log(data)
+    var nestedData = d3.nest().key(function(d) {
+      return d.Year;
+    }).key(function(d) {
+      return d.Prov;
+    }).object(data);
+    //Converts the PRUID number to the acronym
+    function PruidtoProv(pruid) {
+      if (pruid == 10) {
+        return "NL";
+      } else if (pruid == 11) {
+        return "PE";
+      } else if (pruid == 12) {
+        return "NS";
+      } else if (pruid == 13) {
+        return "NB";
+      } else if (pruid == 24) {
+        return "QC";
+      } else if (pruid == 35) {
+        return "ON";
+      } else if (pruid == 46) {
+        return "MB";
+      } else if (pruid == 47) {
+        return "SK";
+      } else if (pruid == 48) {
+        return "AB";
+      } else if (pruid == 59) {
+        return "BC";
+      } else if (pruid == 60) {
+        return "YT";
+      } else if (pruid == 61) {
+        return "NT";
+      } else if (pruid == 62) {
+        return "NU";
+      }
+    }
+
+    function colour() {
+      d3.selectAll(".PRUID").transition().style("fill", function(d, i) {
+        pr = PruidtoProv(d.properties.PRUID)
+        console.log(nestedData[2021][pr][0]["proportion"])
+        val = nestedData[2021][pr][0]["proportion"]
+        if (!isNaN(val) && val != -1) {
+          return ColourChoice(val) //color2(nestedData.get(d.properties.PRUID)[0][ddl2]); function that returns the colour
+        } else {
+          return "#e6e6e6";
+        }
+      });
+    }
+    var colours = ["#A52770", "#D83C76", "#F65D6D", "#FD876F", "#FFB185"]
+
+    function ColourChoice(val) {
+      if (val >= .80) {
+        return colours[0]
+      } else if (val >= .60) {
+        return colours[1]
+      } else if (val >= .40) {
+        return colours[2]
+      } else if (val >= .20) {
+        return colours[3]
+      } else if (val >= 0) {
+        return colours[4]
+      } else {
+        return "#e6e6e6"
+      }
+    }
+    d3.json('http://test.canada.ca/phac-aspc/design-system/library/map/output.json').then(function(mapJSON) {
+      var svg = d3.select('#map').append('svg').attr("id", "svg").attr('width', "100%").attr('height', "100%").attr("preserveAspectRatio", "xMinYMin meet").attr("viewBox", "0 0 900 900")
+      var healthregions = topojson.feature(mapJSON, mapJSON.objects.Can_PR2016);
+      const projection2 = d3.geoIdentity((function(x, y) {
+        return [2 * x, y];
+      })).reflectY(true).fitSize([880, 880], healthregions);
+      // what is used to generate the path for the provinces
+      path = d3.geoPath().projection(projection2);
+      hrid = svg.append('g').attr("id", "mapGroup").attr("transform", "translate(0,0)").selectAll('g').data(healthregions.features).enter();
+      hrid.append("g").attr("class", "regions").attr("id", function(d) {
+        return "g" + d.properties["PRUID"]
+      }).attr("tabindex", 0).attr("data-taborder", function(d) {
+        return d.properties.TABORDER;
+      }).attr("focusable", "true").append('path').attr("id", function(d) {
+        return "path" + d.properties["PRUID"]
+      }).attr("class", "PRUID").attr("d", path).attr("stroke", "white").attr("stroke-width", 0.5).style("opacity", 0.85)
+      colour();
+    });
+  });
+&lt;/script&gt;</code></pre>
+</details>
 
 <h2 id="content">Content and design guidelines</h2>
 <ul>
@@ -316,5 +448,188 @@ dir="ltr"><![endif]-->
           <![endif]-->
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
 
+
+      <script src="https://d3js.org/d3.v5.min.js"></script>
+      <script type="text/javascript" src="https://health-infobase.canada.ca/src/js/polyfill.js"></script>
+      <script src="https://health-infobase.canada.ca/src/js/topojson.v2.min.js"></script>
+      <script src="https://health-infobase.canada.ca/src/js/polylabel.js"></script>
+      <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+      // Language
+      var language = $('html').attr('lang');
+      
+      const margin = {
+        top: 10,
+        right: 10,
+        bottom: 10,
+        left: 10
+       },
+       width = 1300 - margin.left - margin.right, //width of the section
+       height = 1200 - (margin.top) - (margin.bottom); //height of the section
+      
+      var path
+      var hrid
+      
+      d3.csv("http://test.canada.ca/phac-aspc/design-system/library/map/AllPTs3.csv", function(d) {
+       d.Year = +d["Year"]
+       d.CNISP_beds = +d["CNISP_beds"]
+       d.total = +d["total"]
+       d.proportion = +d["proportion"]
+       d.Percentage = +d["Percentage"]
+       d.Prov = d["Prov"]
+       return d;
+      
+      }).then(function(data) {
+       console.log(data)
+      
+       var nestedData = d3.nest()
+        .key(function(d) { return d.Year; })
+        .key(function(d) { return d.Prov; })
+        .object(data);
+      
+       //Converts the PRUID number to the acronym
+       function PruidtoProv(pruid) {
+        if (pruid == 10) {
+         return "NL";
+        }
+        else if (pruid == 11) {
+         return "PE";
+        }
+        else if (pruid == 12) {
+         return "NS";
+        }
+        else if (pruid == 13) {
+         return "NB";
+        }
+        else if (pruid == 24) {
+         return "QC";
+        }
+        else if (pruid == 35) {
+         return "ON";
+        }
+        else if (pruid == 46) {
+         return "MB";
+        }
+        else if (pruid == 47) {
+         return "SK";
+        }
+        else if (pruid == 48) {
+         return "AB";
+        }
+        else if (pruid == 59) {
+         return "BC";
+        }
+        else if (pruid == 60) {
+         return "YT";
+        }
+        else if (pruid == 61) {
+         return "NT";
+        }
+        else if (pruid == 62) {
+         return "NU";
+        }
+       }
+      
+       function colour() {
+        d3.selectAll(".PRUID")
+         .transition()
+         .style("fill", function(d, i) {
+          pr = PruidtoProv(d.properties.PRUID)
+          console.log(nestedData[2021][pr][0]["proportion"])
+          val = nestedData[2021][pr][0]["proportion"]
+          if (!isNaN(val) && val != -1) {
+           return ColourChoice(val) //color2(nestedData.get(d.properties.PRUID)[0][ddl2]); function that returns the colour
+          }
+          else {
+           return "#e6e6e6";
+          }
+         });
+       }
+      
+       var colours = ["#A52770", "#D83C76", "#F65D6D", "#FD876F", "#FFB185"]
+       function ColourChoice(val) {
+        if (val >= .80) {
+         return colours[0]
+        }
+        else if (val >= .60) {
+         return colours[1]
+        }
+        else if (val >= .40) {
+         return colours[2]
+        }
+        else if (val >= .20) {
+         return colours[3]
+        }
+        else if (val >= 0) {
+         return colours[4]
+        }
+        else {
+         return "#e6e6e6"
+        }
+       }
+      
+       d3.json('http://test.canada.ca/phac-aspc/design-system/library/map/output.json').then(function(mapJSON) {
+      
+        var svg = d3.select('#map')
+         .append('svg')
+         .attr("id", "svg")
+         .attr('width', "100%")
+         .attr('height', "100%")
+         .attr("preserveAspectRatio", "xMinYMin meet")
+         .attr("viewBox", "0 0 900 900")
+      
+        var healthregions = topojson.feature(mapJSON, mapJSON.objects.Can_PR2016);
+      
+        const projection2 = d3.geoIdentity((function(x, y) {
+          return [2 * x, y];
+         }))
+         .reflectY(true)
+         .fitSize([880, 880], healthregions);
+      
+        // what is used to generate the path for the provinces
+        path = d3.geoPath().projection(projection2);
+      
+        hrid = svg
+         .append('g')
+         .attr("id", "mapGroup")
+         .attr("transform", "translate(0,0)")
+         .selectAll('g')
+         .data(healthregions.features)
+         .enter();
+      
+        hrid
+         .append("g")
+         .attr("class", "regions")
+         .attr("id", function(d) { return "g" + d.properties["PRUID"] })
+         .attr("tabindex", 0)
+         .attr("data-taborder", function(d) {
+          return d.properties.TABORDER;
+         })
+         .attr("focusable", "true")
+         .append('path')
+         .attr("id", function(d) { return "path" + d.properties["PRUID"] })
+         .attr("class", "PRUID")
+         .attr("d", path)
+         .attr("stroke", "white")
+         .attr("stroke-width", 0.5)
+         .style("opacity", 0.85)
+      
+        colour();
+      
+       });
+      });
+</script>
+
+<script>
+  function CopyToClipboard(id)
+  {
+  var r = document.createRange();
+  r.selectNode(document.getElementById(id));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(r);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+  }
+</script>
   </body>
 </html>
