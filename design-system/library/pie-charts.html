@@ -18,7 +18,7 @@ dir="ltr"><![endif]-->
     <link rel="stylesheet" href="../../css/in-page.css">
     <link rel="stylesheet" href="../../css/alpha-beta-banner.css" />
 
-
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script> 		<!-- makes ToC work -->
 
@@ -219,11 +219,104 @@ dir="ltr"><![endif]-->
 </ul>
 
 <h2 id="design">Design and code</h2>
-<p>Coming soon
-
-</p>
-
-
+<div class="pattern-demo mrgn-bttm-md">
+<div id="pieGraph"></div>
+</div>
+<details>
+  <summary>HTML</summary>
+  <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copy code to clipboard</button>
+  <pre id="code1"><code>&lt;!-- Add D3 library in the head section --&gt;
+&lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
+   
+&lt;!-- Add a div in the section where you want the graph -->
+&lt;div id="pieGraph"&gt;&lt;/div&gt;</code></pre>
+</details>
+<details>
+  <summary>JS</summary>
+  <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copy code to clipboard</button>
+  <pre id="code2"><code>&lt;script&gt;
+    const width = 650, height = 650, margin = 100;
+        
+        // radius of the pie graph is half the width or half the height
+        const radius = Math.min(width, height) / 2 - margin;
+        
+        const svg = d3.select("#pieGraph")
+          .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+          .append("g")
+            .attr("transform", `translate(${width/2},${height/2})`);
+        
+        // dummy fruit data
+        const data = {Apples: 26, Oranges: 12, Pears:33, Bananas:8, };
+        
+        const color = d3.scaleOrdinal()
+          .domain(["Apples", "Oranges", "Pears", "Bananas",])
+          .range(d3.schemeDark2);
+        
+        // compute the position of each group
+        const pieGraph = d3.pie()
+          .sort(null) 
+          .value(d => d[1]);
+          
+        const pieData = pieGraph(Object.entries(data));
+        
+        const arc = d3.arc()
+        // size of the inner hole (to get a pie chart instead od a doughnut chart, change inner radius to 0)
+          .innerRadius(radius * 0.5)
+          .outerRadius(radius * 0.8);
+        
+        // arc for label positioning
+        const outerArc = d3.arc()
+          .innerRadius(radius * 0.9)
+          .outerRadius(radius * 0.9);
+    
+        // build the pie chart path
+        svg
+          .selectAll('path')
+          .data(pieData)
+          .join('path')
+              .attr('d', arc)
+              .attr('fill', d => color(d.data[1]))
+              .attr("stroke", "white")
+              .style("opacity", 0.7)
+              .style("stroke-width", "2px");
+    
+        // Add lines for labels
+        svg
+          .selectAll('polyline')
+          .data(pieData)
+          .join('polyline')
+            .attr("stroke", "black")
+            .style("fill", "none")
+            .attr("stroke-width", 1.3)
+            .attr('points', function(d) {
+              const position1 = arc.centroid(d);
+              const position2 = outerArc.centroid(d);
+              const position3 = outerArc.centroid(d); 
+              const middleAngle = d.startAngle + (d.endAngle - d.startAngle) / 2;
+              position3[0] = radius * 0.95 * (middleAngle < Math.PI ? 1 : -1); 
+              return [position1, position2, position3]
+            })
+    
+        // Add the polylines between chart and labels:
+        svg
+          .selectAll('text')
+          .data(pieData)
+          .join('text')
+            .text(d => d.data[0])
+            .attr('transform', function(d) {
+                const position = outerArc.centroid(d);
+                const middleAngle = d.startAngle + (d.endAngle - d.startAngle) / 2
+                position[0] = radius * 0.99 * (middleAngle < Math.PI ? 1 : -1);
+                return `translate(${position})`;
+            })
+            .style('text-anchor', function(d) {
+                const middleAngle = d.startAngle + (d.endAngle - d.startAngle) / 2
+                return (middleAngle < Math.PI ? 'start' : 'end')
+            });
+&lt;/script&gt;</code></pre>
+</details>
 <h2 id="content">Content and design guidelines</h2>
 <ul>
   <li>Try to limit the number of categories to avoid confusion</li>
@@ -320,6 +413,90 @@ dir="ltr"><![endif]-->
 
           <![endif]-->
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
+
+      <script>
+        const width = 650, height = 650, margin = 100;
+        
+        // radius of the pie graph is half the width or half the height
+        const radius = Math.min(width, height) / 2 - margin;
+        
+        const svg = d3.select("#pieGraph")
+          .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+          .append("g")
+            .attr("transform", `translate(${width/2},${height/2})`);
+        
+        // dummy fruit data
+        const data = {Apples: 26, Oranges: 12, Pears:33, Bananas:8, };
+        
+        const color = d3.scaleOrdinal()
+          .domain(["Apples", "Oranges", "Pears", "Bananas",])
+          .range(d3.schemeDark2);
+        
+        // compute the position of each group
+        const pieGraph = d3.pie()
+          .sort(null) 
+          .value(d => d[1]);
+          
+        const pieData = pieGraph(Object.entries(data));
+        
+        const arc = d3.arc()
+        // size of the inner hole (to get a pie chart instead od a doughnut chart, change inner radius to 0)
+          .innerRadius(radius * 0.5)
+          .outerRadius(radius * 0.8);
+        
+        // arc for label positioning
+        const outerArc = d3.arc()
+          .innerRadius(radius * 0.9)
+          .outerRadius(radius * 0.9);
+    
+        // build the pie chart path
+        svg
+          .selectAll('path')
+          .data(pieData)
+          .join('path')
+              .attr('d', arc)
+              .attr('fill', d => color(d.data[1]))
+              .attr("stroke", "white")
+              .style("opacity", 0.7)
+              .style("stroke-width", "2px");
+    
+        // Add lines for labels
+        svg
+          .selectAll('polyline')
+          .data(pieData)
+          .join('polyline')
+            .attr("stroke", "black")
+            .style("fill", "none")
+            .attr("stroke-width", 1.3)
+            .attr('points', function(d) {
+              const position1 = arc.centroid(d);
+              const position2 = outerArc.centroid(d);
+              const position3 = outerArc.centroid(d); 
+              const middleAngle = d.startAngle + (d.endAngle - d.startAngle) / 2;
+              position3[0] = radius * 0.95 * (middleAngle < Math.PI ? 1 : -1); 
+              return [position1, position2, position3]
+            })
+    
+        // Add the polylines between chart and labels:
+        svg
+          .selectAll('text')
+          .data(pieData)
+          .join('text')
+            .text(d => d.data[0])
+            .attr('transform', function(d) {
+                const position = outerArc.centroid(d);
+                const middleAngle = d.startAngle + (d.endAngle - d.startAngle) / 2
+                position[0] = radius * 0.99 * (middleAngle < Math.PI ? 1 : -1);
+                return `translate(${position})`;
+            })
+            .style('text-anchor', function(d) {
+                const middleAngle = d.startAngle + (d.endAngle - d.startAngle) / 2
+                return (middleAngle < Math.PI ? 'start' : 'end')
+            });
+      
+    </script>
 
   </body>
 </html>
