@@ -255,7 +255,7 @@ dir="ltr"><![endif]-->
     height = 1200 - (margin.top) - (margin.bottom); //height of the section
   var path
   var hrid
-  d3.csv("http://test.canada.ca/phac-aspc/design-system/library/map/AllPTs3.csv", function(d) {
+  d3.csv("https://test.canada.ca/phac-aspc/design-system/library/map/AllPTs3.csv", function(d) {
     d.Year = +d["Year"]
     d.CNISP_beds = +d["CNISP_beds"]
     d.total = +d["total"]
@@ -330,7 +330,7 @@ dir="ltr"><![endif]-->
         return "#e6e6e6"
       }
     }
-    d3.json('http://test.canada.ca/phac-aspc/design-system/library/map/output.json').then(function(mapJSON) {
+    d3.json('https://test.canada.ca/phac-aspc/design-system/library/map/output.json').then(function(mapJSON) {
       var svg = d3.select('#map').append('svg').attr("id", "svg").attr('width', "100%").attr('height', "100%").attr("preserveAspectRatio", "xMinYMin meet").attr("viewBox", "0 0 900 900")
       var healthregions = topojson.feature(mapJSON, mapJSON.objects.Can_PR2016);
       const projection2 = d3.geoIdentity((function(x, y) {
@@ -470,7 +470,7 @@ dir="ltr"><![endif]-->
       var path
       var hrid
       
-      d3.csv("http://test.canada.ca/phac-aspc/design-system/library/map/AllPTs3.csv", function(d) {
+      d3.csv("https://test.canada.ca/phac-aspc/design-system/library/map/AllPTs3.csv", function(d) {
        d.Year = +d["Year"]
        d.CNISP_beds = +d["CNISP_beds"]
        d.total = +d["total"]
@@ -568,7 +568,7 @@ dir="ltr"><![endif]-->
         }
        }
       
-       d3.json('http://test.canada.ca/phac-aspc/design-system/library/map/output.json').then(function(mapJSON) {
+       d3.json('https://test.canada.ca/phac-aspc/design-system/library/map/output.json').then(function(mapJSON) {
       
         var svg = d3.select('#map')
          .append('svg')
