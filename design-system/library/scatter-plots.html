@@ -18,7 +18,7 @@ dir="ltr"><![endif]-->
     <link rel="stylesheet" href="../../css/in-page.css">
     <link rel="stylesheet" href="../../css/alpha-beta-banner.css" />
 
-
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script> 		<!-- makes ToC work -->
 
@@ -216,10 +216,108 @@ dir="ltr"><![endif]-->
   <li>Remember that a correlation between 2 variables doesn’t necessarily mean one variable caused the other</li>
 </ul>
 <h2 id="design">Design and code</h2>
-<p>Coming soon
 
-</p>
+<div class="pattern-demo mrgn-bttm-md">
+  <div id="scatterGraph"></div>
+</div>
+<details>
+  <summary>HTML</summary>
+  <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copy code to clipboard</button>
+  <pre id="code1"><code>&lt;!-- Add D3 library in the head section --&gt;
+&lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
+   
+&lt;!-- Add a div in the section where you want the graph -->
+&lt;div id="scatterGraph"&gt;&lt;/div&gt;</code></pre>
+</details>
+<details>
+  <summary>JS</summary>
+  <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copy code to clipboard</button>
+  <pre id="code2"><code>&lt;script&gt;
+  // dimensions and margins
+  const margin = {top: 10, right: 30, bottom: 50, left: 90},
+          width = 600 - margin.left - margin.right,
+          height = 540 - margin.top - margin.bottom;
 
+  // append the svg
+  const svg = d3.select("#scatterGraph")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+  //dummy data Price/Amount
+  let data = [
+    {"Price":29.80,"Amount":208},
+    {"Price":39.80,"Amount":303},
+    {"Price":16.50,"Amount":43},
+    {"Price":87.10,"Amount":412},
+    {"Price":67.31,"Amount":324},
+    {"Price":9.10,"Amount":232},
+    {"Price":3.30,"Amount":85},
+    {"Price":10.10,"Amount":178},
+    {"Price":45.33,"Amount":321},
+    {"Price":45.21,"Amount":421},
+    {"Price":12.13,"Amount":234},
+    {"Price":32.19,"Amount":425},
+    {"Price":18.31,"Amount":223},
+    {"Price":5.90,"Amount":18},
+    {"Price":4.99,"Amount":107},
+    {"Price":13.32,"Amount":132},
+    {"Price":78.11,"Amount":524},
+    {"Price":32.31,"Amount":302},
+    {"Price":82.31,"Amount":683},
+    {"Price":62.31,"Amount":552},];
+
+  // xAxis
+  const x = d3.scaleLinear()
+  .domain([0, 100])
+  .range([ 0, width ]);
+
+  svg.append("g")
+    .attr("transform", `translate(0, ${height})`)
+    .call(d3.axisBottom(x))
+    .style("font-size","12px");
+
+  // yAxis
+  const y = d3.scaleLinear()
+  .domain([0, 1000])
+  .range([ height, 0]);
+
+  svg.append("g")
+    .call(d3.axisLeft(y))
+    .style("font-size","12px");
+      
+  // xAxis label 
+  svg.append("text")
+      .attr("text-anchor", "end")
+      .attr("x", width/2 + margin.left - 35)
+      .attr("y", height + margin.top + 35)
+      .style("font-weight","bold")
+      .style("font-size", "23px")
+      .text("Price");
+
+  // yAxis label
+  svg.append("text")
+      .attr("text-anchor", "end")
+      .attr("transform", "rotate(-90)")
+      .attr("y", -margin.left + 45)
+      .attr("x", -margin.top - height/2 + 60)
+        .style("font-weight","bold")
+        .style("font-size", "23px")
+      .text("Amount")
+
+    // Add graph data points
+    svg.append('g')
+    .selectAll("dot")
+    .data(data)
+    .join("circle")
+        .attr("cx", function (d) { return x(d.Price); } )
+        .attr("cy", function (d) { return y(d.Amount); } )
+        .attr("r", 7)
+        .style("fill", "#69b3a2");
+&lt;/script&gt;</code></pre>
+</details>
 <h2 id="content">Content and design guidelines</h2>
 <ul>
   <li>Consider adding a trend line if there’s a clear relationship between the variables</li>
@@ -316,6 +414,92 @@ dir="ltr"><![endif]-->
 
           <![endif]-->
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
+
+      <script>
+        // dimensions and margins
+      const margin = {top: 10, right: 30, bottom: 50, left: 90},
+              width = 600 - margin.left - margin.right,
+              height = 540 - margin.top - margin.bottom;
+    
+      // append the svg
+      const svg = d3.select("#scatterGraph")
+          .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform", `translate(${margin.left}, ${margin.top})`);
+      
+      //dummy data Price/Amount
+      let data = [
+        {"Price":29.80,"Amount":208},
+        {"Price":39.80,"Amount":303},
+        {"Price":16.50,"Amount":43},
+        {"Price":87.10,"Amount":412},
+        {"Price":67.31,"Amount":324},
+        {"Price":9.10,"Amount":232},
+        {"Price":3.30,"Amount":85},
+        {"Price":10.10,"Amount":178},
+        {"Price":45.33,"Amount":321},
+        {"Price":45.21,"Amount":421},
+        {"Price":12.13,"Amount":234},
+        {"Price":32.19,"Amount":425},
+        {"Price":18.31,"Amount":223},
+        {"Price":5.90,"Amount":18},
+        {"Price":4.99,"Amount":107},
+        {"Price":13.32,"Amount":132},
+        {"Price":78.11,"Amount":524},
+        {"Price":32.31,"Amount":302},
+        {"Price":82.31,"Amount":683},
+        {"Price":62.31,"Amount":552},];
+    
+      // xAxis
+      const x = d3.scaleLinear()
+      .domain([0, 100])
+      .range([ 0, width ]);
+      
+      svg.append("g")
+        .attr("transform", `translate(0, ${height})`)
+        .call(d3.axisBottom(x))
+        .style("font-size","12px");
+    
+      // yAxis
+      const y = d3.scaleLinear()
+      .domain([0, 1000])
+      .range([ height, 0]);
+      
+      svg.append("g")
+        .call(d3.axisLeft(y))
+        .style("font-size","12px");
+          
+      // xAxis label 
+      svg.append("text")
+          .attr("text-anchor", "end")
+          .attr("x", width/2 + margin.left - 35)
+          .attr("y", height + margin.top + 35)
+          .style("font-weight","bold")
+          .style("font-size", "23px")
+          .text("Price");
+    
+      // yAxis label
+      svg.append("text")
+          .attr("text-anchor", "end")
+          .attr("transform", "rotate(-90)")
+          .attr("y", -margin.left + 45)
+          .attr("x", -margin.top - height/2 + 60)
+           .style("font-weight","bold")
+           .style("font-size", "23px")
+          .text("Amount")
+    
+        // Add graph data points
+        svg.append('g')
+        .selectAll("dot")
+        .data(data)
+        .join("circle")
+            .attr("cx", function (d) { return x(d.Price); } )
+            .attr("cy", function (d) { return y(d.Amount); } )
+            .attr("r", 7)
+            .style("fill", "#69b3a2");
+    </script>
 
   </body>
 </html>
