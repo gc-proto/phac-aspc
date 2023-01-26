@@ -56,7 +56,7 @@ dir="ltr"><![endif]-->
     <section id="wb-lng" class="text-right">
       <h2 class="wb-inv">Sélection de la langue</h2>
       <ul class="list-inline margin-bottom-none">
-          <li><a lang="en" href="../../design-system/data/exploration.html">English</a></li>
+          <li><a lang="en" href="../../design-system/dataviz/tasks.html">English</a></li>
       </ul>
     </section>
     <div class="row">
@@ -94,8 +94,8 @@ dir="ltr"><![endif]-->
           <li > <a href="../commencer.html">Démarrer</a></li>
           <li><a href="../donnees.html">Données</a>
             <ul>
-            <li><a class="active" href="../donnees/exploration.html">Exploration des données</a></li>
-            <li><a href="../donnees/preparation.html">Vérification et préparation des données</a></li>
+              <li><a href="../visualisation/taches.html">Besoins des utilisateurs et tâches de données</a></li>
+              <li><a href="../visualisation/taches.htm">Visualisation de données</a></li>
          </ul>
          </li>
           <li><a href="../visualisation.html">Mise en récit et visualisation</a></li>
@@ -113,13 +113,12 @@ dir="ltr"><![endif]-->
 
   <ul class="menu-list lst-none">
 <li > <a href="../commencer.html">Démarrer</a></li>
-<li><a href="../donnees.html">Données</a>
-   <ul class="menu-list lst-none">
-      <li><a class="active" href="../donnees/exploration.html">Exploration des données</a></li>
-      <li><a href="../donnees/preparation.html">Vérification et préparation des données</a></li>
-    </ul>
-</li>
-<li><a href="../visualisation.html">Mise en récit et visualisation</a></li>
+<li><a href="../donnees.html">Données</a></li>
+<li><a href="../visualisation.html">Mise en récit et visualisation</a>
+  <ul class="menu-list lst-none">
+    <li><a class="active" href="../visualisation/taches.html">Besoins des utilisateurs et tâches de données</a></li>
+    <li><a href="../visualisation/taches.htm">Visualisation de données</a></li>
+  </ul></li>
 <li><a href="../bibliotheque.html">Bibliothèque de composantes</a></li>
 <li><a href="../performance.html">Mesure de la performance et amélioration continue</a></li>
 
@@ -137,60 +136,111 @@ dir="ltr"><![endif]-->
 
 
 <ul class="nav mrgn-lft-lg">
-   <li class="longdoc-toc-link"><a href="#outils">Outils pour l'exploration de données</a></li>
-   <li class="longdoc-toc-link"><a href="#travailler">Travailler avec vos données</a></li>
-   <li class="longdoc-toc-link"><a href="#possibilités">Explorer les possibilités de visualisation</a></li>
-   </ul>
+  <li class="longdoc-toc-link"><a href="#public">Comprendre votre public cible</a></li>
+  <li class="longdoc-toc-link"><a href="#taches">Tâches de données</a>
+    <ul class="nav">
+      <li class="longdoc-toc-link"><a href="#stories">Job stories (histoires de tâches)</a></li>
+      <li class="longdoc-toc-link"><a href="#variete">Une grande variété de tâches de données</a></li>
+    </ul>
+  </li>
+  <li class="longdoc-toc-link"><a href="#raconter">Raconter une histoire avec des données</a></li>
+</ul>
           </nav>
     </div>
 
 <div class="col-md-7 mrgn-tp-lg" style="padding-left: 40px; padding-right: 40px">
 
-<h1 class="gc-thickline mrgn-tp-0">Exploration des données</h1>
+<h1 class="gc-thickline mrgn-tp-0">Besoins des utilisateurs et tâches de données</h1>
 
 <div class="visible-xs visible-sm">
 
 <h2 class="h3">Sur cette page</h2>
 <ul>
-   <li><a href="#outils">Outils pour l'exploration de données</a></li>
-   <li><a href="#travailler">Travailler avec vos données</a></li>
-   <li><a href="#possibilités">Explorer les possibilités de visualisation</a></li>
+  <li><a href="#public">Comprendre votre public cible</a></li>
+  <li><a href="#taches">Tâches de données</a>
+    <ul>
+      <li><a href="#stories">Job stories (histoires de tâches)</a></li>
+      <li><a href="#variete">Une grande variété de tâches de données</a></li>
+    </ul>
+  </li>
+  <li><a href="#raconter">Raconter une histoire avec des données</a></li>
+</ul>
  </ul>
 </div>
-<p>Il est bon d'utiliser des techniques d'exploration de données sur vos données pour vous aider à voir ce que vous pouvez en tirer.</p>
+<p>Comprendre votre public civle et ce qu'ils veulent faire avec vos données (leurs <strong>tâches</strong>) est une étape cruciale dans la conception d'un bon produit de données.</p>
 
-<h2 id="outils">Outils pour l'exploration de données</h2>
-<p>Utiliser des outils simples pour explorer vos données est beaucoup moins fastidieux que de travailler directement avec D3.</p>
-<p>Voici quelques outils que vous pouvez utiliser:</p>
+<h2 id="public">Comprendre votre public cible</h2>
+<p>Posez-vous cette question : qui utilisera les données? </p>
+<p>Comme l'Infobase Santée est publique, votre public cible imaginé pourrait être différent de votre public cible réel. Par exemple, vous souhaiteriez peut-être ne voir que des spécialistes de la santé utiliser certaines donnéesé. Mais si le sujet intéresse le grand public, celui-ci peut également utiliser vos produits de données. <strong> Assurez-vous que vos produits de données fonctionnent pour tous les publics cibles réels, et pas seulement pour celui que vous idéalisez.</strong></p>
+
+<h2 id="taches">Tâches de données</h2>
+<p>Ces questions peuvent vous aider à explorer les tâches que votre produit doit aider les gens à accomplir :</p>
 <ul>
-   <li>Excel</li>
-   <li>Google Sheets</li>
-   <li>Tableau</li>
-   <li>Power BI</li>
-   <li><a href="https://app.rawgraphs.io/">Raw Graphs</a></li>
-   <li><a href="https://developers.google.com/chart">Google Charts</a></li>
-   <li>Python et R, si vous êtes familiarisé avec le code</li>
+   <li>Que vont <strong>essayer de faire</strong> les gens avec les données ? </li>
+   <li>Que veulent-ils <strong>obtenir</strong> des données ?</li>
+   <li>Que pourraient-ils <strong>être capable de faire</strong> avec les données qu'ils ne peuvent pas faire sans avoir les données ? </li>
 </ul>
-<p>Notez que les graphiques que vous produisez avec ces outils ne peuvent généralement pas être utilisés « tels quels » dans les produits de données. Nous devons les recréer à l'aide de D3 pour en  garantir l'utilisabilité et l'accessibilité.</p>
+<p>Comprendre cela est crucial pour choisir la bonne technique de visualisation.</p>
 
-<h2 id="travailler">Travailler avec vos données</h2>
-<p>Vous pouvez avoir une idée à l'avance du graphique que vous souhaitez utiliser. Lors de l'exploration de vos données, si vous vous rendez compte qu'elles ne s'y prêtent pas bien, n'utilisez pas la mauvaise technique de visualisation de données.</p>
+<h3 id="stories">Job stories (histoires de tâches)</h3>
+<p>Les <cite>job stories</cite> sont utiles pour identifier comment, dans certaines situations, les gens peuvent utiliser les données que vous publiez pour arriver à un résultat souhaité.</p>
+<p>Les <cite>job stories</cite> suivent ce format :</p>
+<blockquote><p> “Quand je (situation),  je veux (motivation), afin de pouvoir (résultat attendu).” </p></blockquote>
+<div class="well well-sm">
+<p>Exemple : </p>
+<p><strong>Quand je</strong> suis éligible pour un rappel de vaccin contre la covid, <strong>je veux</strong> savoir si le vaccin est efficace pour prévenir les formes graves de la COVID-19, <strong>afin de pouvoir</strong> décider si je veux le recevoir ou non</p>
+</div>
+<p>Faites un atelier <cite>job stories</cite> avec toutes les personnes impliquées pour renforcer votre compréhension de la façon et des raisons pour lesquelles quelqu'un pourrait vouloir utiliser vos données.</p>
 
-<p>Continuez à explorer jusqu'à ce que vous trouviez la bonne technique de visualisation de données. Laissez les données déterminer la technique qui conviendra le mieux aux tâches à accomplir.</p>
+<h3 id="variete">Une grande variété de tâches de données</h3>
+<p>Les différents publics cibles peuvent avoir des tâches différentes qu'ils souhaitent effectuer avec les données.</p>
+<p>Nous pouvons visualiser cette grande variété de tâches sur un continuum, de l'explication du haut vers le bas (fournie par nous) à l'exploration autonome (effectuée par l'utilisateur) :</p>
+<div class="pattern-demo mrgn-bttm-md">
+         <img src="../img/variete_taches.PNG" class="full-width" alt="Longue description après l'image.">
+</div>
+         <details>
+            <summary>Des tâches principales variées            </summary>
+            <p>La gamme de tâches de données peut être comprise comme un continuum, de simple à complexe.</p>
+            <p>À gauche du continuum se trouvent les tâches les plus susceptibles d'être effectuées par la majorité des gens :</p>
+            <ul>
+                <li>Grand public</li>
+                <li>Simple</li>
+                <li>Explicatif</li>
+                <li>Indicateurs clés</li>
+                <li>Mise en récit des données</li>
+                <li>Infographies et blogue</li>
+                <li>Interprétation fournie</li>
+             </ul>
+            <p>Au milieu du continuum se trouvent les tâches susceptibles d'être effectuées par une bonne proportion d'utilisateurs :</p>
+            <ul>
+                <li>Cartes et graphiques interactifs</li>
+                <li>Auto-exploration des données</li>
+                <li>Visualisation de données complexe</li>
+                <li>Auto-interprétation</li>
+             </ul>
+            <p>À droite du continuum se trouvent les tâches susceptibles d'être effectuées par une minorité d'utilisateurs :</p>
+            <ul>
+              <li>Experts</li>
+              <li>Complexe</li>
+              <li>Données brutes</li>
+              <li>Détails techniques</li>
+              <li>Sources</li>
+              <li>API</li>
+            </ul>
 
-<h2 id="possibilités">Explorer les possibilités de visualisation</h2>
-<p>Voici quelques conseils pour vous aider à explorer vos données:</p>
-   <ul>
-      <li>consultez la section <a href="../visualisation/visualisation.html">visualisation de données</a> pour voir différentes options, en fonction de l'histoire que vous souhaitez raconter</li>
-      <li>commencez par des techniques simples, et progressez vers des techniques plus complexes</li>
-      <li>déterminez ce qui aide les gens à comprendre les données, pas ce qui « a l'air cool »</li>
-      <li>gardez l'esprit ouvert et essayez des techniques avec lesquelles vous êtes moins familier</li>
+          </ul>
+            
+        </details>
 
-   </ul>
-<h2 id="additional">Ressources supplémentaires</h2>
-<ul>
-   <li><a href="https://towardsdatascience.com/15-data-exploration-techniques-to-go-from-data-to-insights-93f66e6805df">15 Data Exploration techniques to go from Data to Insights</a> (en anglais seulement)</li>
-</ul>
+        <h2 id="raconter">Racontez une histoire avec des données</h2>
+<p>Nous avons la responsabilité de contextualiser les données que nous fournissons au public, tout en étant transparents sur les données elles-mêmes. Quelle est l'histoire qui se cache dans les données? Quelles sont les principales conclusions à tirer? </p>
+<p>Il est important d'extraire les principaux renseignements des données et de les présenter aux gens. </p>
+<p>Commencez votre produit avec les renseignements principauxs (l'histoire que racontent les données), passez aux tâches d'exploration des données (le cas échéant) et terminez en rendant les données brutes disponibles. </p>
+
+<p>Soyez responsable : ne racontez pas une histoire non soutenue par les données.</p>
+
+
+
 <div class="clearfix"></div>
 <div class="row pagedetails">
    <div class="datemod col-xs-12 mrgn-tp-lg">
