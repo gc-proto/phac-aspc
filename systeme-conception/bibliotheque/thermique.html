@@ -7,7 +7,7 @@ dir="ltr"><![endif]-->
 
 <head>
     <meta charset="utf-8">
-    <title>Health Infobase Design Manual - Canada.ca</title>
+    <title>Manuel de conception de l'Infobase Santé - Canada.ca</title>
 
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <meta name="description">
@@ -18,7 +18,7 @@ dir="ltr"><![endif]-->
     <link rel="stylesheet" href="../../css/in-page.css">
     <link rel="stylesheet" href="../../css/alpha-beta-banner.css" />
 
-
+    <script src="https://d3js.org/d3.v7.min.js"></script> 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script> 		<!-- makes ToC work -->
 
@@ -42,37 +42,41 @@ dir="ltr"><![endif]-->
 
 </style>
 
-<body id="start" class="page-type-nav cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
-    <ul id="wb-tphp">
-        <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
-        <li class="wb-slc"> <a class="wb-sl" href="#wb-info">Skip to "About
-		government"</a> </li>
-    </ul>
+<body id="start" class="page-type-nav" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
+  <ul id="wb-tphp">
+    <li class="wb-slc">
+        <a class="wb-sl" href="#wb-cont">Passer au contenu principal</a>
+    </li>
+    <li class="wb-slc visible-sm visible-md visible-lg">
+        <a class="wb-sl" href="#wb-info">Passer à « Au sujet du gouvernement »</a>
+    </li>
+</ul>
     <header>
     <div id="wb-bnr" class="container-fluid">
     <section id="wb-lng" class="text-right">
-    <h1 class="wb-inv">Language selection</h2>
-    <ul class="list-inline margin-bottom-none">
-    <li><a lang="fr" href="#">Français</a></li>
-    </ul>
+      <h2 class="wb-inv">Sélection de la langue</h2>
+      <ul class="list-inline margin-bottom-none">
+          <li><a lang="en" href="../../design-system/library/heat-maps.html">English</a></li>
+      </ul>
     </section>
     <div class="row">
     <div class="brand col-xs-5 col-md-4">
-    <a href="https://www.canada.ca"><img src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg" alt=""><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+      <a href="https://www.canada.ca/fr/index.html"><img src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-fr.svg" alt=""><span class="wb-inv"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
     </div>
 
     </div>
     </div>
+
 
 
     </header>
-
+    
 
 
 <main property="mainContentOfPage" class="wb-prettify all-pre">
 <div class="container-fluid" style="padding:0px;">
     	<section class="blue-header well well-sm brdr-0 mrgn-bttm-0 mrgn-tp-0">
-<h2 class="mrgn-tp-md"><a class="top-menu" href="../index.html">Health Infobase Design Manual</a></h2>
+<h2 class="mrgn-tp-md"><a class="top-menu" href="../index.html">Manuel de conception de l'Infobase Santé</a></h2>
         		</section>
             <section class="brdr-0">
   <div class="row" style="margin-right:0px">
@@ -83,164 +87,863 @@ dir="ltr"><![endif]-->
 
       <section id="inline_content_modal" class="mfp-hide modal-dialog modal-content overlay-def">
 			<header class="modal-header">
-				<h2 class="modal-title">Table of contents</h2>
+        <h2 class="modal-title">Table des matières</h2>
 			</header>
 			<div class="modal-body">
         <ul>
-
-          <li > <a href="../getting-started.html">Getting started</a></li>
-
-            <li><a href="../data.html">Data</a></li>
-            <li><a href="../dataviz.html">Storytelling and visualization</a></li>
-            <li><a href="../library.html">Pattern library</a>
-            <ul>
-
-              <li><a href="./bar-graphs.html">Bar graph</a></li>
-              <li><a href="./buttons.html">Customization buttons</a></li>
-              <li><a href="./drop-down.html">Drop-down selector</a></li>
-              <li><a class="active" href="./heat-maps.html">Heat map</a></li>
-              <li><a href="./histograms.html">Histogram</a></li>
-              <li><a href="./key-highlights.html">Key highlights</a></li>
-              <li><a href="./line.html">Line chart</a></li>
-              <li><a href="./maps.html">Map</a></li>
-              <li><a href="./pie-charts.html">Pie charts and doughnut chart</a></li>
-              <li><a href="./related-products.html">Related products</a></li>
-              <li><a href="./scatter-plots.html">Scatter plot</a></li>
-              <li><a href="./tabbed-interface.html">Tabbed interface</a></li>
-              <li><a href="./timeline.html">Timeline slider</a></li>
-              <li><a href="./transitions.html">Transitions</a></li>
-            </li>
+          <li > <a href="../commencer.html">Démarrer</a></li>
+          <li><a href="../donnees.html">Données</a></li>
+              <li><a href="../visualisation.html">Mise en récit et visualisation</a>
+               </li>
+          <li><a href="../bibliotheque.html">Bibliothèque de composantes</a>
+          <ul>
+            <li><a href="../bibliotheque/boutons.html">Boutons de personnalisation</a></li>
+            <li><a href="../bibliotheque/carte.html">Carte</a></li>
+            <li><a href="../bibliotheque/thermique.html">Carte thermique</a></li>
+            <li><a href="../bibliotheque/barres.html">Diagramme à barres</a></li>
+            <li><a href="../bibliotheque/circulaire.html">Diagrammes circulaires et diagramme en anneau</a></li>
+            <li><a href="../bibliotheque/ligne.html">Graphique linéaire</a></li>
+            <li><a href="../bibliotheque/histogrammes.html">Histogramme</a></li>
+            <li><a href="../bibliotheque/cles.html">Indicateurs clés</a></li>
+            <li><a href="../bibliotheque/onglets.html">Interface à onglets</a></li>
+            <li><a href="../bibliotheque/nuages.html">Nuage de points</a></li>
+            <li><a href="../bibliotheque/produits-connexes.html">Produits connexes</a></li>
+            <li><a href="../bibliotheque/chrono.html">Sélecteur chronologique</a></li>
+            <li><a href="../bibliotheque/deroulant.html">Sélecteur déroulant</a></li>
+            <li><a href="../bibliotheque/transitions.html">Transitions</a></li>
+          
+        </ul>
+      
+      </li>
+          <li><a href="../performance.html">Mesure de la performance et amélioration continue</a>
           </ul>
-            <li><a href="../performance.html">Performance measurement and continuous improvement</a></li>
-
-      </ul>
 			</div>
 		</section>
     </section>
 
     <div class="mgrn-tp-xl visible-sm"><p><br></p></div> <!-- temp test fix for menu covering button -->
 <div class="col-md-2 global-toc visible-md visible-lg">
-  <h2 class="h3 mrgn-lft-md">Table of contents</h2>
+  <h2 class="h3 mrgn-lft-md">Table des matières</h2>
 
   <ul class="menu-list lst-none">
 
-    <li > <a href="../getting-started.html">Getting started</a></li>
-
-      <li><a href="../data.html">Data</a></li>
-      <li><a href="../dataviz.html">Storytelling and visualization</a></li>
-      <li><a href="../library.html">Pattern library</a>
-      <ul class="menu-list lst-none">
-
-        <li><a href="./bar-graphs.html">Bar graph</a></li>
-        <li><a href="./buttons.html">Customization buttons</a></li>
-        <li><a href="./drop-down.html">Drop-down selector</a></li>
-        <li><a class="active" href="./heat-maps.html">Heat map</a></li>
-        <li><a href="./histograms.html">Histogram</a></li>
-        <li><a href="./key-highlights.html">Key highlights</a></li>
-        <li><a href="./line.html">Line chart</a></li>
-        <li><a href="./maps.html">Map</a></li>
-        <li><a href="./pie-charts.html">Pie charts and doughnut chart</a></li>
-        <li><a href="./related-products.html">Related products</a></li>
-        <li><a href="./scatter-plots.html">Scatter plot</a></li>
-        <li><a href="./tabbed-interface.html">Tabbed interface</a></li>
-        <li><a href="./timeline.html">Timeline slider</a></li>
-        <li><a href="./transitions.html">Transitions</a></li>
+    <li> <a href="../commencer.html">Démarrer</a></li>
+    <li><a href="../donnees.html">Données</a></li>
+    <li><a href="../visualisation.html">Mise en récit et visualisation</a>
       </li>
-    </ul>
-      <li><a href="../performance.html">Performance measurement and continuous improvement</a></li>
-
-
-</ul>
-
+    <li><a href="../bibliotheque.html">Bibliothèque de composantes</a>
+    
+      <ul class="menu-list lst-none">
+        <li><a href="../bibliotheque/boutons.html">Boutons de personnalisation</a></li>
+        <li><a href="../bibliotheque/carte.html">Carte</a></li>
+        <li><a class="active" href="../bibliotheque/thermique.html">Carte thermique</a></li>
+        <li><a href="../bibliotheque/barres.html">Diagramme à barres</a></li>
+        <li><a href="../bibliotheque/circulaire.html">Diagrammes circulaires et diagramme en anneau</a></li>
+        <li><a href="../bibliotheque/ligne.html">Graphique linéaire</a></li>
+        <li><a href="../bibliotheque/histogrammes.html">Histogramme</a></li>
+        <li><a href="../bibliotheque/cles.html">Indicateurs clés</a></li>
+        <li><a href="../bibliotheque/onglets.html">Interface à onglets</a></li>
+        <li><a href="../bibliotheque/nuages.html">Nuage de points</a></li>
+        <li><a href="../bibliotheque/produits-connexes.html">Produits connexes</a></li>
+        <li><a href="../bibliotheque/chrono.html">Sélecteur chronologique</a></li>
+        <li><a href="../bibliotheque/deroulant.html">Sélecteur déroulant</a></li>
+        <li><a href="../bibliotheque/transitions.html">Transitions</a></li>
+      </ul>
+  
+    </li>
+    <li><a  href="../performance.html">Mesure de la performance et amélioration continue</a>
+      </li>
+  
+  </ul>
+  
 </div>
 
 
     <div class="col-md-2 visible-md visible-lg">
-<div class="row">
 
-      <nav id="toc" data-spy="affix" data-toggle="toc" class="affix col-xs-12 col-sm-12" >
-
-
-<h2 class="h3 mrgn-lft-lg">On this page</h2>
+      <nav id="toc" data-spy="affix" data-toggle="toc" class="affix" >
 
 
+<h2 class="h3 mrgn-lft-lg">Sur cette page</h2>
 
-                <ul class="nav mrgn-lft-lg">
-                  <li class="longdoc-toc-link"><a href="#when">When to use</a></li>
-                  <li class="longdoc-toc-link"><a href="#avoid">What to avoid</a></li>
-                  <li class="longdoc-toc-link"><a href="#design">Design and code</a></li>
-                  <li class="longdoc-toc-link"><a href="#content">Content and design guidelines</a></li>
-                  <li class="longdoc-toc-link"><a href="#accessibility">Accessibility guidelines</a></li>
-                  <!--<li class="longdoc-toc-link"><a href="#research">Research</a></li>-->
 
+
+<ul class="nav mrgn-lft-lg">
+  <li class="longdoc-toc-link"><a href="#quand">Quand utiliser cette composante</a></li>
+  <li class="longdoc-toc-link"><a href="#eviter">Quoi éviter</a></li>
+  <li class="longdoc-toc-link"><a href="#design">Design et code</a></li>
+  <li class="longdoc-toc-link"><a href="#contenu">Lignes directrices sur le contenu</a></li>
+  <li class="longdoc-toc-link"><a href="#accessibilite">Lignes directrices sur l'accessibilité</a></li>
+  <!--<li class="longdoc-toc-link"><a href="#recherche">Recherche</a></li>-->
+
+</ul>
 
           </nav>
     </div>
-</div>
 
 <div class="col-md-7 mrgn-tp-lg" style="padding-left: 40px; padding-right: 40px">
 
-<h1 class="gc-thickline mrgn-tp-0">Heat maps</h1>
-<p>A heat map is a visual representation of data that uses color to show the values of two or more variables.</p>
+<h1 class="gc-thickline mrgn-tp-0">Carte thermique</h1>
+<p>Une carte thermique est une représentation visuelle de données qui utilise la couleur pour montrer les valeurs de deux ou plusieurs variables.</p>
 
 <div class="visible-xs visible-sm">
 
-<h2 class="h3">On this page</h2>
+<h2 class="h3">Sur cette page</h2>
 <ul>
-  <li><a href="#when">When to use</a></li>
-  <li><a href="#avoid">What to avoid</a></li>
-  <li><a href="#design">Design and code</a></li>
-  <li><a href="#content">Content and design guidelines</a></li>
-  <li><a href="#design">Accessibility guidelines</a></li>
-  <!-- <li><a href="#research">Research</a></li>-->
+  <li><a href="#quand">Quand utiliser cette composante</a></li>
+  <li><a href="#eviter">Quoi éviter</a></li>
+  <li><a href="#design">Design et code</a></li>
+  <li><a href="#contenu">Lignes directrices sur le contenu</a></li>
+  <li><a href="#accessibilite">Lignes directrices sur l'accessibilité</a></li>
+  <!--<li><a href="#recherche">Recherche</a></li>-->
+
 </ul>
 </div>
-<h2 id="when">When to use</h2>
+<h2 id="quand">Quand utiliser cette composante</h2>
 <ul>
-  <li>To show the relationship between two or more variables</li>
-  <li>To show the distribution of data over two or more dimensions</li>
-  <li>To identify trends or patterns in the data</li>
+  <li>Pour montrer la relation entre deux ou plusieurs variables</li>
+  <li>Pour montrer la distribution des données sur deux ou plusieurs dimensions</li>
+  <li>Pour identifier les tendances ou des motifs dans les données</li>
 </ul>
 
 <div class="well well-sm cnt-wdth-lmtd"">
-  <h3 class="mrgn-tp-sm">Examples</h3>
+  <h3 class="mrgn-tp-sm">Exemples</h3>
   <ul>
-    <li>A heat map showing the distribution of a certain risk factor for a disease, such as obesity or smoking</li>
-    <li>A heat map showing the distribution of antimicrobial consumption by province</li>
- </ul>
+    <li>Une carte thermique montrant la distribution d'un facteur de risque pour une maladie, tel que l'obésité ou la consommation de tabac</li>
+    <li>Une carte thermique montrant la distribution de la consommation d'antimicrobiens par province</li>
+  </ul>
   </div>
 
-
-<h2 id="avoid">What to avoid</h2>
-<li>Don’t use heat maps to show data that does not have a clear numeric value</li>
-<li>Don’t use heat maps to show data with different units or different scales</li>
-
-<h2 id="design">Design and code</h2>
-<p>Coming soon
-
-</p>
-
-<h2 id="content">Content and design guidelines</h2>
+<h2 id="eviter">Quoi éviter</h2>
 <ul>
-  <li>Use a sequential or diverging colour palette (see <a href="../dataviz/dataviz/design.html#colours">Colours</a>)</li>
-  <li>Include a legend for the colour palette</li>
-  <li>Considering including the value in each cell</li>
-  <li>Follow the <a href="../dataviz/dataviz/design.html">general design guidelines</a>
+  <li>Ne pas utiliser de cartes thermiques pour montrer des données qui n'ont pas une valeur numérique claire</li>
+  <li>Ne pas utiliser de cartes thermiques pour montrer des données avec des unités ou des échelles différentes</li>
 </ul>
 
-<h2 id="accessibility">Accessibility guidelines</h2>
+<h2 id="design">Design et code</h2>
+<div class="pattern-demo mrgn-bttm-md">
+  <div id="heatMapGraph"></div>
+  </div>
+  
+  <details>
+    <summary>HTML</summary>
+    <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copier dans le presse-papiers</button>
+    <pre id="code1"><code>&lt;!-- Ajouter la bibliothèque D3 dans la section head --&gt;
+  &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
+     
+  &lt;!-- Ajouter ce div dans la bonne section -->
+  &lt;div id="scatterGraph"&gt;&lt;/div&gt;</code></pre>
+  </details>
+  <details>
+    <summary>JS</summary>
+    <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copier dans le presse-papiers</button>
+    <pre id="code2"><code>&lt;script&gt;
+    // dimensions and margins 
+    const margin = {top: 50, right: 30, bottom: 70, left: 100},
+      width = 600 - margin.left - margin.right,
+      height = 600 - margin.top - margin.bottom;
+    
+    // append the svg 
+    const svg = d3.select("#heatMapGraph")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+    
+    // row and columns
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    const years = ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009"]
+    
+    // aAxis
+    const x = d3.scaleBand()
+      .range([ 0, width ])
+      .domain(months)
+      .padding(0.01);
+      
+    svg.append("g")
+      .attr("transform", `translate(0, ${height})`)
+      .call(d3.axisBottom(x))
+      .style("font-size","14px");
+    
+    // yAxis
+    const y = d3.scaleBand()
+      .range([ height, 0 ])
+      .domain(years)
+      .padding(0.01);
+      
+    svg.append("g")
+      .call(d3.axisLeft(y))
+      .style("font-size","14px");
+      
+    // graph title  
+    svg.append("text")
+        .attr("text-anchor", "end")
+        .attr("x", width/2 + margin.left + 50)
+        .attr("y", -10)
+        .style("font-weight","bold")
+        .style("font-size", "24px")
+        .text("Température moyenne en °C");
+        
+    // xAxis label 
+    svg.append("text")
+        .attr("text-anchor", "end")
+        .attr("x", width/2 + margin.left - 40)
+        .attr("y", height + margin.top + 0)
+        .style("font-weight","bold")
+        .style("font-size", "23px")
+        .text("Mois");
+  
+    // yAxis label
+    svg.append("text")
+        .attr("text-anchor", "end")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -margin.left + 45)
+        .attr("x", -margin.top - height/2 + 60)
+          .style("font-weight","bold")
+          .style("font-size", "23px")
+        .text("Année");
+        
+    // Build color scale
+    const myColor = d3.scaleLinear()
+      .range(["white", "#EB5F44"])
+      .domain([1,100])
+    
+    //dummy data
+    let data = [
+      {
+          "month": "Jan",
+          "year": "2000",
+          "value": "30"
+      },
+      {
+          "month": "Jan",
+          "year": "2001",
+          "value": "95"
+      },
+      {
+          "month": "Jan",
+          "year": "2002",
+          "value": "22"
+      },
+      {
+          "month": "Jan",
+          "year": "2003",
+          "value": "14"
+      },
+      {
+          "month": "Jan",
+          "year": "2004",
+          "value": "59"
+      },
+      {
+          "month": "Jan",
+          "year": "2005",
+          "value": "52"
+      },
+      {
+          "month": "Jan",
+          "year": "2006",
+          "value": "88"
+      },
+      {
+          "month": "Jan",
+          "year": "2007",
+          "value": "20"
+      },
+      {
+          "month": "Jan",
+          "year": "2008",
+          "value": "99"
+      },
+      {
+          "month": "Jan",
+          "year": "2009",
+          "value": "66"
+      },
+      {
+          "month": "Feb",
+          "year": "2000",
+          "value": "37"
+      },
+      {
+          "month": "Feb",
+          "year": "2001",
+          "value": "50"
+      },
+      {
+          "month": "Feb",
+          "year": "2002",
+          "value": "81"
+      },
+      {
+          "month": "Feb",
+          "year": "2003",
+          "value": "79"
+      },
+      {
+          "month": "Feb",
+          "year": "2004",
+          "value": "84"
+      },
+      {
+          "month": "Feb",
+          "year": "2005",
+          "value": "91"
+      },
+      {
+          "month": "Feb",
+          "year": "2006",
+          "value": "82"
+      },
+      {
+          "month": "Feb",
+          "year": "2007",
+          "value": "89"
+      },
+      {
+          "month": "Feb",
+          "year": "2008",
+          "value": "6"
+      },
+      {
+          "month": "Feb",
+          "year": "2009",
+          "value": "67"
+      },
+      {
+          "month": "Mar",
+          "year": "2000",
+          "value": "96"
+      },
+      {
+          "month": "Mar",
+          "year": "2001",
+          "value": "13"
+      },
+      {
+          "month": "Mar",
+          "year": "2002",
+          "value": "98"
+      },
+      {
+          "month": "Mar",
+          "year": "2003",
+          "value": "10"
+      },
+      {
+          "month": "Mar",
+          "year": "2004",
+          "value": "86"
+      },
+      {
+          "month": "Mar",
+          "year": "2005",
+          "value": "23"
+      },
+      {
+          "month": "Mar",
+          "year": "2006",
+          "value": "74"
+      },
+      {
+          "month": "Mar",
+          "year": "2007",
+          "value": "47"
+      },
+      {
+          "month": "Mar",
+          "year": "2008",
+          "value": "73"
+      },
+      {
+          "month": "Mar",
+          "year": "2009",
+          "value": "40"
+      },
+      {
+          "month": "Apr",
+          "year": "2000",
+          "value": "75"
+      },
+      {
+          "month": "Apr",
+          "year": "2001",
+          "value": "18"
+      },
+      {
+          "month": "Apr",
+          "year": "2002",
+          "value": "92"
+      },
+      {
+          "month": "Apr",
+          "year": "2003",
+          "value": "43"
+      },
+      {
+          "month": "Apr",
+          "year": "2004",
+          "value": "16"
+      },
+      {
+          "month": "Apr",
+          "year": "2005",
+          "value": "27"
+      },
+      {
+          "month": "Apr",
+          "year": "2006",
+          "value": "76"
+      },
+      {
+          "month": "Apr",
+          "year": "2007",
+          "value": "24"
+      },
+      {
+          "month": "Apr",
+          "year": "2008",
+          "value": "1"
+      },
+      {
+          "month": "Apr",
+          "year": "2009",
+          "value": "87"
+      },
+      {
+          "month": "May",
+          "year": "2000",
+          "value": "44"
+      },
+      {
+          "month": "May",
+          "year": "2001",
+          "value": "29"
+      },
+      {
+          "month": "May",
+          "year": "2002",
+          "value": "58"
+      },
+      {
+          "month": "May",
+          "year": "2003",
+          "value": "55"
+      },
+      {
+          "month": "May",
+          "year": "2004",
+          "value": "65"
+      },
+      {
+          "month": "May",
+          "year": "2005",
+          "value": "56"
+      },
+      {
+          "month": "May",
+          "year": "2006",
+          "value": "9"
+      },
+      {
+          "month": "May",
+          "year": "2007",
+          "value": "78"
+      },
+      {
+          "month": "May",
+          "year": "2008",
+          "value": "49"
+      },
+      {
+          "month": "May",
+          "year": "2009",
+          "value": "36"
+      },
+      {
+          "month": "Jun",
+          "year": "2000",
+          "value": "35"
+      },
+      {
+          "month": "Jun",
+          "year": "2001",
+          "value": "80"
+      },
+      {
+          "month": "Jun",
+          "year": "2002",
+          "value": "8"
+      },
+      {
+          "month": "Jun",
+          "year": "2003",
+          "value": "46"
+      },
+      {
+          "month": "Jun",
+          "year": "2004",
+          "value": "48"
+      },
+      {
+          "month": "Jun",
+          "year": "2005",
+          "value": "100"
+      },
+      {
+          "month": "Jun",
+          "year": "2006",
+          "value": "17"
+      },
+      {
+          "month": "Jun",
+          "year": "2007",
+          "value": "41"
+      },
+      {
+          "month": "Jun",
+          "year": "2008",
+          "value": "33"
+      },
+      {
+          "month": "Jun",
+          "year": "2009",
+          "value": "11"
+      },
+      {
+          "month": "Jul",
+          "year": "2000",
+          "value": "77"
+      },
+      {
+          "month": "Jul",
+          "year": "2001",
+          "value": "62"
+      },
+      {
+          "month": "Jul",
+          "year": "2002",
+          "value": "94"
+      },
+      {
+          "month": "Jul",
+          "year": "2003",
+          "value": "15"
+      },
+      {
+          "month": "Jul",
+          "year": "2004",
+          "value": "69"
+      },
+      {
+          "month": "Jul",
+          "year": "2005",
+          "value": "63"
+      },
+      {
+          "month": "Jul",
+          "year": "2006",
+          "value": "61"
+      },
+      {
+          "month": "Jul",
+          "year": "2007",
+          "value": "54"
+      },
+      {
+          "month": "Jul",
+          "year": "2008",
+          "value": "38"
+      },
+      {
+          "month": "Jul",
+          "year": "2009",
+          "value": "93"
+      },
+      {
+          "month": "Aug",
+          "year": "2000",
+          "value": "39"
+      },
+      {
+          "month": "Aug",
+          "year": "2001",
+          "value": "26"
+      },
+      {
+          "month": "Aug",
+          "year": "2002",
+          "value": "90"
+      },
+      {
+          "month": "Aug",
+          "year": "2003",
+          "value": "83"
+      },
+      {
+          "month": "Aug",
+          "year": "2004",
+          "value": "31"
+      },
+      {
+          "month": "Aug",
+          "year": "2005",
+          "value": "2"
+      },
+      {
+          "month": "Aug",
+          "year": "2006",
+          "value": "51"
+      },
+      {
+          "month": "Aug",
+          "year": "2007",
+          "value": "28"
+      },
+      {
+          "month": "Aug",
+          "year": "2008",
+          "value": "42"
+      },
+      {
+          "month": "Aug",
+          "year": "2009",
+          "value": "7"
+      },
+      {
+          "month": "Sep",
+          "year": "2000",
+          "value": "5"
+      },
+      {
+          "month": "Sep",
+          "year": "2001",
+          "value": "60"
+      },
+      {
+          "month": "Sep",
+          "year": "2002",
+          "value": "21"
+      },
+      {
+          "month": "Sep",
+          "year": "2003",
+          "value": "25"
+      },
+      {
+          "month": "Sep",
+          "year": "2004",
+          "value": "3"
+      },
+      {
+          "month": "Sep",
+          "year": "2005",
+          "value": "70"
+      },
+      {
+          "month": "Sep",
+          "year": "2006",
+          "value": "34"
+      },
+      {
+          "month": "Sep",
+          "year": "2007",
+          "value": "68"
+      },
+      {
+          "month": "Sep",
+          "year": "2008",
+          "value": "57"
+      },
+      {
+          "month": "Sep",
+          "year": "2009",
+          "value": "32"
+      },
+      {
+          "month": "Oct",
+          "year": "2000",
+          "value": "19"
+      },
+      {
+          "month": "Oct",
+          "year": "2001",
+          "value": "85"
+      },
+      {
+          "month": "Oct",
+          "year": "2002",
+          "value": "53"
+      },
+      {
+          "month": "Oct",
+          "year": "2003",
+          "value": "45"
+      },
+      {
+          "month": "Oct",
+          "year": "2004",
+          "value": "71"
+      },
+      {
+          "month": "Oct",
+          "year": "2005",
+          "value": "64"
+      },
+      {
+          "month": "Oct",
+          "year": "2006",
+          "value": "4"
+      },
+      {
+          "month": "Oct",
+          "year": "2007",
+          "value": "12"
+      },
+      {
+          "month": "Oct",
+          "year": "2008",
+          "value": "97"
+      },
+      {
+          "month": "Oct",
+          "year": "2009",
+          "value": "72"
+      },{
+          "month": "Nov",
+          "year": "2000",
+          "value": "19"
+      },
+      {
+          "month": "Nov",
+          "year": "2001",
+          "value": "85"
+      },
+      {
+          "month": "Nov",
+          "year": "2002",
+          "value": "53"
+      },
+      {
+          "month": "Nov",
+          "year": "2003",
+          "value": "45"
+      },
+      {
+          "month": "Nov",
+          "year": "2004",
+          "value": "71"
+      },
+      {
+          "month": "Nov",
+          "year": "2005",
+          "value": "64"
+      },
+      {
+          "month": "Nov",
+          "year": "2006",
+          "value": "4"
+      },
+      {
+          "month": "Nov",
+          "year": "2007",
+          "value": "12"
+      },
+      {
+          "month": "Nov",
+          "year": "2008",
+          "value": "97"
+      },
+      {
+          "month": "Nov",
+          "year": "2009",
+          "value": "72"
+      },{
+          "month": "Dec",
+          "year": "2000",
+          "value": "19"
+      },
+      {
+          "month": "Dec",
+          "year": "2001",
+          "value": "85"
+      },
+      {
+          "month": "Dec",
+          "year": "2002",
+          "value": "53"
+      },
+      {
+          "month": "Dec",
+          "year": "2003",
+          "value": "45"
+      },
+      {
+          "month": "Dec",
+          "year": "2004",
+          "value": "71"
+      },
+      {
+          "month": "Dec",
+          "year": "2005",
+          "value": "64"
+      },
+      {
+          "month": "Dec",
+          "year": "2006",
+          "value": "4"
+      },
+      {
+          "month": "Dec",
+          "year": "2007",
+          "value": "12"
+      },
+      {
+          "month": "Dec",
+          "year": "2008",
+          "value": "97"
+      },
+      {
+          "month": "Dec",
+          "year": "2009",
+          "value": "72"
+      }
+  ];
+      svg.selectAll()
+          .data(data, function(d) {return d.month+':'+d.year;})
+          .join("rect")
+          .attr("x", function(d) { return x(d.month) })
+          .attr("y", function(d) { return y(d.year) })
+          .attr("width", x.bandwidth() )
+          .attr("height", y.bandwidth() )
+          .style("fill", function(d) { return myColor(d.value)} )
+          
+  
+  &lt;/script&gt;</code></pre>
+  </details>
+
+
+<h2 id="contenu">Lignes directrices sur le contenu</h2>
 <ul>
-  <li>Provide a data table with the graph</li>
-  <li>If the heat map tells a clear story, include that story in the alt text - for example, if the heat map shows a clear relationship or distribution of data, spell it out in the alt text</li>
-  <li>Follow the <a href="../dataviz/dataviz/design.html#accessibility">general accessibility guidelines</a> </li>
+  <li>Utilisez une palette de couleurs séquentielle ou divergente (voir <a href="../visualisation/visualisation/design.html#couleurs">Couleurs</a>)</li>
+  <li>Incluez une légende pour la palette de couleurs</li>
+  <li>Envisagez d'inclure la valeur dans chaque cellule</li>
+  <li>Suivez les <a href="../visualisation/visualisation/design.html">lignes directrices générales sur le contenu</a> </li>
 </ul>
 
-<!--
-<h2 id="research">Research</h2>
+<h2 id="accessibilite">Lignes directrices sur l'accessibilité</h2>
+<ul>
+  <li>Fournissez un tableau de données avec le graphique</li>
+  <li>Si la carte thermique raconte une histoire claire, incluez cette histoire dans le texte alternatif - par exemple, si la carte thermique montre une relation ou une distribution de données claires, décrivez-la dans le texte alternatif</li>
+  <li>Suivez les <a href="../visualisation/visualisation/design.html#accessibilite">lignes directrices générales sur l'accessibilité</a> </li>
+</ul>
+
+<!--<h2 id="recerche">Recherche</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
 
-</p>
--->
+</p> -->
+
 
     <div class="clearfix"></div>
     	<div class="row pagedetails">
@@ -311,14 +1014,712 @@ dir="ltr"><![endif]-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script>
       <script src="../../js/toc-custom.js"></script>
-      <script src="../../js/alpha-banner.js"></script>
+      <script src="../../js/alpha-banner-fr.js"></script>
 
       <!--<![endif]-->
       <!--[if lt IE 9]>
           <script src="./wet-boew/js/ie8-wet-boew2.min.js"></script>
 
           <![endif]-->
-      <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
+          <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
 
+          <script>
+            // dimensions and margins 
+            const margin = {top: 50, right: 30, bottom: 70, left: 100},
+              width = 600 - margin.left - margin.right,
+              height = 600 - margin.top - margin.bottom;
+            
+            // append the svg 
+            const svg = d3.select("#heatMapGraph")
+            .append("svg")
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+              .attr("transform", `translate(${margin.left},${margin.top})`);
+            
+            // row and columns
+            const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+            const years = ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009"]
+            
+            // aAxis
+            const x = d3.scaleBand()
+              .range([ 0, width ])
+              .domain(months)
+              .padding(0.01);
+              
+            svg.append("g")
+              .attr("transform", `translate(0, ${height})`)
+              .call(d3.axisBottom(x))
+              .style("font-size","14px");
+            
+            // yAxis
+            const y = d3.scaleBand()
+              .range([ height, 0 ])
+              .domain(years)
+              .padding(0.01);
+              
+            svg.append("g")
+              .call(d3.axisLeft(y))
+              .style("font-size","14px");
+              
+            // graph title  
+            svg.append("text")
+                .attr("text-anchor", "end")
+                .attr("x", width/2 + margin.left + 50)
+                .attr("y", -10)
+                .style("font-weight","bold")
+                .style("font-size", "24px")
+                .text("Température moyenne en °C");
+                
+            // xAxis label 
+            svg.append("text")
+                .attr("text-anchor", "end")
+                .attr("x", width/2 + margin.left - 40)
+                .attr("y", height + margin.top + 0)
+                .style("font-weight","bold")
+                .style("font-size", "23px")
+                .text("Mois");
+          
+            // yAxis label
+            svg.append("text")
+                .attr("text-anchor", "end")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -margin.left + 45)
+                .attr("x", -margin.top - height/2 + 60)
+                 .style("font-weight","bold")
+                 .style("font-size", "23px")
+                .text("Année");
+                
+            // Build color scale
+            const myColor = d3.scaleLinear()
+              .range(["white", "#EB5F44"])
+              .domain([1,100])
+            
+            //dummy data
+            let data = [
+              {
+                  "month": "Jan",
+                  "year": "2000",
+                  "value": "30"
+              },
+              {
+                  "month": "Jan",
+                  "year": "2001",
+                  "value": "95"
+              },
+              {
+                  "month": "Jan",
+                  "year": "2002",
+                  "value": "22"
+              },
+              {
+                  "month": "Jan",
+                  "year": "2003",
+                  "value": "14"
+              },
+              {
+                  "month": "Jan",
+                  "year": "2004",
+                  "value": "59"
+              },
+              {
+                  "month": "Jan",
+                  "year": "2005",
+                  "value": "52"
+              },
+              {
+                  "month": "Jan",
+                  "year": "2006",
+                  "value": "88"
+              },
+              {
+                  "month": "Jan",
+                  "year": "2007",
+                  "value": "20"
+              },
+              {
+                  "month": "Jan",
+                  "year": "2008",
+                  "value": "99"
+              },
+              {
+                  "month": "Jan",
+                  "year": "2009",
+                  "value": "66"
+              },
+              {
+                  "month": "Feb",
+                  "year": "2000",
+                  "value": "37"
+              },
+              {
+                  "month": "Feb",
+                  "year": "2001",
+                  "value": "50"
+              },
+              {
+                  "month": "Feb",
+                  "year": "2002",
+                  "value": "81"
+              },
+              {
+                  "month": "Feb",
+                  "year": "2003",
+                  "value": "79"
+              },
+              {
+                  "month": "Feb",
+                  "year": "2004",
+                  "value": "84"
+              },
+              {
+                  "month": "Feb",
+                  "year": "2005",
+                  "value": "91"
+              },
+              {
+                  "month": "Feb",
+                  "year": "2006",
+                  "value": "82"
+              },
+              {
+                  "month": "Feb",
+                  "year": "2007",
+                  "value": "89"
+              },
+              {
+                  "month": "Feb",
+                  "year": "2008",
+                  "value": "6"
+              },
+              {
+                  "month": "Feb",
+                  "year": "2009",
+                  "value": "67"
+              },
+              {
+                  "month": "Mar",
+                  "year": "2000",
+                  "value": "96"
+              },
+              {
+                  "month": "Mar",
+                  "year": "2001",
+                  "value": "13"
+              },
+              {
+                  "month": "Mar",
+                  "year": "2002",
+                  "value": "98"
+              },
+              {
+                  "month": "Mar",
+                  "year": "2003",
+                  "value": "10"
+              },
+              {
+                  "month": "Mar",
+                  "year": "2004",
+                  "value": "86"
+              },
+              {
+                  "month": "Mar",
+                  "year": "2005",
+                  "value": "23"
+              },
+              {
+                  "month": "Mar",
+                  "year": "2006",
+                  "value": "74"
+              },
+              {
+                  "month": "Mar",
+                  "year": "2007",
+                  "value": "47"
+              },
+              {
+                  "month": "Mar",
+                  "year": "2008",
+                  "value": "73"
+              },
+              {
+                  "month": "Mar",
+                  "year": "2009",
+                  "value": "40"
+              },
+              {
+                  "month": "Apr",
+                  "year": "2000",
+                  "value": "75"
+              },
+              {
+                  "month": "Apr",
+                  "year": "2001",
+                  "value": "18"
+              },
+              {
+                  "month": "Apr",
+                  "year": "2002",
+                  "value": "92"
+              },
+              {
+                  "month": "Apr",
+                  "year": "2003",
+                  "value": "43"
+              },
+              {
+                  "month": "Apr",
+                  "year": "2004",
+                  "value": "16"
+              },
+              {
+                  "month": "Apr",
+                  "year": "2005",
+                  "value": "27"
+              },
+              {
+                  "month": "Apr",
+                  "year": "2006",
+                  "value": "76"
+              },
+              {
+                  "month": "Apr",
+                  "year": "2007",
+                  "value": "24"
+              },
+              {
+                  "month": "Apr",
+                  "year": "2008",
+                  "value": "1"
+              },
+              {
+                  "month": "Apr",
+                  "year": "2009",
+                  "value": "87"
+              },
+              {
+                  "month": "May",
+                  "year": "2000",
+                  "value": "44"
+              },
+              {
+                  "month": "May",
+                  "year": "2001",
+                  "value": "29"
+              },
+              {
+                  "month": "May",
+                  "year": "2002",
+                  "value": "58"
+              },
+              {
+                  "month": "May",
+                  "year": "2003",
+                  "value": "55"
+              },
+              {
+                  "month": "May",
+                  "year": "2004",
+                  "value": "65"
+              },
+              {
+                  "month": "May",
+                  "year": "2005",
+                  "value": "56"
+              },
+              {
+                  "month": "May",
+                  "year": "2006",
+                  "value": "9"
+              },
+              {
+                  "month": "May",
+                  "year": "2007",
+                  "value": "78"
+              },
+              {
+                  "month": "May",
+                  "year": "2008",
+                  "value": "49"
+              },
+              {
+                  "month": "May",
+                  "year": "2009",
+                  "value": "36"
+              },
+              {
+                  "month": "Jun",
+                  "year": "2000",
+                  "value": "35"
+              },
+              {
+                  "month": "Jun",
+                  "year": "2001",
+                  "value": "80"
+              },
+              {
+                  "month": "Jun",
+                  "year": "2002",
+                  "value": "8"
+              },
+              {
+                  "month": "Jun",
+                  "year": "2003",
+                  "value": "46"
+              },
+              {
+                  "month": "Jun",
+                  "year": "2004",
+                  "value": "48"
+              },
+              {
+                  "month": "Jun",
+                  "year": "2005",
+                  "value": "100"
+              },
+              {
+                  "month": "Jun",
+                  "year": "2006",
+                  "value": "17"
+              },
+              {
+                  "month": "Jun",
+                  "year": "2007",
+                  "value": "41"
+              },
+              {
+                  "month": "Jun",
+                  "year": "2008",
+                  "value": "33"
+              },
+              {
+                  "month": "Jun",
+                  "year": "2009",
+                  "value": "11"
+              },
+              {
+                  "month": "Jul",
+                  "year": "2000",
+                  "value": "77"
+              },
+              {
+                  "month": "Jul",
+                  "year": "2001",
+                  "value": "62"
+              },
+              {
+                  "month": "Jul",
+                  "year": "2002",
+                  "value": "94"
+              },
+              {
+                  "month": "Jul",
+                  "year": "2003",
+                  "value": "15"
+              },
+              {
+                  "month": "Jul",
+                  "year": "2004",
+                  "value": "69"
+              },
+              {
+                  "month": "Jul",
+                  "year": "2005",
+                  "value": "63"
+              },
+              {
+                  "month": "Jul",
+                  "year": "2006",
+                  "value": "61"
+              },
+              {
+                  "month": "Jul",
+                  "year": "2007",
+                  "value": "54"
+              },
+              {
+                  "month": "Jul",
+                  "year": "2008",
+                  "value": "38"
+              },
+              {
+                  "month": "Jul",
+                  "year": "2009",
+                  "value": "93"
+              },
+              {
+                  "month": "Aug",
+                  "year": "2000",
+                  "value": "39"
+              },
+              {
+                  "month": "Aug",
+                  "year": "2001",
+                  "value": "26"
+              },
+              {
+                  "month": "Aug",
+                  "year": "2002",
+                  "value": "90"
+              },
+              {
+                  "month": "Aug",
+                  "year": "2003",
+                  "value": "83"
+              },
+              {
+                  "month": "Aug",
+                  "year": "2004",
+                  "value": "31"
+              },
+              {
+                  "month": "Aug",
+                  "year": "2005",
+                  "value": "2"
+              },
+              {
+                  "month": "Aug",
+                  "year": "2006",
+                  "value": "51"
+              },
+              {
+                  "month": "Aug",
+                  "year": "2007",
+                  "value": "28"
+              },
+              {
+                  "month": "Aug",
+                  "year": "2008",
+                  "value": "42"
+              },
+              {
+                  "month": "Aug",
+                  "year": "2009",
+                  "value": "7"
+              },
+              {
+                  "month": "Sep",
+                  "year": "2000",
+                  "value": "5"
+              },
+              {
+                  "month": "Sep",
+                  "year": "2001",
+                  "value": "60"
+              },
+              {
+                  "month": "Sep",
+                  "year": "2002",
+                  "value": "21"
+              },
+              {
+                  "month": "Sep",
+                  "year": "2003",
+                  "value": "25"
+              },
+              {
+                  "month": "Sep",
+                  "year": "2004",
+                  "value": "3"
+              },
+              {
+                  "month": "Sep",
+                  "year": "2005",
+                  "value": "70"
+              },
+              {
+                  "month": "Sep",
+                  "year": "2006",
+                  "value": "34"
+              },
+              {
+                  "month": "Sep",
+                  "year": "2007",
+                  "value": "68"
+              },
+              {
+                  "month": "Sep",
+                  "year": "2008",
+                  "value": "57"
+              },
+              {
+                  "month": "Sep",
+                  "year": "2009",
+                  "value": "32"
+              },
+              {
+                  "month": "Oct",
+                  "year": "2000",
+                  "value": "19"
+              },
+              {
+                  "month": "Oct",
+                  "year": "2001",
+                  "value": "85"
+              },
+              {
+                  "month": "Oct",
+                  "year": "2002",
+                  "value": "53"
+              },
+              {
+                  "month": "Oct",
+                  "year": "2003",
+                  "value": "45"
+              },
+              {
+                  "month": "Oct",
+                  "year": "2004",
+                  "value": "71"
+              },
+              {
+                  "month": "Oct",
+                  "year": "2005",
+                  "value": "64"
+              },
+              {
+                  "month": "Oct",
+                  "year": "2006",
+                  "value": "4"
+              },
+              {
+                  "month": "Oct",
+                  "year": "2007",
+                  "value": "12"
+              },
+              {
+                  "month": "Oct",
+                  "year": "2008",
+                  "value": "97"
+              },
+              {
+                  "month": "Oct",
+                  "year": "2009",
+                  "value": "72"
+              },{
+                  "month": "Nov",
+                  "year": "2000",
+                  "value": "19"
+              },
+              {
+                  "month": "Nov",
+                  "year": "2001",
+                  "value": "85"
+              },
+              {
+                  "month": "Nov",
+                  "year": "2002",
+                  "value": "53"
+              },
+              {
+                  "month": "Nov",
+                  "year": "2003",
+                  "value": "45"
+              },
+              {
+                  "month": "Nov",
+                  "year": "2004",
+                  "value": "71"
+              },
+              {
+                  "month": "Nov",
+                  "year": "2005",
+                  "value": "64"
+              },
+              {
+                  "month": "Nov",
+                  "year": "2006",
+                  "value": "4"
+              },
+              {
+                  "month": "Nov",
+                  "year": "2007",
+                  "value": "12"
+              },
+              {
+                  "month": "Nov",
+                  "year": "2008",
+                  "value": "97"
+              },
+              {
+                  "month": "Nov",
+                  "year": "2009",
+                  "value": "72"
+              },{
+                  "month": "Dec",
+                  "year": "2000",
+                  "value": "19"
+              },
+              {
+                  "month": "Dec",
+                  "year": "2001",
+                  "value": "85"
+              },
+              {
+                  "month": "Dec",
+                  "year": "2002",
+                  "value": "53"
+              },
+              {
+                  "month": "Dec",
+                  "year": "2003",
+                  "value": "45"
+              },
+              {
+                  "month": "Dec",
+                  "year": "2004",
+                  "value": "71"
+              },
+              {
+                  "month": "Dec",
+                  "year": "2005",
+                  "value": "64"
+              },
+              {
+                  "month": "Dec",
+                  "year": "2006",
+                  "value": "4"
+              },
+              {
+                  "month": "Dec",
+                  "year": "2007",
+                  "value": "12"
+              },
+              {
+                  "month": "Dec",
+                  "year": "2008",
+                  "value": "97"
+              },
+              {
+                  "month": "Dec",
+                  "year": "2009",
+                  "value": "72"
+              }
+          ];
+              svg.selectAll()
+                  .data(data, function(d) {return d.month+':'+d.year;})
+                  .join("rect")
+                  .attr("x", function(d) { return x(d.month) })
+                  .attr("y", function(d) { return y(d.year) })
+                  .attr("width", x.bandwidth() )
+                  .attr("height", y.bandwidth() )
+                  .style("fill", function(d) { return myColor(d.value)} )
+                  
+          </script>
+
+      <script>
+        function CopyToClipboard(id)
+        {
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        }
+        </script>
   </body>
 </html>
+
+
+
