@@ -53,7 +53,7 @@ dir="ltr"><![endif]-->
     <section id="wb-lng" class="text-right">
     <h1 class="wb-inv">Language selection</h2>
     <ul class="list-inline margin-bottom-none">
-    <li><a lang="fr" href="#">Français</a></li>
+    <li><a lang="fr" href="../../systeme-conception/bibliotheque/ligne.html">Français</a></li>
     </ul>
     </section>
     <div class="row">
@@ -486,6 +486,18 @@ function(d){
 })
         
 </script>
+
+<script>
+  function CopyToClipboard(id)
+  {
+  var r = document.createRange();
+  r.selectNode(document.getElementById(id));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(r);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+  }
+  </script>
 
   </body>
 </html>
