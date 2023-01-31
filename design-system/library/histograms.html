@@ -18,7 +18,8 @@ dir="ltr"><![endif]-->
     <link rel="stylesheet" href="../../css/in-page.css">
     <link rel="stylesheet" href="../../css/alpha-beta-banner.css" />
 
-
+    
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script> 		<!-- makes ToC work -->
 
@@ -224,10 +225,97 @@ dir="ltr"><![endif]-->
 </ul>
 
 <h2 id="design">Design and code</h2>
-<p>Coming soon
-
-</p>
-
+<div class="pattern-demo mrgn-bttm-md">
+<div id="histogramDiv"></div>
+</div>
+<details>
+  <summary>HTML</summary>
+  <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copy code to clipboard</button>
+  <pre id="code1"><code>&lt;!-- Add D3 library in the head section --&gt;
+&lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
+   
+&lt;!-- Add a div in the section where you want the graph -->
+&lt;div id="histogramDiv"&gt;&lt;/div&gt;</code></pre>
+</details>
+<details>
+  <summary>JS</summary>
+  <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copy code to clipboard</button>
+  <pre id="code2"><code>&lt;script&gt;
+  // set the dimensions 
+      const margin = {top: 10, right: 30, bottom: 50, left: 90},
+          width = 620 - margin.left - margin.right,
+          height = 520 - margin.top - margin.bottom;
+      
+    // append the svg 
+    const svg = d3.select("#histogramDiv")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform",`translate(${margin.left},${margin.top})`);
+    
+    // dummy data
+    d3.csv("https://test.canada.ca/phac-aspc/design-system/library/histograms/data.csv").then( function(data) {
+    
+      // xAxis
+      const x = d3.scaleLinear()
+          .domain([0, 1000])
+          .range([0, width]);
+          
+      svg.append("g")
+          .attr("transform", `translate(0, ${height})`)
+          .call(d3.axisBottom(x))
+          .style("font-size","17px");
+    
+      // set the parameters
+      const histogramFunc = d3.histogram()
+          .value(function(d) { return d.price; })   
+          .domain(x.domain())  
+          .thresholds(x.ticks(70)); 
+    
+      const allBins = histogramFunc(data);
+    
+      // yAxis
+      const y = d3.scaleLinear()
+          .range([height, 0]);
+        
+        y.domain([0, d3.max(allBins, function(d) { return d.length; })]);   
+    
+      svg.append("g")
+          .call(d3.axisLeft(y))
+          .style("font-size","17px");
+          
+          // xAxis label 
+        svg.append("text")
+            .attr("text-anchor", "end")
+            .attr("x", width/2 + margin.left - 90)
+            .attr("y", height + margin.top + 40)
+            .style("font-weight","bold")
+            .style("font-size", "23px")
+            .text("Bins");
+      
+        // yAxis label
+        svg.append("text")
+            .attr("text-anchor", "end")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -margin.left + 35)
+            .attr("x", -margin.top - height/2 + 20)
+              .style("font-weight","bold")
+              .style("font-size", "23px")
+            .text("Price");
+            
+      // append the bars
+      svg.selectAll("rect")
+        .data(allBins)
+        .join("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return `translate(${x(d.x0)} , ${y(d.length)})`})
+            .attr("width", function(d) { return x(d.x1) - x(d.x0) -1})
+            .attr("height", function(d) { return height - y(d.length); })
+            .style("fill", "#336699")
+    });
+&lt;/script&gt;</code></pre>
+</details>
 
 <h2 id="content">Content and design guidelines</h2>
 <ul>
@@ -329,6 +417,98 @@ dir="ltr"><![endif]-->
 
           <![endif]-->
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
+
+      <script>
+    
+        // set the dimensions 
+        const margin = {top: 10, right: 30, bottom: 50, left: 90},
+            width = 620 - margin.left - margin.right,
+            height = 520 - margin.top - margin.bottom;
+        
+        // append the svg 
+        const svg = d3.select("#histogramDiv")
+          .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform",`translate(${margin.left},${margin.top})`);
+        
+        // dummy data
+        d3.csv("https://test.canada.ca/phac-aspc/design-system/library/histograms/data.csv").then( function(data) {
+        
+          // xAxis
+          const x = d3.scaleLinear()
+              .domain([0, 1000])
+              .range([0, width]);
+              
+          svg.append("g")
+              .attr("transform", `translate(0, ${height})`)
+              .call(d3.axisBottom(x))
+              .style("font-size","17px");
+        
+          // set the parameters
+          const histogramFunc = d3.histogram()
+              .value(function(d) { return d.price; })   
+              .domain(x.domain())  
+              .thresholds(x.ticks(70)); 
+        
+          const allBins = histogramFunc(data);
+        
+          // yAxis
+          const y = d3.scaleLinear()
+              .range([height, 0]);
+            
+            y.domain([0, d3.max(allBins, function(d) { return d.length; })]);   
+        
+          svg.append("g")
+              .call(d3.axisLeft(y))
+              .style("font-size","17px");
+              
+             // xAxis label 
+            svg.append("text")
+                .attr("text-anchor", "end")
+                .attr("x", width/2 + margin.left - 90)
+                .attr("y", height + margin.top + 40)
+                .style("font-weight","bold")
+                .style("font-size", "23px")
+                .text("Bins");
+          
+            // yAxis label
+            svg.append("text")
+                .attr("text-anchor", "end")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -margin.left + 35)
+                .attr("x", -margin.top - height/2 + 20)
+                 .style("font-weight","bold")
+                 .style("font-size", "23px")
+                .text("Price");
+                
+          // append the bars
+          svg.selectAll("rect")
+            .data(allBins)
+            .join("rect")
+            .attr("x", 1)
+            .attr("transform", function(d) { return `translate(${x(d.x0)} , ${y(d.length)})`})
+                .attr("width", function(d) { return x(d.x1) - x(d.x0) -1})
+                .attr("height", function(d) { return height - y(d.length); })
+                .style("fill", "#336699")
+        });
+          
+        </script>
+
+<script>
+  function CopyToClipboard(id)
+  {
+  var r = document.createRange();
+  r.selectNode(document.getElementById(id));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(r);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+  }
+</script>
+
+
 
   </body>
 </html>
