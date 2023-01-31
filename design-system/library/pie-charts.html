@@ -53,7 +53,7 @@ dir="ltr"><![endif]-->
     <section id="wb-lng" class="text-right">
     <h1 class="wb-inv">Language selection</h2>
     <ul class="list-inline margin-bottom-none">
-    <li><a lang="fr" href="#">Français</a></li>
+    <li><a lang="fr" href="../../systeme-conception/bibliotheque/circulaire.html">Français</a></li>
     </ul>
     </section>
     <div class="row">
@@ -212,7 +212,8 @@ dir="ltr"><![endif]-->
   </div>
 
 <h2 id="avoid">What to avoid</h2>
-<ul><li>Don’t use pie charts or doughnut charts to show data that does not have a clear numeric value</li>
+<ul>
+  <li>Don’t use pie charts or doughnut charts to show data that does not have a clear numeric value</li>
 <li>Don’t use pie charts or doughnut charts to show data with different units or different scales</li>
 <li>Pie charts or doughnut charts are usually hard to read if there are too many categories, so avoid using pie charts with more than 5-6 categories</li>
 <li>In most cases, there are better alternatives to pie charts and doughnut charts (such as bar graphs or stacked bar graphs)</li>
@@ -497,6 +498,18 @@ dir="ltr"><![endif]-->
             });
       
     </script>
+
+<script>
+  function CopyToClipboard(id)
+  {
+  var r = document.createRange();
+  r.selectNode(document.getElementById(id));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(r);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+  }
+  </script>
 
   </body>
 </html>
