@@ -7,7 +7,7 @@ dir="ltr"><![endif]-->
 
 <head>
     <meta charset="utf-8">
-    <title>Health Infobase Design Manual - Canada.ca</title>
+    <title>Manuel de conception de l'Infobase Santé - Canada.ca</title>
 
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <meta name="description">
@@ -18,9 +18,8 @@ dir="ltr"><![endif]-->
     <link rel="stylesheet" href="../../css/in-page.css">
     <link rel="stylesheet" href="../../css/alpha-beta-banner.css" />
     <link rel="stylesheet" href="https://infobase-dev.com/src/css/global.css" />
-    
 
-
+    <script src="https://d3js.org/d3.v7.min.js"></script> 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script> 		<!-- makes ToC work -->
 
@@ -45,36 +44,40 @@ dir="ltr"><![endif]-->
 </style>
 
 <body id="start" class="page-type-nav cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage" data-spy="scroll" data-target="#toc">
-    <ul id="wb-tphp">
-        <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
-        <li class="wb-slc"> <a class="wb-sl" href="#wb-info">Skip to "About
-		government"</a> </li>
-    </ul>
+  <ul id="wb-tphp">
+    <li class="wb-slc">
+        <a class="wb-sl" href="#wb-cont">Passer au contenu principal</a>
+    </li>
+    <li class="wb-slc visible-sm visible-md visible-lg">
+        <a class="wb-sl" href="#wb-info">Passer à « Au sujet du gouvernement »</a>
+    </li>
+</ul>
     <header>
     <div id="wb-bnr" class="container-fluid">
     <section id="wb-lng" class="text-right">
-    <h1 class="wb-inv">Language selection</h2>
-    <ul class="list-inline margin-bottom-none">
-    <li><a lang="fr" href="#">Français</a></li>
-    </ul>
+      <h2 class="wb-inv">Sélection de la langue</h2>
+      <ul class="list-inline margin-bottom-none">
+          <li><a lang="en" href="../../design-system/library/tabbed-interface.html">English</a></li>
+      </ul>
     </section>
     <div class="row">
     <div class="brand col-xs-5 col-md-4">
-    <a href="https://www.canada.ca"><img src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg" alt=""><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+      <a href="https://www.canada.ca/fr/index.html"><img src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-fr.svg" alt=""><span class="wb-inv"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
     </div>
 
     </div>
     </div>
+
 
 
     </header>
-
+    
 
 
 <main property="mainContentOfPage" class="wb-prettify all-pre">
 <div class="container-fluid" style="padding:0px;">
     	<section class="blue-header well well-sm brdr-0 mrgn-bttm-0 mrgn-tp-0">
-<h2 class="mrgn-tp-md"><a class="top-menu" href="../index.html">Health Infobase Design Manual</a></h2>
+<h2 class="mrgn-tp-md"><a class="top-menu" href="../index.html">Manuel de conception de l'Infobase Santé</a></h2>
         		</section>
             <section class="brdr-0">
   <div class="row" style="margin-right:0px">
@@ -85,225 +88,248 @@ dir="ltr"><![endif]-->
 
       <section id="inline_content_modal" class="mfp-hide modal-dialog modal-content overlay-def">
 			<header class="modal-header">
-				<h2 class="modal-title">Table of contents</h2>
+        <h2 class="modal-title">Table des matières</h2>
 			</header>
 			<div class="modal-body">
         <ul>
-
-          <li > <a href="../getting-started.html">Getting started</a></li>
-
-            <li><a href="../data.html">Data</a></li>
-            <li><a href="../dataviz.html">Storytelling and visualization</a></li>
-            <li><a href="../library.html">Pattern library</a>
-            <ul>
-
-              <li><a href="./bar-graphs.html">Bar graph</a></li>
-              <li><a href="./buttons.html">Customization buttons</a></li>
-              <li><a href="./drop-down.html">Drop-down selector</a></li>
-              <li><a href="./heat-maps.html">Heat map</a></li>
-              <li><a href="./histograms.html">Histogram</a></li>
-              <li><a href="./key-highlights.html">Key highlights</a></li>
-              <li><a href="./line.html">Line chart</a></li>
-              <li><a href="./maps.html">Map</a></li>
-              <li><a href="./pie-charts.html">Pie charts and doughnut chart</a></li>
-              <li><a href="./related-products.html">Related products</a></li>
-              <li><a href="./scatter-plots.html">Scatter plot</a></li>
-              <li><a class="active" href="./tabbed-interface.html">Tabbed interface</a></li>
-              <li><a href="./timeline.html">Timeline slider</a></li>
-              <li><a href="./transitions.html">Transitions</a></li>
-  </ul>
+          <li > <a href="../commencer.html">Démarrer</a></li>
+          <li><a href="../donnees.html">Données</a></li>
+              <li><a href="../visualisation.html">Mise en récit et visualisation</a>
+               </li>
+          <li><a href="../bibliotheque.html">Bibliothèque de composantes</a>
+          <ul>
+            <li><a href="../bibliotheque/boutons.html">Boutons de personnalisation</a></li>
+            <li><a href="../bibliotheque/carte.html">Carte</a></li>
+            <li><a href="../bibliotheque/thermique.html">Carte thermique</a></li>
+            <li><a href="../bibliotheque/barres.html">Diagramme à barres</a></li>
+            <li><a href="../bibliotheque/circulaire.html">Diagrammes circulaires et diagramme en anneau</a></li>
+            <li><a href="../bibliotheque/ligne.html">Graphique linéaire</a></li>
+            <li><a href="../bibliotheque/histogramme.html">Histogramme</a></li>
+            <li><a href="../bibliotheque/cles.html">Indicateurs clés</a></li>
+            <li><a href="../bibliotheque/onglets.html">Interface à onglets</a></li>
+            <li><a href="../bibliotheque/nuages.html">Nuage de points</a></li>
+            <li><a href="../bibliotheque/produits-connexes.html">Produits connexes</a></li>
+            <li><a href="../bibliotheque/chrono.html">Sélecteur chronologique</a></li>
+            <li><a href="../bibliotheque/deroulant.html">Sélecteur déroulant</a></li>
+            <li><a href="../bibliotheque/transitions.html">Transitions</a></li>
+          
+        </ul>
+      
       </li>
-      <li><a href="../performance.html">Performance measurement and continuous improvement</a></li>
-
-      </ul>
+          <li><a href="../performance.html">Mesure de la performance et amélioration continue</a>
+          </ul>
 			</div>
 		</section>
     </section>
 
     <div class="mgrn-tp-xl visible-sm"><p><br></p></div> <!-- temp test fix for menu covering button -->
 <div class="col-md-2 global-toc visible-md visible-lg">
-  <h2 class="h3 mrgn-lft-md">Table of contents</h2>
+  <h2 class="h3 mrgn-lft-md">Table des matières</h2>
 
   <ul class="menu-list lst-none">
 
-    <li > <a href="../getting-started.html">Getting started</a></li>
-
-      <li><a href="../data.html">Data</a></li>
-      <li><a href="../dataviz.html">Storytelling and visualization</a></li>
-      <li><a href="../library.html">Pattern library</a>
+    <li> <a href="../commencer.html">Démarrer</a></li>
+    <li><a href="../donnees.html">Données</a></li>
+    <li><a href="../visualisation.html">Mise en récit et visualisation</a>
+      </li>
+    <li><a href="../bibliotheque.html">Bibliothèque de composantes</a>
+    
       <ul class="menu-list lst-none">
-
-        <li><a href="./bar-graphs.html">Bar graph</a></li>
-        <li><a href="./buttons.html">Customization buttons</a></li>
-        <li><a href="./drop-down.html">Drop-down selector</a></li>
-        <li><a href="./heat-maps.html">Heat map</a></li>
-        <li><a href="./histograms.html">Histogram</a></li>
-        <li><a href="./key-highlights.html">Key highlights</a></li>
-        <li><a href="./line.html">Line chart</a></li>
-        <li><a href="./maps.html">Map</a></li>
-        <li><a href="./pie-charts.html">Pie charts and doughnut chart</a></li>
-        <li><a href="./related-products.html">Related products</a></li>
-        <li><a href="./scatter-plots.html">Scatter plot</a></li>
-        <li><a class="active" href="./tabbed-interface.html">Tabbed interface</a></li>
-        <li><a href="./timeline.html">Timeline slider</a></li>
-        <li><a href="./transitions.html">Transitions</a></li>
-</ul>
-</li>
-<li><a href="../performance.html">Performance measurement and continuous improvement</a></li>
-
-</ul>
-
+        <li><a href="../bibliotheque/boutons.html">Boutons de personnalisation</a></li>
+        <li><a href="../bibliotheque/carte.html">Carte</a></li>
+        <li><a href="../bibliotheque/thermique.html">Carte thermique</a></li>
+        <li><a href="../bibliotheque/barres.html">Diagramme à barres</a></li>
+        <li><a href="../bibliotheque/circulaire.html">Diagrammes circulaires et diagramme en anneau</a></li>
+        <li><a href="../bibliotheque/ligne.html">Graphique linéaire</a></li>
+        <li><a href="../bibliotheque/histogramme.html">Histogramme</a></li>
+        <li><a href="../bibliotheque/cles.html">Indicateurs clés</a></li>
+        <li><a class="active" href="../bibliotheque/onglets.html">Interface à onglets</a></li>
+        <li><a href="../bibliotheque/nuages.html">Nuage de points</a></li>
+        <li><a href="../bibliotheque/produits-connexes.html">Produits connexes</a></li>
+        <li><a href="../bibliotheque/chrono.html">Sélecteur chronologique</a></li>
+        <li><a href="../bibliotheque/deroulant.html">Sélecteur déroulant</a></li>
+        <li><a href="../bibliotheque/transitions.html">Transitions</a></li>
+      </ul>
+  
+    </li>
+    <li><a  href="../performance.html">Mesure de la performance et amélioration continue</a>
+      </li>
+  
+  </ul>
+  
 </div>
 
 
     <div class="col-md-2 visible-md visible-lg">
-<div class="row">
 
-      <nav id="toc" data-spy="affix" data-toggle="toc" class="affix col-xs-12 col-sm-12" >
-
-
-<h2 class="h3 mrgn-lft-lg">On this page</h2>
+      <nav id="toc" data-spy="affix" data-toggle="toc" class="affix" >
 
 
+<h2 class="h3 mrgn-lft-lg">Sur cette page</h2>
 
-                <ul class="nav mrgn-lft-lg">
-                  <li class="longdoc-toc-link"><a href="#when">When to use</a></li>
-                  <li class="longdoc-toc-link"><a href="#avoid">What to avoid</a></li>
-                  <li class="longdoc-toc-link"><a href="#design">Design and code</a></li>
-                  <li class="longdoc-toc-link"><a href="#content">Content guidelines</a></li>
-                  <li class="longdoc-toc-link"><a href="#accessibility">Accessibility guidelines</a></li>
-                   <!--<li class="longdoc-toc-link"><a href="#research">Research</a></li>-->
 
+
+<ul class="nav mrgn-lft-lg">
+  <li class="longdoc-toc-link"><a href="#quand">Quand utiliser cette composante</a></li>
+  <li class="longdoc-toc-link"><a href="#eviter">Quoi éviter</a></li>
+  <li class="longdoc-toc-link"><a href="#design">Design et code</a></li>
+  <li class="longdoc-toc-link"><a href="#contenu">Lignes directrices sur le contenu</a></li>
+  <li class="longdoc-toc-link"><a href="#accessibilite">Lignes directrices sur l'accessibilité</a></li>
+  <!--<li class="longdoc-toc-link"><a href="#recherche">Recherche</a></li>-->
+
+</ul>
 
           </nav>
-        </div>
     </div>
-    
-    <div class="col-md-7 mrgn-tp-lg" style="padding-left: 40px; padding-right: 40px">
-    
-    <h1 class="gc-thickline mrgn-tp-0">Tabbed interface</h1>
-    <p>Tabbed interfaces allow splitting a complex data product in multiple sections. 
-    </p>
-    
-    <div class="visible-xs visible-sm">
-    
-    <h2 class="h3">On this page</h2>
-    <ul>
-      <li><a href="#when">When to use</a></li>
-      <li><a href="#avoid">What to avoid</a></li>
-      <li><a href="#design">Design and code</a></li>
-      <li><a href="#content">Content guidelines</a></li>
-      <li><a href="#design">Accessibility guidelines</a></li>
-      <!--<li><a href="#research">Research</a></li>-->
-    </ul>
-    </div>
-    <h2 id="when">When to use</h2>
-    <ul>
-      <li>Use a tabbed interface to separate different aspects of a data product </li>
 
-    </ul>
-    
-    <h2 id="avoid">What to avoid</h2>
+<div class="col-md-7 mrgn-tp-lg" style="padding-left: 40px; padding-right: 40px">
 
-    <ul>
-      <li>Use a maximum of 3 to 6 tabs</li>
-      <li>Only use a tabbed interface if you have too much content to make everything fit in one page</li>
-    </ul>
+<h1 class="gc-thickline mrgn-tp-0">Interface à onglets</h1>
+<p>Les interfaces à onglets permettent de diviser un produit de données complexe en plusieurs sections.</p>
 
-    <h2 id="design">Design and code</h2>
+<div class="visible-xs visible-sm">
 
-    <div class="pattern-demo mrgn-bttm-md">
+<h2 class="h3">Sur cette page</h2>
+<ul>
+  <li><a href="#quand">Quand utiliser cette composante</a></li>
+  <li><a href="#eviter">Quoi éviter</a></li>
+  <li><a href="#design">Design et code</a></li>
+  <li><a href="#contenu">Lignes directrices sur le contenu</a></li>
+  <li><a href="#accessibilite">Lignes directrices sur l'accessibilité</a></li>
+  <!--<li><a href="#recherche">Recherche</a></li>-->
 
-    <section class="blue-header well well-sm brdr-0 mrgn-bttm-0 mrgn-tp-0">
-      <div class="container mrgn-tp-sm">
+</ul>
+</div>
+<h2 id="quand">Quand utiliser cette composante</h2>
+<ul>
+  <li>Utilisez une interface à onglets pour séparer les différents aspects d'un produit de données</li>
 
-              <h1 class="mrgn-tp-md" property="name" id="wb-cont" dir="ltr"><span class="stacked"><span>Page 1</span>: <span>Group name</span></span></h1>
-                 <ul class="list-inline small mrgn-bttm-sm" style="line-height:1.65em" id="list-inline-desktop-only">
-                        <li class="mrgn-rght-lg"> Last updated: 2023-01-01</li>
-                        <li> <a class="pdf" href="#"><i class="fa fa-download" aria-hidden="true"></i> <span class="wb-invisible">Download page in </span>PDF<span class="wb-invisible"> format</span></a></li>
-                         <li> <a class="pdf" href="#"><i class="fa fa-download" aria-hidden="true"></i> <span class="wb-invisible">Download data in </span>CSV<span class="wb-invisible"> format</span></a></li>
-                      </ul>
-          <p>Short introduction to the data product (optional). 1 or 2 sentences explaining the product.</p>
-          
- </div>
- </section>
- 
-    <section class="well well-sm brdr-0 mrgn-bttm-25 mrgn-tp-0 tabNav" style="padding:0px;">
-                    <div class="container">
-                      <nav>
-                        <ul class="list-inline hidden-xs hidden-sm mrgn-bttm-0">
-                            <li><a class="active btn btn-tabs" id="active-tab" role="button" href="#">Page 1</a></li>
-                            <li><a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_2_EN">Page 2</a></li>
-                            <li><a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_3_EN">Page 3</a></li>
-                            <li><a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_4_EN">Page 4</a></li>
-                           <li><a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_5_EN">Page 5</a></li>
-                        </ul>
-                        
-                        <ul class="list-unstyled hidden-md hidden-lg">
-                            <li><a class="active btn btn-tabs-mobile" style="padding:10px 0px;" id="active-tab" role="button" href="#">Page 1</a></li>
-                            <li><a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_2_EN">Page 2</a></li>
-                            <li><a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_3_EN">Page 3</a></li>
-                            <li><a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_4_EN">Page 4</a></li>
-                           <li><a class="btn btn-tabs-mobile"  id="tab" role="button" href="./template_tabs_5_EN">Page 5</a></li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </section>
-                  
-                </div>
+</ul>
+
+<h2 id="eviter">Quoi éviter</h2>
+<ul>
+  <li>Utilisez un maximum de 3 à 6 onglets</li>
+  <li>N'utilisez une interface à onglets que si vous avez trop de contenu pour tout faire tenir sur une seule page</li>
+</ul>
+
+<h2 id="design">Design et code</h2>
+<div class="pattern-demo mrgn-bttm-md">
+
+  <section class="blue-header well well-sm brdr-0 mrgn-bttm-0 mrgn-tp-0">
+    <div class="container mrgn-tp-sm">
+
+            
+      <h1 class="mrgn-tp-md" property="name" id="wb-cont" dir="ltr"><span class="stacked"><span>Page 1</span>: <span>Nom du groupe</span></span></h1>
+      <ul class="list-inline small mrgn-bttm-sm" style="line-height:1.65em" id="list-inline-desktop-only">
+             <li class="mrgn-rght-lg"> Dernière mise à jour : 2023-01-01</li>
+              <li> <a class="pdf" href="#"><i class="fa fa-download" aria-hidden="true"></i> <span class="wb-invisible">Télécharger la page en format </span>PDF<span class="wb-invisible"></span></a></li>
+               <li> <a class="pdf" href="#"><i class="fa fa-download" aria-hidden="true"></i> <span class="wb-invisible">Télécharger les données en format </span>CSV<span class="wb-invisible"></span></a></li>
+           </ul>
+<p>Brève introduction au produit de données (facultatif). 1 ou 2 phrases expliquant le produit.</p>
+
+</div>
+</section>
+
+<section class="well well-sm brdr-0 mrgn-bttm-25 mrgn-tp-0 tabNav" style="padding:0px;">
+         <div class="container">
+           <nav>
+             <ul class="list-inline hidden-xs hidden-sm mrgn-bttm-0">
+                 <li><a class="active btn btn-tabs" id="active-tab" role="button" href="#">Page 1</a></li>
+                 <li><a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_2_FR">Page 2</a></li>
+                 <li><a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_3_FR">Page 3</a></li>
+                 <li><a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_4_FR">Page 4</a></li>
+                <li><a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_5_FR">Page 5</a></li>
+             </ul>
+             
+             <ul class="list-unstyled hidden-md hidden-lg">
+                 <li><a class="active btn btn-tabs-mobile" style="padding:10px 0px;" id="active-tab" role="button" href="#">Page 1</a></li>
+                 <li><a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_2_FR">Page 2</a></li>
+                 <li><a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_3_FR">Page 3</a></li>
+                 <li><a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_4_FR">Page 4</a></li>
+                <li><a class="btn btn-tabs-mobile"  id="tab" role="button" href="./template_tabs_5_FR">Page 5</a></li>
+             </ul>
+           </nav>
+         </div>
+       </section>
+              </div>
 
 
-      <details>
-        <summary>HTML</summary>
-        <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copy code to clipboard</button>
-        <pre id="code1"><code>&lt;section class="well well-sm brdr-0 mrgn-bttm-25 mrgn-tp-0 tabNav" style="padding:0px;"&gt; 
-  &lt;div class="container"&gt; 
-    &lt;nav&gt; 
-      &lt;ul class="list-inline hidden-xs hidden-sm mrgn-bttm-0"&gt; 
-        &lt;li&gt; 
-          &lt;a class="active btn btn-tabs" id="active-tab" role="button" href="#"&gt; Page 1&lt;/a&gt; 
-        &lt;/li&gt; 
-        &lt;li&gt; 
-          &lt;a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_2_EN"&gt; Page 2&lt;/a&gt; 
-        &lt;/li&gt; 
-        &lt;li&gt; 
-          &lt;a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_3_EN"&gt; Page 3&lt;/a&gt; 
-        &lt;/li&gt; 
-        &lt;li&gt; 
-          &lt;a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_4_EN"&gt; Page 4&lt;/a&gt; 
-        &lt;/li&gt; 
-        &lt;li&gt; 
-          &lt;a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_5_EN"&gt; Page 5&lt;/a&gt; 
-        &lt;/li&gt; 
-      &lt;/ul&gt; 
-      &lt;ul class="list-unstyled hidden-md hidden-lg"&gt; 
-        &lt;li&gt; 
-          &lt;a class="active btn btn-tabs-mobile" style="padding:10px 0px;" id="active-tab" role="button" href="#"&gt; Page 1&lt;/a&gt; 
-        &lt;/li&gt; 
-        &lt;li&gt; 
-          &lt;a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_2_EN"&gt; Page 2&lt;/a&gt; 
-        &lt;/li&gt; 
-        &lt;li&gt; 
-          &lt;a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_3_EN"&gt; Page 3&lt;/a&gt; 
-        &lt;/li&gt; 
-        &lt;li&gt; 
-          &lt;a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_4_EN"&gt; Page 4&lt;/a&gt; 
-        &lt;/li&gt; 
-        &lt;li&gt; 
-          &lt;a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_5_EN"&gt; Page 5&lt;/a&gt; 
-        &lt;/li&gt; 
-      &lt;/ul&gt; 
-    &lt;/nav&gt; 
-  &lt;/div&gt; 
-&lt;/section&gt; </code></pre>
-      </details>
+    <details>
+      <summary>HTML</summary>
+      <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copier dans le presse-papiers</button>
+      <pre id="code1"><code>&lt;section class="blue-header well well-sm brdr-0 mrgn-bttm-0 mrgn-tp-0"&gt;
+  &lt;div class="container mrgn-tp-sm"&gt;
+    &lt;h1 class="mrgn-tp-md" property="name" id="wb-cont" dir="ltr"&gt;
+      &lt;span class="stacked"&gt;
+        &lt;span&gt;Page 1&lt;/span&gt;: &lt;span&gt;Nom du groupe&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/h1&gt;
+    &lt;ul class="list-inline small mrgn-bttm-sm" style="line-height:1.65em" id="list-inline-desktop-only"&gt;
+      &lt;li class="mrgn-rght-lg"&gt; Dernière mise à jour : 2023-01-01&lt;/li&gt;
+      &lt;li&gt;
+        &lt;a class="pdf" href="#"&gt;
+          &lt;i class="fa fa-download" aria-hidden="true"&gt;&lt;/i&gt;
+          &lt;span class="wb-invisible"&gt;Télécharger la page en format &lt;/span&gt;PDF &lt;span class="wb-invisible"&gt;&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a class="pdf" href="#"&gt;
+          &lt;i class="fa fa-download" aria-hidden="true"&gt;&lt;/i&gt;
+          &lt;span class="wb-invisible"&gt;Télécharger les données en format &lt;/span&gt;CSV &lt;span class="wb-invisible"&gt;&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Brève introduction au produit de données (facultatif). 1 ou 2 phrases expliquant le produit.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="well well-sm brdr-0 mrgn-bttm-25 mrgn-tp-0 tabNav" style="padding:0px;"&gt;
+  &lt;div class="container"&gt;
+    &lt;nav&gt;
+      &lt;ul class="list-inline hidden-xs hidden-sm mrgn-bttm-0"&gt;
+        &lt;li&gt;
+          &lt;a class="active btn btn-tabs" id="active-tab" role="button" href="#"&gt;Page 1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_2_FR"&gt;Page 2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_3_FR"&gt;Page 3&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+           &lt;a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_4_FR"&gt;Page 4&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a class="btn btn-tabs" id="tab" role="button" href="./template_tabs_5_FR"&gt;Page 5&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class="list-unstyled hidden-md hidden-lg"&gt;
+        &lt;li&gt;
+          &lt;a class="active btn btn-tabs-mobile" style="padding:10px 0px;" id="active-tab" role="button" href="#"&gt;Page 1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_2_FR"&gt;Page 2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_3_FR"&gt;Page 3&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_4_FR"&gt;Page 4&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a class="btn btn-tabs-mobile" id="tab" role="button" href="./template_tabs_5_FR"&gt;Page 5&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+    </details>
 
 
 
-      <details>
-        <summary>CSS</summary>
-        <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copy code to clipboard</button>
-        <pre id="code2"><code>.tabNav a:visited {
+    <details>
+      <summary>CSS</summary>
+      <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copier dans le presse-papiers</button>
+      <pre id="code2"><code>.tabNav a:visited {
 color: #2b4380;
 }
 .tabNav a:visited:hover {
@@ -317,12 +343,12 @@ font-size: 20px;
 font-weight: bold;
 border-radius: 0px;
 }
-        
+      
 .btn-tabs:hover {
 background-color:#26374A;
 color: #FFF;
 }
- 
+
 .btn-tabs.active {
 background-color: #26374A;
 color: #FFF;
@@ -331,8 +357,8 @@ font-weight: bold;
 box-shadow: none;
 border-radius: 0px;
 }
-        
-  
+      
+
 .btn-tabs-mobile {
 background-color: #F5F5F5;
 color: #2b4380;
@@ -341,8 +367,8 @@ font-weight: bold;
 border-radius: 0px;
 padding:10px 0px
 }
-        
-  
+      
+
 .btn-tabs-mobile.active {
 background-color: #F5F5F5;
 color: #26374A;
@@ -352,32 +378,34 @@ box-shadow: none;
 border-radius: 0px;
 border-bottom: 5px solid #26374A;
 }
-    
+  
 .btn-tabs, .btn-tabs:visited {
 display: inline-block;
 text-decoration: none;
 }</code></pre>
-      </details>
+    </details>
 
 
 
-     
+  
 
-    <h2 id="content">Content and design guidelines</h2>
-    <ul>
-      <li>Don’t label a tab “Overview” or  “About [topic]” - use meaningful and descriptive tab labels instead</li>
-      <li>Follow the <a href="../dataviz/dataviz/design.html">general design guidelines</a> </li>
-    </ul>
-    
-    <h2 id="accessibility">Accessibility guidelines</h2>
-    <ul>
-      <li>Follow the <a href="../dataviz/dataviz/design.html#accessibility">general accessibility guidelines</a> </li>
-    </ul>
-    
-    <!--<h2 id="resarch">Research</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
-    
-    </p> -->
+<h2 id="contenu">Lignes directrices sur le contenu et le design</h2>
+<ul>
+  <li>N'utilisez pas l'étiquette « Aperçu » ou « À propos de [sujet] » pour un onglet- utilisez plutôt des étiquettes d'onglets significatives et descriptives</li>
+
+  <li>Suivez les <a href="../visualisation/visualisation/design.html">lignes directrices générales sur le contenu</a> </li>
+</ul>
+
+<h2 id="accessibilite">Lignes directrices sur l'accessibilité</h2>
+<ul>
+  <li>Suivez les <a href="../visualisation/visualisation/design.html#accessibilite">lignes directrices générales sur l'accessibilité</a> </li>
+</ul>
+
+<!--<h2 id="recerche">Recherche</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem dolor, feugiat eu placerat vitae, laoreet a elit. Ut eleifend nec elit quis elementum. Mauris dignissim nunc quam, sed mattis risus fringilla id. Integer luctus, mi vitae efficitur elementum, enim ex scelerisque mi, id venenatis elit justo sit amet dolor. Suspendisse ornare pulvinar maximus. Aenean ac mi ullamcorper purus dictum tincidunt porta a sem. Donec a purus vel ex congue commodo. Integer lacinia neque eget metus tempor maximus. Nunc rhoncus, lacus porttitor sodales tristique, nulla ipsum tempor tellus, vel vestibulum ligula sem nec elit. Etiam consequat hendrerit tincidunt. Sed et tellus hendrerit, blandit mauris quis, blandit velit. Vestibulum volutpat, lectus at ullamcorper egestas, est lacus auctor libero, in sagittis sem massa in eros. Fusce vestibulum, purus in lacinia semper, dolor velit venenatis ex, eget placerat nisl eros vel est. Quisque nulla velit, vehicula eu tempor vitae, faucibus feugiat velit. Suspendisse lectus augue, laoreet vitae enim ac, congue pretium lorem.
+
+</p> -->
+
 
     <div class="clearfix"></div>
     	<div class="row pagedetails">
@@ -398,74 +426,96 @@ text-decoration: none;
       </section>
 
 
+
+
+
 </div>
 
 
-    		<footer id="wb-info">
-    	<div class="landscape">
-    	<nav class="container wb-navcurr">
-    	<h2 class="wb-inv">About this guide</h2>
-    	<ul class="list-unstyled colcount-sm-2 colcount-md-3">
-    	<li><a href="mailto:phac.infobase.aspc@canada.ca">Contact the Infobase Team</a></li>
-    	<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
-    	<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
-    	<li><a href="https://www.canada.ca/en/news.html">News</a></li>
-    	<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
-    	<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
-    	<li><a href="https://pm.gc.ca/eng">Prime Minister</a></li>
-    	<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
-    	<li><a href="https://open.canada.ca/en/">Open government</a></li>
-    	</ul>
-    	</nav>
-    	</div>
-    	<div class="brand">
-    	<div class="container">
-    	<div class="row">
-    	<nav class="col-md-9 col-lg-10 ftr-urlt-lnk">
-    	<h2 class="wb-inv">About this site</h2>
-    	<ul>
-    	<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
-    	<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
-    	<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
-    	<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-    	<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-    	</ul>
-    	</nav>
-    	<div class="col-xs-6 visible-sm visible-xs tofpg">
-    	<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
-    	</div>
-    	<div class="col-xs-6 col-md-3 col-lg-2 text-right">
-    	<img src="http://www.canada.ca/etc/designs/canada/wet-boew/assets/wmms-blk.svg" alt="Symbol of the Government of Canada">
-    	</div>
-    	</div>
-    	</div>
-    	</div>
-    	</footer>
+<footer id="wb-info">
+	<h2 class="wb-inv">À propos de ce site</h2>
+<div class="gc-contextual">
+		<div class="container">
+			<nav>
+				<h3>Infobase Santé</h3>
+				<ul class="list-col-xs-1 list-col-sm-2 list-col-md-3">
+				    <li><a href="mailto:infobase@phac-aspc.gc.ca">Communiquer avec nous par courriel</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<div class="gc-main-footer">
+		<div class="container">
+			<nav>
+				<h3>Gouvernement du Canada</h3>
+				<ul class="list-col-xs-1 list-col-sm-2 list-col-md-3"><li><a href="https://www.canada.ca/fr/contact.html">Toutes les coordonnées</a></li>
+					<li><a href="https://www.canada.ca/fr/gouvernement/min.html">Ministères et organismes</a></li>
+					<li><a href="https://www.canada.ca/fr/gouvernement/systeme.html">À propos du gouvernement</a></li></ul>
+				<h4><span class="wb-inv">Thèmes et sujets</span></h4>
+				<ul class="list-unstyled colcount-sm-2 colcount-md-3"><li><a href="https://www.canada.ca/fr/services/emplois.html">Emplois</a></li>
+					<li><a href="https://www.canada.ca/fr/services/immigration-citoyennete.html">Immigration et citoyenneté</a></li>
+					<li><a href="https://voyage.gc.ca/">Voyage et tourisme</a></li>
+					<li><a href="https://www.canada.ca/fr/services/entreprises.html">Entreprises</a></li>
+					<li><a href="https://www.canada.ca/fr/services/prestations.html">Prestations</a></li>
+					<li><a href="https://www.canada.ca/fr/services/sante.html">Santé</a></li>
+					<li><a href="https://www.canada.ca/fr/services/impots.html">Impôts</a></li>
+					<li><a href="https://www.canada.ca/fr/services/environnement.html">Environnement et ressources naturelles</a></li>
+					<li><a href="https://www.canada.ca/fr/services/defense.html">Sécurité nationale et défense</a></li>
+					<li><a href="https://www.canada.ca/fr/services/culture.html">Culture, histoire et sport</a></li>
+					<li><a href="https://www.canada.ca/fr/services/police.html">Services de police, justice et urgences</a></li>
+					<li><a href="https://www.canada.ca/fr/services/transport.html">Transport et infrastructure</a></li>
+					<li><a href="https://www.international.gc.ca/world-monde/index.aspx?lang=fra">Le Canada et le monde</a></li>
+					<li><a href="https://www.canada.ca/fr/services/finance.html">Argent et finance</a></li>
+					<li><a href="https://www.canada.ca/fr/services/science.html">Science et innovation</a></li>
+					<li><a href="https://www.canada.ca/fr/services/autochtones.html">Autochtones</a></li>
+					<li><a href="https://www.canada.ca/fr/services/veterans.html">Vétérans et militaires</a></li>
+					<li><a href="https://www.canada.ca/fr/services/jeunesse.html">Jeunesse</a></li></ul>
+			</nav>
+		</div>
+	</div>
+
+	<div class="gc-sub-footer">
+		<div class="container d-flex align-items-center">
+			<nav>
+				<h3 class="wb-inv">Organisation du gouvernement du Canada</h3>
+				<ul>
+					<li><a href="https://www.canada.ca/fr/sociaux.html">Médias sociaux</a></li>
+					<li><a href="https://www.canada.ca/fr/mobile.html">Applications mobiles</a></li>
+					<li><a href="https://www.canada.ca/fr/gouvernement/a-propos.html">À propos de Canada.ca</a></li><li><a href="https://www.canada.ca/fr/transparence/avis.html">Avis</a></li>
+					<li><a href="https://www.canada.ca/fr/transparence/confidentialite.html">Confidentialité</a></li></ul>
+			</nav>
+			<div class="wtrmrk align-self-end">
+				<img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" alt="Symbole du gouvernement du Canada" />
+			</div>
+		</div>
+	</div>
+</footer>
     	<!--[if gte IE 9 | !IE ]><!-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
       <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script>
       <script src="../../js/toc-custom.js"></script>
-      <script src="../../js/alpha-banner.js"></script>
+      <script src="../../js/alpha-banner-fr.js"></script>
 
       <!--<![endif]-->
       <!--[if lt IE 9]>
           <script src="./wet-boew/js/ie8-wet-boew2.min.js"></script>
 
           <![endif]-->
-      <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
-
-      <script>
-        function CopyToClipboard(id)
-        {
-        var r = document.createRange();
-        r.selectNode(document.getElementById(id));
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(r);
-        document.execCommand('copy');
-        window.getSelection().removeAllRanges();
-        }
-      </script>
-
+          <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
+          
+          <script>
+            function CopyToClipboard(id)
+            {
+            var r = document.createRange();
+            r.selectNode(document.getElementById(id));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(r);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            }
+            </script>
+        
   </body>
 </html>
 
