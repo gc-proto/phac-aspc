@@ -416,9 +416,219 @@ dir="ltr"><![endif]-->
 
 <div class="graph viztype2 mrgn-tp-md">
 <div class="pattern-demo mrgn-bttm-md">
-
-<p>Coming soon</p>
+  <h3>Quantity of fruits</h3>
+  <div id="horizontal"></div>
 </div>
+<details>
+  <summary>HTML</summary>
+  <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copy code to clipboard</button>
+  <pre id="code1"><code>&lt;!-- Add D3 library in the head section --&gt;
+&lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
+   
+&lt;!-- Add a div in the section where you want the graph -->
+&lt;div id="vertical"&gt;&lt;/div&gt;</code></pre>
+</details>
+<details>
+  <summary>JS</summary>
+  <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copy code to clipboard</button>
+  <pre id="code2"><code>&lt;script&gt;
+    var languageHori = document.documentElement.lang;
+  
+  //1. load data
+  var csvfilesHori = [
+    'https://test.canada.ca/phac-aspc/design-system/library/bar-graphs/vertical_data.csv', // 0
+  ]
+  var promisesHori = [];
+  csvfilesHori.forEach(function(url) {
+    promisesHori.push(d3.csv(url))
+  });
+  
+  //Request + response + and then...
+  Promise.all(promisesHori)
+  .then(function(datasets) {
+    processDataHori(datasets[0]);
+  })
+
+  const createGraphHori = (graphID, svgID, width, height) => conditionalAppendHori(d3.select(svgID), "svg", `#svg-${graphID}`)
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", "0 0 " + (width) + " " + (height))
+    .attr("id", `svg-${graphID}`)
+  
+  // Append an element if no match is found, otherwise select the existing one
+  function conditionalAppendHori(parent, type, additionalSelector = "") {
+    const existing = parent.select(`${type}${additionalSelector}`)
+  
+    return !existing.empty() ? existing : parent.append(type);
+  }
+  // Insert an element if no match is found, otherwise select the existing one
+  function conditionalInsertHori(parent, type, before, additionalSelector = "") {
+    const existing = parent.select(`${type}${additionalSelector}`)
+    return !existing.empty() ? existing : parent.insert(type, before);
+  }
+  
+  class VisualHori {
+    constructor(draw) {
+      this._draw = draw
+    }
+  
+    draw(data, ...args) {
+      this._draw(data, ...args)
+    }
+  }
+  
+  const paletteHori = {
+    Yellow: "#FBDD69",
+    Orange: "#FF9258",
+    LightBlue: "#93D9FF",
+    Teal: "#2C93B4",
+    Green: "#00727D"
+  }
+  
+  //2.
+  function processDataHori(data){
+      horizontalGraph.draw(data, `#horizontal`, 430, 250);
+  }
+
+
+  //4.2
+  let horizontalGraph = new VisualHori(
+    function(data, svgID, svgWidth, svgHeight) {
+      
+  // 		const formatValueWithUnit = (d) => data[d]
+          const dataGrouped = d3.group(data, d => d.fruit);
+  
+      const svg = createGraphHori("horiical", svgID, svgWidth, svgHeight)
+  
+      const margin = { top: 20, right: 20, bottom: 70, left: 110 },
+        width = svgWidth - (margin.left + margin.right),
+        height = svgHeight - (margin.top + margin.bottom),
+        gHori = conditionalAppendHori(svg, "g").attr("transform", `translate(${margin.left}, ${margin.top})`)
+      
+      let domainArr = d3.map(data, d => d.fruit);
+      const colour = d3.scaleOrdinal().domain(domainArr).range([palette.Orange, palette.Teal, palette.Yellow, palette.Orange, palette.Teal, palette.Yellow, palette.Orange, palette.Yellow])
+  
+      /* SEX GRAPH */
+      let xArray = {"en":	["Apples", "Oranges", "Pears", "Bananas"], "fr": ["Pommes", "Oranges", "Poires", "Bananes"]};
+      let x = d3.scaleBand().domain(domainArr).range([0, height]).padding(0.4);
+      
+      const maxY = d3.max(data, function(d) { console.log(+d.quantity); return +d.quantity;} );
+      let y = d3.scaleLinear().domain([0, maxY + 1]).range([0,height]);
+  
+      let axisHori = conditionalAppendHori(gHori, "g", ".axisHori")
+        .classed("axisHori", true)
+  
+      let x_axisHori = conditionalAppendHori(axisHori, "g", ".x_axisHori")
+        .classed("x_axisHori", true)
+  
+      x_axisHori
+        .attr("transform", "translate(0,0)")
+        .call(d3.axisLeft(x))
+        .selectAll("text")
+        // .attr("transform", "rotate(-35)")
+        .classed("x_axisText", true)
+        .attr("font-size", "0.9rem")
+        // .style("text-anchor", "end")
+        .text(function(d,i){
+          return xArray[language][i];
+        })
+  // 			.call(wrapHori,75);
+        
+      let y_axisHori = conditionalAppendHori(axisHori, "g", ".y_axisHori")
+        .classed("y_axisHori", true)	
+        
+      y_axisHori
+        .attr("id", "y_axisHori")
+        .attr("transform", "translate(0," + (height) + ")")
+        .call(d3.axisBottom(y).ticks(5).tickFormat(function(d) {
+          return d;
+        }))
+        .selectAll("text")
+        .attr("class", "axisTextHori")
+        .attr("font-size", "0.9rem")
+  
+      svg.append("text")
+        .attr("class", "y-axis-text-hori")
+        .text(function(d,i){
+            if(language == "en"){
+                return 'Quantity';
+            }else{
+                return 'Quantité';
+            }
+        })
+        .attr("x", 10)
+  // 			.attr("y", height/3)
+        .attr("font-size", "1.2rem")
+        .attr("transform", "translate(" + (width / 2) + "," + ((height + margin.top ) + (margin.bottom / 1.5)) +")")
+  // 			.call(wrap, 350)	
+  
+      svg.append("text")
+        .attr("class", "x-axis-text-hori")
+        .text(function(d,i){
+            if(language == "en"){
+                return 'Fruits';
+            }else{
+                return 'Fruits';
+            }
+        })
+        .attr("transform", "translate(20,"+(height/1.1)+")rotate(-90)")
+        .attr("x", 10)
+        .attr("y", 10)
+        .attr("font-size", "1.2rem")
+  // 			.call(wrap, 350)
+  
+      // bars
+      let rectGroup = conditionalAppendHori(gHori, "g", "#mainChartAreaHori")
+        .attr("id", "mainChartAreaHori")
+        .selectAll("g")
+        .data(domainArr)
+        .join("g")
+        .attr("id", d => d.replace(/\s/g, ''))
+  
+      const rects = rectGroup.selectAll("rect")
+        .data(d => [d])
+        .join("rect")
+        .attr("fill", "#008080") //d => colour(d))
+        .attr("y", d => x(d))
+        .attr("height", x.bandwidth())
+        .each(function(d) {
+          conditionalAppendHori(d3.select(this), "title")
+            .text(d)
+        })
+        .transition().duration(1000)
+        .attr("x", d => y(0.05))
+        .attr("width", d => y(dataGrouped.get(d)[0].quantity))
+  
+      rectGroup.selectAll("text")
+        .data(d => [d])
+        .join("text")
+        .style("text-anchor", "middle")
+        .classed("rectTextHori", true)
+        .attr("font-size", "1rem")
+        .attr("font-weight", "bold")
+        .attr("y", d => x(d) + x.bandwidth() / 1.5)
+        .transition().duration(1000)
+        .attr("x", d => y(dataGrouped.get(d)[0].quantity) + 15)
+        .tween("text", function(d) {
+          let item = d3.select(this);
+          if (item.property("previousValue") === undefined)
+            item.property("previousValue", dataGrouped.get(d)[0].quantity);
+          let i = d3.interpolateNumber(item.property("previousValue"), dataGrouped.get(d)[0].quantity);
+          if (dataGrouped.get(d)[0].quantity === "" || dataGrouped.get(d)[0].quantity === 0) {
+            item.text("N/A");
+            item.property("previousValue", 0);
+          }
+          else {
+            item.property("previousValue", dataGrouped.get(d)[0].quantity);
+            return function(t) { return item.text(d3.format(".1f")(i(t))); };
+          }
+        })
+        .on("end",()=>{
+          // d3.selectAll(".rectText").call(wrap,100);
+        })
+    }
+  )
+&lt;/script&gt;</code></pre>
+</details>
 </div>
 
 <div class="graph viztype3 mrgn-tp-md">
@@ -760,6 +970,205 @@ dir="ltr"><![endif]-->
   document.execCommand('copy');
   window.getSelection().removeAllRanges();
   }
+</script>
+
+<script>
+
+  var languageHori = document.documentElement.lang;
+  
+  //1. load data
+  var csvfilesHori = [
+    'https://test.canada.ca/phac-aspc/design-system/library/bar-graphs/vertical_data.csv', // 0
+  ]
+  var promisesHori = [];
+  csvfilesHori.forEach(function(url) {
+    promisesHori.push(d3.csv(url))
+  });
+  
+  //Request + response + and then...
+  Promise.all(promisesHori)
+  .then(function(datasets) {
+    processDataHori(datasets[0]);
+  })
+
+  const createGraphHori = (graphID, svgID, width, height) => conditionalAppendHori(d3.select(svgID), "svg", `#svg-${graphID}`)
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", "0 0 " + (width) + " " + (height))
+    .attr("id", `svg-${graphID}`)
+  
+  // Append an element if no match is found, otherwise select the existing one
+  function conditionalAppendHori(parent, type, additionalSelector = "") {
+    const existing = parent.select(`${type}${additionalSelector}`)
+  
+    return !existing.empty() ? existing : parent.append(type);
+  }
+  // Insert an element if no match is found, otherwise select the existing one
+  function conditionalInsertHori(parent, type, before, additionalSelector = "") {
+    const existing = parent.select(`${type}${additionalSelector}`)
+    return !existing.empty() ? existing : parent.insert(type, before);
+  }
+  
+  class VisualHori {
+    constructor(draw) {
+      this._draw = draw
+    }
+  
+    draw(data, ...args) {
+      this._draw(data, ...args)
+    }
+  }
+  
+  const paletteHori = {
+    Yellow: "#FBDD69",
+    Orange: "#FF9258",
+    LightBlue: "#93D9FF",
+    Teal: "#2C93B4",
+    Green: "#00727D"
+  }
+  
+  //2.
+  function processDataHori(data){
+      horizontalGraph.draw(data, `#horizontal`, 430, 250);
+  }
+
+
+  //4.2
+  let horizontalGraph = new VisualHori(
+    function(data, svgID, svgWidth, svgHeight) {
+      
+  // 		const formatValueWithUnit = (d) => data[d]
+          const dataGrouped = d3.group(data, d => d.fruit);
+  
+      const svg = createGraphHori("horiical", svgID, svgWidth, svgHeight)
+  
+      const margin = { top: 20, right: 20, bottom: 70, left: 110 },
+        width = svgWidth - (margin.left + margin.right),
+        height = svgHeight - (margin.top + margin.bottom),
+        gHori = conditionalAppendHori(svg, "g").attr("transform", `translate(${margin.left}, ${margin.top})`)
+      
+      let domainArr = d3.map(data, d => d.fruit);
+      const colour = d3.scaleOrdinal().domain(domainArr).range([palette.Orange, palette.Teal, palette.Yellow, palette.Orange, palette.Teal, palette.Yellow, palette.Orange, palette.Yellow])
+  
+      /* SEX GRAPH */
+      let xArray = {"en":	["Apples", "Oranges", "Pears", "Bananas"], "fr": ["Pommes", "Oranges", "Poires", "Bananes"]};
+      let x = d3.scaleBand().domain(domainArr).range([0, height]).padding(0.4);
+      
+      const maxY = d3.max(data, function(d) { console.log(+d.quantity); return +d.quantity;} );
+      let y = d3.scaleLinear().domain([0, maxY + 1]).range([0,height]);
+  
+      let axisHori = conditionalAppendHori(gHori, "g", ".axisHori")
+        .classed("axisHori", true)
+  
+      let x_axisHori = conditionalAppendHori(axisHori, "g", ".x_axisHori")
+        .classed("x_axisHori", true)
+  
+      x_axisHori
+        .attr("transform", "translate(0,0)")
+        .call(d3.axisLeft(x))
+        .selectAll("text")
+        // .attr("transform", "rotate(-35)")
+        .classed("x_axisText", true)
+        .attr("font-size", "0.9rem")
+        // .style("text-anchor", "end")
+        .text(function(d,i){
+          return xArray[language][i];
+        })
+  // 			.call(wrapHori,75);
+        
+      let y_axisHori = conditionalAppendHori(axisHori, "g", ".y_axisHori")
+        .classed("y_axisHori", true)	
+        
+      y_axisHori
+        .attr("id", "y_axisHori")
+        .attr("transform", "translate(0," + (height) + ")")
+        .call(d3.axisBottom(y).ticks(5).tickFormat(function(d) {
+          return d;
+        }))
+        .selectAll("text")
+        .attr("class", "axisTextHori")
+        .attr("font-size", "0.9rem")
+  
+      svg.append("text")
+        .attr("class", "y-axis-text-hori")
+        .text(function(d,i){
+            if(language == "en"){
+                return 'Quantity';
+            }else{
+                return 'Quantité';
+            }
+        })
+        .attr("x", 10)
+  // 			.attr("y", height/3)
+        .attr("font-size", "1.2rem")
+        .attr("transform", "translate(" + (width / 2) + "," + ((height + margin.top ) + (margin.bottom / 1.5)) +")")
+  // 			.call(wrap, 350)	
+  
+      svg.append("text")
+        .attr("class", "x-axis-text-hori")
+        .text(function(d,i){
+            if(language == "en"){
+                return 'Fruits';
+            }else{
+                return 'Fruits';
+            }
+        })
+        .attr("transform", "translate(20,"+(height/1.1)+")rotate(-90)")
+        .attr("x", 10)
+        .attr("y", 10)
+        .attr("font-size", "1.2rem")
+  // 			.call(wrap, 350)
+  
+      // bars
+      let rectGroup = conditionalAppendHori(gHori, "g", "#mainChartAreaHori")
+        .attr("id", "mainChartAreaHori")
+        .selectAll("g")
+        .data(domainArr)
+        .join("g")
+        .attr("id", d => d.replace(/\s/g, ''))
+  
+      const rects = rectGroup.selectAll("rect")
+        .data(d => [d])
+        .join("rect")
+        .attr("fill", "#008080") //d => colour(d))
+        .attr("y", d => x(d))
+        .attr("height", x.bandwidth())
+        .each(function(d) {
+          conditionalAppendHori(d3.select(this), "title")
+            .text(d)
+        })
+        .transition().duration(1000)
+        .attr("x", d => y(0.05))
+        .attr("width", d => y(dataGrouped.get(d)[0].quantity))
+  
+      rectGroup.selectAll("text")
+        .data(d => [d])
+        .join("text")
+        .style("text-anchor", "middle")
+        .classed("rectTextHori", true)
+        .attr("font-size", "1rem")
+        .attr("font-weight", "bold")
+        .attr("y", d => x(d) + x.bandwidth() / 1.5)
+        .transition().duration(1000)
+        .attr("x", d => y(dataGrouped.get(d)[0].quantity) + 15)
+        .tween("text", function(d) {
+          let item = d3.select(this);
+          if (item.property("previousValue") === undefined)
+            item.property("previousValue", dataGrouped.get(d)[0].quantity);
+          let i = d3.interpolateNumber(item.property("previousValue"), dataGrouped.get(d)[0].quantity);
+          if (dataGrouped.get(d)[0].quantity === "" || dataGrouped.get(d)[0].quantity === 0) {
+            item.text("N/A");
+            item.property("previousValue", 0);
+          }
+          else {
+            item.property("previousValue", dataGrouped.get(d)[0].quantity);
+            return function(t) { return item.text(d3.format(".1f")(i(t))); };
+          }
+        })
+        .on("end",()=>{
+          // d3.selectAll(".rectText").call(wrap,100);
+        })
+    }
+  )
 </script>
   </body>
 </html>

@@ -764,41 +764,41 @@ dir="ltr"><![endif]-->
 
 <script>
 
-  var language = document.documentElement.lang;
+  var languageHori = document.documentElement.lang;
   
   //1. load data
-  var csvfiles = [
+  var csvfilesHori = [
     'https://test.canada.ca/phac-aspc/design-system/library/bar-graphs/vertical_data.csv', // 0
   ]
-  var promises = [];
-  csvfiles.forEach(function(url) {
-    promises.push(d3.csv(url))
+  var promisesHori = [];
+  csvfilesHori.forEach(function(url) {
+    promisesHori.push(d3.csv(url))
   });
   
   //Request + response + and then...
-  Promise.all(promises)
+  Promise.all(promisesHori)
   .then(function(datasets) {
-    processData(datasets[0]);
+    processDataHori(datasets[0]);
   })
 
-  const createGraphhorizontal = (graphID, svgID, width, height) => conditionalAppend(d3.select(svgID), "svg", `#svg-${graphID}`)
+  const createGraphHori = (graphID, svgID, width, height) => conditionalAppendHori(d3.select(svgID), "svg", `#svg-${graphID}`)
     .attr("preserveAspectRatio", "xMinYMin meet")
     .attr("viewBox", "0 0 " + (width) + " " + (height))
     .attr("id", `svg-${graphID}`)
   
   // Append an element if no match is found, otherwise select the existing one
-  function conditionalAppend(parent, type, additionalSelector = "") {
+  function conditionalAppendHori(parent, type, additionalSelector = "") {
     const existing = parent.select(`${type}${additionalSelector}`)
   
     return !existing.empty() ? existing : parent.append(type);
   }
   // Insert an element if no match is found, otherwise select the existing one
-  function conditionalInsert(parent, type, before, additionalSelector = "") {
+  function conditionalInsertHori(parent, type, before, additionalSelector = "") {
     const existing = parent.select(`${type}${additionalSelector}`)
     return !existing.empty() ? existing : parent.insert(type, before);
   }
   
-  class VisualHorizontal {
+  class VisualHori {
     constructor(draw) {
       this._draw = draw
     }
@@ -808,7 +808,7 @@ dir="ltr"><![endif]-->
     }
   }
   
-  const paletteHorizontal = {
+  const paletteHori = {
     Yellow: "#FBDD69",
     Orange: "#FF9258",
     LightBlue: "#93D9FF",
@@ -817,43 +817,42 @@ dir="ltr"><![endif]-->
   }
   
   //2.
-  function processData(data){
+  function processDataHori(data){
       horizontalGraph.draw(data, `#horizontal`, 430, 250);
   }
 
 
   //4.2
-  let horizontalGraph = new VisualHorizontal(
+  let horizontalGraph = new VisualHori(
     function(data, svgID, svgWidth, svgHeight) {
       
   // 		const formatValueWithUnit = (d) => data[d]
           const dataGrouped = d3.group(data, d => d.fruit);
   
-      const svg = createGraphhorizontal("horizontal", svgID, svgWidth, svgHeight)
+      const svg = createGraphHori("horiical", svgID, svgWidth, svgHeight)
   
       const margin = { top: 20, right: 20, bottom: 70, left: 110 },
         width = svgWidth - (margin.left + margin.right),
         height = svgHeight - (margin.top + margin.bottom),
-        g = conditionalAppend(svg, "g").attr("transform", `translate(${margin.left}, ${margin.top})`)
+        gHori = conditionalAppendHori(svg, "g").attr("transform", `translate(${margin.left}, ${margin.top})`)
       
       let domainArr = d3.map(data, d => d.fruit);
-      const colour = d3.scaleOrdinal().domain(domainArr).range([paletteHorizontal.Orange, paletteHorizontal.Teal, paletteHorizontal.Yellow, paletteHorizontal.Orange, paletteHorizontal.Teal, paletteHorizontal.Yellow, paletteHorizontal.Orange, paletteHorizontal.Yellow])
+      const colour = d3.scaleOrdinal().domain(domainArr).range([palette.Orange, palette.Teal, palette.Yellow, palette.Orange, palette.Teal, palette.Yellow, palette.Orange, palette.Yellow])
   
       /* SEX GRAPH */
-      // axis
       let xArray = {"en":	["Apples", "Oranges", "Pears", "Bananas"], "fr": ["Pommes", "Oranges", "Poires", "Bananes"]};
       let x = d3.scaleBand().domain(domainArr).range([0, height]).padding(0.4);
       
       const maxY = d3.max(data, function(d) { console.log(+d.quantity); return +d.quantity;} );
       let y = d3.scaleLinear().domain([0, maxY + 1]).range([0,height]);
   
-      let axis = conditionalAppend(g, "g", ".axis")
-        .classed("axis", true)
+      let axisHori = conditionalAppendHori(gHori, "g", ".axisHori")
+        .classed("axisHori", true)
   
-      let x_axis = conditionalAppend(axis, "g", ".x_axis")
-        .classed("x_axis", true)
+      let x_axisHori = conditionalAppendHori(axisHori, "g", ".x_axisHori")
+        .classed("x_axisHori", true)
   
-      x_axis
+      x_axisHori
         .attr("transform", "translate(0,0)")
         .call(d3.axisLeft(x))
         .selectAll("text")
@@ -866,21 +865,21 @@ dir="ltr"><![endif]-->
         })
   // 			.call(wrapHori,75);
         
-      let y_axis = conditionalAppend(axis, "g", ".y_axis")
-        .classed("y_axis", true)	
+      let y_axisHori = conditionalAppendHori(axisHori, "g", ".y_axisHori")
+        .classed("y_axisHori", true)	
         
-      y_axis
-        .attr("id", "y_axis")
+      y_axisHori
+        .attr("id", "y_axisHori")
         .attr("transform", "translate(0," + (height) + ")")
         .call(d3.axisBottom(y).ticks(5).tickFormat(function(d) {
           return d;
         }))
         .selectAll("text")
-        .attr("class", "axisText")
+        .attr("class", "axisTextHori")
         .attr("font-size", "0.9rem")
   
       svg.append("text")
-        .attr("class", "y-axis-text")
+        .attr("class", "y-axis-text-hori")
         .text(function(d,i){
             if(language == "en"){
                 return 'Quantity';
@@ -895,7 +894,7 @@ dir="ltr"><![endif]-->
   // 			.call(wrap, 350)	
   
       svg.append("text")
-        .attr("class", "x-axis-text")
+        .attr("class", "x-axis-text-hori")
         .text(function(d,i){
             if(language == "en"){
                 return 'Fruits';
@@ -910,8 +909,8 @@ dir="ltr"><![endif]-->
   // 			.call(wrap, 350)
   
       // bars
-      let rectGroup = conditionalAppend(g, "g", "#mainChartAreaGender")
-        .attr("id", "mainChartAreaGender")
+      let rectGroup = conditionalAppendHori(gHori, "g", "#mainChartAreaHori")
+        .attr("id", "mainChartAreaHori")
         .selectAll("g")
         .data(domainArr)
         .join("g")
@@ -924,7 +923,7 @@ dir="ltr"><![endif]-->
         .attr("y", d => x(d))
         .attr("height", x.bandwidth())
         .each(function(d) {
-          conditionalAppend(d3.select(this), "title")
+          conditionalAppendHori(d3.select(this), "title")
             .text(d)
         })
         .transition().duration(1000)
@@ -935,7 +934,7 @@ dir="ltr"><![endif]-->
         .data(d => [d])
         .join("text")
         .style("text-anchor", "middle")
-        .classed("rectText", true)
+        .classed("rectTextHori", true)
         .attr("font-size", "1rem")
         .attr("font-weight", "bold")
         .attr("y", d => x(d) + x.bandwidth() / 1.5)
@@ -961,6 +960,5 @@ dir="ltr"><![endif]-->
     }
   )
 </script>
-
   </body>
 </html>
