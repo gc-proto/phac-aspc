@@ -329,15 +329,29 @@ dir="ltr"><![endif]-->
 
 &lt;!-- Add this script --&gt;
 &lt;script&gt;
-  function CopyToClipboard(id)
-  {
-  var r = document.createRange();
-  r.selectNode(document.getElementById(id));
-  window.getSelection().removeAllRanges();
-  window.getSelection().addRange(r);
-  document.execCommand('copy');
-  window.getSelection().removeAllRanges();
-  }
+// multiSelectExample
+  $('#multiSelectExample').addClass("selectpicker")
+  $('#multiSelectExample').selectpicker({
+      dropdownAlignRight: true,
+      dropupAuto: false,
+      selectedTextFormat: "count",
+      size: 10,
+      liveSearch: true
+  });
+
+  $("#multiSelectExample").on("change", function(e, clickedIndex, newValue, oldValue) {
+      var sel = $(this).val();
+      //console.log(sel)	
+      if (sel.indexOf("selectAll") > -1) {
+          $('#multiSelectExample').selectpicker('val', ["Apple", "Orange", "Grape", "Banana"]);
+          $('#multiSelectExample').selectpicker("refresh")
+      }
+      else if (sel.indexOf("deselectAll") > -1) {
+          $('#multiSelectExample').selectpicker('val', []);
+          $('#multiSelectExample').selectpicker("refresh")
+      }
+      
+  })
 &lt;/script&gt</code></pre>
     </details>
     </div>
@@ -573,9 +587,8 @@ $(document).ready(function(){
     });
 });
 </script>
-<script>
-document.getElementById('graph1').click();
-</script>
+
+
 
   </body>
 </html>

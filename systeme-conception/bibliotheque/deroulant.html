@@ -280,15 +280,15 @@ dir="ltr"><![endif]-->
   <details>
     <summary>HTML</summary>
     <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copier dans le presse-papiers</button>
-    <pre id="code1"><code>&lt;!-- Note that the options could be generated dynamically instead --&gt;
+    <pre id="code1"><code>&lt;!-- Noter que les options pourraient être générées de façon dynamique --&gt;
 
 &lt;select multiple id="multiSelectExample"&gt;
-&lt;option class="actionBtn" value="selectAll"&gt;Select all&lt;/option&gt;
-&lt;option class="actionBtn" value="deselectAll"&gt;Deselect all&lt;/option&gt;
-&lt;option&gt;Apple&lt;/option&gt;
-&lt;option&gt;Orange&lt;/option&gt;
-&lt;option&gt;Grape&lt;/option&gt;
-&lt;option&gt;Banana&lt;/option&gt;
+ &lt;option class="actionBtn" value="selectAll"&gt;Tout sélectionner&lt;/option&gt;
+ &lt;option class="actionBtn" value="deselectAll"&gt;Tout désélectionner&lt;/option&gt;
+ &lt;option&gt;Pomme&lt;/option&gt;
+ &lt;option&gt;Orange&lt;/option&gt;
+ &lt;option&gt;Raisin&lt;/option&gt;
+ &lt;option&gt;Banane&lt;/option&gt;
 &lt;/select&gt;</code></pre>
   </details>
   <details>
@@ -323,23 +323,37 @@ dir="ltr"><![endif]-->
   <details>
     <summary>JS</summary>
     <button class="btn btn-default" onclick="CopyToClipboard('code3');return false;">Copier dans le presse-papiers</button>
-    <pre id="code3"><code>&lt;&lt;!-- Add these references --&gt;
+    <pre id="code3"><code>&lt;&lt;!-- Ajouter ces références --&gt;
 &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"&gt;&lt;/script&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"&gt;&lt;/script&gt;
 &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"&gt;&lt;/script&gt;
 &lt;script src="https://infobase-dev.com/src/js/bootstrap-select/bootstrap-select.js"&gt;&lt;/script&gt;
 
-&lt;!-- Add this script --&gt;
+&lt;!-- Ajouter ce script--&gt;
 &lt;script&gt;
-function CopyToClipboard(id)
-{
-var r = document.createRange();
-r.selectNode(document.getElementById(id));
-window.getSelection().removeAllRanges();
-window.getSelection().addRange(r);
-document.execCommand('copy');
-window.getSelection().removeAllRanges();
-}
+// multiSelectExample
+  $('#multiSelectExample').addClass("selectpicker")
+  $('#multiSelectExample').selectpicker({
+      dropdownAlignRight: true,
+      dropupAuto: false,
+      selectedTextFormat: "count",
+      size: 10,
+      liveSearch: true
+  });
+
+  $("#multiSelectExample").on("change", function(e, clickedIndex, newValue, oldValue) {
+      var sel = $(this).val();
+      //console.log(sel)	
+      if (sel.indexOf("selectAll") > -1) {
+          $('#multiSelectExample').selectpicker('val', ["Pomme", "Orange", "Raisin", "Banane"]);
+          $('#multiSelectExample').selectpicker("refresh")
+      }
+      else if (sel.indexOf("deselectAll") > -1) {
+          $('#multiSelectExample').selectpicker('val', []);
+          $('#multiSelectExample').selectpicker("refresh")
+      }
+      
+  })
 &lt;/script&gt</code></pre>
   </details>
   </div>
@@ -352,7 +366,6 @@ window.getSelection().removeAllRanges();
           <optgroup label="Types of statistics">
               <option selected value="num" class="toggleBtns">Nombre</option>
               <option value="rate" class="toggleBtns">Taux</option>
-              <!--<option value="avg" class="toggleBtns">Moving average</option>-->
           </optgroup>
       </select>
       <span class="titleNumMod">de</span>
@@ -382,30 +395,29 @@ window.getSelection().removeAllRanges();
     <summary>HTML</summary>
     <button class="btn btn-default" onclick="CopyToClipboard('code4');return false;">Copier dans le presse-papiers</button>
     <pre id="code4"><code>&lt;h3&gt;
-&lt;label for="dropdownType3" class="wb-inv"&gt;Types of statistics&lt;/label&gt;
+&lt;label for="dropdownType3" class="wb-inv"&gt;Types de statistiques&lt;/label&gt;
 &lt;select id="dropdownType3" class="form-control dropdown form-inline"&gt;
   &lt;optgroup label="Types of statistics"&gt;
-    &lt;option selected value="num" class="toggleBtns"&gt;Count&lt;/option&gt;
-    &lt;option value="rate" class="toggleBtns"&gt;Rate&lt;/option&gt;
-    &lt;!--&lt;option value="avg" class="toggleBtns"&gt;Moving average&lt;/option&gt;--&gt;
+    &lt;option selected value="num" class="toggleBtns"&gt;Nombre&lt;/option&gt;
+    &lt;option value="rate" class="toggleBtns"&gt;Taux&lt;/option&gt;
   &lt;/optgroup&gt;
 &lt;/select&gt;
 &lt;span class="titleNumMod"&gt;of&lt;/span&gt;
-&lt;label for="dropdownType1" class="wb-inv"&gt;Types of measures&lt;/label&gt;
+&lt;label for="dropdownType1" class="wb-inv"&gt;Types de mesures&lt;/label&gt;
 &lt;select id="dropdownType1" class="form-control dropdown form-inline"&gt;
   &lt;optgroup label="Types of measures"&gt;
-    &lt;option value="cases_total" class="toggleBtns"&gt;total cases&lt;/option&gt;
-    &lt;option selected value="cases_weekly" class="toggleBtns"&gt;cases (last 7 days)&lt;/option&gt;
-    &lt;option value="cases_last14" class="toggleBtns"&gt;cases (last 14 days)&lt;/option&gt;
-    &lt;option value="deaths_total" class="toggleBtns"&gt;deaths&lt;/option&gt;
-    &lt;option value="deaths_weekly" class="toggleBtns"&gt;deaths (last 7 days)&lt;/option&gt;
-    &lt;option value="deaths_last14" class="toggleBtns"&gt;deaths (last 14 days)&lt;/option&gt;
+    &lt;option value="cases_total" class="toggleBtns"&gt;cas totaux&lt;/option&gt;
+    &lt;option selected value="cases_weekly" class="toggleBtns"&gt;cas (depuis la dernière semaine)&lt;/option&gt;
+    &lt;option value="cases_last14" class="toggleBtns"&gt;cas (depuis les 2 dernières semaines)&lt;/option&gt;
+    &lt;option value="deaths_total" class="toggleBtns"&gt;décès totaux&lt;/option&gt;
+    &lt;option value="deaths_weekly" class="toggleBtns"&gt;décès (depuis la dernière semaine)&lt;/option&gt;
+    &lt;option value="deaths_last14" class="toggleBtns"&gt;décès (depuis les 2 dernières semaines)&lt;/option&gt;
   &lt;/optgroup&gt;  &lt;/select&gt;
 &lt;span class="numArticle"&gt;of&lt;/span&gt; COVID-19, &lt;label for="dropdownType4" class="wb-inv"&gt;Types of statistics&lt;/label&gt;
 &lt;select id="dropdownType4" class="form-control dropdown form-inline"&gt;
   &lt;optgroup label="Types of statistics"&gt;
-    &lt;option selected value="pt" class="toggleBtns"&gt;province/territory&lt;/option&gt;
-    &lt;option value="hr" class="toggleBtns"&gt;health region&lt;/option&gt;
+    &lt;option selected value="pt" class="toggleBtns"&gt;province/territoire&lt;/option&gt;
+    &lt;option value="hr" class="toggleBtns"&gt;région de santé&lt;/option&gt;
   &lt;/optgroup&gt;
 &lt;/select&gt;
 &lt;/h3&gt;</code></pre>
@@ -559,7 +571,7 @@ padding:3px 9px;
                 var sel = $(this).val();
                 //console.log(sel)	
                 if (sel.indexOf("selectAll") > -1) {
-                    $('#multiSelectExample').selectpicker('val', ["Apple", "Orange", "Grape", "Banana"]);
+                    $('#multiSelectExample').selectpicker('val', ["Pomme", "Orange", "Raisin", "Banane"]);
                     $('#multiSelectExample').selectpicker("refresh")
                 }
                 else if (sel.indexOf("deselectAll") > -1) {
