@@ -38,32 +38,35 @@ dir="ltr"><![endif]-->
 </head>
 
 <style>
-  .actionBtn {
-      /*background-color: lightgray;*/
-      border: 1px solid lightgray;
-      /*font-weight: bold;*/
-      margin: 3px;
-      border-radius: 4px;
-  }
+   .actionBtn {
+                /*background-color: lightgray;*/
+                border: 1px solid lightgray;
+                /*font-weight: bold;*/
+                margin: 3px;
+                border-radius: 4px;
+            }
 
-  .bootstrap-select>.dropdown-toggle {
-      background: white;
-      border: 3px solid black;
-  }
-  
-  .dropdown-toggle::after {
-      display: inline-block;
-      width: 0;
-      height: 0;
-      margin-left: 0.255em;
-      vertical-align: 0.255em;
-      content: "";
-      border-top: 0.3em solid;
-      border-right: 0.3em solid transparent;
-      border-bottom: 0;
-      border-left: 0.3em solid transparent;
-  }
+            .bootstrap-select>.dropdown-toggle {
+                background: white;
+                border: 3px solid black;
+            }
+            
+            .dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
 
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 250px;
+}
   .dropdown {
   display:inline; 
   font-size:1.1em; 
@@ -294,30 +297,34 @@ dir="ltr"><![endif]-->
   <details>
     <summary>CSS</summary>
     <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copier dans le presse-papiers</button>
-    <pre id="code2"><code>.actionBtn {
-  /*background-color: lightgray;*/
-  border: 1px solid lightgray;
-  /*font-weight: bold;*/
-  margin: 3px;
-  border-radius: 4px;
+    <pre id="code2"><code> .actionBtn {
+    /*background-color: lightgray;*/
+    border: 1px solid lightgray;
+    /*font-weight: bold;*/
+    margin: 3px;
+    border-radius: 4px;
 }
 
 .bootstrap-select>.dropdown-toggle {
-  background: white;
-  border: 3px solid black;
+    background: white;
+    border: 3px solid black;
+}
+  
+  .dropdown-toggle::after {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 0.255em;
+vertical-align: 0.255em;
+content: "";
+border-top: 0.3em solid;
+border-right: 0.3em solid transparent;
+border-bottom: 0;
+border-left: 0.3em solid transparent;
 }
 
-.dropdown-toggle::after {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 0.255em;
-  vertical-align: 0.255em;
-  content: "";
-  border-top: 0.3em solid;
-  border-right: 0.3em solid transparent;
-  border-bottom: 0;
-  border-left: 0.3em solid transparent;
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+width: 250px;
 }</code></pre>
   </details>
   <details>
@@ -332,17 +339,46 @@ dir="ltr"><![endif]-->
 &lt;!-- Ajouter ce script--&gt;
 &lt;script&gt;
 // multiSelectExample
-  $('#multiSelectExample').addClass("selectpicker")
-  $('#multiSelectExample').selectpicker({
-      dropdownAlignRight: true,
-      dropupAuto: false,
-      selectedTextFormat: "count",
-      size: 10,
-      liveSearch: true
-  });
+            var language = document.documentElement.lang;
+            $(document).ready(function(){
+                
+            $('#multiSelectExample').addClass("selectpicker")
+            
+            if (language == "en") {	
+			$('#multiSelectExample').selectpicker({	
+				dropdownAlignRight: true,	
+				dropupAuto: false,	
+				selectedTextFormat: "count",	
+				size: 10,	
+				liveSearch: true,	
+				noneSelectedText: "No fruits selected",	
+				countSelectedText: "{0} fruits selected",	
+				// width: "100%"	
+				// actionsBox: true,	
+				// selectAllText: "Select all",	
+				// deselectAllText: "Deselect all",	
+			});	
+		}	
+		else {	
+		    
+			$('#multiSelectExample').selectpicker({	
+				dropdownAlignRight: true,	
+				dropupAuto: false,	
+				selectedTextFormat: "count",	
+				size: 10,	
+				liveSearch: true,	
+				noneSelectedText: "Pas de fruits selectionnés",	
+				countSelectedText: "{0} fruits selectionnés",	
+				// actionsBox: true,	
+				// selectAllText: "Tout sélectionner",	
+				// deselectAllText: "Tout désélectionner",	
+			});	
+		}
+		
 
   $("#multiSelectExample").on("change", function(e, clickedIndex, newValue, oldValue) {
-      var sel = $(this).val();
+      var sel = $(this).val() || [];
+      console.log(sel)
       //console.log(sel)	
       if (sel.indexOf("selectAll") > -1) {
           $('#multiSelectExample').selectpicker('val', ["Pomme", "Orange", "Raisin", "Banane"]);
@@ -353,6 +389,7 @@ dir="ltr"><![endif]-->
           $('#multiSelectExample').selectpicker("refresh")
       }
       
+  })
   })
 &lt;/script&gt</code></pre>
   </details>
@@ -558,29 +595,59 @@ padding:3px 9px;
           
           <script type="text/javascript">
             // multiSelectExample
-            $('#multiSelectExample').addClass("selectpicker")
-            $('#multiSelectExample').selectpicker({
-                dropdownAlignRight: true,
-                dropupAuto: false,
-                selectedTextFormat: "count",
-                size: 10,
-                liveSearch: true
-            });
-          
-            $("#multiSelectExample").on("change", function(e, clickedIndex, newValue, oldValue) {
-                var sel = $(this).val();
-                //console.log(sel)	
-                if (sel.indexOf("selectAll") > -1) {
-                    $('#multiSelectExample').selectpicker('val', ["Pomme", "Orange", "Raisin", "Banane"]);
-                    $('#multiSelectExample').selectpicker("refresh")
-                }
-                else if (sel.indexOf("deselectAll") > -1) {
-                    $('#multiSelectExample').selectpicker('val', []);
-                    $('#multiSelectExample').selectpicker("refresh")
-                }
+            var language = document.documentElement.lang;
+            $(document).ready(function(){
                 
-            })
-          </script>
+            $('#multiSelectExample').addClass("selectpicker")
+            
+            if (language == "en") {	
+			$('#multiSelectExample').selectpicker({	
+				dropdownAlignRight: true,	
+				dropupAuto: false,	
+				selectedTextFormat: "count",	
+				size: 10,	
+				liveSearch: true,	
+				noneSelectedText: "No fruits selected",	
+				countSelectedText: "{0} fruits selected",	
+				// width: "100%"	
+				// actionsBox: true,	
+				// selectAllText: "Select all",	
+				// deselectAllText: "Deselect all",	
+			});	
+		}	
+		else {	
+		    
+			$('#multiSelectExample').selectpicker({	
+				dropdownAlignRight: true,	
+				dropupAuto: false,	
+				selectedTextFormat: "count",	
+				size: 10,	
+				liveSearch: true,	
+				noneSelectedText: "Pas de fruits selectionnés",	
+				countSelectedText: "{0} fruits selectionnés",	
+				// actionsBox: true,	
+				// selectAllText: "Tout sélectionner",	
+				// deselectAllText: "Tout désélectionner",	
+			});	
+		}
+		
+
+  $("#multiSelectExample").on("change", function(e, clickedIndex, newValue, oldValue) {
+      var sel = $(this).val() || [];
+      console.log(sel)
+      //console.log(sel)	
+      if (sel.indexOf("selectAll") > -1) {
+          $('#multiSelectExample').selectpicker('val', ["Pomme", "Orange", "Raisin", "Banane"]);
+          $('#multiSelectExample').selectpicker("refresh")
+      }
+      else if (sel.indexOf("deselectAll") > -1) {
+          $('#multiSelectExample').selectpicker('val', []);
+          $('#multiSelectExample').selectpicker("refresh")
+      }
+      
+  })
+  })
+        </script>
           
           <script>
           
