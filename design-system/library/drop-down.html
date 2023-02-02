@@ -330,28 +330,58 @@ dir="ltr"><![endif]-->
 &lt;!-- Add this script --&gt;
 &lt;script&gt;
 // multiSelectExample
-  $('#multiSelectExample').addClass("selectpicker")
-  $('#multiSelectExample').selectpicker({
-      dropdownAlignRight: true,
-      dropupAuto: false,
-      selectedTextFormat: "count",
-      size: 10,
-      liveSearch: true
-  });
+var language = document.documentElement.lang;
+ $(document).ready(function(){
+     
+ $('#multiSelectExample').addClass("selectpicker")
+ 
+ if (language == "en") {	
+$('#multiSelectExample').selectpicker({	
+dropdownAlignRight: true,	
+dropupAuto: false,	
+selectedTextFormat: "count",	
+size: 10,	
+liveSearch: true,	
+noneSelectedText: "No fruits selected",	
+countSelectedText: "{0} fruits selected",	
+// width: "100%"	
+// actionsBox: true,	
+// selectAllText: "Select all",	
+// deselectAllText: "Deselect all",	
+});	
+}	
+else {	
 
-  $("#multiSelectExample").on("change", function(e, clickedIndex, newValue, oldValue) {
-      var sel = $(this).val();
-      //console.log(sel)	
-      if (sel.indexOf("selectAll") > -1) {
-          $('#multiSelectExample').selectpicker('val', ["Apple", "Orange", "Grape", "Banana"]);
-          $('#multiSelectExample').selectpicker("refresh")
-      }
-      else if (sel.indexOf("deselectAll") > -1) {
-          $('#multiSelectExample').selectpicker('val', []);
-          $('#multiSelectExample').selectpicker("refresh")
-      }
-      
-  })
+$('#multiSelectExample').selectpicker({	
+dropdownAlignRight: true,	
+dropupAuto: false,	
+selectedTextFormat: "count",	
+size: 10,	
+liveSearch: true,	
+noneSelectedText: "Pas de fruits selectionnés",	
+countSelectedText: "{0} fruits selectionnés",	
+// actionsBox: true,	
+// selectAllText: "Tout sélectionner",	
+// deselectAllText: "Tout désélectionner",	
+});	
+}
+
+
+ $("#multiSelectExample").on("change", function(e, clickedIndex, newValue, oldValue) {
+     var sel = $(this).val() || [];
+     console.log(sel)
+     //console.log(sel)	
+     if (sel.indexOf("selectAll") > -1) {
+         $('#multiSelectExample').selectpicker('val', ["Apple", "Orange", "Grape", "Banana"]);
+         $('#multiSelectExample').selectpicker("refresh")
+     }
+     else if (sel.indexOf("deselectAll") > -1) {
+         $('#multiSelectExample').selectpicker('val', []);
+         $('#multiSelectExample').selectpicker("refresh")
+     }
+     
+ })
+ })
 &lt;/script&gt</code></pre>
     </details>
     </div>
@@ -552,17 +582,46 @@ dir="ltr"><![endif]-->
 
 <script type="text/javascript">
   // multiSelectExample
+ var language = document.documentElement.lang;
+  $(document).ready(function(){
+      
   $('#multiSelectExample').addClass("selectpicker")
-  $('#multiSelectExample').selectpicker({
-      dropdownAlignRight: true,
-      dropupAuto: false,
-      selectedTextFormat: "count",
-      size: 10,
-      liveSearch: true
-  });
+  
+  if (language == "en") {	
+$('#multiSelectExample').selectpicker({	
+dropdownAlignRight: true,	
+dropupAuto: false,	
+selectedTextFormat: "count",	
+size: 10,	
+liveSearch: true,	
+noneSelectedText: "No fruits selected",	
+countSelectedText: "{0} fruits selected",	
+// width: "100%"	
+// actionsBox: true,	
+// selectAllText: "Select all",	
+// deselectAllText: "Deselect all",	
+});	
+}	
+else {	
+
+$('#multiSelectExample').selectpicker({	
+dropdownAlignRight: true,	
+dropupAuto: false,	
+selectedTextFormat: "count",	
+size: 10,	
+liveSearch: true,	
+noneSelectedText: "Pas de fruits selectionnés",	
+countSelectedText: "{0} fruits selectionnés",	
+// actionsBox: true,	
+// selectAllText: "Tout sélectionner",	
+// deselectAllText: "Tout désélectionner",	
+});	
+}
+
 
   $("#multiSelectExample").on("change", function(e, clickedIndex, newValue, oldValue) {
-      var sel = $(this).val();
+      var sel = $(this).val() || [];
+      console.log(sel)
       //console.log(sel)	
       if (sel.indexOf("selectAll") > -1) {
           $('#multiSelectExample').selectpicker('val', ["Apple", "Orange", "Grape", "Banana"]);
@@ -573,6 +632,7 @@ dir="ltr"><![endif]-->
           $('#multiSelectExample').selectpicker("refresh")
       }
       
+  })
   })
 </script>
 
