@@ -422,8 +422,8 @@ dir="ltr"><![endif]-->
 </div>
 <details>
   <summary>HTML</summary>
-  <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copier dans le presse-papiers</button>
-  <pre id="code1"><code>&lt;!-- Ajouter la bibliothèque D3 dans la section head --&gt;
+  <button class="btn btn-default" onclick="CopyToClipboard('code3');return false;">Copier dans le presse-papiers</button>
+  <pre id="code3"><code>&lt;!-- Ajouter la bibliothèque D3 dans la section head --&gt;
 &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
    
 &lt;!-- Ajouter ce div dans la section où vous voulez ajouter le graphique -->
@@ -432,8 +432,8 @@ dir="ltr"><![endif]-->
 </details>
 <details>
   <summary>JS</summary>
-  <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copier dans le presse-papiers</button>
-  <pre id="code2"><code>&lt;script&gt;
+  <button class="btn btn-default" onclick="CopyToClipboard('code4');return false;">Copier dans le presse-papiers</button>
+  <pre id="code4"><code>&lt;script&gt;
     var languageHori = document.documentElement.lang;
   
   //1. load data
@@ -641,18 +641,18 @@ dir="ltr"><![endif]-->
     
       <details>
         <summary>HTML</summary>
-        <button class="btn btn-default" onclick="CopyToClipboard('code1');return false;">Copier dans le presse-papiers</button>
-        <pre id="code1"><code>&lt;!-- Ajouter la bibliothèque D3 dans la section head --&gt;
+        <button class="btn btn-default" onclick="CopyToClipboard('code5');return false;">Copier dans le presse-papiers</button>
+        <pre id="code5"><code>&lt;!-- Ajouter la bibliothèque D3 dans la section head --&gt;
 &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
     
-&lt;!-- Ajouter ce div dans la section où vous voulez ajouter le graphique -->
+&lt;!-- Ajouter ce div dans la section où vous voulez ajouter le graphique --&gt;
 
 &lt;div id="grouped"&gt;&lt;/div&gt;</code></pre>
       </details>
       <details>
         <summary>JS</summary>
-        <button class="btn btn-default" onclick="CopyToClipboard('code2');return false;">Copier dans le presse-papiers</button>
-        <pre id="code2"><code>&lt;script&gt;
+        <button class="btn btn-default" onclick="CopyToClipboard('code6');return false;">Copier dans le presse-papiers</button>
+        <pre id="code6"><code>&lt;script&gt;
       // set the dimensions and margins of the graph
 var margin = {top: 10, right: 30, bottom: 20, left: 50},
   width = 460 - margin.left - margin.right,
@@ -744,7 +744,133 @@ svg.append("g")
   <div class="graph viztype4 mrgn-tp-md">
     <div class="pattern-demo mrgn-bttm-md">
     
-    <p>À venir</p>
+      <div id="stackedBars"></div>
+
+      <details>
+        <summary>HTML</summary>
+        <button class="btn btn-default" onclick="CopyToClipboard('code7');return false;">Copier dans le presse-papiers</button>
+        <pre id="code7"><code>&lt;!-- Ajouter la bibliothèque D3 dans la section head --&gt;
+    &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
+         
+    &lt;!-- Ajouter ce div dans la section où vous voulez ajouter le graphique --&gt;
+    &lt;div id="stackedBars"&gt;&lt;/div&gt;</code></pre>
+      </details>
+      <details>
+        <summary>JS</summary>
+        <button class="btn btn-default" onclick="CopyToClipboard('code8');return false;">Copier dans le presse-papiers</button>
+        <pre id="code8"><code>&lt;script&gt;
+// dimensions and margins
+const marginstacked = {top: 10, right: 30, bottom: 50, left: 100},
+    widthstacked = 640 - marginstacked.left - marginstacked.right,
+    heightstacked = 550 - marginstacked.top - marginstacked.bottom;
+
+// append svg
+const svgstacked = d3.select("#stackedBars")
+  .append("svg")
+    .attr("width", widthstacked + marginstacked.left + marginstacked.right)
+    .attr("height", heightstacked + marginstacked.top + marginstacked.bottom)
+    .append("g")
+        .attr("transform", `translate(${marginstacked.left},${marginstacked.top})`);
+
+d3.csv("https://test.canada.ca/phac-aspc/design-system/library/bar-graphs/stacked-data-fr-utf9.csv").then( function(data) {
+    // subgroups
+  const subgroups = data.columns.slice(1);
+
+  // main groups
+  const groups = data.map(d => (d.month));
+  
+  // Add X axis
+  const x = d3.scaleBand()
+      .domain(groups)
+      .range([0, width])
+      .padding([0.2]);
+      
+  svgstacked.append("g")
+    .attr("transform", `translate(0, ${height})`)
+    .call(d3.axisBottom(x).tickSizeOuter(0))
+    .style("font-size","16px");
+
+  // Add Y axis
+  const y = d3.scaleLinear()
+    .domain([0, 800])
+    .range([ height, 0]);
+    
+  svgstacked.append("g")
+    .call(d3.axisLeft(y).tickFormat((d)=> "$"+d))
+    .style("font-size","16px");
+    
+    // xAxis label 
+  svgstacked.append("text")
+      .attr("text-anchor", "end")
+      .attr("x", width/2 + margin.left - 40)
+      .attr("y", height + margin.top + 35)
+      .style("font-weight","bold")
+      .style("font-size", "23px")
+      .text("Mois");
+
+  // yAxis label
+  svgstacked.append("text")
+      .attr("text-anchor", "end")
+      .attr("transform", "rotate(-90)")
+      .attr("y", -margin.left - 10)
+      .attr("x", -margin.top - height/2 + 60)
+      .style("font-weight","bold")
+      .style("font-size", "23px")
+      .text("Prix");
+    
+  // palette
+  const color = d3.scaleOrdinal()
+    .domain(subgroups)
+    .range(['#e41a1c','#377eb8','#4daf4a'])
+
+  //stacked data
+  const stackedData = d3.stack()
+    .keys(subgroups)(data);
+
+  svgstacked.append("g")
+    .selectAll("g")
+    .data(stackedData)
+    .join("g")
+      .attr("fill", d => color(d.key))
+      .selectAll("rect")
+      .data(d => d)
+      .join("rect")
+        .attr("height", d => y(d[0]) - y(d[1]))
+        .attr("width",x.bandwidth())
+          .attr("x", d => x(d.data.month))
+        .attr("y", d => y(d[1]));
+    
+    //append legend
+    let legend = svgstacked.append("g")
+        .attr("class", "legendG")
+        .attr("font-family", "sans-serif")
+        .style("font-size", "19px")
+        .attr("text-anchor", "start")
+        .attr("transform", "translate(-465,0)")
+        .selectAll("g")
+        .data(stackedData.slice())
+        .enter()
+        .append("g")
+        .attr("transform", function(d, i) { return "translate(" + 450 + "," + -(325 + (30* i)) + ")"; });
+
+    legend.append("rect")
+        .attr("x", 430)
+        .attr("y", 400)
+        .attr("width", 19)
+        .attr("height", 19)
+        .attr("fill", function(d) { return color(d); })
+        .style("stroke-width", "0.5px")
+        .style("stroke", "black");
+        
+    legend.append("text")
+        .attr("x", 455)
+        .attr("y", 410)
+        .attr("dy", "0.4em")
+        .attr("class","legendText")
+        .text(function(d) { return d.key; });
+})  
+      &lt;/script&gt;</code></pre>
+      </details>
     </div>
     </div>
 <p><a href="https://d3-graph-gallery.com/barplot.html"><span class="fa fa-arrow-right"></span> Documentation D3.js complète pour les diagrammes à barres</a></p>
@@ -1375,6 +1501,120 @@ svg.append("g")
 }
 
 </script>
+
+<script>
+  // dimensions and margins
+  const marginstacked = {top: 10, right: 30, bottom: 50, left: 100},
+      widthstacked = 640 - marginstacked.left - marginstacked.right,
+      heightstacked = 550 - marginstacked.top - marginstacked.bottom;
+  
+  // append svg
+  const svgstacked = d3.select("#stackedBars")
+    .append("svg")
+      .attr("width", widthstacked + marginstacked.left + marginstacked.right)
+      .attr("height", heightstacked + marginstacked.top + marginstacked.bottom)
+      .append("g")
+          .attr("transform", `translate(${marginstacked.left},${marginstacked.top})`);
+  
+  d3.csv("https://test.canada.ca/phac-aspc/design-system/library/bar-graphs/stacked-data-fr-utf9.csv").then( function(data) {
+      // subgroups
+    const subgroups = data.columns.slice(1);
+  
+    // main groups
+    const groups = data.map(d => (d.month));
+    
+    // Add X axis
+    const x = d3.scaleBand()
+        .domain(groups)
+        .range([0, width])
+        .padding([0.2]);
+        
+    svgstacked.append("g")
+      .attr("transform", `translate(0, ${height})`)
+      .call(d3.axisBottom(x).tickSizeOuter(0))
+      .style("font-size","16px");
+  
+    // Add Y axis
+    const y = d3.scaleLinear()
+      .domain([0, 800])
+      .range([ height, 0]);
+      
+    svgstacked.append("g")
+      .call(d3.axisLeft(y).tickFormat((d)=> "$"+d))
+      .style("font-size","16px");
+      
+      // xAxis label 
+    svgstacked.append("text")
+        .attr("text-anchor", "end")
+        .attr("x", width/2 + margin.left - 40)
+        .attr("y", height + margin.top + 35)
+        .style("font-weight","bold")
+        .style("font-size", "23px")
+        .text("Mois");
+  
+    // yAxis label
+    svgstacked.append("text")
+        .attr("text-anchor", "end")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -margin.left - 10)
+        .attr("x", -margin.top - height/2 + 60)
+        .style("font-weight","bold")
+        .style("font-size", "23px")
+        .text("Prix");
+      
+    // palette
+    const color = d3.scaleOrdinal()
+      .domain(subgroups)
+      .range(['#e41a1c','#377eb8','#4daf4a'])
+  
+    //stacked data
+    const stackedData = d3.stack()
+      .keys(subgroups)(data);
+  
+    svgstacked.append("g")
+      .selectAll("g")
+      .data(stackedData)
+      .join("g")
+        .attr("fill", d => color(d.key))
+        .selectAll("rect")
+        .data(d => d)
+        .join("rect")
+          .attr("height", d => y(d[0]) - y(d[1]))
+          .attr("width",x.bandwidth())
+           .attr("x", d => x(d.data.month))
+          .attr("y", d => y(d[1]));
+      
+      //append legend
+      let legend = svgstacked.append("g")
+          .attr("class", "legendG")
+          .attr("font-family", "sans-serif")
+          .style("font-size", "19px")
+          .attr("text-anchor", "start")
+          .attr("transform", "translate(-465,0)")
+          .selectAll("g")
+          .data(stackedData.slice())
+          .enter()
+          .append("g")
+          .attr("transform", function(d, i) { return "translate(" + 450 + "," + -(325 + (30* i)) + ")"; });
+  
+      legend.append("rect")
+          .attr("x", 430)
+          .attr("y", 400)
+          .attr("width", 19)
+          .attr("height", 19)
+          .attr("fill", function(d) { return color(d); })
+          .style("stroke-width", "0.5px")
+          .style("stroke", "black");
+          
+      legend.append("text")
+          .attr("x", 455)
+          .attr("y", 410)
+          .attr("dy", "0.4em")
+          .attr("class","legendText")
+          .text(function(d) { return d.key; });
+  })
+  
+  </script>
   </body>
 </html>
 
