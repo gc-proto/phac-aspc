@@ -25,14 +25,11 @@
 
 
     
-    <script>
-        var cases = 7225;
-      </script>
-      
-
+ 
     <script>
         window.onload = function() {
-              
+            var cases = document.getElementById("number-of-cases").innerHTML;
+
           var schema = {
             "@context": "https://schema.org",
             "@type": "FAQPage",
@@ -191,9 +188,9 @@
 
             <div>
                 
-                  <p>There were <script>document.write(cases);</script> cases this week.</p>
-                  
-            <!-- CONTENT ENDS HERE -->
+                <p>There were <span id="number-of-cases">7225</span> cases this week.</p>
+                
+                <!-- CONTENT ENDS HERE -->
 
             <div class="mwsgeneric-base-html parbase section">
 
