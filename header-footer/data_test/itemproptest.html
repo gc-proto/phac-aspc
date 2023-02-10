@@ -27,26 +27,34 @@
     
     <script>
         var cases = 7225;
-        var schema = {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "How many cases were there this week?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": cases.toString()
+      </script>
+      
+
+    <script>
+        window.onload = function() {
+              
+          var schema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How many cases were there this week?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": cases
+                }
               }
-            }
-          ]
+            ]
+          };
+      
+          var script = document.createElement('script');
+          script.type = "application/ld+json";
+          script.text = JSON.stringify(schema);
+          document.querySelector('body').appendChild(script);
         };
-  
-        var script = document.createElement('script');
-        script.type = "application/ld+json";
-        script.text = JSON.stringify(schema);
-        document.querySelector('body').appendChild(script);
-  </script>
+      </script>
+ 
     </head>
 
 
