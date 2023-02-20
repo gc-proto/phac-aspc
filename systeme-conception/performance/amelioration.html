@@ -177,7 +177,7 @@ dir="ltr"><![endif]-->
       <li>les tests de convivialité</li>
    </ul>
    <h3 id="heuristique">Évaluation heuristique</h3>
-   <p>Une évaluation heuristique est une manière d'évaluer un produit numérique ou une interface sur la base d'un ensemble de principes d'utilisabilité. En général, l'évaluation est effectuée par plusieurs personnes et évalue le produit sur des principes tels que :</p>
+   <p>Une évaluation heuristique est une manière d'évaluer un produit numérique ou une interface sur la base d'un ensemble de principes de convivialité. En général, l'évaluation est effectuée par plusieurs personnes et évalue le produit sur des principes tels que :</p>
    <ul>
       <li>le produit est-il facile à trouver? </li>
       <li>le contenu est-il clair? </li>
@@ -186,8 +186,8 @@ dir="ltr"><![endif]-->
       <li>le produit est-il utile?     </li>
    </ul>
    <h3 id="analytique">Analytique Web</h3>
-   <p>Consultez l'analytique Web pour comprendre les comportements actuels des utilisateurs sur votre produit.</p>
-   <p>Voir <a href="./mesure.html#donnees">les mesures d'analytique Web</a> pour plus de détails.</p>
+   <p>Consultez l'analytique Web pour comprendre les comportements actuels des utilisateurs en lien avec votre produit.</p>
+   <p>Voir les <a href="./mesure.html#donnees">paramètres d'analytique Web</a> pour en savoir plus.</p>
    
 <h3 id="retroaction">Rétroaction des utilisateurs</h3>
 <p>Ajouter l'outil de rétroaction dans les produits clés peut soutenir votre plan d'amélioration continue.</p>
@@ -197,8 +197,8 @@ dir="ltr"><![endif]-->
 </ul>
 <p>La rétroaction des utilisateurs ne devrait pas être utilisée comme indicateur de performance, mais plutôt comme des données qualitatives pour aider à améliorer le produit. Elle n'est utile que si les propriétaires du produit s'engagent à réviser régulièrement les commentaires et à agir en conséquence.</p>
 <h4>Ajout de l'outil de rétroaction</h3>
-<p>Pour ajouter l'outil de retour à une page, vous devez remplacer le widget Signaler un problème habituel et le bouton Partager avec du code HTML, puis ajouter un script JS.</p>
-<p>Mettez à jour les 2 champs suivants du HTML avec les renseignement de la page :</p>
+<p>Pour ajouter l'outil de retour à une page, vous devez remplacer le widget Signaler un problème et le bouton Partager par un code HTML, puis ajouter un script JS.</p>
+<p>Mettez à jour les 2 champs suivants du code HTML avec les renseignement de la page :</p>
 <ul>
    <li>Titre de la page</li>
    <li>URL de la page</li>
@@ -312,30 +312,31 @@ $(document).on("wb-ready.wb", function() {
   <h4>Évaluation formative et évaluation sommative</h4>
   <p>Les évaluations formatives et sommatives diffèrent par leur objectif :</p>
   <blockquote>
-  <p>"Les évaluations formatives sont utilisées dans un processus itératif pour apporter des améliorations avant la production. Les évaluations sommatives sont utilisées pour évaluer un produit expédié par rapport à une référence."</p>
+  <p>« Les évaluations formatives sont utilisées dans un processus itératif pour apporter des améliorations avant la production. Les évaluations sommatives sont utilisées pour évaluer un produit expédié par rapport à une référence. »</p>
     
     <p class="small">Source: <a href="https://www.nngroup.com/articles/formative-vs-summative-evaluations/#:~:text=Formative%20vs.-,Summative%20Evaluations,in%20comparison%20to%20a%20benchmark">NN Group</a> (en anglais seulement)</p>
   </blockquote>
 
   <h5>Évaluations formatives</h5>
-  <p>Les évaluations formatives sont utilisées pendant la conception d'un produit pour l'améliorer de façon itérative et s'assurer qu'il fonctionne réellement. C'est une partie du processus de design.</p>
+  <p>Les évaluations formatives sont utilisées pendant la conception d'un produit pour l'améliorer de façon itérative et s'assurer qu'il fonctionne réellement. C'est une partie du processus de conception.</p>
 
-  <p>Aussi peu que 5 participants peuvent suffire à découvrir des problèmes de convivialité importants et à montrer comment les gens interagissent avec le produit. Pendant la phase de conception, il est préférable de faire plusieurs rondes de 5 participants plutôt qu'une ronde de 15 participants.</p>
+  <p>Aussi peu que 5 participants peuvent découvrir des problèmes de convivialité importants et montrer l’interaction des gens avec le produit. Pendant la phase de conception, il est préférable de faire plusieurs rondes de 5 participants plutôt qu'une ronde de 15 participants.</p>
 
-  <p>En raison du faible nombre de participants, il n'est pas possible de rapporter les résultats des tests en termes de pourcentage - les chiffres ne sont pas assez fiables. Ce genre de test peut être effectué rapidement à l'aide d'outils en ligne et n'est pas très intensif en termes de ressources.</p>
+  <p>En raison du faible nombre de participants, il n'est pas possible de rapporter les résultats des tests en pourcentage – les chiffres ne sont pas assez fiables. Ce genre de test peut être effectué rapidement à l'aide d'outils en ligne et n'exige pas beaucoup de ressources.</p>
      <ul>
      <li><a href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/">Why You Only Need to Test with 5 Users (NN Group)</a> (en anglais seulement)</li>
   </ul>
    <h5>Évaluations sommatives</h5>
    <p>Les évaluations sommatives sont utilisées pour mesurer la réussite des tâches. Il faut tester une référence, puis retester le contenu après des modifications.</p>
-   <p>Elle nécessite 15 participants ou plus - idéalement 16 à 18. Avec un grand nombre de participants, les résultats sont généralement reproductibles. Vous pouvez rapporter la réussite en pourcentage. Elle peut être utilisée pour suivre les performances dans le temps.</p>
-   <p>L'évaluation sommative est plus intensive en termes de ressources que l'évaluation formative.</p>
+   <p>Elles nécessitent 15 participants ou plus - idéalement de 16 à 18. Avec ce nombre de participants, les résultats sont généralement reproductibles. Vous pouvez rapporter la réussite en pourcentage. Elle peut être utilisée pour suivre la performance dans le temps.</p>
+   <p>L'évaluation sommative exige plus de ressources que l'évaluation formative.</p>
+
    <h4>Écriture des scénarios de tâches</h4>
-   <p>Utilisez <a href="../visualisation/taches.html#taches">les recherches effectuées pour comprendre les tâches de données</a> pour informer vos scénarios de tâches.</p>
-   <p>Consultez les ligne directrices du Bureau de la transformation numérique pour vous aider à écrire de bons scénarios de tâches.</p>
+   <p>Utilisez les <a href="../visualisation/taches.html#taches">recherches effectuées pour comprendre les tâches de données</a> pour informer vos scénarios de tâches.</p>
+   <p>Consultez les lignes directrices du Bureau de la transformation numérique pour vous aider à écrire de bons scénarios de tâches.</p>
    <ul>
       <li><a href="https://conception.canada.ca/amelioration-continue/recherche.html#exploratoire">
-        Amélioration continue - Phase exploratoire (BTN)</a></li>
+        Amélioration continue – Phase exploratoire (BTN)</a></li>
    </ul>
    <h4>Modéré et non modéré</h4>
    <p>Les tests modérés sont à privilégier dans les situations suivantes :</p>
@@ -348,7 +349,7 @@ $(document).on("wb-ready.wb", function() {
    <ul>
       <li>pour des résultats rapides</li>
       <li>pour étudier quelques tâches très spécifiques</li>
-      <li>si vous avez seulement besoin de sélectionner les participants en utilisant des informations démographiques de base (âge ou revenu)</li>
+      <li>si vous devez seulement sélectionner les participants en utilisant des données démographiques de base (âge ou revenu)</li>
    </ul>
 
     <div class="clearfix"></div>
