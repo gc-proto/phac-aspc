@@ -26,13 +26,35 @@
 
 
 <style>
-        .apply-button {
-        font-size: 1.1em; /* makes the font slightly bigger */
-        background-color: #26374A;
-        color: white;
-        padding: 10px 15px; /* adds spacing all around the text */
-        border-radius: 20px; /* makes the button look like a pill */
-        }
+   body {
+    font-family: Arial, sans-serif;
+}
+
+#chord-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+button {
+    background-color: darkblue;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: navy;
+}
+
+#output {
+    margin-top: 20px;
+}
+
 
     </style>
 
@@ -166,21 +188,23 @@
 
             <h1>Chord Progression Generator</h1>
             <form id="chord-form">
-                <label for="key">Key:</label>
-                <select id="key">
-                </select>
-        
-                <label for="scale-type">Scale Type:</label>
-                <select id="scale-type">
-                    <option value="major">Major</option>
-                    <option value="minor">Minor</option>
-                </select>
-        
+                <div>
+                    <label for="key">Key:</label>
+                    <select id="key">
+                    </select>
+                </div>
+                <div>
+                    <label for="scale-type">Scale Type:</label>
+                    <select id="scale-type">
+                        <option value="major">Major</option>
+                        <option value="minor">Minor</option>
+                    </select>
+                </div>
                 <button type="submit">Generate</button>
             </form>
         
-            <h2>Generated Chord Progressions</h2>
-            <div id="output">
+            <div id="output" style="display: none;">
+                <h2>Generated Chord Progressions</h2>
                 <div id="progression1" class="progression">
                     <h3>Progression 1</h3>
                     <p id="progression1Chords"></p>

@@ -37,29 +37,35 @@ function getMinorScale(key) {
 function generateChordProgressions(key, scaleType) {
     let scale;
     let progressions;
+    let majorChords;
+    let minorChords;
 
     if (scaleType.toLowerCase() === 'major') {
         scale = getMajorScale(key);
         progressions = progressionsMajor;
+        majorChords = [1, 4, 5];
+        minorChords = [2, 3, 6];
     } else if (scaleType.toLowerCase() === 'minor') {
         scale = getMinorScale(key);
         progressions = progressionsMinor;
+        majorChords = [3, 6, 7];
+        minorChords = [1, 2, 4, 5];
     } else {
         console.error("Invalid scale type. Choose either 'major' or 'minor'.");
         return;
     }
 
-    const romanToInt = {'I': 1, 'ii': 2, 'iii': 3, 'IV': 4, 'V': 5, 'vi': 6, 'VII': 7,
-                        'i': 1, 'ii°': 2, 'III': 3, 'iv': 4, 'v': 5, 'VI': 6, 'VII': 7};
-    const majorChords = [1, 4, 5];
-    const minorChords = [2, 3, 6];
-    const diminishedChords = [7];
+    const romanToInt = {
+        'I': 1, 'ii': 2, 'iii': 3, 'IV': 4, 'V': 5, 'vi': 6, 'VII': 7,
+        'i': 1, 'ii°': 2, 'III': 3, 'iv': 4, 'v': 5, 'VI': 6, 'VII': 7
+    };
+    const diminishedChords = [2];
 
     const generatedProgressions = [];
     const generatedRomanProgressions = [];
 
     // Pick 3 unique progressions
-    const uniqueProgressions = randomSample(progressions, 3);
+    const uniqueProgressions = randomSample([...progressions], 3); // Make a copy of progressions using spread operator
 
     for (const progression of uniqueProgressions) {
         const chords = [];
@@ -79,6 +85,8 @@ function generateChordProgressions(key, scaleType) {
 
     return [generatedProgressions, generatedRomanProgressions];
 }
+
+
 
 function randomSample(arr, n) {
     const result = [];
@@ -117,4 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    document.getElementById('output').style.display = 'block';
 });
