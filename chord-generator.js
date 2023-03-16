@@ -124,7 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById(`progression${index + 1}Roman`).textContent = '(' + romanProgression.join(' - ') + ')';
             });
         }
+
+        document.getElementById('output').style.display = 'block';
     });
 
-    document.getElementById('output').style.display = 'block';
+    
 });
