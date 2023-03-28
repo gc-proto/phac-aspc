@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
     <script src="https://unpkg.com/n3/browser/n3.min.js"></script>
-    <script id="structured-data" type="application/ld+json"></script>
 
    
 
@@ -386,6 +385,7 @@
 
     <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
 
+    <script id="structured-data" type="application/ld+json"></script>
 
     <script>
         async function fetchAndParseTTL() {
@@ -460,7 +460,7 @@
 
         return jsonld;
         }
-        
+
         fetchAndParseTTL().then(store => {
         displayInformation(store);
         const jsonld = createJSONLD(store);
