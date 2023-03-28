@@ -461,10 +461,11 @@
         }
 
         function insertJSONLDScript(jsonld) {
-            const jsonldString = JSON.stringify(jsonld, null, 2);
-            const jsonldScript = `<script type="application/ld+json">${jsonldString}</script>`;
+            const jsonldScript = document.createElement('script');
+            jsonldScript.type = 'application/ld+json';
+            jsonldScript.textContent = JSON.stringify(jsonld, null, 2);
             console.log('JSON-LD script:', jsonldScript); // Debugging
-            document.head.innerHTML += jsonldScript;
+            document.head.appendChild(jsonldScript);
         }
 
         document.addEventListener('DOMContentLoaded', function() {
