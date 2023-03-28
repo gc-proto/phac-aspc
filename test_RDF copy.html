@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON-LD Test</title>
+
+    <script src="https://unpkg.com/n3/browser/n3.min.js"></script>
+
+   
+
+    </head>
+<body>
+    <h1 id="program-name"></h1>
+    <h2>Description</h2>
+    <p id="program-description"></p>
+    <h2>Eligibility Criteria</h2>
+    <ul id="eligibility-criteria"></ul>
+    <h2>Application Steps</h2>
+    <ol id="application-steps"></ol>
+
+
+    <script>
+        async function fetchAndParseTTL() {
+            const response = await fetch('https://test.canada.ca/phac-aspc/canada_child_benefit.ttl');
+            const ttlText = await response.text();
+            
+            const parser = new N3.Parser();
+            const store = new N3.Store();
+            parser.parse(ttlText, (error, quad, prefixes) => {
+                if (quad) {
+                    store.addQuad(quad);
+                } else if (error) {
+                    console.error(error);
+                }
+            });
+
+            return store;
+        }
+
+        function displayInformation(store) {
+            const FOAF = 'http://xmlns.com/foaf/0.1/';
+            const SCHEMA = 'http://schema.org/';
+
+            const subject = store.getQuads(null, `${FOAF}name`, null)[0].subject;
+            const programName = store.getQuads(subject, `${FOAF}name`, null)[0].object.value;
+            document.getElementById('program-name').textContent = programName;
+
+            const descriptions = store.getQuads(subject, `${FOAF}description`, null).map(quad => quad.object.value);
+            document.getElementById('program-description').textContent = descriptions.join(' ');
+
+            const eligibilityCriteria = store.getQuads(subject, `${SCHEMA}eligibility`, null).map(quad => quad.object.value);
+            const eligibilityList = document.getElementById('eligibility-criteria');
+            eligibilityCriteria.forEach(criteria => {
+                const listItem = document.createElement('li');
+                listItem.textContent = criteria;
+                eligibilityList.appendChild(listItem);
+            });
+
+            const applicationSteps = store.getQuads(subject, `${SCHEMA}step`, null).map(quad => quad.object.value);
+            const stepsList = document.getElementById('application-steps');
+            applicationSteps.forEach(step => {
+                const listItem = document.createElement('li');
+                listItem.textContent = step;
+                stepsList.appendChild(listItem);
+            });
+        }
+
+        function createJSONLD(store) {
+            const FOAF = 'http://xmlns.com/foaf/0.1/';
+            const SCHEMA = 'http://schema.org/';
+
+            const subject = store.getQuads(null, `${FOAF}name`, null)[0].subject;
+            const programName = store.getQuads(subject, `${FOAF}name`, null)[0].object.value;
+
+            const descriptions = store.getQuads(subject, `${FOAF}description`, null).map(quad => quad.object.value);
+            const eligibilityCriteria = store.getQuads(subject, `${SCHEMA}eligibility`, null).map(quad => quad.object.value);
+            const applicationSteps = store.getQuads(subject, `${SCHEMA}step`, null).map(quad => quad.object.value);
+
+            const jsonld = {
+                "@context": {
+                    "name": "http://xmlns.com/foaf/0.1/name",
+                    "description": "http://xmlns.com/foaf/0.1/description",
+                    "eligibility": "http://schema.org/eligibility",
+                    "step": "http://schema.org/step",
+                },
+                "@type": "http://xmlns.com/foaf/0.1/Program",
+                "name": programName,
+                "description": descriptions.join(' '),
+                "eligibility": eligibilityCriteria,
+                "step": applicationSteps,
+            };
+
+            return jsonld;
+        }
+
+        function insertJSONLDScript(jsonld) {
+            const jsonldScript = document.createElement('script');
+            jsonldScript.type = 'application/ld+json';
+            jsonldScript.textContent = JSON.stringify(jsonld, null, 2);
+            console.log('JSON-LD script:', jsonldScript); // Debugging
+            document.body.appendChild(jsonldScript);
+        }
+
+        fetchAndParseTTL().then(store => {
+          displayInformation(store);
+          const jsonld = createJSONLD(store);
+          console.log('JSON-LD:', jsonld); // Debugging
+          insertJSONLDScript(jsonld);
+        });
+    </script>
+
+
+    
+</body>
+
+</html>

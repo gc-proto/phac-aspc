@@ -461,16 +461,19 @@
         }
 
         function insertJSONLDScript(jsonld) {
-          const jsonldScript = document.createElement('script');
-          jsonldScript.type = 'application/ld+json';
-          jsonldScript.textContent = JSON.stringify(jsonld, null, 2);
-          document.head.appendChild(jsonldScript);
+            const jsonldString = JSON.stringify(jsonld, null, 2);
+            const jsonldScript = `<script type="application/ld+json">${jsonldString}</script>`;
+            console.log('JSON-LD script:', jsonldScript); // Debugging
+            document.head.innerHTML += jsonldScript;
         }
 
-        fetchAndParseTTL().then(store => {
-          displayInformation(store);
-          const jsonld = createJSONLD(store);
-          insertJSONLDScript(jsonld);
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchAndParseTTL().then(store => {
+                displayInformation(store);
+                const jsonld = createJSONLD(store);
+                console.log('JSON-LD:', jsonld); // Debugging
+                insertJSONLDScript(jsonld);
+            });
         });
     </script>
 
