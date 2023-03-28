@@ -385,7 +385,6 @@
 
     <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
 
-    <script id="structured-data" type="application/ld+json"></script>
 
     <script>
         async function fetchAndParseTTL() {
@@ -446,10 +445,10 @@
 
             const jsonld = {
                 "@context": {
-                "name": "http://xmlns.com/foaf/0.1/name",
-                "description": "http://xmlns.com/foaf/0.1/description",
-                "eligibility": "http://schema.org/eligibility",
-                "step": "http://schema.org/step",
+                    "name": "http://xmlns.com/foaf/0.1/name",
+                    "description": "http://xmlns.com/foaf/0.1/description",
+                    "eligibility": "http://schema.org/eligibility",
+                    "step": "http://schema.org/step",
                 },
                 "@type": "http://xmlns.com/foaf/0.1/Program",
                 "name": programName,
@@ -458,13 +457,20 @@
                 "step": applicationSteps,
             };
 
-        return jsonld;
+            return jsonld;
+        }
+
+        function insertJSONLDScript(jsonld) {
+          const jsonldScript = document.createElement('script');
+          jsonldScript.type = 'application/ld+json';
+          jsonldScript.textContent = JSON.stringify(jsonld, null, 2);
+          document.head.appendChild(jsonldScript);
         }
 
         fetchAndParseTTL().then(store => {
-        displayInformation(store);
-        const jsonld = createJSONLD(store);
-        document.getElementById('structured-data').textContent = JSON.stringify(jsonld, null, 2);
+          displayInformation(store);
+          const jsonld = createJSONLD(store);
+          insertJSONLDScript(jsonld);
         });
     </script>
 
