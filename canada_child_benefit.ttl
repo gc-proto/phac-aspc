@@ -1,0 +1,16 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://schema.org/> .
+
+<https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview.html> a foaf:Program ;
+    ns1:eligibility "Canadian citizens, permanent residents, protected persons, temporary residents, and First Nations children are eligible for the Canada Child Benefit.",
+        "You must be primarily responsible for the care and upbringing of the child.",
+        "You must live with the child, and the child must be under 18 years of age.",
+        "Your adjusted family net income must be below the threshold for your family size." ;
+    ns1:step "1. Make sure you have all the necessary documents and information, such as your Social Insurance Number, your child's birth certificate, and your marital status.",
+        "2. Fill out the Canada Child Benefit application form, which can be found on the Canada Revenue Agency website.",
+        "3. Submit your application to the Canada Revenue Agency." ;
+    foaf:description "The Canada Child Benefit is a tax-free monthly payment made to eligible families to help them with the cost of raising children.",
+        "To apply for the Canada Child Benefit, follow these steps:",
+        "To be eligible for the Canada Child Benefit, you must meet the following criteria:" ;
+    foaf:name "Canada Child Benefit" .
+
