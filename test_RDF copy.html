@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" id="meta-description">
     <title>JSON-LD Test</title>
 
     <script src="https://unpkg.com/n3/browser/n3.min.js"></script>
 
-   
+    <script type="application/ld+json" id="jsonld-placeholder">
+        {}
+    </script>
 
     </head>
 <body>
@@ -18,6 +21,7 @@
     <ul id="eligibility-criteria"></ul>
     <h2>Application Steps</h2>
     <ol id="application-steps"></ol>
+    
 
 
     <script>
@@ -94,22 +98,35 @@
             return jsonld;
         }
 
-        function insertJSONLDScript(jsonld) {
-            const jsonldScript = document.createElement('script');
-            jsonldScript.type = 'application/ld+json';
-            jsonldScript.textContent = JSON.stringify(jsonld, null, 2);
-            console.log('JSON-LD script:', jsonldScript); // Debugging
-            document.body.appendChild(jsonldScript);
+
+
+
+        function setMetaDescription(store) {
+            const FOAF = 'http://xmlns.com/foaf/0.1/';
+            const subject = store.getQuads(null, `${FOAF}name`, null)[0].subject;
+            const descriptions = store.getQuads(subject, `${FOAF}description`, null).map(quad => quad.object.value);
+            const description = descriptions[0]; // Choose the first description
+
+            const metaDescription = document.getElementById('meta-description');
+            metaDescription.setAttribute('content', description);
         }
 
-        fetchAndParseTTL().then(store => {
-          displayInformation(store);
-          const jsonld = createJSONLD(store);
-          console.log('JSON-LD:', jsonld); // Debugging
-          insertJSONLDScript(jsonld);
+        function insertJSONLDScript(jsonld) {
+        const jsonldPlaceholder = document.getElementById('jsonld-placeholder');
+        jsonldPlaceholder.textContent = JSON.stringify(jsonld, null, 2);
+        console.log('JSON-LD script:', jsonldPlaceholder); // Debugging
+    }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchAndParseTTL().then(store => {
+                setMetaDescription(store);
+                displayInformation(store);
+                const jsonld = createJSONLD(store);
+                console.log('JSON-LD:', jsonld); // Debugging
+                insertJSONLDScript(jsonld);
+            });
         });
     </script>
-
 
     
 </body>
