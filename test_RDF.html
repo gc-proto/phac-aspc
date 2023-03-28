@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
     <script src="https://unpkg.com/n3/browser/n3.min.js"></script>
+    <script id="structured-data" type="application/ld+json"></script>
+
    
 
     </head>
@@ -431,7 +433,39 @@
             });
         }
 
-        fetchAndParseTTL().then(displayInformation);
+        function createJSONLD(store) {
+            const FOAF = 'http://xmlns.com/foaf/0.1/';
+            const SCHEMA = 'http://schema.org/';
+
+            const subject = store.getQuads(null, `${FOAF}name`, null)[0].subject;
+            const programName = store.getQuads(subject, `${FOAF}name`, null)[0].object.value;
+
+            const descriptions = store.getQuads(subject, `${FOAF}description`, null).map(quad => quad.object.value);
+            const eligibilityCriteria = store.getQuads(subject, `${SCHEMA}eligibility`, null).map(quad => quad.object.value);
+            const applicationSteps = store.getQuads(subject, `${SCHEMA}step`, null).map(quad => quad.object.value);
+
+            const jsonld = {
+                "@context": {
+                "name": "http://xmlns.com/foaf/0.1/name",
+                "description": "http://xmlns.com/foaf/0.1/description",
+                "eligibility": "http://schema.org/eligibility",
+                "step": "http://schema.org/step",
+                },
+                "@type": "http://xmlns.com/foaf/0.1/Program",
+                "name": programName,
+                "description": descriptions.join(' '),
+                "eligibility": eligibilityCriteria,
+                "step": applicationSteps,
+            };
+
+        return jsonld;
+        }
+        
+        fetchAndParseTTL().then(store => {
+        displayInformation(store);
+        const jsonld = createJSONLD(store);
+        document.getElementById('structured-data').textContent = JSON.stringify(jsonld, null, 2);
+        });
     </script>
 
 
