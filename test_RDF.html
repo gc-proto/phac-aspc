@@ -29,6 +29,15 @@
         {}
     </script>
 
+
+    <style>
+        .hidden {
+            display: none;
+        }
+        .criteria {
+            margin-bottom: 20px;
+        }
+    </style>
     </head>
 
 
@@ -163,6 +172,32 @@
             <p id="program-description"></p>
             <h2>Who can apply</h2>
             <ul id="eligibility-criteria"></ul>
+
+            <h3>Answer a few questions</h3>
+            <p>Does this apply to you?</p>
+
+            <div id="wizard">
+                <!-- Criteria will be appended here -->
+            </div>
+            <section id="ineligible" class="panel panel-default panel-primary hidden">
+                <header class="panel-heading">
+                    <h5 class="panel-title">Ineligible</h5>
+                </header>
+                <div class="panel-body">
+                    <p>Sorry, you are not eligible for the Canada Child Benefit.</p>
+                </div>  
+            </section>
+            <section id="eligible" class="panel panel-default panel-primary hidden">
+                <header class="panel-heading">
+                    <h5 class="panel-title">Eligible</h5>
+                </header>
+                <div class="panel-body">
+                    <p>It seems like you may be eligible. Continue with the application.</p>
+                </div>  
+            </section>
+            
+
+
             <h2>How to apply</h2>
             <ol id="application-steps"></ol>
 
@@ -510,19 +545,81 @@
             console.log('JSON-LD script:', jsonldPlaceholder); // Debugging
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            fetchAndParseTTL().then(store => {
-                setMetaDescription(store);
-                displayInformation(store);
-                const jsonld = createJSONLD(store);
-                console.log('JSON-LD:', jsonld); // Debugging
-                insertJSONLDScript(jsonld);
-            });
-        });
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+    fetchAndParseTTL().then(store => {
+        setMetaDescription(store);
+        displayInformation(store);
+        const jsonld = createJSONLD(store);
+        console.log('JSON-LD:', jsonld); // Debugging
+        insertJSONLDScript(jsonld);
+    });
+});
+
+
     </script>
 
 
-    
+<script>
+  async function createWizard() {
+    const store = await fetchAndParseTTL();
+    const eligibilityCriteria = store.getQuads(null, "http://schema.org/eligibility", null, null)
+        .map(quad => quad.object.value);
+
+    const wizard = document.getElementById("wizard");
+
+    eligibilityCriteria.forEach((criterion, index) => {
+        const criteriaDiv = document.createElement("div");
+        criteriaDiv.classList.add("criteria");
+        if (index !== 0) {
+            criteriaDiv.classList.add("hidden");
+        }
+
+        criteriaDiv.innerHTML = `
+            <h3>Question ${index + 1}</h3>
+            <p>${criterion}</p>
+            <input type="radio" id="yes-${index}" name="criteria-${index}" value="yes" />
+            <label for="yes-${index}">Yes</label>
+            <input type="radio" id="no-${index}" name="criteria-${index}" value="no" />
+            <label for="no-${index}">No</label>
+        `;
+
+        wizard.appendChild(criteriaDiv);
+
+        criteriaDiv.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener("change", () => {
+                hideResults();
+                if (radio.value === "no") {
+                    showIneligible();
+                } else if (index === eligibilityCriteria.length - 1) {
+                    showEligible();
+                } else {
+                    wizard.children[index + 1].classList.remove("hidden");
+                }
+            });
+        });
+    });
+}
+
+function hideResults() {
+    document.getElementById("ineligible").classList.add("hidden");
+    document.getElementById("eligible").classList.add("hidden");
+}
+
+function showIneligible() {
+    document.getElementById("ineligible").classList.remove("hidden");
+}
+
+function showEligible() {
+    document.getElementById("eligible").classList.remove("hidden");
+}
+
+createWizard();
+
+
+</script>
+
 </body>
 
 </html>
