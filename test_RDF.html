@@ -442,33 +442,54 @@
         });
     }
 
-        function createJSONLD(store) {
-            const FOAF = 'http://xmlns.com/foaf/0.1/';
-            const SCHEMA = 'http://schema.org/';
+    function createJSONLD(store) {
+    const FOAF = 'http://xmlns.com/foaf/0.1/';
+    const SCHEMA = 'http://schema.org/';
 
-            const subject = store.getQuads(null, `${FOAF}name`, null)[0].subject;
-            const programName = store.getQuads(subject, `${FOAF}name`, null)[0].object.value;
+    const subject = store.getQuads(null, `${FOAF}name`, null)[0].subject;
+    const programName = store.getQuads(subject, `${FOAF}name`, null)[0].object.value;
 
-            const descriptions = store.getQuads(subject, `${FOAF}description`, null).map(quad => quad.object.value);
-            const eligibilityCriteria = store.getQuads(subject, `${SCHEMA}eligibility`, null).map(quad => quad.object.value);
-            const applicationSteps = store.getQuads(subject, `${SCHEMA}step`, null).map(quad => quad.object.value);
+    const descriptions = store.getQuads(subject, `${FOAF}description`, null).map(quad => quad.object.value);
+    const eligibilityCriteria = store.getQuads(subject, `${SCHEMA}eligibility`, null).map(quad => quad.object.value);
+    const applicationSteps = store.getQuads(subject, `${SCHEMA}step`, null).map(quad => quad.object.value);
 
-            const jsonld = {
-                "@context": {
-                    "name": "http://xmlns.com/foaf/0.1/name",
-                    "description": "http://xmlns.com/foaf/0.1/description",
-                    "eligibility": "http://schema.org/eligibility",
-                    "step": "http://schema.org/step",
-                },
-                "@type": "http://xmlns.com/foaf/0.1/Program",
-                "name": programName,
-                "description": descriptions.join(' '),
-                "eligibility": eligibilityCriteria,
-                "step": applicationSteps,
-            };
+    const eligibilityText = eligibilityCriteria.map((criteria, index) => `• ${criteria}`).join('\n');
+    const stepsText = applicationSteps.map((step, index) => `${index + 1}. ${step}`).join('\n');
 
-            return jsonld;
-        }
+    const jsonld = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the Canada Child Benefit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": descriptions[0]
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who can apply for the Canada Child Benefit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": eligibilityText
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How to apply for the Canada Child Benefit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": stepsText
+                }
+            }
+        ]
+    };
+
+    return jsonld;
+}
+
 
 
 
