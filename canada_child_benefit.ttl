@@ -2,7 +2,7 @@
 @prefix ns1: <http://schema.org/> .
 
 <https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview.html> a foaf:Program ;
-    ns1:eligibility "Canadian citizens, permanent residents, protected persons, temporary residents, and First Nations children are eligible for the Canada Child Benefit.",
+    ns1:eligibility "You must be a Canadian citizen, permanent resident, protected person, temporary resident, or a Indian under the Indian Act",
         "You must be primarily responsible for the care and upbringing of the child.",
         "You must live with the child, and the child must be under 18 years of age.",
         "Your adjusted family net income must be below the threshold for your family size." ;
