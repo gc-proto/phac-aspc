@@ -5,8 +5,7 @@
     ns1:eligibility "You are a Canadian citizen, permanent resident, protected person, temporary resident, or an Indian under the Indian Act",
         "You are primarily responsible for the care and upbringing of your child.",
         "You live with the child, and the child is under 18 years of age.",
-        "Your adjusted family net income is be below the threshold for your family size.",
-        "Additional fake criteria to test the script." ;
+        "Your adjusted family net income is be below the threshold for your family size." ;
     ns1:step "Make sure you have all the necessary documents and information, such as your Social Insurance Number, your child's birth certificate, and your marital status.",
         "Fill out the Canada Child Benefit application form, which can be found on the Canada Revenue Agency website.",
         "Submit your application to the Canada Revenue Agency." ;
