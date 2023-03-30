@@ -562,7 +562,7 @@
 
 
 <script>
-  async function createWizard() {
+ async function createWizard() {
     const store = await fetchAndParseTTL();
     const eligibilityCriteria = store.getQuads(null, "http://schema.org/eligibility", null, null)
         .map(quad => quad.object.value);
@@ -616,7 +616,6 @@ function showEligible() {
 }
 
 createWizard();
-
 
 </script>
 

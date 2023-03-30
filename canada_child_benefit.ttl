@@ -13,5 +13,5 @@
     foaf:description "The Canada Child Benefit is a tax-free monthly payment made to eligible families to help them with the cost of raising children.",
         "To apply for the Canada Child Benefit, follow these steps:",
         "To be eligible for the Canada Child Benefit, you must meet the following criteria:" ;
-    foaf:name "Canada Child Benefit" .
+    foaf:name "Canada Child Benefit".
 
