@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+
+<!--[if lt IE 9]>
+<html class="no-js lt-ie9" dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!--<![endif]-->
+
+<head prefix="og: http://ogp.me/ns#">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+
+    <!--CHANGE THE TITLE-->
+
+    <title>Test RDF - Canada.ca</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="description" content="" id="meta-description">
-    <title>JSON-LD Test</title>
+    <link href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/css/theme.min.css" />
+    <noscript><link rel="stylesheet" href="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/css/noscript.min.css" /></noscript>
+    <link rel="stylesheet" href="https://test.canada.ca/covid-19-guidance/proto/css/alpha-beta-banner.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
     <script src="https://unpkg.com/n3/browser/n3.min.js"></script>
 
@@ -12,123 +29,569 @@
         {}
     </script>
 
+
+    <style>
+        .hidden {
+            display: none;
+        }
+        .criteria {
+            margin-bottom: 20px;
+        }
+    </style>
     </head>
-<body>
-    <h1 id="program-name"></h1>
-    <h2>Description</h2>
-    <p id="program-description"></p>
-    <h2>Eligibility Criteria</h2>
-    <ul id="eligibility-criteria"></ul>
-    <h2>Application Steps</h2>
-    <ol id="application-steps"></ol>
-    
+
+
+    <body class="cnt-wdth-lmtd" vocab="http://schema.org/" typeof="WebPage"><nav><ul id="wb-tphp">
+     <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li><li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to &#34;About government&#34;</a></li></ul></nav>
+
+            <header>
+                <div id="wb-bnr" class="container">
+                    <div class="row">
+
+                        <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+                            <h2 class="wb-inv">Language selection</h2>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="list-inline mrgn-bttm-0">
+                                        <li>
+                                            <a lang="fr" href="./voyage-covid-fr.html">
+
+                                                <span class="hidden-xs">Fran&ccedil;ais</span>
+                                                <abbr title="Fran&ccedil;ais" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+
+                            <a href="/en.html" property="url">
+                                <img src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg" alt="Government of Canada" property="logo">
+                            </a>
+
+                            <meta property="name" content="Government of Canada" />
+                            <meta property="areaServed" typeof="Country" content="Canada" />
+                            <link property="logo" href="https://www.canada.ca/etc/designs/canada/wet-boew/assets/wmms-blk.svg" />
+                        </div>
+                        <section id="wb-srch" class="col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-xs-12 col-sm-5 col-md-4">
+                            <h2>Search</h2>
+
+                            <form action="/en/sr/srb.html" method="get" name="cse-search-box" role="search">
+                                <div class="form-group wb-srch-qry">
+                                    <label for="wb-srch-q" class="wb-inv">Search Canada.ca</label>
+                                    <input name="cdn" value="canada" type="hidden" />
+                                    <input name="st" value="s" type="hidden" />
+                                    <input name="num" value="10" type="hidden" />
+                                    <input name="langs" value="en" type="hidden" />
+                                    <input name="st1rt" value="1" type="hidden" />
+                                    <input name="s5bm3ts21rch" value="x" type="hidden" />
+
+                                    <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search Canada.ca" />
+
+                                    <input type="hidden" name="_charset_" value="UTF-8" />
+
+                                    <datalist id="wb-srch-q-ac">
+									</datalist>
+                                </div>
+                                <div class="form-group submit">
+                                    <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span
+											class="wb-inv">Search</span></button>
+                                </div>
+                            </form>
+
+                        </section>
+                    </div>
+                </div>
+
+                <nav class="gcweb-v2 gcweb-menu" typeof="SiteNavigationElement">
+                    <div class="container">
+                        <h2 class="wb-inv">Menu</h2>
+                        <button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main
+							</span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
+                        <ul role="menu" aria-orientation="vertical" data-ajax-replace="/content/dam/canada/sitemenu/sitemenu-v2-en.html">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/jobs.html">Jobs and the workplace</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/immigration-citizenship.html">Immigration
+									and citizenship</a>
+                            </li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://travel.gc.ca/">Travel
+									and
+									tourism</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/business.html">Business and industry</a>
+                            </li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/benefits.html">Benefits</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/health.html">Health</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/taxes.html">Taxes</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/environment.html">Environment and natural
+									resources</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/defence.html">National security and
+									defence</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a>
+                            </li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/policing.html">Policing, justice and
+									emergencies</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/transport.html">Transport and
+									infrastructure</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the
+									world </a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/science.html">Science and innovation</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+
+                <!--UPDATE THE BREADCRUMB-->
+
+                <nav id="wb-bc" property="breadcrumb">
+                    <h2 class="wb-inv">You are here:</h2>
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li><a href='/en.html'>Canada.ca</a></li>
+                            <li><a href='/en/employment-social-development.html'>Employment and Social Development Canada</a></li>
+                        </ol>
+                    </div>
+                </nav>
+
+            </header>
+        </div>
+
+    </div>
+
+
+	<!--CONTENT STARTS HERE-->
+    <main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement" class="container">
+
+
+            <!--CHANGE THE H1-->
+
+            <h1 id="program-name"></h1>
+            <p id="program-description"></p>
+            <h2>Who can apply</h2>
+            <ul id="eligibility-criteria"></ul>
+
+            <h3>Answer a few questions</h3>
+            <p>Does this apply to you?</p>
+
+            <div id="wizard">
+                <!-- Criteria will be appended here -->
+            </div>
+            <section id="ineligible" class="panel panel-default panel-primary hidden">
+                <header class="panel-heading">
+                    <h5 class="panel-title">Ineligible</h5>
+                </header>
+                <div class="panel-body">
+                    <p>Sorry, you may not be eligible for the Canada Child Benefit.</p>
+                </div>  
+            </section>
+            <section id="eligible" class="panel panel-default panel-primary hidden">
+                <header class="panel-heading">
+                    <h5 class="panel-title">Eligible</h5>
+                </header>
+                <div class="panel-body">
+                    <p>It seems like you may be eligible. Continue with the application.</p>
+                </div>  
+            </section>
+            
+
+
+            <h2>How to apply</h2>
+            <ol id="application-steps"></ol>
+
+            
+            
+            <!-- CONTENT ENDS HERE -->
+
+            <div class="mwsgeneric-base-html parbase section">
+
+                <div class="row row-no-gutters mrgn-tp-xl">
+                    <div class="col-sm-7 col-lg-6">
+                        <section class="gc-pg-hlpfl provisional">
+                            <div class="well mrgn-bttm-0">
+                                <form id="gc-pg-hlpfl-frm" action="https://apps.canada.ca/x-notify/eml/send" method="post" autocomplete="off">
+                                    <input type="hidden" name="pageTitle" value="Managing your business">
+                                    <input type="hidden" name="submissionPage" value="covid-19-guidance/proto/business/maintaining-your-business.html">
+                                    <input type="hidden" name="tid" value="tbs-wasthishelpfulen">
+                                    <input type="hidden" name="auke" value="NTQxNzE1OTA3NTgwMDYyOTQ&#x3D;">
+                                    <div class="gc-pg-hlpfl-btn">
+                                        <div class="row row-no-gutters">
+                                            <div class="col-xs-12 col-sm-7 mrgn-tp-sm">
+                                                <h2 class="mrgn-tp-sm h5">Did you find what you were looking for?</h2>
+                                            </div>
+                                            <div class="col-xs-8 col-sm-5 text-right">
+                                                <button data-wb5-click="postback@#gc-pg-hlpfl-frm@" type="submit" name="helpful" value="Yes" class="btn btn-primary" data-wb-doaction="[
+														{&quot;action&quot;:&quot;removeClass&quot;,&quot;source&quot;:&quot;.gc-pg-hlpfl-thnk&quot;,&quot;class&quot;:&quot;hide&quot;},
+														{&quot;action&quot;:&quot;addClass&quot;,&quot;source&quot;:&quot;#gc-pg-hlpfl-frm&quot;,&quot;class&quot;:&quot;hide&quot;}
+													]" data-gc-analytics-wtph>Yes</button>
+                                                <button type="button" class="btn btn-primary mrgn-lft-sm nojs-hide" data-wb-doaction="[
+														{&quot;action&quot;:&quot;ajax&quot;,&quot;url&quot;:&quot;/content/dam/canada/mws-swg/nohelpful.html&quot;,&quot;container&quot;:&quot;.gc-pg-hlpfl-yes&quot;},
+														{&quot;action&quot;:&quot;removeClass&quot;,&quot;source&quot;:&quot;.gc-pg-hlpfl-no&quot;,&quot;class&quot;:&quot;nojs-show&quot;},
+														{&quot;action&quot;:&quot;addClass&quot;,&quot;source&quot;:&quot;.gc-pg-hlpfl-btn&quot;,&quot;class&quot;:&quot;hide&quot;}
+													]" data-gc-analytics-wtph-no>No</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="h3 hidden nojs-show">If not, tell us why:</p>
+                                    <div class="gc-pg-hlpfl-no nojs-show">
+                                        <fieldset>
+                                            <legend class="h4 mrgn-tp-0 mrgn-bttm-md">What was wrong?</legend>
+                                            <div class="radio">
+                                                <label for="problem1">
+												<input name="problem" id="problem1" type="radio"
+													value="The answer I need is missing"
+													data-gc-analytics-wtph-value="The answer I need is missing-La réponse dont j’ai besoin n’est pas là"
+													data-gc-analytics-collect="notPrivate">
+												The answer I need is missing
+											</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="problem2">
+												<input name="problem" id="problem2" type="radio"
+													value="The information isn’t clear"
+													data-gc-analytics-wtph-value="The information isn’t clear-L'information n'est pas claire"
+													data-gc-analytics-collect="notPrivate">
+												The information isn’t clear
+											</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="problem3">
+												<input name="problem" id="problem3" type="radio"
+													value="I’m not in the right place"
+													data-gc-analytics-wtph-value="I’m not in the right place-Je ne suis pas au bon endroit"
+													data-gc-analytics-collect="notPrivate">
+												I’m not in the right place
+											</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="problem4">
+												<input name="problem" id="problem4" type="radio"
+													value="Something is broken or incorrect"
+													data-gc-analytics-wtph-value="Something is broken or incorrect-Quelque chose est brisé ou incorrect"
+													data-gc-analytics-collect="notPrivate">
+												Something is broken or incorrect
+											</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="problem5">
+												<input name="problem" id="problem5" type="radio" value="Other reason"
+													data-gc-analytics-wtph-value="Other reason-Autre raison"
+													data-gc-analytics-collect="notPrivate">
+												Other reason
+											</label>
+                                            </div>
+                                        </fieldset>
+                                        <label for="problem6" class="mrgn-bttm-0">Please provide more details</label>
+                                        <p class="small">
+                                            <strong>(Don’t include any personal information)</strong>
+                                            <br>
+                                            <span class="small">Maximum 300 characters</span>
+                                        </p>
+                                        <textarea id="problem6" name="details" class="full-width" maxlength="300"></textarea>
+                                        <button data-wb5-click="postback@#gc-pg-hlpfl-frm@" type="submit" name="helpful" value="No" class="btn btn-primary mrgn-tp-md mrgn-bttm-sm" data-wb-doaction="[
+												{&quot;action&quot;:&quot;removeClass&quot;,&quot;source&quot;:&quot;.gc-pg-hlpfl-thnk&quot;,&quot;class&quot;:&quot;hide&quot;},
+												{&quot;action&quot;:&quot;addClass&quot;,&quot;source&quot;:&quot;#gc-pg-hlpfl-frm&quot;,&quot;class&quot;:&quot;hide&quot;}
+											]" data-gc-analytics-wtph-submit>Submit</button>
+                                    </div>
+                                    <div class="gc-pg-hlpfl-yes">
+                                        <input type="hidden" name="helpful" value="Yes">
+                                    </div>
+                                </form>
+                                <div class="gc-pg-hlpfl-thnk hide">
+                                    <p class="h6 mrgn-tp-sm mrgn-bttm-sm"><span class="far fa-check-circle text-success mrgn-rght-sm" aria-hidden="true"></span> Thank you for your feedback</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1 col-lg-offset-3">
+                        <div class="wb-share" data-wb-share="{&quot;pnlId&quot;:&quot;pnlShrPg&quot;, &quot;lnkClass&quot;: &quot;btn btn-default btn-block mrgn-tp-md&quot;}">
+                        </div>
+                    </div>
+                </div>
+
+                <!--update references-->
+
+            </div>
+
+            <div class="mwsgeneric-base-html parbase section">
+
+                <!--update references-->
+
+                </div>
+
+                <div class="pagedetails">
+                    <dl id="wb-dtmd">
+                        <dt>Date modified:</dt>
+                        <dd><time property="dateModified">2021-11-30</time></dd>
+                    </dl>
+                </div>
+            </div>
+    </main>
+
+    <div class="par iparys_inherited">
+
+    </div>
+
+    <div class="par iparys_inherited">
+
+        <div class="global-footer">
+            <footer id="wb-info">
+                <div class="landscape">
+                    <nav class="container wb-navcurr">
+                        <h2 class="wb-inv">About government</h2>
+                        <ul class="list-unstyled colcount-sm-2 colcount-md-3">
+
+                            <li><a href="http://www.phac-aspc.gc.ca/contac-eng.php">Contact us</a></li>
+
+                            <li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a>
+                            </li>
+
+                            <li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and
+									military</a></li>
+
+                            <li><a href="https://www.canada.ca/en/news.html">News</a></li>
+
+                            <li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and
+									regulations</a></li>
+
+                            <li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide
+									reporting</a></li>
+
+                            <li><a href="http://pm.gc.ca/en">Prime Minister</a></li>
+
+                            <li><a href="https://www.canada.ca/en/government/system.html">About government</a></li>
+
+                            <li><a href="http://open.canada.ca/en">Open government</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="brand">
+                    <div class="container">
+                        <div class="row">
+                            <nav class="col-md-10 ftr-urlt-lnk">
+                                <h2 class="wb-inv">About this site</h2>
+                                <ul>
+
+                                    <li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+
+                                    <li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+
+                                    <li><a href="https://www.canada.ca/en/government/about.html">About Canada.ca</a>
+                                    </li>
+
+                                    <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and
+											conditions</a></li>
+
+                                    <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+
+                                </ul>
+                            </nav>
+                            <div class="col-xs-6 visible-sm visible-xs tofpg">
+                                <a href="#wb-cont">Top of page <span class="glyphicon glyphicon-chevron-up"></span></a>
+                            </div>
+                            <div class="col-xs-6 col-md-2 text-right">
+                                <img src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="https://test.canada.ca/covid-19-guidance/proto/js/alpha-banner.js"></script>
+    <script type="text/javascript" src="https://www.canada.ca/etc/clientlibs/granite/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.canada.ca/etc/clientlibs/granite/utils.min.js"></script>
+    <script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/clientlib-publish.min.js"></script>
+
+    <!--[if gte IE 9 | !IE ]><!-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/wet-boew.min.js"></script>
+    <!--<![endif]-->
+
+    <!--[if lt IE 9]>
+<script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+
+    <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
 
 
     <script>
-        async function fetchAndParseTTL() {
-            const response = await fetch('https://test.canada.ca/phac-aspc/canada_child_benefit.ttl');
-            const ttlText = await response.text();
-            
-            const parser = new N3.Parser();
-            const store = new N3.Store();
-            parser.parse(ttlText, (error, quad, prefixes) => {
-                if (quad) {
-                    store.addQuad(quad);
-                } else if (error) {
-                    console.error(error);
+ 
+ async function fetchAndParseTTL() {
+    const response = await fetch('https://test.canada.ca/ontologie-gc-ontology/services/canada-child-benefit.ttl');
+    const ttlText = await response.text();
+
+    const parser = new N3.Parser();
+    const store = new N3.Store();
+    parser.parse(ttlText, (error, quad, prefixes) => {
+        if (quad) {
+            store.addQuad(quad);
+        } else if (error) {
+            console.error(error);
+        }
+    });
+
+    return store;
+}
+
+function displayInformation(store) {
+    const GC = 'https://test.canada.ca/ontologie-gc-ontology/gc-ontology.ttl#';
+    const subject = store.getQuads(null, `${GC}name_en`, null)[0].subject;
+
+    const programName = store.getQuads(subject, `${GC}name_en`, null)[0].object.value;
+    document.getElementById('program-name').textContent = programName;
+
+    const description = store.getQuads(subject, `${GC}description_en`, null)[0].object.value;
+    document.getElementById('program-description').textContent = description;
+
+    const eligibilityHeading = document.createElement('p');
+    eligibilityHeading.textContent = `To be eligible for the Canada Child Benefit, you must meet the following criteria:`;
+    document.getElementById('eligibility-criteria').insertAdjacentElement('beforebegin', eligibilityHeading);
+
+    const eligibilityCriteria = store.getQuads(subject, `${GC}eligibility_en`, null).map(quad => quad.object.value).flat();
+    const eligibilityList = document.getElementById('eligibility-criteria');
+    eligibilityCriteria.forEach(criteria => {
+        const eligibilityItem = document.createElement('li');
+        eligibilityItem.textContent = criteria;
+        eligibilityList.appendChild(eligibilityItem);
+    });
+
+    const stepsHeading = document.createElement('p');
+    stepsHeading.textContent = `To apply for the Canada Child Benefit, follow these steps:`;
+    document.getElementById('application-steps').insertAdjacentElement('beforebegin', stepsHeading);
+
+    const applicationSteps = store.getQuads(subject, `${GC}step_en`, null).map(quad => quad.object.value).flat();
+    const stepsList = document.getElementById('application-steps');
+    applicationSteps.forEach(step => {
+        const stepsItem = document.createElement('li');
+        stepsItem.textContent = step;
+        stepsList.appendChild(stepsItem);
+    });
+
+    // Set the meta description
+    const metaDescription = store.getQuads(subject, `${GC}description_en`, null)[0].object.value;
+    document.getElementById('meta-description').setAttribute('content', metaDescription);
+
+    // Generate JSON-LD
+    const eligibilityAnswerText = eligibilityCriteria.join('\n• ');
+    const stepsAnswerText = applicationSteps.map((step, index) => `${index + 1}. ${step}`).join('\n');
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the Canada Child Benefit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": metaDescription
                 }
-            });
+            },
+            {
+                "@type": "Question",
+                "name": "Who can apply for the Canada Child Benefit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": `• ${eligibilityAnswerText}`
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How to apply for the Canada Child Benefit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": stepsAnswerText
+                }
+            }
+        ]
+    };
 
-            return store;
-        }
+    document.getElementById('jsonld-placeholder').textContent = JSON.stringify(jsonLd, null, 2);
+}
 
-        function displayInformation(store) {
-            const FOAF = 'http://xmlns.com/foaf/0.1/';
-            const SCHEMA = 'http://schema.org/';
-
-            const subject = store.getQuads(null, `${FOAF}name`, null)[0].subject;
-            const programName = store.getQuads(subject, `${FOAF}name`, null)[0].object.value;
-            document.getElementById('program-name').textContent = programName;
-
-            const descriptions = store.getQuads(subject, `${FOAF}description`, null).map(quad => quad.object.value);
-            document.getElementById('program-description').textContent = descriptions.join(' ');
-
-            const eligibilityCriteria = store.getQuads(subject, `${SCHEMA}eligibility`, null).map(quad => quad.object.value);
-            const eligibilityList = document.getElementById('eligibility-criteria');
-            eligibilityCriteria.forEach(criteria => {
-                const listItem = document.createElement('li');
-                listItem.textContent = criteria;
-                eligibilityList.appendChild(listItem);
-            });
-
-            const applicationSteps = store.getQuads(subject, `${SCHEMA}step`, null).map(quad => quad.object.value);
-            const stepsList = document.getElementById('application-steps');
-            applicationSteps.forEach(step => {
-                const listItem = document.createElement('li');
-                listItem.textContent = step;
-                stepsList.appendChild(listItem);
-            });
-        }
-
-        function createJSONLD(store) {
-            const FOAF = 'http://xmlns.com/foaf/0.1/';
-            const SCHEMA = 'http://schema.org/';
-
-            const subject = store.getQuads(null, `${FOAF}name`, null)[0].subject;
-            const programName = store.getQuads(subject, `${FOAF}name`, null)[0].object.value;
-
-            const descriptions = store.getQuads(subject, `${FOAF}description`, null).map(quad => quad.object.value);
-            const eligibilityCriteria = store.getQuads(subject, `${SCHEMA}eligibility`, null).map(quad => quad.object.value);
-            const applicationSteps = store.getQuads(subject, `${SCHEMA}step`, null).map(quad => quad.object.value);
-
-            const jsonld = {
-                "@context": {
-                    "name": "http://xmlns.com/foaf/0.1/name",
-                    "description": "http://xmlns.com/foaf/0.1/description",
-                    "eligibility": "http://schema.org/eligibility",
-                    "step": "http://schema.org/step",
-                },
-                "@type": "http://xmlns.com/foaf/0.1/Program",
-                "name": programName,
-                "description": descriptions.join(' '),
-                "eligibility": eligibilityCriteria,
-                "step": applicationSteps,
-            };
-
-            return jsonld;
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    fetchAndParseTTL().then(store => {
+        displayInformation(store);
+    });
+});
+                  
 
 
 
 
-        function setMetaDescription(store) {
-            const FOAF = 'http://xmlns.com/foaf/0.1/';
-            const subject = store.getQuads(null, `${FOAF}name`, null)[0].subject;
-            const descriptions = store.getQuads(subject, `${FOAF}description`, null).map(quad => quad.object.value);
-            const description = descriptions[0]; // Choose the first description
-
-            const metaDescription = document.getElementById('meta-description');
-            metaDescription.setAttribute('content', description);
-        }
-
-        function insertJSONLDScript(jsonld) {
-        const jsonldPlaceholder = document.getElementById('jsonld-placeholder');
-        jsonldPlaceholder.textContent = JSON.stringify(jsonld, null, 2);
-        console.log('JSON-LD script:', jsonldPlaceholder); // Debugging
-    }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            fetchAndParseTTL().then(store => {
-                setMetaDescription(store);
-                displayInformation(store);
-                const jsonld = createJSONLD(store);
-                console.log('JSON-LD:', jsonld); // Debugging
-                insertJSONLDScript(jsonld);
-            });
-        });
     </script>
 
+
+<script>
+    async function createWizard() {
+        const store = await fetchAndParseTTL();
+        const GC = 'https://test.canada.ca/ontologie-gc-ontology/gc-ontology.ttl#';
+        const subject = store.getQuads(null, `${GC}name_en`, null)[0].subject;
+        const eligibilityCriteria = store.getQuads(subject, `${GC}eligibility_en`, null)
+            .map(quad => quad.object.value);
     
+        const wizard = document.getElementById("wizard");
+    
+        eligibilityCriteria.forEach((criterion, index) => {
+            const criteriaDiv = document.createElement("div");
+            criteriaDiv.classList.add("criteria");
+            if (index !== 0) {
+                criteriaDiv.classList.add("hidden");
+            }
+    
+            criteriaDiv.innerHTML = `
+                <h3>Question ${index + 1}</h3>
+                <p>${criterion}</p>
+                <input type="radio" id="yes-${index}" name="criteria-${index}" value="yes" />
+                <label for="yes-${index}">Yes</label>
+                <input type="radio" id="no-${index}" name="criteria-${index}" value="no" />
+                <label for="no-${index}">No</label>
+            `;
+    
+            wizard.appendChild(criteriaDiv);
+    
+            criteriaDiv.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.addEventListener("change", () => {
+                    hideResults();
+                    if (radio.value === "no") {
+                        showIneligible();
+                    } else if (index === eligibilityCriteria.length - 1) {
+                        showEligible();
+                    } else {
+                        wizard.children[index + 1].classList.remove("hidden");
+                    }
+                });
+            });
+        });
+    }
+    
+    function hideResults() {
+        document.getElementById("ineligible").classList.add("hidden");
+        document.getElementById("eligible").classList.add("hidden");
+    }
+    
+    function showIneligible() {
+        document.getElementById("ineligible").classList.remove("hidden");
+    }
+    
+    function showEligible() {
+        document.getElementById("eligible").classList.remove("hidden");
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        createWizard();
+    });
+    
+    </script>
 </body>
 
 </html>
