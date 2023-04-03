@@ -619,6 +619,68 @@ createWizard();
 
 </script>
 
+<script>
+async function createWizard() {
+    const store = await fetchAndParseTTL();
+    const GC = 'https://test.canada.ca/ontologie-gc-ontology/gc-ontology.ttl#';
+    const subject = store.getQuads(null, `${GC}name_en`, null)[0].subject;
+    const eligibilityCriteria = store.getQuads(subject, `${GC}eligibility_en`, null)
+        .map(quad => quad.object.value);
+
+    const wizard = document.getElementById("wizard");
+
+    eligibilityCriteria.forEach((criterion, index) => {
+        const criteriaDiv = document.createElement("div");
+        criteriaDiv.classList.add("criteria");
+        if (index !== 0) {
+            criteriaDiv.classList.add("hidden");
+        }
+
+        criteriaDiv.innerHTML = `
+            <h3>Question ${index + 1}</h3>
+            <p>${criterion}</p>
+            <input type="radio" id="yes-${index}" name="criteria-${index}" value="yes" />
+            <label for="yes-${index}">Yes</label>
+            <input type="radio" id="no-${index}" name="criteria-${index}" value="no" />
+            <label for="no-${index}">No</label>
+        `;
+
+        wizard.appendChild(criteriaDiv);
+
+        criteriaDiv.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener("change", () => {
+                hideResults();
+                if (radio.value === "no") {
+                    showIneligible();
+                } else if (index === eligibilityCriteria.length - 1) {
+                    showEligible();
+                } else {
+                    wizard.children[index + 1].classList.remove("hidden");
+                }
+            });
+        });
+    });
+}
+
+function hideResults() {
+    document.getElementById("ineligible").classList.add("hidden");
+    document.getElementById("eligible").classList.add("hidden");
+}
+
+function showIneligible() {
+    document.getElementById("ineligible").classList.remove("hidden");
+}
+
+function showEligible() {
+    document.getElementById("eligible").classList.remove("hidden");
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    createWizard();
+});
+
+</script>
+
 </body>
 
 </html>
