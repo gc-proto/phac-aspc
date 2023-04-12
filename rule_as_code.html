@@ -403,19 +403,20 @@
     <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
 
     <script type="module">
-        import {
-          isIneligible,
-          isEligibleParent,
-          getBenefitAmount,
-        } from './dentalBenefitModule.js';
+        document.addEventListener('DOMContentLoaded', function () {
+          import {
+            isIneligible,
+            isEligibleParent,
+            getBenefitAmount,
+          } from './dentalBenefitModule.js';
       
-        const form = document.getElementById('dentalBenefitForm');
-        const result = document.getElementById('result');
+          const form = document.getElementById('dentalBenefitForm');
+          const result = document.getElementById('result');
       
-        form.addEventListener('submit', function (event) {
-          event.preventDefault();
+          form.addEventListener('submit', function (event) {
+            event.preventDefault();
       
-          const applicant = {
+            const applicant = {
             isParent: document.getElementById('isParent').checked,
             numChildren: parseInt(document.getElementById('numChildren').value, 10),
             receivesCanadaChildBenefit: document.getElementById('receivesCanadaChildBenefit').checked,
