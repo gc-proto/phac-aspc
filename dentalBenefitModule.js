@@ -1,41 +1,29 @@
-const isMisrepresentation = (applicant) => {
-    // Implement logic to check if the applicant has misrepresented or concealed facts
+const isIneligible = (applicant) => {
+    return (
+      applicant.hasMisrepresented ||
+      (applicant.hasCommittedViolation && !applicant.decisionRescinded)
+    );
   };
   
-  const hasCommittedViolation = (applicant) => {
-    // Implement logic to check if the applicant has committed a violation in relation to a previous application
-  };
-  
-  const isEligibleParent = (applicant, date) => {
+  const isEligibleParent = (applicant) => {
     return (
       applicant.isParent &&
       applicant.numChildren > 0 &&
-      applicant.receivesCanadaChildBenefitOn[date]
+      applicant.receivesCanadaChildBenefit
     );
   };
   
-  const isIneligible = (applicant) => {
-    return (
-      isMisrepresentation(applicant) ||
-      (hasCommittedViolation(applicant) && !applicant.decisionRescinded)
-    );
-  };
-  
-  const getBenefitAmount = (applicant, date) => {
-    if (applicant.adjustedIncome[date] < 70000) {
+  const getBenefitAmount = (applicant) => {
+    if (applicant.adjustedIncome < 70000) {
       return 650;
-    } else if (applicant.adjustedIncome[date] < 80000) {
+    } else if (applicant.adjustedIncome < 80000) {
       return 390;
-    } else if (applicant.adjustedIncome[date] < 90000) {
+    } else if (applicant.adjustedIncome < 90000) {
       return 260;
     } else {
       return 0;
     }
   };
   
-  export {
-    isIneligible,
-    isEligibleParent,
-    getBenefitAmount,
-  };
+  export { isIneligible, isEligibleParent, getBenefitAmount };
   
