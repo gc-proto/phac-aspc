@@ -402,41 +402,43 @@
 
     <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
 
-        <script type="module">
-    import {
-        isIneligible,
-        isEligibleParent,
-        getBenefitAmount,
-    } from './dentalBenefitModule.js';
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const form = document.getElementById('dentalBenefitForm');
-        const result = document.getElementById('result');
-
-        form.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        const applicant = {
-            isParent: document.getElementById('isParent').checked,
-            numChildren: parseInt(document.getElementById('numChildren').value, 10),
-            receivesCanadaChildBenefit: document.getElementById('receivesCanadaChildBenefit').checked,
-            adjustedIncome: parseFloat(document.getElementById('adjustedIncome').value),
-            hasDentalInsurance: document.getElementById('hasDentalInsurance').checked,
-            hasMisrepresented: document.getElementById('hasMisrepresented').checked,
-            hasCommittedViolation: document.getElementById('hasCommittedViolation').checked,
-          };
+    <script type="module">
+        import {
+          isIneligible,
+          isEligibleParent,
+          getBenefitAmount,
+        } from './dentalBenefitModule.js';
       
-          const isEligible =
-            !isIneligible(applicant) && isEligibleParent(applicant);
+        document.addEventListener('DOMContentLoaded', function () {
+          const form = document.getElementById('dentalBenefitForm');
+          const result = document.getElementById('result');
       
-          if (isEligible) {
-            const benefitAmount = getBenefitAmount(applicant);
-            result.textContent = `Eligible for a dental benefit of $${benefitAmount}.`;
-          } else {
-            result.textContent = 'Not eligible for a dental benefit.';
-          }
+          form.addEventListener('submit', function (event) {
+            event.preventDefault();
+      
+            const applicant = {
+              isParent: form.isParent.checked,
+              numChildren: parseInt(form.numChildren.value),
+              receivesCanadaChildBenefit: form.receivesCanadaChildBenefit.checked,
+              adjustedIncome: parseFloat(form.adjustedIncome.value),
+              hasMisrepresented: form.hasMisrepresented.checked,
+              hasCommittedViolation: form.hasCommittedViolation.checked,
+              decisionRescinded: form.decisionRescinded.checked,
+            };
+      
+            const isEligible =
+              !isIneligible(applicant) && isEligibleParent(applicant);
+      
+            if (isEligible) {
+              const benefitAmount = getBenefitAmount(applicant);
+              result.innerHTML = `The applicant is eligible for a dental benefit of $${benefitAmount}.`;
+            } else {
+              result.innerHTML = 'The applicant is not eligible for a dental benefit.';
+            }
+          });
         });
       </script>
+      
       
 </body>
 
