@@ -15,11 +15,11 @@ const isIneligible = (applicant) => {
   
   const getBenefitAmount = (applicant) => {
     if (applicant.adjustedIncome < 70000) {
-      return 650;
+      return applicant.numChildren * 650;
     } else if (applicant.adjustedIncome < 80000) {
-      return 390;
+      return applicant.numChildren * 390;
     } else if (applicant.adjustedIncome < 90000) {
-      return 260;
+      return applicant.numChildren * 260;
     } else {
       return 0;
     }
