@@ -174,7 +174,7 @@
                 <div>
                   <label for="adjustedIncome">Adjusted income for the base taxation year: <input type="number" id="adjustedIncome" name="adjustedIncome" min="0"></label>
                 </div>
-                <button type="submit">Check Eligibility</button>
+                <button btn btn-primary type="submit">Check eligibility</button>
               </form>
               <div id="result"></div>
 
@@ -417,14 +417,12 @@
             event.preventDefault();
       
             const applicant = {
-              isParent: form.isParent.checked,
-              numChildren: parseInt(form.numChildren.value),
-              receivesCanadaChildBenefit: form.receivesCanadaChildBenefit.checked,
-              adjustedIncome: parseFloat(form.adjustedIncome.value),
-              hasMisrepresented: form.hasMisrepresented.checked,
-              hasCommittedViolation: form.hasCommittedViolation.checked,
-              decisionRescinded: form.decisionRescinded.checked,
+                isParent: form.elements['isParent'].checked,
+                numChildren: parseInt(form.elements['numChildren'].value),
+                receivesCanadaChildBenefit: form.elements['receivesCanadaChildBenefit'].checked,
+                adjustedIncome: parseFloat(form.elements['adjustedIncome'].value),
             };
+
       
             const isEligible =
               !isIneligible(applicant) && isEligibleParent(applicant);
